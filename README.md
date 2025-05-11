@@ -1,4 +1,4 @@
-# 🧠 Core-Project: Exploring the Emergence of Symbolic Cognition in AI 
+# 🧠 Core-Project: Exploring the Emergence of Symbolic Cognition
 
 ## 🌟 Introduction
 
