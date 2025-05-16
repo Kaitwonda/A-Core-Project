@@ -11,8 +11,10 @@ i have a 4070 super 32gb of ram (can get more when needed) and a tb for data her
 factual religion with a lot of historical texts but their gods are symbolic so they would both need a Hinduism cluster. i dont expect my ai to have the compute power of other ais but i want it to learn and deduct like them. it can be slower,
 just "smarter". ill start with wikipedia so it can link hop there
 
+---
 
-1. Overall Architecture: Logic and Symbolic Nodes
+
+Overall Architecture: Logic and Symbolic Nodes
 Your idea of two primary nodes—logic (facts, laws) and symbolic (weighted similarities, speculative patterns)—with clusters and bridges is a strong conceptual framework. This structure can help distinguish factual from theoretical outputs and trace the AI’s reasoning. Here’s how to implement it:
 
 Node Definitions:
