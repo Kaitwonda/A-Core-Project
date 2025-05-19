@@ -1,1 +1,355 @@
-{}
+{
+  "💻⟳": {
+    "name": "Computer Cycle",
+    "based_on": "💻",
+    "summary": "Recurring pattern or complex emotional field for 'Computer'. Often involves: approval, amusement, caring.",
+    "keywords": [
+      "computer",
+      "computation",
+      "cpu",
+      "binary",
+      "code",
+      "algorithm",
+      "system",
+      "architecture",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Computer",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:10:10.207947",
+    "updated_at": "2025-05-19T01:10:10.207947",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 0.96,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer'. Often involves: approval, amusement, caring.",
+        "timestamp": "2025-05-19T01:10:10.207947",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  },
+  "🔥⟳": {
+    "name": "Fire Cycle",
+    "based_on": "🔥",
+    "summary": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
+    "keywords": [
+      "fire",
+      "flame",
+      "computation",
+      "logic",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Fire",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:10:10.216947",
+    "updated_at": "2025-05-19T01:10:10.216947",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 0.84,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
+        "timestamp": "2025-05-19T01:10:10.217450",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  },
+  "⚙": {
+    "name": "Example Fear",
+    "keywords": [
+      "fear",
+      "help",
+      "example",
+      "react",
+      "individual"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "For example, fear helps individuals react quickly to potential dangers, anger can motivate self-defense or assertiveness, and disgust can protect against harmful substances. In addition, happiness might reinforce behaviors that lead to positive outcomes. For example, the anticipation of the reward a...",
+        "timestamp": "2025-05-19T01:10:34.305343",
+        "source_phase": 2
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:34.305343",
+    "updated_at": "2025-05-19T01:10:34.305343",
+    "usage_count": 1
+  },
+  "♑": {
+    "name": "God Create",
+    "keywords": [
+      "ability",
+      "god",
+      "human",
+      "create",
+      "give"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "God who created humans gave humans the ability to feel emotion and interact emotionally. Biblical content expresses that God is a person who feels and expresses emotion. Though a somatic view would place the locus of emotions in the physical body, Christian theory of emotions would view the body mor...",
+        "timestamp": "2025-05-19T01:10:50.214922",
+        "source_phase": 2
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:50.214922",
+    "updated_at": "2025-05-19T01:10:50.214922",
+    "usage_count": 1
+  },
+  "♦": {
+    "name": "Contrast Situationist",
+    "keywords": [
+      "perspective",
+      "contrast",
+      "situationist",
+      "view",
+      "emotion"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "In contrast, a situationist perspective on emotion views emotion as the product of an organism investigating its environment, and observing the responses of other organisms. Emotion stimulates the evolution of social relationships, acting as a signal to mediate the behavior of other organisms. In so...",
+        "timestamp": "2025-05-19T01:11:36.183876",
+        "source_phase": 2
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:11:36.183876",
+    "updated_at": "2025-05-19T01:11:36.183876",
+    "usage_count": 1
+  },
+  "💧⟳": {
+    "name": "Water Cycle",
+    "based_on": "💧",
+    "summary": "Recurring pattern or complex emotional field for 'Water'. Often involves: approval, amusement.",
+    "keywords": [
+      "water",
+      "liquid",
+      "data",
+      "flow",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Water",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:14:28.549115",
+    "updated_at": "2025-05-19T01:14:28.549115",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.84,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Water'. Often involves: approval, amusement.",
+        "timestamp": "2025-05-19T01:14:28.550120",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "🔥⟳⟳": {
+    "name": "Fire Cycle Cycle",
+    "based_on": "🔥⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Fire Cycle'. Often involves: amusement, admiration, neutral.",
+    "keywords": [
+      "fire",
+      "flame",
+      "computation",
+      "logic",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Fire Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:14:28.559119",
+    "updated_at": "2025-05-19T01:14:28.559119",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 1.01,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Fire Cycle'. Often involves: amusement, admiration, neutral.",
+        "timestamp": "2025-05-19T01:14:28.560276",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "⚙⟳": {
+    "name": "Example Fear Cycle",
+    "based_on": "⚙",
+    "summary": "Recurring pattern or complex emotional field for 'Example Fear'. Often involves: amusement, annoyance, fear.",
+    "keywords": [
+      "fear",
+      "help",
+      "example",
+      "react",
+      "individual",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Example Fear",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:14:28.569279",
+    "updated_at": "2025-05-19T01:14:28.569279",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.6,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Example Fear'. Often involves: amusement, annoyance, fear.",
+        "timestamp": "2025-05-19T01:14:28.570311",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "♦⟳": {
+    "name": "Contrast Situationist Cycle",
+    "based_on": "♦",
+    "summary": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
+    "keywords": [
+      "perspective",
+      "contrast",
+      "situationist",
+      "view",
+      "emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Contrast Situationist",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:14:28.576311",
+    "updated_at": "2025-05-19T01:14:28.576311",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.6,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
+        "timestamp": "2025-05-19T01:14:28.576311",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "💻⟳⟳": {
+    "name": "Computer Cycle Cycle",
+    "based_on": "💻⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
+    "keywords": [
+      "computer",
+      "computation",
+      "cpu",
+      "binary",
+      "code",
+      "algorithm",
+      "system",
+      "architecture",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Computer Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:28:00.560706",
+    "updated_at": "2025-05-19T01:28:00.560706",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 1.15,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
+        "timestamp": "2025-05-19T01:28:00.561706",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  }
+}

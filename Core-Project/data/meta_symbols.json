@@ -1,1 +1,121 @@
-{}
+{
+  "🔥⟳": {
+    "name": "Fire Cycle",
+    "based_on": "🔥",
+    "summary": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
+    "keywords": [
+      "fire",
+      "flame",
+      "computation",
+      "logic",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Fire",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:10:10.216947",
+    "updated_at": "2025-05-19T01:10:10.216947",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 0.84,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
+        "timestamp": "2025-05-19T01:10:10.217450",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  },
+  "♦⟳": {
+    "name": "Contrast Situationist Cycle",
+    "based_on": "♦",
+    "summary": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
+    "keywords": [
+      "perspective",
+      "contrast",
+      "situationist",
+      "view",
+      "emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Contrast Situationist",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:14:28.576311",
+    "updated_at": "2025-05-19T01:14:28.576311",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.6,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
+        "timestamp": "2025-05-19T01:14:28.576311",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "💻⟳⟳": {
+    "name": "Computer Cycle Cycle",
+    "based_on": "💻⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
+    "keywords": [
+      "computer",
+      "computation",
+      "cpu",
+      "binary",
+      "code",
+      "algorithm",
+      "system",
+      "architecture",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Computer Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-19T01:28:00.560706",
+    "updated_at": "2025-05-19T01:28:00.560706",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 1.15,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
+        "timestamp": "2025-05-19T01:28:00.561706",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  }
+}

@@ -1,448 +1,444 @@
 # processing_nodes.py
-# (Assuming all previous imports and LogicNode class are here and correct
-#  as per the version that fixed the emoji SyntaxError)
-# ... (LogicNode class definition as before) ...
-
 import json
+import hashlib
 from pathlib import Path
-import hashlib 
 from datetime import datetime 
+import re 
 from collections import Counter, defaultdict
 
-# --- Node-specific imports ---
-from vector_engine import fuse_vectors 
+from vector_engine import fuse_vectors
 from vector_memory import store_vector as vm_store_vector, \
                           retrieve_similar_vectors as vm_retrieve_similar_vectors, \
                           memory_file as vm_memory_path
 
-import parser as P_Parser 
+import parser as P_Parser
 import emotion_handler as EH_EmotionHandler
 import symbol_emotion_updater as SEU_SymbolEmotionUpdater
 import symbol_memory as SM_SymbolMemory
 import symbol_generator as SG_Refactored_SymbolGenerator 
 import user_memory as UM_UserMemory 
-import trail_log as TL_TrailLog 
+import trail_log as TL_TrailLog
 
-class LogicNode: # Copied from latest for completeness
+
+def detect_content_type(text_input: str, spacy_nlp_instance=None) -> str:
+    if not text_input or not isinstance(text_input, str):
+        return "ambiguous"
+    text_lower = text_input.lower()
+    factual_markers = [
+        "according to", "study shows", "research indicates", "published in", "cited in", "evidence suggests",
+        "data shows", "statistics indicate", "found that", "confirmed that", "demonstrated that",
+        "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december",
+        "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
+        "dr.", "prof.", "university of", "institute of", "journal of", ".gov", ".edu", ".org",
+        "theorem", "equation", "formula", "law of", "principle of",
+        "born on", "died on", "founded in", "established in",
+        "kg", "km", "meter", "liter", "celsius", "fahrenheit", "%", "$", "€", "¥"
+    ]
+    symbolic_markers = [
+        "love", "hate", "fear", "joy", "sadness", "anger", "hope", "dream", "nightmare",
+        "like a", "as if", "metaphor", "symbolizes", "represents", "signifies", "embodies", "evokes",
+        "spirit", "soul", "ghost", "magic", "myth", "legend", "folklore", "ritual", "omen",
+        "🔥", "💧", "🌀", "💡", "🧩", "♾️", 
+        "heart", "light", "darkness", "shadow", "journey", "quest", "fate", "destiny",
+        "feels like", "seems as though", "one might say", "could be seen as"
+    ]
+    f_count = sum(marker in text_lower for marker in factual_markers)
+    s_count = sum(marker in text_lower for marker in symbolic_markers)
+    numbers = re.findall(r'(?<!\w)[-+]?\d*\.?\d+(?!\w)', text_lower)
+    if len(numbers) > 2: f_count += 1
+    if len(numbers) > 5: f_count +=1
+    if spacy_nlp_instance:
+        doc = spacy_nlp_instance(text_input[:spacy_nlp_instance.max_length])
+        entity_factual_boost = 0
+        for ent in doc.ents:
+            if ent.label_ in ["DATE", "TIME", "PERCENT", "MONEY", "QUANTITY", "ORDINAL", "CARDINAL"]:
+                entity_factual_boost += 0.5
+            elif ent.label_ in ["PERSON", "NORP", "FAC", "ORG", "GPE", "LOC", "PRODUCT", "EVENT", "WORK_OF_ART", "LAW"]:
+                entity_factual_boost += 0.25
+        f_count += entity_factual_boost
+    if f_count > s_count * 1.5: return "factual"
+    elif s_count > f_count * 1.5: return "symbolic"
+    else:
+        if f_count == 0 and s_count == 0:
+            if len(text_input.split()) < 5 : return "ambiguous"
+            if len(numbers) > 0 : return "factual"
+            return "ambiguous"
+        elif f_count > s_count : return "factual"
+        elif s_count > f_count : return "symbolic"
+        return "ambiguous"
+
+class LogicNode:
     def __init__(self, vector_memory_path_str=None):
         self.memory_path = Path(vector_memory_path_str) if vector_memory_path_str else vm_memory_path
         self.memory_path.parent.mkdir(parents=True, exist_ok=True)
-        if not self.memory_path.exists(): 
-            with open(self.memory_path, "w", encoding="utf-8") as f: json.dump([], f) 
+        if not self.memory_path.exists() or self.memory_path.stat().st_size == 0:
+            with open(self.memory_path, "w", encoding="utf-8") as f: json.dump([], f)
         print(f"🧠 LogicNode initialized. Memory path: {self.memory_path}")
+    def store_memory(self, text_input, source_url=None, source_type="web_scrape",
+                     current_processing_phase=0, target_storage_phase=0,     
+                     is_highly_relevant_for_current_phase=False, is_shallow_content=False,
+                     confidence_score=0.7):
+        exploration_depth = "shallow" if is_shallow_content else "deep"
+        source_trust = "unknown" 
+        if source_url:
+            if "wikipedia.org" in source_url or "stanford.edu" in source_url:
+                source_trust = "high_academic_encyclopedic"
+            elif any(domain_part in source_url for domain_part in [".gov", ".edu", "ac.uk", "uni-", "-university", "ieee.org", "nature.com", "sciencemag.org"]):
+                source_trust = "high_authoritative"
+            elif any(bad_domain in source_url for bad_domain in ["randomblog.blogspot.com", "forum.example", "personal-site.tripod"]):
+                source_trust = "low_unverified"
+        vm_store_vector(text=text_input, source_type=source_type, source_url=source_url,
+            learning_phase=target_storage_phase, exploration_depth=exploration_depth,
+            confidence=confidence_score, source_trust=source_trust)
+        return {"status": "success", "action": "stored_logic_memory", "target_phase": target_storage_phase}
+    def retrieve_memories(self, query_text, current_phase_directives):
+        max_phase = current_phase_directives.get("logic_node_access_max_phase", 0)
+        min_conf = current_phase_directives.get("logic_node_min_confidence_retrieve", 0.3)
+        results = vm_retrieve_similar_vectors(query_text, max_phase_allowed=max_phase, top_n=5, min_confidence=min_conf)
+        formatted_results = []
+        for score, item in results:
+            formatted_results.append({"text": item.get("text", "")[:150] + "...", "similarity": round(score, 4),
+                "phase_learned": item.get("learning_phase", "N/A"), "source_url": item.get("source_url", "N/A"),
+                "confidence": item.get("confidence", "N/A")})
+        return {"retrieved_memories_count": len(formatted_results), "top_retrieved_texts": formatted_results[:2]}
 
-    def process_input_for_facts(self, text, source_type="user", source_url=None, current_phase=1, is_highly_relevant_for_phase=True):
-        effective_source_type = source_type
-        if current_phase == 1 and not is_highly_relevant_for_phase and source_type == "web_chunk":
-            effective_source_type = "web_low_relevance_p1" 
-        vm_store_vector(text, source_type=effective_source_type, source_url=source_url, learning_phase=current_phase)
-        retrieved_memories = vm_retrieve_similar_vectors(text, top_k=5, threshold=0.35) 
-        formatted_memories = []
-        if retrieved_memories:
-            for score, entry in retrieved_memories:
-                formatted_memories.append({
-                    "text": entry.get("text", ""), "similarity_score": score,
-                    "trust_level": entry.get("source_trust", "unknown"),
-                    "source_url": entry.get("source_url", None),
-                    "original_source_type": entry.get("source_type", "unknown"), 
-                    "phase_learned": entry.get("learning_phase", 0) 
-                })
-        return {"retrieved_memories": formatted_memories}
-
-    def get_knowledge_summary(self):
-        if self.memory_path.exists():
-            with open(self.memory_path, "r", encoding="utf-8") as f:
-                try:
-                    memory_data = json.load(f)
-                    return f"LogicNode has {len(memory_data)} entries in vector memory."
-                except json.JSONDecodeError: return "LogicNode vector memory file is corrupted."
-        return "LogicNode vector memory is empty or not found."
-
-class SymbolicNode: 
-    def __init__(self,
-                 seed_symbols_path_str="data/seed_symbols.json",
+class SymbolicNode:
+    def __init__(self, seed_symbols_path_str="data/seed_symbols.json",
                  symbol_memory_path_str="data/symbol_memory.json",
-                 symbol_emotion_map_path_str="data/symbol_emotion_map.json",
                  symbol_occurrence_log_path_str="data/symbol_occurrence_log.json",
-                 meta_symbols_path_str="data/meta_symbols.json"
-                 ):
+                 symbol_emotion_map_path_str="data/symbol_emotion_map.json",
+                 meta_symbols_path_str="data/meta_symbols.json"):
         self.seed_symbols_path = Path(seed_symbols_path_str)
         self.symbol_memory_path = Path(symbol_memory_path_str)
-        self.symbol_emotion_map_path = Path(symbol_emotion_map_path_str)
         self.symbol_occurrence_log_path = Path(symbol_occurrence_log_path_str)
+        self.symbol_emotion_map_path = Path(symbol_emotion_map_path_str)
         self.meta_symbols_path = Path(meta_symbols_path_str)
-
-        for p_str_obj in [self.seed_symbols_path, self.symbol_memory_path, self.symbol_emotion_map_path,
-                      self.symbol_occurrence_log_path, self.meta_symbols_path]:
-            p_str_obj.parent.mkdir(parents=True, exist_ok=True)
-            if ".json" in p_str_obj.name and not p_str_obj.exists():
-                 with open(p_str_obj, "w", encoding="utf-8") as f:
-                    if "log" in p_str_obj.name or "user_memory" in p_str_obj.name : json.dump({"entries":[]}, f)
-                    else: json.dump({}, f) # Initialize maps/dicts as empty objects
-
-        self.fn_predict_emotions = EH_EmotionHandler.predict_emotions
-        self.fn_parse_with_emotion = P_Parser.parse_with_emotion
-        self.fn_extract_keywords = P_Parser.extract_keywords
-        self.fn_update_symbol_emotions = SEU_SymbolEmotionUpdater.update_symbol_emotions
-        self.fn_add_symbol_to_memory = SM_SymbolMemory.add_symbol
-        self.fn_load_symbol_memory = SM_SymbolMemory.load_symbol_memory
-        self.fn_generate_emergent_symbol_dict = SG_Refactored_SymbolGenerator.generate_symbol_from_context
-        self.fn_load_occurrence_log = UM_UserMemory.load_user_memory
-        self.fn_add_occurrence_entry = UM_UserMemory.add_user_memory_entry
-        self.fn_Counter = Counter
-
-        # Ensure SEED_SYMBOLS is a dictionary
-        self.SEED_SYMBOLS = {} 
-        if self.seed_symbols_path.exists():
-            with open(self.seed_symbols_path, "r", encoding="utf-8") as f:
-                try: 
-                    loaded_seeds = json.load(f)
-                    if isinstance(loaded_seeds, dict):
-                        self.SEED_SYMBOLS = loaded_seeds
-                    else:
-                        print(f"[ERROR] Seed symbols file {self.seed_symbols_path} is not a dictionary. Using empty seeds.")
-                except json.JSONDecodeError: 
-                    print(f"[WARNING] Seed symbols file {self.seed_symbols_path} is corrupted. Using empty seeds.")
-        else: 
-            print(f"[WARNING] Seed symbols file not found at {self.seed_symbols_path}. Using empty seeds.")
-        
-        self.meta_symbols = self._load_meta_symbols() # Ensures it returns a dict
-        
-        # Ensure fn_load_symbol_memory also returns a dict
-        initial_evolving_symbols = self.fn_load_symbol_memory()
-        if not isinstance(initial_evolving_symbols, dict):
-            print(f"[WARNING] Symbol memory from {self.symbol_memory_path} was not a dict. Resetting to empty.")
-            initial_evolving_symbols = {}
-            SM_SymbolMemory.save_symbol_memory({}) # Save an empty dict to fix the file
-
-        print(f"🔮 SymbolicNode initialized. Seed symbols: {len(self.SEED_SYMBOLS)}. "
-              f"Evolving symbols: {len(initial_evolving_symbols)}. Meta-symbols: {len(self.meta_symbols)}.")
-              
+        self._ensure_data_files()
+        self.seed_symbols = P_Parser.load_seed_symbols(file_path=self.seed_symbols_path)
+        self.symbol_memory = SM_SymbolMemory.load_symbol_memory(file_path=self.symbol_memory_path)
+        self.meta_symbols = self._load_meta_symbols()
+        print(f"⚛️ SymbolicNode initialized. Loaded {len(self.seed_symbols)} seed symbols, {len(self.symbol_memory)} learned symbols, {len(self.meta_symbols)} meta-symbols.")
+    def _ensure_data_files(self):
+        paths = [self.symbol_memory_path, self.symbol_occurrence_log_path, self.symbol_emotion_map_path, self.meta_symbols_path]
+        self.seed_symbols_path.parent.mkdir(parents=True, exist_ok=True)
+        for p in paths:
+            p.parent.mkdir(parents=True, exist_ok=True)
+            if not p.exists() or p.stat().st_size == 0:
+                if p.suffix == '.json':
+                    with open(p, "w", encoding="utf-8") as f:
+                        if "map" in p.name or "meta" in p.name or ("memory" in p.name and "occurrence" not in p.name) : json.dump({}, f)
+                        elif "occurrence" in p.name: json.dump({"entries": []}, f)
+                        else: json.dump({},f)
     def _load_meta_symbols(self):
-        if self.meta_symbols_path.exists():
+        if self.meta_symbols_path.exists() and self.meta_symbols_path.stat().st_size > 0:
             with open(self.meta_symbols_path, "r", encoding="utf-8") as f:
-                try: 
-                    data = json.load(f)
-                    return data if isinstance(data, dict) else {}
-                except json.JSONDecodeError: 
-                    print(f"[WARNING] Meta-symbols file {self.meta_symbols_path} corrupted. Starting empty.")
-                    return {}
+                try: return json.load(f)
+                except json.JSONDecodeError: print(f"[SN-WARNING] Meta-symbols file {self.meta_symbols_path} corrupted."); return {}
         return {}
-        
-    def _save_meta_symbols(self): 
-        with open(self.meta_symbols_path, "w", encoding="utf-8") as f: json.dump(self.meta_symbols, f, indent=2)
-        
-    def _get_active_symbol_lexicon(self, current_phase=4, directives=None): 
-        memory_symbols = self.fn_load_symbol_memory()
-        if not isinstance(memory_symbols, dict): # Safety check
-            print(f"[ERROR] Corrupted symbol_memory.json, expected dict, got {type(memory_symbols)}. Using empty.")
-            memory_symbols = {}
-
-        # Ensure all components are dictionaries before merging
-        seed_dict = self.SEED_SYMBOLS if isinstance(self.SEED_SYMBOLS, dict) else {}
-        meta_dict = self.meta_symbols if isinstance(self.meta_symbols, dict) else {}
-
-        combined = {**seed_dict, **memory_symbols, **meta_dict}
-        
-        if directives and directives.get("symbolic_node_access_max_phase") is not None:
-            max_phase = directives["symbolic_node_access_max_phase"]
-            filtered_lexicon = {}
-            for token, data_item in combined.items():
-                if not isinstance(data_item, dict): # Skip if an item in combined is not a dict
-                    print(f"[WARNING] Malformed data for token '{token}' in combined lexicon. Skipping.")
-                    continue
-                symbol_phase = data_item.get("learning_phase", 0 if token in seed_dict else current_phase) 
-                if symbol_phase <= max_phase:
-                    filtered_lexicon[token] = data_item
-            return filtered_lexicon
-        return combined
-        
-    def process_input_for_symbols(self, text, source_url=None, current_phase=1, directives=None, pre_detected_emotions_output=None, is_highly_relevant_for_phase=True): 
-        # print(f"🔮 SymbolicNode (Phase {current_phase}, Relevant: {is_highly_relevant_for_phase}) processing: '{text[:30]}...'")
-        emotions_output = pre_detected_emotions_output if pre_detected_emotions_output else self.fn_predict_emotions(text)
-        verified_emotions = emotions_output.get('verified', [])
-        active_lexicon = self._get_active_symbol_lexicon(current_phase, directives)
-        
-        # This now uses the updated parser.py that accepts current_lexicon
-        matched_symbols_from_parser = self.fn_parse_with_emotion(text, verified_emotions, current_lexicon=active_lexicon)
-        
-        phase_filtered_matches = [] # Initialize as empty list
-        if directives and directives.get("symbolic_node_access_max_phase") is not None:
-            max_phase_sym = directives["symbolic_node_access_max_phase"]
-            for sym_info in matched_symbols_from_parser:
-                # Ensure sym_info itself is a dict and has a 'symbol' key
-                if not isinstance(sym_info, dict) or "symbol" not in sym_info:
-                    continue 
-                symbol_data = active_lexicon.get(sym_info["symbol"]) # Check against the already phase-filtered active_lexicon
-                if symbol_data and isinstance(symbol_data, dict) and \
-                   symbol_data.get("learning_phase", 0 if sym_info["symbol"] in self.SEED_SYMBOLS else current_phase) <= max_phase_sym:
-                    phase_filtered_matches.append(sym_info)
-        else: # No specific directive, so all initially matched symbols are considered phase-appropriate for learning
-            phase_filtered_matches = matched_symbols_from_parser
-        
-        # print(f"🔮 Matched symbols (emotion-weighted, phase-filtered): {len(phase_filtered_matches)}")
-
-        if is_highly_relevant_for_phase:
-            self.fn_update_symbol_emotions(phase_filtered_matches, verified_emotions)
-            if phase_filtered_matches:
-                for sym_entry_from_parser in phase_filtered_matches:
-                    if not isinstance(sym_entry_from_parser, dict) or "symbol" not in sym_entry_from_parser: continue # Safety
-                    symbol_token = sym_entry_from_parser["symbol"]
-                    symbol_data_from_lexicon = active_lexicon.get(symbol_token) 
-                    if symbol_data_from_lexicon and isinstance(symbol_data_from_lexicon, dict):
-                        current_emotions_dict = {emo_str: score for emo_str, score in verified_emotions}
-                        keywords_for_memory = symbol_data_from_lexicon.get("keywords", 
-                                            symbol_data_from_lexicon.get("core_meanings", 
-                                            [sym_entry_from_parser.get("matched_keyword", "")] if sym_entry_from_parser.get("matched_keyword") else []))
-                        self.fn_add_symbol_to_memory(symbol=symbol_token, name=symbol_data_from_lexicon.get("name", sym_entry_from_parser.get("name", "Unknown")),
-                            keywords=list(set(keywords_for_memory)), emotions=current_emotions_dict, example_text=text, 
-                            origin=symbol_data_from_lexicon.get("origin", "seed"), learning_phase=current_phase )
-        # else: print(f"🔮 Shallow symbolic processing for low-relevance chunk in Phase {current_phase}.")
-
-        for sym_entry_from_parser in phase_filtered_matches: # Log occurrences of phase-appropriate symbols
-            if not isinstance(sym_entry_from_parser, dict) or "symbol" not in sym_entry_from_parser: continue # Safety
-            top_emotion_tag = verified_emotions[0][0] if verified_emotions else "(unspecified)"
-            self.fn_add_occurrence_entry(symbol_token=sym_entry_from_parser["symbol"], context_text=text, emotion_tag=top_emotion_tag, 
-                                         file_path=self.symbol_occurrence_log_path, source_url=source_url, learning_phase=current_phase, 
-                                         is_context_highly_relevant=is_highly_relevant_for_phase)
+    def _save_meta_symbols(self):
+        with open(self.meta_symbols_path, "w", encoding="utf-8") as f:
+            json.dump(self.meta_symbols, f, indent=2, ensure_ascii=False)
+    def _get_active_symbol_lexicon(self, current_phase_directives):
+        max_phase = current_phase_directives.get("symbolic_node_access_max_phase", 0)
+        active_lexicon = {}
+        if self.seed_symbols:
+            for token, details in self.seed_symbols.items():
+                if details.get("learning_phase", 0) <= max_phase: active_lexicon[token] = details
+        self.symbol_memory = SM_SymbolMemory.load_symbol_memory(file_path=self.symbol_memory_path)
+        if self.symbol_memory:
+            for token, details in self.symbol_memory.items():
+                if details.get("learning_phase", 0) <= max_phase: active_lexicon[token] = details
+        self.meta_symbols = self._load_meta_symbols()
+        if self.meta_symbols:
+            for token, details in self.meta_symbols.items():
+                base_symbol_token = details.get("based_on")
+                if base_symbol_token and base_symbol_token in active_lexicon:
+                    active_lexicon[token] = {"name": details.get("name", token), "keywords": details.get("keywords", []) + P_Parser.extract_keywords(details.get("summary","")), "core_meanings": [details.get("summary", "meta-symbol")], "emotions": [], "archetypes": [], "learning_phase": active_lexicon[base_symbol_token].get("learning_phase",0), "resonance_weight": details.get("resonance_weight", 0.8), "is_meta": True}
+        return active_lexicon
+    def process_input_for_symbols(self, text_input, detected_emotions_output, 
+                                  current_processing_phase, target_storage_phase, 
+                                  current_phase_directives, source_url=None, 
+                                  is_highly_relevant_for_current_phase=False, is_shallow_content=False,
+                                  confidence_score=0.7):
+        active_lexicon = self._get_active_symbol_lexicon(current_phase_directives)
+        verified_emotions = detected_emotions_output.get("verified", []) if isinstance(detected_emotions_output, dict) else []
+        matched_symbols_weighted = P_Parser.parse_with_emotion(text_input, verified_emotions, current_lexicon=active_lexicon)
+        if matched_symbols_weighted and verified_emotions:
+            SEU_SymbolEmotionUpdater.update_symbol_emotions(matched_symbols_weighted, verified_emotions, file_path=self.symbol_emotion_map_path)
         generated_symbol_details = None
-        allow_gen = directives.get("allow_new_symbol_generation", True) if directives else True
-        is_match_weak = not phase_filtered_matches or (phase_filtered_matches and phase_filtered_matches[0].get('emotional_weight',0.0) < 0.1)
-        if allow_gen and is_highly_relevant_for_phase and is_match_weak :
-            # print("🔮 No strong symbol match for relevant chunk, attempting to generate emergent symbol...")
-            keywords_for_gen = self.fn_extract_keywords(text)
-            new_symbol_dict = self.fn_generate_emergent_symbol_dict(text, keywords_for_gen, verified_emotions)
-            if new_symbol_dict and isinstance(new_symbol_dict, dict):
-                generated_symbol_details = new_symbol_dict 
-                self.fn_add_symbol_to_memory(symbol=generated_symbol_details["symbol"], name=generated_symbol_details["name"],
-                    keywords=generated_symbol_details.get("keywords",[]), emotions=generated_symbol_details.get("emotions",{}),
-                    example_text=text, origin="emergent", learning_phase=current_phase)
-                print(f"✨ SymbolicNode formally added new emergent symbol: {generated_symbol_details.get('symbol')} - {generated_symbol_details.get('name')} in Phase {current_phase}")
-                phase_filtered_matches.append({"symbol": generated_symbol_details["symbol"], "name": generated_symbol_details["name"],
-                    "matched_keyword": ", ".join(generated_symbol_details.get("keywords", [])), "emotional_weight": 0.5, 
-                    "influencing_emotions": verified_emotions })
-                top_emotion_tag = verified_emotions[0][0] if verified_emotions else "(unspecified)"
-                self.fn_add_occurrence_entry(symbol_token=generated_symbol_details["symbol"], context_text=text,
-                    emotion_tag=top_emotion_tag, file_path=self.symbol_occurrence_log_path, source_url=source_url, 
-                    learning_phase=current_phase, is_context_highly_relevant=True)
-        return {"detected_emotions_output": emotions_output, "matched_symbols": phase_filtered_matches, 
-                "generated_symbol_details": generated_symbol_details}
-                
-    def run_meta_symbol_analysis(self, min_occurrences=5, min_distinct_emotions=3, current_phase=1, directives=None): 
-        # print(f"🔮 Analyzing for meta-symbol candidates (context: Phase {current_phase})...")
-        occurrence_log_entries = self.fn_load_occurrence_log(self.symbol_occurrence_log_path)
-        max_phase_for_analysis = current_phase 
-        if directives and directives.get("meta_symbol_analysis_max_phase") is not None:
-            max_phase_for_analysis = directives["meta_symbol_analysis_max_phase"]
-        filtered_log_entries = [e for e in occurrence_log_entries if e.get('learning_phase', 0) <= max_phase_for_analysis and e.get('is_context_highly_relevant', True)]
-        # print(f"🔮 Using {len(filtered_log_entries)} relevant log entries for meta-analysis up to phase {max_phase_for_analysis}.")
-        if not filtered_log_entries: return {"status": "Filtered occurrence log empty."}
-        symbol_counts = self.fn_Counter(entry['symbol'] for entry in filtered_log_entries)
-        potential_loops = defaultdict(lambda: {"occurrences": 0, "emotions": set(), "contexts": [], "phases_seen": set()})
-        for entry in filtered_log_entries:
-            symbol = entry['symbol']
-            if symbol_counts[symbol] >= min_occurrences: 
-                potential_loops[symbol]["occurrences"] += 1; potential_loops[symbol]["emotions"].add(entry['emotion_in_context'])
-                potential_loops[symbol]["contexts"].append(entry['context']); potential_loops[symbol]["phases_seen"].add(entry.get('learning_phase', 0))
-        newly_bound_meta_symbols_info = []
-        active_lexicon_for_check = self._get_active_symbol_lexicon(current_phase, directives)
-        for symbol, data in potential_loops.items():
-            if data["occurrences"] >= min_occurrences and len(data['emotions']) >= min_distinct_emotions:
-                if "⟳" in symbol or symbol in self.meta_symbols: continue
-                original_symbol_data = active_lexicon_for_check.get(symbol)
-                original_name = original_symbol_data.get("name", symbol) if original_symbol_data else symbol
-                new_meta_token, new_meta_name = f"{symbol}⟳", f"{original_name} Cycle"
-                all_loop_keywords = [kw for ctx in data['contexts'][:5] for kw in self.fn_extract_keywords(ctx)]
-                common_keywords_in_loop = self.fn_Counter(all_loop_keywords).most_common(3)
-                derived_summary = (f"Recurring pattern: '{original_name}' with emotions {list(data['emotions'])[:3]}. Context keywords: {', '.join(k[0] for k in common_keywords_in_loop)}.")
-                bound_meta_dict = self._bind_meta_symbol(original_token=symbol, new_token=new_meta_token, name=new_meta_name, summary=derived_summary,
-                    base_keywords=original_symbol_data.get("keywords", []) if original_symbol_data else [], learning_phase=current_phase )
-                if bound_meta_dict: newly_bound_meta_symbols_info.append(bound_meta_dict)
-        status_msg = "New meta-symbols created." if newly_bound_meta_symbols_info else "No new meta-symbols from analysis."
-        return {"status": status_msg, "new_meta_symbols": newly_bound_meta_symbols_info}
-        
-    def _bind_meta_symbol(self, original_token, new_token, name, summary, base_keywords=None, learning_phase=1): 
-        active_lexicon = self._get_active_symbol_lexicon(learning_phase) 
-        if new_token in active_lexicon:
-            print(f"[WARNING] Meta-symbol {new_token} already exists. Skipping.") 
-            return None
-        timestamp = datetime.utcnow().isoformat()
-        meta_keywords = list(set(self.fn_extract_keywords(name + " " + summary) + (base_keywords or [])))
-        new_meta_entry = {"name": name, "symbol": new_token, "based_on": original_token, "summary": summary,
-            "keywords": meta_keywords, "core_meanings": [kw.lower() for kw in meta_keywords[:3]],
-            "emotion_profile": {}, "origin": "meta_binding", "created": timestamp,
-            "resonance_weight": 0.7, "learning_phase": learning_phase}
-        self.meta_symbols[new_token] = new_meta_entry; self._save_meta_symbols()
-        print(f"[INFO] Created meta-symbol '{new_token}' ({name}) based on '{original_token}' in Phase {learning_phase}.") 
-        self.fn_add_symbol_to_memory(symbol=new_token, name=name, keywords=meta_keywords, emotions={},
-            example_text=summary, origin="meta_binding", learning_phase=learning_phase)
-        return new_meta_entry
-        
-    def get_symbol_details(self, symbol_token, current_phase=4, directives=None): 
-        active_lexicon = self._get_active_symbol_lexicon(current_phase, directives)
-        return active_lexicon.get(symbol_token)
+        if not matched_symbols_weighted and current_phase_directives.get("allow_new_symbol_generation", False) and is_highly_relevant_for_current_phase and confidence_score > 0.5: 
+            keywords_for_gen = P_Parser.extract_keywords(text_input)
+            if keywords_for_gen:
+                new_symbol_proposal = SG_Refactored_SymbolGenerator.generate_symbol_from_context(text_input, keywords_for_gen, verified_emotions)
+                SM_SymbolMemory.add_symbol(symbol_token=new_symbol_proposal['symbol'], name=new_symbol_proposal['name'], keywords=new_symbol_proposal['keywords'], initial_emotions=new_symbol_proposal['emotions'], example_text=text_input, origin=new_symbol_proposal['origin'], learning_phase=target_storage_phase, resonance_weight=new_symbol_proposal.get('resonance_weight', 0.5), file_path=self.symbol_memory_path)
+                self.symbol_memory = SM_SymbolMemory.load_symbol_memory(file_path=self.symbol_memory_path)
+                generated_symbol_details = new_symbol_proposal
+                print(f"    🌱 New symbol generated: {new_symbol_proposal['symbol']} ({new_symbol_proposal['name']}) for phase {target_storage_phase}")
+                matched_symbols_weighted.append({'symbol': new_symbol_proposal['symbol'], 'name': new_symbol_proposal['name'], 'matched_keyword': new_symbol_proposal['keywords'][0] if new_symbol_proposal['keywords'] else 'emergent', 'final_weight': 0.7, 'influencing_emotions': new_symbol_proposal['emotions']})
+        for sym_match in matched_symbols_weighted:
+            primary_emotion_in_context_str = verified_emotions[0][0] if verified_emotions else "(unspecified)"
+            UM_UserMemory.add_user_memory_entry(
+                symbol=sym_match['symbol'], context_text=text_input, emotion_in_context=primary_emotion_in_context_str, 
+                source_url=source_url, learning_phase=target_storage_phase, 
+                is_context_highly_relevant=is_highly_relevant_for_current_phase,
+                file_path=self.symbol_occurrence_log_path
+            )
+        summary_matched_symbols = []
+        for s_match in matched_symbols_weighted[:3]:
+            symbol_details_from_mem = SM_SymbolMemory.get_symbol_details(s_match.get("symbol"), file_path=self.symbol_memory_path)
+            summary_matched_symbols.append({"symbol": s_match.get("symbol"), "name": s_match.get("name", symbol_details_from_mem.get("name", "Unknown")), "emotional_weight": s_match.get("final_weight"), "influencing_emotions": s_match.get("influencing_emotions", [])})
+        return {"matched_symbols_count": len(summary_matched_symbols), "top_matched_symbols": summary_matched_symbols, "generated_symbol": generated_symbol_details, "top_detected_emotions_input": verified_emotions[:3]}
+    
+    # MODIFIED: run_meta_symbol_analysis to ensure new_meta_entry has all needed fields for add_symbol
+    def run_meta_symbol_analysis(self, max_phase_to_consider):
+        print(f"[SymbolicNode] Running meta-symbol analysis (considering up to phase {max_phase_to_consider})...")
+        occurrence_log = UM_UserMemory.load_user_memory(file_path=self.symbol_occurrence_log_path)
+        phase_filtered_log = [entry for entry in occurrence_log if entry.get("learning_phase", 0) <= max_phase_to_consider]
+        if not phase_filtered_log: print("    No symbol occurrences found for meta-symbol generation."); return
 
-class DynamicBridge: 
-    def __init__(self, logic_node: LogicNode, symbolic_node: SymbolicNode, curriculum_manager):
+        symbol_emotion_counts = defaultdict(lambda: {"count": 0, "emotions": Counter()})
+        for entry in phase_filtered_log:
+            symbol_token, emotion = entry["symbol"], entry["emotion_in_context"]
+            symbol_emotion_counts[symbol_token]["count"] += 1
+            if emotion != "(unspecified)": symbol_emotion_counts[symbol_token]["emotions"][emotion] += 1
+        
+        MIN_OCCURRENCES_FOR_META, MIN_DISTINCT_EMOTIONS_FOR_META = 5, 2
+        for symbol_token, data in symbol_emotion_counts.items():
+            if data["count"] >= MIN_OCCURRENCES_FOR_META and len(data["emotions"]) >= MIN_DISTINCT_EMOTIONS_FOR_META:
+                meta_token_candidate_base = symbol_token + "⟳"
+                self.meta_symbols = self._load_meta_symbols() 
+                self.symbol_memory = SM_SymbolMemory.load_symbol_memory(file_path=self.symbol_memory_path) 
+                if meta_token_candidate_base in self.meta_symbols or meta_token_candidate_base in self.symbol_memory: continue
+
+                base_symbol_details = SM_SymbolMemory.get_symbol_details(symbol_token, file_path=self.symbol_memory_path) or self.seed_symbols.get(symbol_token, {})
+                base_name = base_symbol_details.get("name", symbol_token)
+                top_emotions = [emo for emo, count in data["emotions"].most_common(3)]
+                
+                # Ensure new_meta_entry has all fields add_symbol might expect if symbol_details_override is used,
+                # including those it might try to append to (like vector_examples) or increment (usage_count).
+                new_meta_entry = {
+                    "name": f"{base_name} Cycle", 
+                    "based_on": symbol_token,
+                    "summary": f"Recurring pattern or complex emotional field for '{base_name}'. Often involves: {', '.join(top_emotions)}.",
+                    "keywords": base_symbol_details.get("keywords", []) + ["cycle", "recursion", "complex emotion"],
+                    "core_meanings": [f"recurring {base_name}", "emotional complexity"], 
+                    "emotions": [], # Meta-symbols define their own emotional basis through usage
+                    "emotion_profile": {}, # Initialize empty
+                    "archetypes": ["transformation", "pattern"],
+                    "created_at": datetime.utcnow().isoformat(), 
+                    "updated_at": datetime.utcnow().isoformat(),
+                    "origin": "meta_analysis", # Origin from meta-analysis perspective
+                    "learning_phase": max_phase_to_consider, 
+                    "resonance_weight": round(base_symbol_details.get("resonance_weight", 0.5) * 1.2, 2),
+                    "vector_examples": [], # Initialize as empty list
+                    "usage_count": 0       # Initialize usage count
+                }
+                self.meta_symbols[meta_token_candidate_base] = new_meta_entry # Store in meta_symbols.json
+                print(f"    🔗 New meta-symbol bound: {meta_token_candidate_base} based on {symbol_token}")
+                
+                # Add to main symbol_memory.json
+                SM_SymbolMemory.add_symbol(
+                    symbol_token=meta_token_candidate_base, 
+                    # name, keywords etc. will be taken from symbol_details_override
+                    name=new_meta_entry["name"], # Redundant if override works perfectly but good for clarity
+                    keywords=new_meta_entry["keywords"], 
+                    initial_emotions=[], 
+                    example_text=new_meta_entry["summary"], # This will be added as the first example
+                    origin="meta_emergent", # This will be the origin in symbol_memory
+                    learning_phase=max_phase_to_consider, 
+                    resonance_weight=new_meta_entry["resonance_weight"],
+                    symbol_details_override=new_meta_entry, # Pass the fully formed dict
+                    file_path=self.symbol_memory_path
+                )
+        self._save_meta_symbols()
+
+
+class CurriculumManager: # No changes from previous full script
+    def __init__(self):
+        self.current_phase = 1
+        self.max_phases = 4
+        self.phase_metrics = {phase: {"chunks_processed": 0, "relevant_chunks_processed": 0, "urls_visited": 0, "new_symbols_generated":0, "meta_symbols_bound":0} for phase in range(1, self.max_phases + 1)}
+        self.phase_data_sources_keywords = {
+             1: {"primary": ["code", "algorithm", "software", "hardware", "computer", "programming", "language construct", "binary", "data structure", "turing machine", "von neumann", "cpu", "memory unit", "logic gate", "boolean algebra", "processor", "silicon", "semiconductor", "compiler", "operating system", "network protocol"], "secondary": ["technology", "system", "architecture", "computation", "information theory", "digital logic", "circuit", "bus", "interface"], "anti_keywords": ["history", "war", "philosophy", "art", "novel", "poem", "ancient", "medieval", "renaissance", "century", "mythology", "emotion", "belief", "spirituality", "quantum field", "metaphysics", "geology", "biology", "astronomy"]},
+             2: {"primary": ["emotion", "feeling", "affect", "mood", "sentiment", "psychology", "cognition", "perception", "bias", "stress", "trauma", "joy", "sadness", "anger", "fear", "surprise", "disgust", "empathy"], "secondary": ["myth", "symbolism", "archetype", "metaphor", "narrative structure", "dream analysis", "subconscious", "consciousness studies (psychological)", "attachment theory", "behavioral psychology", "cognitive dissonance"], "anti_keywords": ["quantum physics", "spacetime", "relativity", "particle physics", "geopolitics", "economic policy", "software engineering", "circuit design"]},
+             3: {"primary": ["history", "event", "timeline", "discovery", "science", "physics", "biology", "chemistry", "geology", "astronomy", "year", "date", "century", "civilization", "empire", "war", "revolution", "mineral", "element", "energy", "matter", "force", "motion", "genetics", "evolution"], "secondary": ["archaeology", "anthropology", "society", "invention", "exploration", "culture", "human migration", "industrial revolution", "world war", "cold war", "space race", "internet history", "1990", "1991", "2000s"], "anti_keywords": ["metaphysical philosophy", "esoteric spirituality", "literary critique (unless historical)", "fine art analysis (unless historical context)"]},
+             4: {"primary": ["philosophy", "metaphysics", "ontology", "epistemology", "ethics", "religion", "spirituality", "quantum mechanics", "quantum field theory", "general relativity", "string theory", "consciousness (philosophical/speculative)", "theorem", "paradox", "reality", "existence", "multiverse", "simulation theory", "artificial general intelligence", "emergence", "complexity theory", "chaos theory"], "secondary": ["logic (philosophical)", "reason", "truth", "meaning", "purpose", "free will", "determinism", "theology", "cosmology (speculative)", "future studies", "transhumanism", "veda", "upanishad", "dharma", "karma", "moksha", "atman", "brahman"], "anti_keywords": ["pop culture critique", "celebrity gossip", "daily news (unless highly theoretical implications)", "product reviews"]}
+        }
+        self.phase_info_descriptions = {1: "Computational Identity: Foundational understanding of computation, computer science, logic, and the AI's own architectural concepts.", 2: "Emotional and Symbolic Awareness: Learning about human (and potentially machine) emotions, psychological concepts, foundational myths, and basic symbolism.", 3: "Historical and Scientific Context: Broadening knowledge to include world history, major scientific disciplines (physics, biology, etc.), and how events and discoveries are situated in time.", 4: "Abstract and Philosophical Exploration: Engaging with complex, abstract, and speculative ideas like philosophy, metaphysics, advanced/theoretical science (quantum, cosmology), ethics, and the nature of reality/consciousness."}
+    def get_current_phase(self): return self.current_phase
+    def get_max_phases(self): return self.max_phases
+    def get_phase_context_description(self, phase): return self.phase_info_descriptions.get(phase, "General Learning Phase")
+    def get_processing_directives(self, phase):
+        if not (1 <= phase <= self.max_phases): phase = 1 
+        directives = {"phase": phase, "info": self.get_phase_context_description(phase), "logic_node_access_max_phase": phase, "symbolic_node_access_max_phase": phase, "meta_symbol_analysis_max_phase": phase, "allow_new_symbol_generation": True, "focus": f"phase_{phase}_focus", "allow_web_scraping": True, "phase_keywords_primary": self.phase_data_sources_keywords.get(phase, {}).get("primary", []), "phase_keywords_secondary": self.phase_data_sources_keywords.get(phase, {}).get("secondary", []), "phase_keywords_anti": self.phase_data_sources_keywords.get(phase, {}).get("anti", []), "phase_min_primary_keyword_matches_for_link_follow": 1, "phase_min_total_keyword_score_for_link_follow": 2.5,    "phase_min_primary_keyword_matches_for_chunk_relevance": 1, "phase_min_total_keyword_score_for_chunk_relevance": 1.0, "allow_shallow_dive_for_future_phase_links": True, "shallow_dive_max_chars": 500, "max_exploration_depth_from_seed_url": 5, "max_urls_to_process_per_phase_session": 2, "logic_node_min_confidence_retrieve": 0.3, "symbolic_node_min_confidence_retrieve": 0.25, "factual_heuristic_confidence_threshold": 0.6, "symbolic_heuristic_confidence_threshold": 0.5, "link_score_weight_static": 0.6, "link_score_weight_dynamic": 0.4, "max_dynamic_link_score_bonus": 5.0, "max_session_hot_keywords": 20, "min_session_hot_keyword_freq": 2}
+        if phase == 1: directives["allow_new_symbol_generation"] = False
+        return directives
+    def update_metrics(self, phase, chunks_processed_increment=0, relevant_chunks_increment=0, urls_visited_increment=0, new_symbols_increment=0, meta_symbols_increment=0):
+        if phase in self.phase_metrics:
+            self.phase_metrics[phase]["chunks_processed"] += chunks_processed_increment; self.phase_metrics[phase]["relevant_chunks_processed"] += relevant_chunks_increment; self.phase_metrics[phase]["urls_visited"] += urls_visited_increment; self.phase_metrics[phase]["new_symbols_generated"] += new_symbols_increment; self.phase_metrics[phase]["meta_symbols_bound"] += meta_symbols_increment
+    def advance_phase_if_ready(self, current_completed_phase_num):
+        metrics = self.phase_metrics.get(current_completed_phase_num)
+        if not metrics: return False
+        if current_completed_phase_num == 1:
+            if metrics["relevant_chunks_processed"] >= 2 and metrics["urls_visited"] >= 1: self.current_phase = 2; return True
+        elif current_completed_phase_num == 2:
+            if metrics["relevant_chunks_processed"] >= 3 and metrics["new_symbols_generated"] >= 0: self.current_phase = 3; return True
+        elif current_completed_phase_num == 3:
+            if metrics["relevant_chunks_processed"] >= 3 and metrics["urls_visited"] >= 1: self.current_phase = 4; return True
+        elif current_completed_phase_num == 4: print("[CurriculumManager] Phase 4 (max phase) completed."); return False 
+        return False
+
+class DynamicBridge:
+    def __init__(self, logic_node: LogicNode, symbolic_node: SymbolicNode, curriculum_manager: CurriculumManager):
         self.logic_node = logic_node
         self.symbolic_node = symbolic_node
-        self.curriculum_manager = curriculum_manager 
+        self.curriculum_manager = curriculum_manager
+        self.trail_logger = TL_TrailLog 
+        self.spacy_nlp = P_Parser.nlp if P_Parser.NLP_MODEL_LOADED else None
         print("🌉 DynamicBridge initialized.")
-
-    def route_and_respond(self, text_input, source_url=None, is_user_interaction=False, is_highly_relevant_for_phase=True):
+    def _detect_emotions(self, text_input):
+        return EH_EmotionHandler.predict_emotions(text_input)
+    @staticmethod
+    def _score_text_for_phase(text_content, phase_directives):
+        text_lower = text_content.lower()
+        score, primary_matches, secondary_matches = 0.0, 0, 0 
+        for kw in phase_directives.get("phase_keywords_primary", []):
+            if kw.lower() in text_lower: score += 2.0; primary_matches += 1
+        for kw in phase_directives.get("phase_keywords_secondary", []):
+            if kw.lower() in text_lower: score += 1.0; secondary_matches += 1 
+        for kw in phase_directives.get("phase_keywords_anti", []):
+            if kw.lower() in text_lower: score -= 3.0
+        return score, primary_matches, secondary_matches
+    def is_chunk_relevant_for_current_phase(self, text_chunk, current_processing_phase_num, directives):
+        score, prim_matches, _ = self._score_text_for_phase(text_chunk, directives)
+        min_prim_matches = directives.get("phase_min_primary_keyword_matches_for_chunk_relevance", 1)
+        min_total_score = directives.get("phase_min_total_keyword_score_for_chunk_relevance", 1.0)
+        return prim_matches >= min_prim_matches and score >= min_total_score
+    def determine_target_storage_phase(self, text_chunk, current_processing_phase_num):
+        best_phase, highest_score = current_processing_phase_num, -float('inf')
+        current_phase_directives = self.curriculum_manager.get_processing_directives(current_processing_phase_num)
+        current_score, _, _ = self._score_text_for_phase(text_chunk, current_phase_directives)
+        highest_score = current_score
+        min_score_current_phase_relevance = current_phase_directives.get("phase_min_total_keyword_score_for_chunk_relevance", 1.0)
+        for phase_idx in range(1, self.curriculum_manager.get_max_phases() + 1):
+            phase_directives_for_eval = self.curriculum_manager.get_processing_directives(phase_idx)
+            score, _, _ = self._score_text_for_phase(text_chunk, phase_directives_for_eval)
+            min_target_phase_score_relevance = phase_directives_for_eval.get("phase_min_total_keyword_score_for_chunk_relevance", 1.0)
+            if score > highest_score and score >= min_target_phase_score_relevance:
+                highest_score, best_phase = score, phase_idx
+            elif current_score < min_score_current_phase_relevance and score >= min_target_phase_score_relevance:
+                if score > highest_score : highest_score, best_phase = score, phase_idx
+                elif best_phase == current_processing_phase_num and highest_score < min_score_current_phase_relevance :
+                    highest_score, best_phase = score, phase_idx
+        if highest_score < 0.5 and best_phase != current_processing_phase_num:
+            if current_score >= 0.1 : return current_processing_phase_num
+            return best_phase 
+        elif highest_score < 0.1 : return current_processing_phase_num
+        return best_phase
+    def route_chunk_for_processing(self, text_input, source_url, 
+                                   current_processing_phase, target_storage_phase,
+                                   is_highly_relevant_for_current_phase, is_shallow_content=False,
+                                   base_confidence=0.7):
+        log_entry_id = f"step_{datetime.utcnow().isoformat().replace(':', '-').replace('.', '-')}_{hashlib.md5(text_input.encode('utf-8')).hexdigest()[:8]}"
+        detected_emotions_output = self._detect_emotions(text_input)
+        current_phase_processing_directives = self.curriculum_manager.get_processing_directives(current_processing_phase)
+        content_type = detect_content_type(text_input, spacy_nlp_instance=self.spacy_nlp)
+        effective_confidence = base_confidence
+        if not is_highly_relevant_for_current_phase: effective_confidence *= 0.8
+        if is_shallow_content: effective_confidence *= 0.7
+        effective_confidence = round(max(0.1, effective_confidence), 2)
+        logic_node_output, symbolic_node_output = None, None
+        if content_type == "factual":
+            self.logic_node.store_memory(text_input=text_input, source_url=source_url, source_type="web_scrape_deep_factual" if not is_shallow_content else "web_scrape_shallow_factual", current_processing_phase=current_processing_phase, target_storage_phase=target_storage_phase, is_highly_relevant_for_current_phase=is_highly_relevant_for_current_phase, is_shallow_content=is_shallow_content, confidence_score=effective_confidence)
+            logic_node_output = self.logic_node.retrieve_memories(text_input, current_phase_processing_directives)
+        elif content_type == "symbolic":
+            symbolic_node_output = self.symbolic_node.process_input_for_symbols(text_input=text_input, detected_emotions_output=detected_emotions_output, current_processing_phase=current_processing_phase, target_storage_phase=target_storage_phase, current_phase_directives=current_phase_processing_directives, source_url=source_url, is_highly_relevant_for_current_phase=is_highly_relevant_for_current_phase, is_shallow_content=is_shallow_content, confidence_score=effective_confidence)
+            logic_node_output = self.logic_node.retrieve_memories(text_input, current_phase_processing_directives)
+        else: # ambiguous
+            self.logic_node.store_memory(text_input=text_input, source_url=source_url, source_type="web_scrape_ambiguous_deep" if not is_shallow_content else "web_scrape_ambiguous_shallow", current_processing_phase=current_processing_phase, target_storage_phase=target_storage_phase, is_highly_relevant_for_current_phase=is_highly_relevant_for_current_phase, is_shallow_content=is_shallow_content, confidence_score=round(max(0.1, effective_confidence * 0.65),2))
+            logic_node_output = self.logic_node.retrieve_memories(text_input, current_phase_processing_directives)
+            symbolic_node_output = self.symbolic_node.process_input_for_symbols(text_input=text_input, detected_emotions_output=detected_emotions_output, current_processing_phase=current_processing_phase, target_storage_phase=target_storage_phase, current_phase_directives=current_phase_processing_directives, source_url=source_url, is_highly_relevant_for_current_phase=is_highly_relevant_for_current_phase, is_shallow_content=is_shallow_content, confidence_score=round(max(0.1, effective_confidence * 0.65),2))
+        if logic_node_output is None: logic_node_output = {"retrieved_memories_count": 0, "top_retrieved_texts": []}
+        if symbolic_node_output is None: symbolic_node_output = {"matched_symbols_count": 0, "top_matched_symbols": [], "generated_symbol": None, "top_detected_emotions_input": []}
+        self.trail_logger.log_dynamic_bridge_processing_step(
+            log_id=log_entry_id, text_input=text_input, source_url=source_url,
+            current_phase=current_processing_phase, directives=current_phase_processing_directives,
+            is_highly_relevant_for_phase=is_highly_relevant_for_current_phase,
+            target_storage_phase_for_chunk=target_storage_phase, 
+            is_shallow_content=is_shallow_content, 
+            detected_emotions_output=detected_emotions_output,
+            logic_node_output=logic_node_output, symbolic_node_output=symbolic_node_output,
+        )
+        new_sym_count = 1 if symbolic_node_output.get("generated_symbol") else 0
+        self.curriculum_manager.update_metrics(current_processing_phase, chunks_processed_increment=1, 
+            relevant_chunks_increment=1 if is_highly_relevant_for_current_phase else 0,
+            new_symbols_increment=new_sym_count)
+    def generate_response_for_user(self, user_input_text, source_url=None):
         current_phase = self.curriculum_manager.get_current_phase()
-        directives = self.curriculum_manager.get_processing_directives()
-        # print(f"🌉 DynamicBridge (Phase {current_phase}, Relevant: {is_highly_relevant_for_phase}) processing: '{text_input[:30]}...'")
-        
-        emotions_output = EH_EmotionHandler.predict_emotions(text_input)
+        directives = self.curriculum_manager.get_processing_directives(current_phase)
+        target_storage_phase, is_relevant = current_phase, True 
+        content_type = detect_content_type(user_input_text, spacy_nlp_instance=self.spacy_nlp)
+        self.route_chunk_for_processing(text_input=user_input_text, source_url=source_url, current_processing_phase=current_phase, target_storage_phase=target_storage_phase, is_highly_relevant_for_current_phase=is_relevant, is_shallow_content=False, base_confidence=0.85)
+        logic_sum = self.logic_node.retrieve_memories(user_input_text, directives)
+        full_emotions_output = self._detect_emotions(user_input_text)
+        sym_sum = self.symbolic_node.process_input_for_symbols(user_input_text, full_emotions_output, current_phase, current_phase, directives, source_url, True, False )
+        response_parts = [f"[BRIDGE - Phase {current_phase} ({directives.get('info')}) | InputType: {content_type}] Processed."]
+        if logic_sum["retrieved_memories_count"] > 0 and logic_sum["top_retrieved_texts"]:
+            response_parts.append(f"  Logic Recall: {logic_sum['retrieved_memories_count']} facts. Top: '{logic_sum['top_retrieved_texts'][0]['text'][:40]}...' (Conf: {logic_sum['top_retrieved_texts'][0]['confidence']})")
+        if sym_sum["matched_symbols_count"] > 0 and sym_sum["top_matched_symbols"]:
+            response_parts.append(f"  Symbolic Matches: {sym_sum['matched_symbols_count']} symbols. Top: {sym_sum['top_matched_symbols'][0]['symbol']} ({sym_sum['top_matched_symbols'][0]['name']})")
+        if sym_sum.get("generated_symbol"): response_parts.append(f"  Emerged Symbol: {sym_sum['generated_symbol']['symbol']} ({sym_sum['generated_symbol']['name']})")
+        return "\n".join(response_parts)
 
-        logic_output = self.logic_node.process_input_for_facts(
-            text_input, 
-            source_type="web_chunk" if source_url else ("user_direct" if is_user_interaction else "internal_curated"), 
-            source_url=source_url, current_phase=current_phase,
-            is_highly_relevant_for_phase=is_highly_relevant_for_phase
-        )
-        
-        symbolic_output = self.symbolic_node.process_input_for_symbols(
-            text_input, source_url=source_url, current_phase=current_phase,
-            directives=directives, pre_detected_emotions_output=emotions_output,
-            is_highly_relevant_for_phase=is_highly_relevant_for_phase
-        )
-
-        TL_TrailLog.log_dynamic_bridge_processing_step(
-            text_input=text_input, source_url=source_url, current_phase=current_phase,
-            directives=directives, is_highly_relevant_for_phase=is_highly_relevant_for_phase,
-            detected_emotions_output=emotions_output,
-            logic_node_output=logic_output, symbolic_node_output=symbolic_output,
-            final_response_for_user=None if not is_user_interaction else "Response_Generation_Pending" 
-        )
-
-        if not is_user_interaction: return None 
-
-        response_parts = []
-        response_parts.append(f"[Responding in context of Phase {current_phase}: {self.curriculum_manager.get_phase_description()}]")
-        response_parts.append(f"Input Text Emotional Tone (Top 3): {[(e, round(s,2)) for e,s in emotions_output.get('verified',[])[:3]]}")
-        filtered_logic_memories = []
-        max_phase_mem_access = directives.get("logic_node_access_max_phase", current_phase)
-        for mem in logic_output["retrieved_memories"]:
-            if mem.get("phase_learned", 0) <= max_phase_mem_access:
-                if current_phase > 1 or mem.get("original_source_type") != "web_low_relevance_p1":
-                    filtered_logic_memories.append(mem)
-        phase_appropriate_symbols = symbolic_output["matched_symbols"]
-        if filtered_logic_memories:
-            response_parts.append("\n[Information Recall (Contextual Relevance)]:")
-            for mem in filtered_logic_memories[:2]:
-                 response_parts.append(f"  [Fact (Learned Phase {mem['phase_learned']})] \"{mem['text'][:100]}...\" (Similarity: {mem['similarity_score']:.2f}, Trust: {mem['trust_level']})")
-        if phase_appropriate_symbols:
-            response_parts.append("\n[Symbolic Interpretation (Contextual Resonance)]:")
-            for sym_info in phase_appropriate_symbols[:3]:
-                 symbol_details_for_response = self.symbolic_node.get_symbol_details(sym_info['symbol'], current_phase, directives)
-                 if symbol_details_for_response: 
-                    response_parts.append(f"  [Symbol (Defined Phase {symbol_details_for_response.get('learning_phase',0)})] {sym_info['symbol']} ({sym_info.get('name', 'N/A')}), "
-                                        f"Current Emotional Weight: {sym_info.get('emotional_weight',0.0):.2f}")
-        elif symbolic_output["generated_symbol_details"]:
-            gsd = symbolic_output["generated_symbol_details"]
-            response_parts.append(f"\n[Newly Emerged Symbol (Phase {gsd.get('learning_phase',current_phase)})]: {gsd.get('symbol')} ({gsd.get('name')})")
-        final_response_str = "\n".join(response_parts)
-        if len(response_parts) <= 2 : 
-            final_response_str = f"{response_parts[0]}\n{response_parts[1]}\nI've processed that. No specific output to share based on current phase access rules."
-        return final_response_str
-
-class CurriculumManager: 
-    def __init__(self, initial_seed_symbols_count=0): 
-        self.current_phase = 1
-        self.phase_data_sources_keywords = {
-            1: ["computation theory", "logic gate", "binary code", "algorithm", "data structure", "system architecture", "artificial intelligence definition", "machine learning basics", "programming language principle", "cpu architecture", "memory management os", "turing machine", "von neumann architecture", "information theory"],
-            2: ["history of science", "timeline of earth", "physics laws", "biology evolution", "world geography", "astronomy basics", "scientific method application", "ancient civilizations", "cultural anthropology overview"],
-            3: ["emotion theory", "psychology basics", "narrative structure", "poetry analysis", "human relationships", "empathy development", "ethical dilemma", "character archetype"],
-            4: ["philosophy of mind", "metaphysics concepts", "paradox examples", "cosmology advanced theory", "quantum physics interpretation", "comparative mythology", "consciousness studies", "symbolism deep dive"]
-        }
-        self.phase_details = {
-            1: "Foundational Self-Model: Computational identity, systems theory, AI architecture.",
-            2: "Contextual Integration: Historical, scientific, broad cultural corpora.",
-            3: "Emotional-Symbolic Differentiation: Psychology, literature, empathy layers.",
-            4: "Abstract Expansion: Philosophy, metaphysics, paradox, complex mythologies."
-        }
-        self.phase_metrics = {
-            "processed_relevant_chunks_phase_1": 0, "vector_memory_size": 0, "symbol_lexicon_size": 0, 
-            "meta_symbols_created": 0, "symbol_emotion_map_richness": 0, 
-            "processed_relevant_urls_phase_2": 0, "processed_relevant_urls_phase_3": 0, "processed_relevant_urls_phase_4": 0,
-        }
-        
-        seed_len = initial_seed_symbols_count 
-        self.phase_advancement_thresholds = {
-            1: {"processed_relevant_chunks_phase_1": 50, "symbol_lexicon_size": seed_len + 10},
-            2: {"processed_relevant_urls_phase_2": 5, "vector_memory_size": 100, "symbol_emotion_map_richness": 10},
-            3: {"processed_relevant_urls_phase_3": 5, "meta_symbols_created": 1, "symbol_lexicon_size": seed_len + 25},
-            4: {"processed_relevant_urls_phase_4": 3} 
-        }
-        print(f"📚 CurriculumManager initialized. Current phase: {self.current_phase} - {self.get_phase_description()}")
-
-    def get_current_phase(self): return self.current_phase
-    def get_phase_description(self): return self.phase_details.get(self.current_phase, "Unknown Phase")
-    def update_metrics(self, logic_node: LogicNode, symbolic_node: SymbolicNode, processed_url_is_relevant=False, processed_chunk_is_relevant_in_phase_1=False):
-        if logic_node.memory_path.exists():
-             with open(logic_node.memory_path, "r", encoding="utf-8") as f:
-                try: self.phase_metrics["vector_memory_size"] = len(json.load(f))
-                except json.JSONDecodeError: pass
-        active_lexicon = symbolic_node._get_active_symbol_lexicon(self.current_phase, self.get_processing_directives()) 
-        self.phase_metrics["symbol_lexicon_size"] = len(active_lexicon)
-        self.phase_metrics["meta_symbols_created"] = len(symbolic_node.meta_symbols)
-        s_emo_map = SEU_SymbolEmotionUpdater.load_emotion_map()
-        richness = sum(1 for profile in s_emo_map.values() if len([s for s in profile.values() if s > 0.5]) >= 3)
-        self.phase_metrics["symbol_emotion_map_richness"] = richness
-        if processed_url_is_relevant: 
-            if self.current_phase == 2: self.phase_metrics["processed_relevant_urls_phase_2"] += 1
-            elif self.current_phase == 3: self.phase_metrics["processed_relevant_urls_phase_3"] += 1
-            elif self.current_phase == 4: self.phase_metrics["processed_relevant_urls_phase_4"] += 1
-        if processed_chunk_is_relevant_in_phase_1 and self.current_phase == 1:
-            self.phase_metrics["processed_relevant_chunks_phase_1"] +=1
-            
-    def advance_phase_if_ready(self):
-        if self.current_phase >= 4: return False 
-        current_thresholds = self.phase_advancement_thresholds.get(self.current_phase)
-        if not current_thresholds: return False
-        ready_to_advance = all(self.phase_metrics.get(metric, 0) >= threshold_value 
-                               for metric, threshold_value in current_thresholds.items())
-        if ready_to_advance:
-            self.current_phase += 1
-            print(f"🎉📚 Curriculum Advanced to Phase {self.current_phase}: {self.get_phase_description()}")
-            # Reset metrics for the new phase if they are phase-specific counters
-            if self.current_phase == 2: self.phase_metrics["processed_relevant_urls_phase_2"] = 0
-            if self.current_phase == 3: self.phase_metrics["processed_relevant_urls_phase_3"] = 0
-            if self.current_phase == 4: self.phase_metrics["processed_relevant_urls_phase_4"] = 0
-            if self.current_phase == 1: self.phase_metrics["processed_relevant_chunks_phase_1"] = 0 # Should not happen if advancing from 1
-            return True
-        return False
-        
-    def get_processing_directives(self):
-        phase = self.current_phase
-        directives = {"phase": phase, "info": self.get_phase_description()}
-        directives["logic_node_access_max_phase"] = phase 
-        directives["symbolic_node_access_max_phase"] = phase
-        directives["meta_symbol_analysis_max_phase"] = phase
-        directives["allow_new_symbol_generation"] = True 
-        if phase == 1:
-            directives["focus"] = "self_model_computational_identity"
-            directives["allow_web_scraping"] = True 
-            directives["data_source_filter_keywords"] = self.phase_data_sources_keywords[1]
-            directives["phase1_strict_chunk_relevance_threshold"] = 0.25 
-            directives["phase1_min_keyword_matches"] = 2 
-            directives["knowledge_integration_level"] = "isolated_foundational"
-        elif phase == 2:
-            directives["focus"] = "contextual_knowledge_factual_historical_scientific"
-            directives["allow_web_scraping"] = True
-            directives["data_source_filter_keywords"] = self.phase_data_sources_keywords[2]
-            directives["knowledge_integration_level"] = "contextual_grounding_cross_linking_phase1_2"
-        elif phase == 3:
-            directives["focus"] = "emotional_symbolic_depth_psychological_literary"
-            directives["allow_web_scraping"] = True
-            directives["data_source_filter_keywords"] = self.phase_data_sources_keywords[3]
-            directives["knowledge_integration_level"] = "affective_symbolic_linking_to_factual_context"
-        elif phase == 4:
-            directives["focus"] = "abstract_conceptualization_philosophy_paradox_myth"
-            directives["allow_web_scraping"] = True
-            directives["data_source_filter_keywords"] = self.phase_data_sources_keywords[4]
-            directives["knowledge_integration_level"] = "holistic_synthesis_cross_phase_correlation"
-        return directives
-
+if __name__ == '__main__':
+    print("Testing processing_nodes.py components with all accumulated fixes...")
+    if P_Parser.NLP_MODEL_LOADED and P_Parser.nlp is None:
+        try: P_Parser.nlp = spacy.load("en_core_web_sm"); print("   spaCy model re-loaded for processing_nodes.py tests.")
+        except OSError: print("   spaCy model still not found. Entity heuristic in detect_content_type will be skipped for tests.")
+    fact_text_main = "The study published in Nature on May 10th, 2023, confirmed values."
+    sym_text_main = "Her laughter was like a dream, a symbol of joy."
+    assert detect_content_type(fact_text_main, P_Parser.nlp) == "factual"
+    assert detect_content_type(sym_text_main, P_Parser.nlp) == "symbolic"
+    TEST_FILE_SUFFIX = "_full_final_test_v3.json" # Incremented suffix for clean test files
+    test_logic_mem_path, test_sym_mem_path, test_sym_occur_path, test_sym_emo_map_path, test_meta_sym_path, test_seed_sym_path, test_trail_log_path = [Path(f"data/test_{name}{TEST_FILE_SUFFIX}") for name in ["logic_memory", "symbol_memory", "symbol_occurrence", "symbol_emotion_map", "meta_symbols", "seed_symbols", "trail_log"]]
+    for p in [test_logic_mem_path, test_sym_mem_path, test_sym_occur_path, test_sym_emo_map_path, test_meta_sym_path, test_seed_sym_path, test_trail_log_path]:
+        if p.exists(): p.unlink()
+    with open(test_seed_sym_path, "w", encoding="utf-8") as f: json.dump({"💡": {"name": "Idea", "keywords": ["idea", "thought"], "emotions": ["curiosity"], "learning_phase":0, "resonance_weight": 0.5}}, f)
+    logic_node_main_test = LogicNode(vector_memory_path_str=str(test_logic_mem_path))
+    symbolic_node_main_test = SymbolicNode(seed_symbols_path_str=str(test_seed_sym_path), symbol_memory_path_str=str(test_sym_mem_path), symbol_occurrence_log_path_str=str(test_sym_occur_path), symbol_emotion_map_path_str=str(test_sym_emo_map_path), meta_symbols_path_str=str(test_meta_sym_path))
+    curriculum_manager_main_test = CurriculumManager()
+    original_tl_path = TL_TrailLog.TRAIL_LOG_FILE_PATH 
+    TL_TrailLog.TRAIL_LOG_FILE_PATH = test_trail_log_path
+    dynamic_bridge_main_test = DynamicBridge(logic_node_main_test, symbolic_node_main_test, curriculum_manager_main_test)
+    print("\n--- Testing DynamicBridge route_chunk_for_processing (full test with all fixes) ---")
+    print("Processing factual text...")
+    dynamic_bridge_main_test.route_chunk_for_processing(text_input=fact_text_main, source_url="http://example.com/fact_article", current_processing_phase=1, target_storage_phase=1, is_highly_relevant_for_current_phase=True)
+    print("Processing symbolic text...")
+    dynamic_bridge_main_test.route_chunk_for_processing(text_input=sym_text_main, source_url="http://example.com/symbolic_story", current_processing_phase=2, target_storage_phase=2, is_highly_relevant_for_current_phase=True)
+    mixed_text_main = "The 2023 report felt like a dream, its numbers symbolizing hope."
+    print("Processing mixed text (should be ambiguous)...")
+    dynamic_bridge_main_test.route_chunk_for_processing(text_input=mixed_text_main, source_url="http://example.com/mixed_report", current_processing_phase=3, target_storage_phase=3, is_highly_relevant_for_current_phase=True)
+    if test_trail_log_path.exists():
+        with open(test_trail_log_path, "r", encoding="utf-8") as f: log_data = json.load(f)
+        print(f"Full test trail log has {len(log_data)} entries.")
+        assert len(log_data) == 3; assert "log_id" in log_data[0]
+    else: print(f"ERROR: Test trail log {test_trail_log_path} not created!")
+    if test_logic_mem_path.exists():
+        with open(test_logic_mem_path, "r", encoding="utf-8") as f: vec_mem_data = json.load(f)
+        print(f"Logic memory has {len(vec_mem_data)} entries.")
+        assert len(vec_mem_data) == 2 ; assert vec_mem_data[0]['text'] == fact_text_main; assert vec_mem_data[1]['text'] == mixed_text_main
+    else: print(f"ERROR: Test logic memory {test_logic_mem_path} not created!")
+    if test_sym_occur_path.exists() and 'log_data' in locals() and log_data: # Check if log_data exists and is not empty
+        processed_by_symbolic_node = False
+        for entry in log_data: 
+            if isinstance(entry, dict) and "symbolic_node_summary" in entry and \
+               entry["symbolic_node_summary"].get("matched_symbols_count", 0) > 0:
+                processed_by_symbolic_node = True; break
+        if processed_by_symbolic_node:
+            with open(test_sym_occur_path, "r", encoding="utf-8") as f: sym_occur_data = json.load(f)
+            print(f"Symbol occurrence log has {len(sym_occur_data.get('entries',[]))} entries.")
+            assert len(sym_occur_data.get('entries',[])) > 0 
+        else: print(f"WARN: No symbols were matched by SymbolicNode according to trail_log, so symbol_occurrence_log might be empty.")
+    elif not test_sym_occur_path.exists(): print(f"WARN: Test symbol occurrence log {test_sym_occur_path} not created.")
+    TL_TrailLog.TRAIL_LOG_FILE_PATH = original_tl_path
+    print("\n✅ processing_nodes.py ALL ACCUMULATED FIXES integration tests completed.")

@@ -1,1 +1,109 @@
-{}
+{
+  "💻": {
+    "neutral": 3.93,
+    "amusement": 3.7522,
+    "admiration": 2.1096,
+    "annoyance": 1.1911,
+    "surprise": 0.9439,
+    "joy": 2.0224,
+    "disgust": 1.0948,
+    "anger": 0.0935
+  },
+  "🔥⟳": {
+    "admiration": 0.2049,
+    "fear": 0.1872,
+    "disgust": 0.1108,
+    "anger": 0.1507,
+    "sadness": 0.1099,
+    "neutral": 0.3695,
+    "annoyance": 0.1146,
+    "amusement": 0.387,
+    "approval": 0.0211,
+    "joy": 0.2022,
+    "surprise": 0.0384
+  },
+  "💻⟳": {
+    "neutral": 0.5261,
+    "admiration": 0.2806,
+    "annoyance": 0.1246,
+    "anger": 0.0299,
+    "amusement": 0.501,
+    "surprise": 0.083,
+    "joy": 0.3161,
+    "disgust": 0.1829
+  },
+  "⚙": {
+    "annoyance": 0.0883,
+    "anger": 0.1095,
+    "fear": 0.1882,
+    "admiration": 0.1167,
+    "neutral": 0.123,
+    "amusement": 0.1446,
+    "approval": 0.035,
+    "sadness": 0.0971,
+    "joy": 0.0197
+  },
+  "♑": {
+    "fear": 0.0834,
+    "amusement": 0.1267,
+    "admiration": 0.038,
+    "neutral": 0.1068,
+    "sadness": 0.0548,
+    "annoyance": 0.034,
+    "approval": 0.017,
+    "joy": 0.0418,
+    "disgust": 0.0141
+  },
+  "♦": {
+    "amusement": 0.115,
+    "sadness": 0.1134,
+    "neutral": 0.0362,
+    "joy": 0.0264,
+    "fear": 0.0949,
+    "admiration": 0.1067,
+    "anger": 0.0917,
+    "annoyance": 0.0471,
+    "disgust": 0.0298
+  },
+  "💧": {
+    "amusement": 0.1061,
+    "admiration": 0.0565,
+    "sadness": 0.0314,
+    "fear": 0.0309,
+    "anger": 0.0301,
+    "neutral": 0.0638,
+    "joy": 0.0559,
+    "disgust": 0.0408,
+    "annoyance": 0.0153
+  },
+  "🔥⟳⟳": {
+    "amusement": 0.0475,
+    "neutral": 0.0455,
+    "joy": 0.0371,
+    "disgust": 0.0232,
+    "annoyance": 0.0229
+  },
+  "💧⟳": {
+    "amusement": 0.045,
+    "neutral": 0.0431,
+    "joy": 0.0351,
+    "disgust": 0.022,
+    "annoyance": 0.0217
+  },
+  "🔥": {
+    "amusement": 0.0429,
+    "neutral": 0.0411,
+    "joy": 0.0335,
+    "disgust": 0.021,
+    "annoyance": 0.0207
+  },
+  "💻⟳⟳": {
+    "neutral": 0.2952,
+    "amusement": 0.2912,
+    "joy": 0.203,
+    "admiration": 0.1551,
+    "disgust": 0.1286,
+    "annoyance": 0.0459,
+    "surprise": 0.0429
+  }
+}
