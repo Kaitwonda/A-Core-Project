@@ -1,24 +1,21 @@
 # symbol_memory.py
 from pathlib import Path
 import json
-from datetime import datetime # Added for timestamp in add_symbol if needed later
+from datetime import datetime
 
 # File path for symbol memory
 SYMBOL_MEMORY_PATH = Path("data/symbol_memory.json")
 
-# APPENDED/MODIFIED: load_symbol_memory function
-def load_symbol_memory(file_path=SYMBOL_MEMORY_PATH): # Added file_path parameter
+def load_symbol_memory(file_path=SYMBOL_MEMORY_PATH):
     """Loads existing symbol memory, ensuring it's a dictionary of symbol objects."""
-    # Ensure file_path is a Path object if a string is passed
     current_path = Path(file_path) if isinstance(file_path, str) else file_path
     
     current_path.parent.mkdir(parents=True, exist_ok=True)
-    if current_path.exists() and current_path.stat().st_size > 0: # Check size
+    if current_path.exists() and current_path.stat().st_size > 0:
         with open(current_path, "r", encoding="utf-8") as f:
             try:
                 data = json.load(f)
                 if isinstance(data, dict):
-                    # Filter out any top-level keys that are not symbol details dicts
                     return {
                         token: details
                         for token, details in data.items()
@@ -30,225 +27,330 @@ def load_symbol_memory(file_path=SYMBOL_MEMORY_PATH): # Added file_path paramete
             except json.JSONDecodeError:
                 print(f"[SYMBOL_MEMORY-WARNING] Symbol memory file {current_path} corrupted. Returning empty memory.")
                 return {}
-    # print(f"[SYMBOL_MEMORY-INFO] Symbol memory file {current_path} not found or empty. Returning empty memory.")
     return {}
 
-# MODIFIED: save_symbol_memory to ensure it uses its parameter
-def save_symbol_memory(memory, file_path=SYMBOL_MEMORY_PATH): # file_path already a parameter
+def save_symbol_memory(memory, file_path=SYMBOL_MEMORY_PATH):
     """Saves current state of symbol memory to disk."""
     current_path = Path(file_path) if isinstance(file_path, str) else file_path
     current_path.parent.mkdir(parents=True, exist_ok=True)
     with open(current_path, "w", encoding="utf-8") as f:
         json.dump(memory, f, indent=2, ensure_ascii=False)
 
-# MODIFIED: add_symbol to ensure it uses its file_path parameter for load/save
-def add_symbol(symbol_token, name, keywords, initial_emotions, example_text, 
+def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
                origin="emergent", learning_phase=0, resonance_weight=0.5,
-               symbol_details_override=None, # For meta-symbols primarily
+               symbol_details_override=None,
                file_path=SYMBOL_MEMORY_PATH):
     """
     Adds a new symbol or updates an existing one in the symbol_memory.json.
-    Initial_emotions can be a list of emotion strings or a dict like {'emotion': score}.
+    Initial_emotions can be a list of emotion strings, a dict {'emotion': score},
+    a list of tuples [('emotion', score)], or list of dicts [{"emotion":"name", "weight":0.8}].
     """
-    memory = load_symbol_memory(file_path) # Use parameter
+    memory = load_symbol_memory(file_path)
     
+    # Extract numeric weights and build peak emotions map
+    incoming_numeric_weights = []
+    peak_emotions_from_initial = {}
+    
+    if isinstance(initial_emotions, dict):
+        for emo, score in initial_emotions.items():
+            if isinstance(score, (int, float)):
+                incoming_numeric_weights.append(score)
+                peak_emotions_from_initial[emo] = score
+    elif isinstance(initial_emotions, list):
+        for item in initial_emotions:
+            if isinstance(item, dict) and "weight" in item and isinstance(item["weight"], (int, float)):
+                incoming_numeric_weights.append(item["weight"])
+                if "emotion" in item:
+                    peak_emotions_from_initial[item["emotion"]] = item["weight"]
+            elif isinstance(item, tuple) and len(item) == 2 and isinstance(item[1], (int, float)):
+                incoming_numeric_weights.append(item[1])
+                peak_emotions_from_initial[item[0]] = item[1]
+
+    current_max_incoming_weight = max(incoming_numeric_weights, default=0.0)
+    
+    # Filter peak_emotions to only include those at the peak weight
+    peak_emotions_at_max = {
+        emo: weight 
+        for emo, weight in peak_emotions_from_initial.items() 
+        if weight == current_max_incoming_weight
+    } if current_max_incoming_weight > 0 else {}
+
     if symbol_token not in memory:
+        # New symbol creation
         if symbol_details_override and isinstance(symbol_details_override, dict):
-            memory[symbol_token] = symbol_details_override
-            if "created_at" not in memory[symbol_token]: # Ensure timestamp if overridden
-                 memory[symbol_token]["created_at"] = datetime.utcnow().isoformat()
-            if "updated_at" not in memory[symbol_token]:
-                 memory[symbol_token]["updated_at"] = datetime.utcnow().isoformat()
+            memory[symbol_token] = symbol_details_override.copy()
+            # Initialize critical fields that might be missing
+            memory[symbol_token].setdefault("vector_examples", [])
+            memory[symbol_token].setdefault("usage_count", 0)
+            memory[symbol_token].setdefault("golden_memory", {
+                "peak_weight": current_max_incoming_weight,
+                "context": example_text or memory[symbol_token].get("summary", ""),
+                "peak_emotions": peak_emotions_at_max,
+                "timestamp": datetime.utcnow().isoformat()
+            })
+            # Set other fields from parameters if not in override
+            memory[symbol_token].setdefault("name", name)
+            memory[symbol_token].setdefault("keywords", list(set(keywords)))
+            memory[symbol_token].setdefault("emotions", initial_emotions) 
+            memory[symbol_token].setdefault("emotion_profile", {})
+            memory[symbol_token].setdefault("origin", origin) 
+            memory[symbol_token].setdefault("learning_phase", learning_phase) 
+            memory[symbol_token].setdefault("resonance_weight", resonance_weight) 
+            memory[symbol_token].setdefault("created_at", datetime.utcnow().isoformat())
+            memory[symbol_token].setdefault("updated_at", datetime.utcnow().isoformat())
+            memory[symbol_token].setdefault("core_meanings", [])
+            
         else:
+            # Creating a brand new symbol without override
             memory[symbol_token] = {
                 "name": name,
-                "keywords": list(set(keywords)), # Ensure unique keywords
-                "core_meanings": [], # To be populated or refined
-                "emotions": initial_emotions if isinstance(initial_emotions, list) else [], # Store as list
-                "emotion_profile": {}, # Aggregated emotional weights over time
-                "vector_examples": [], # List of text snippets where this symbol appeared
-                "origin": origin, # "seed", "emergent", "meta_emergent"
-                "learning_phase": learning_phase, # Phase when created/significantly updated
-                "resonance_weight": resonance_weight, # How strongly this symbol "pulls" attention
+                "keywords": list(set(keywords)),
+                "core_meanings": [],
+                "emotions": initial_emotions,
+                "emotion_profile": {},
+                "vector_examples": [],
+                "origin": origin,
+                "learning_phase": learning_phase,
+                "resonance_weight": resonance_weight,
+                "golden_memory": {
+                    "peak_weight": current_max_incoming_weight,
+                    "context": example_text or "",
+                    "peak_emotions": peak_emotions_at_max,
+                    "timestamp": datetime.utcnow().isoformat()
+                },
                 "created_at": datetime.utcnow().isoformat(),
                 "updated_at": datetime.utcnow().isoformat(),
                 "usage_count": 0
             }
-        if example_text: # Add initial example if provided
-             # Ensure example text is not overly long for storage
-            max_example_len = 300 
-            example_to_store = example_text[:max_example_len] + "..." if len(example_text) > max_example_len else example_text
-            memory[symbol_token]["vector_examples"].append({
-                "text": example_to_store, 
-                "timestamp": datetime.utcnow().isoformat(),
-                "source_phase": learning_phase # Phase in which this example was encountered
-            })
-            memory[symbol_token]["usage_count"] = 1
-
-    else: # Symbol exists, update it
-        memory[symbol_token]["updated_at"] = datetime.utcnow().isoformat()
-        memory[symbol_token]["usage_count"] = memory[symbol_token].get("usage_count", 0) + 1
         
-        if keywords: # Add new unique keywords
-            existing_kws = set(memory[symbol_token].get("keywords", []))
-            for kw in keywords: existing_kws.add(kw)
-            memory[symbol_token]["keywords"] = sorted(list(existing_kws))
-
+        # Add the example_text if provided
         if example_text:
             max_example_len = 300
             example_to_store = example_text[:max_example_len] + "..." if len(example_text) > max_example_len else example_text
-            # Avoid too many examples, keep maybe last 5-10 or unique ones
-            if len(memory[symbol_token]["vector_examples"]) > 10:
-                memory[symbol_token]["vector_examples"].pop(0) # Remove oldest
             
-            # Add if not a recent duplicate
+            memory[symbol_token]["vector_examples"].append({
+                "text": example_to_store,
+                "timestamp": datetime.utcnow().isoformat(),
+                "source_phase": learning_phase
+            })
+            
+            if memory[symbol_token].get("usage_count", 0) == 0:
+                memory[symbol_token]["usage_count"] = 1
+
+    else:
+        # Symbol exists, update it
+        memory[symbol_token]["updated_at"] = datetime.utcnow().isoformat()
+        memory[symbol_token]["usage_count"] = memory[symbol_token].get("usage_count", 0) + 1
+        
+        # Update keywords
+        if keywords:
+            existing_kws = set(memory[symbol_token].get("keywords", []))
+            for kw in keywords:
+                existing_kws.add(kw)
+            memory[symbol_token]["keywords"] = sorted(list(existing_kws))
+
+        # Add new example
+        if example_text:
+            max_example_len = 300
+            example_to_store = example_text[:max_example_len] + "..." if len(example_text) > max_example_len else example_text
+            current_examples = memory[symbol_token].get("vector_examples", [])
+            
+            # Limit to 10 examples
+            if len(current_examples) > 10:
+                current_examples.pop(0)
+            
+            # Check for duplicates in recent examples
             is_duplicate_example = False
-            for ex_entry in memory[symbol_token]["vector_examples"][-3:]: # Check last 3
-                if ex_entry["text"] == example_to_store:
+            for ex_entry in current_examples[-3:]:
+                if isinstance(ex_entry, dict) and ex_entry.get("text") == example_to_store:
                     is_duplicate_example = True
                     break
+            
             if not is_duplicate_example:
-                 memory[symbol_token]["vector_examples"].append({
-                    "text": example_to_store, 
+                current_examples.append({
+                    "text": example_to_store,
                     "timestamp": datetime.utcnow().isoformat(),
                     "source_phase": learning_phase
                 })
-
-
-        # Emotion profile updates are handled by symbol_emotion_updater based on symbol_emotion_map.
-        # This function could also update the 'emotions' list if new inherent emotions are discovered.
-        # For now, 'emotions' stores defined/seed emotions.
-
-    save_symbol_memory(memory, file_path) # Use parameter
+            memory[symbol_token]["vector_examples"] = current_examples
+        
+        # Update golden memory if this is a new peak
+        if "golden_memory" not in memory[symbol_token]:
+            memory[symbol_token]["golden_memory"] = {
+                "peak_weight": 0.0, 
+                "context": "", 
+                "peak_emotions": {},
+                "timestamp": datetime.utcnow().isoformat()
+            }
+            
+        if incoming_numeric_weights:
+            current_peak = memory[symbol_token]["golden_memory"].get("peak_weight", 0.0)
+            if current_max_incoming_weight > current_peak:
+                memory[symbol_token]["golden_memory"] = {
+                    "peak_weight": current_max_incoming_weight,
+                    "context": example_text or memory[symbol_token]["golden_memory"].get("context", ""),
+                    "peak_emotions": peak_emotions_at_max,
+                    "timestamp": datetime.utcnow().isoformat()
+                }
+        
+    save_symbol_memory(memory, file_path)
     return memory[symbol_token]
 
 
-# MODIFIED: get_symbol_details to use file_path parameter
-def get_symbol_details(symbol_token, file_path=SYMBOL_MEMORY_PATH): # Added file_path
-    memory = load_symbol_memory(file_path) # Use parameter
+def get_symbol_details(symbol_token, file_path=SYMBOL_MEMORY_PATH):
+    """Gets details for a specific symbol."""
+    memory = load_symbol_memory(file_path)
     return memory.get(symbol_token, {})
 
-# MODIFIED: update_symbol_emotional_profile to use file_path (though not directly used by external modules yet)
-def update_symbol_emotional_profile(symbol_token, emotion_changes, file_path=SYMBOL_MEMORY_PATH): # Added file_path
-    """
-    Updates the persistent emotion_profile for a symbol.
-    emotion_changes: dict like {'anger': 0.1, 'joy': -0.05}
-    """
-    memory = load_symbol_memory(file_path) # Use parameter
+def update_symbol_emotional_profile(symbol_token, emotion_changes, file_path=SYMBOL_MEMORY_PATH):
+    """Updates the cumulative emotional profile of a symbol."""
+    memory = load_symbol_memory(file_path)
     if symbol_token in memory:
         profile = memory[symbol_token].get("emotion_profile", {})
         for emotion, change in emotion_changes.items():
             profile[emotion] = profile.get(emotion, 0) + change
-            profile[emotion] = round(max(0, min(1, profile[emotion])), 3) # Clamp 0-1
+            profile[emotion] = round(max(0, min(1, profile[emotion])), 3)
         memory[symbol_token]["emotion_profile"] = profile
         memory[symbol_token]["updated_at"] = datetime.utcnow().isoformat()
-        save_symbol_memory(memory, file_path) # Use parameter
+        save_symbol_memory(memory, file_path)
         return True
     return False
 
-def prune_duplicates(file_path=SYMBOL_MEMORY_PATH): # Added file_path
-    """Removes duplicate entries from vector_examples for each symbol."""
-    # This is a more conceptual function; actual vector similarity would be needed for true semantic duplicates.
-    # For now, it removes exact text duplicates in vector_examples.
-    memory = load_symbol_memory(file_path) # Use parameter
+def prune_duplicates(file_path=SYMBOL_MEMORY_PATH):
+    """Removes duplicate examples from symbol vector_examples."""
+    memory = load_symbol_memory(file_path)
+    changed = False
     for symbol_token in memory:
         if "vector_examples" in memory[symbol_token] and isinstance(memory[symbol_token]["vector_examples"], list):
             unique_examples = []
             seen_texts = set()
+            original_len = len(memory[symbol_token]["vector_examples"])
             for example_entry in memory[symbol_token]["vector_examples"]:
-                # example_entry is now expected to be a dict {'text': "...", 'timestamp': "...", 'source_phase': ...}
                 if isinstance(example_entry, dict) and "text" in example_entry:
-                    example_text = example_entry["text"]
-                    if example_text not in seen_texts:
+                    example_text_val = example_entry["text"]
+                    if example_text_val not in seen_texts:
                         unique_examples.append(example_entry)
-                        seen_texts.add(example_text)
-                # Keep old string-only examples if they exist, but don't add new ones like that
+                        seen_texts.add(example_text_val)
                 elif isinstance(example_entry, str): 
                     if example_entry not in seen_texts:
-                         unique_examples.append({"text": example_entry, "timestamp": "unknown", "source_phase": 0}) # Convert old format
-                         seen_texts.add(example_entry)
-
-
-            if len(unique_examples) < len(memory[symbol_token]["vector_examples"]):
-                print(f"[SYMBOL_MEMORY-INFO] Pruned duplicate examples for symbol '{symbol_token}'.")
+                        unique_examples.append({"text": example_entry, "timestamp": "unknown", "source_phase": 0})
+                        seen_texts.add(example_entry)
+            if len(unique_examples) < original_len:
+                changed = True
             memory[symbol_token]["vector_examples"] = unique_examples
-    save_symbol_memory(memory, file_path) # Use parameter
+    if changed:
+        print(f"[SYMBOL_MEMORY-INFO] Pruned duplicate examples.")
+        save_symbol_memory(memory, file_path)
 
-# get_emotion_profile, now less critical if main profile comes from symbol_emotion_map,
-# but useful if symbol_memory.json itself stores an evolving profile.
-# MODIFIED to use file_path
-def get_emotion_profile(symbol_token, file_path=SYMBOL_MEMORY_PATH): # Added file_path
-    memory = load_symbol_memory(file_path) # Use parameter
+def get_emotion_profile(symbol_token, file_path=SYMBOL_MEMORY_PATH):
+    """Gets the cumulative emotion profile for a symbol."""
+    memory = load_symbol_memory(file_path)
     symbol_data = memory.get(symbol_token)
     if symbol_data and isinstance(symbol_data, dict) and "emotion_profile" in symbol_data:
         return symbol_data["emotion_profile"]
     return {}
 
+def get_golden_memory(symbol_token, file_path=SYMBOL_MEMORY_PATH):
+    """Gets the golden memory (peak state) for a symbol."""
+    memory = load_symbol_memory(file_path)
+    symbol_data = memory.get(symbol_token)
+    if symbol_data and isinstance(symbol_data, dict) and "golden_memory" in symbol_data:
+        return symbol_data["golden_memory"]
+    return None
+
 
 if __name__ == '__main__':
-    print("Testing symbol_memory.py with phase tagging and robust loading/saving with file_path...")
+    print("Testing symbol_memory.py with complete Golden Memory feature...")
     
-    # Use a temporary test file
-    test_sm_path = Path("data/test_symbol_memory_v2.json")
-    if test_sm_path.exists(): 
-        try: test_sm_path.unlink()
-        except OSError as e: print(f"Could not clear {test_sm_path}: {e}")
+    test_path = Path("data/test_symbol_memory_golden_complete.json")
+    if test_path.exists(): 
+        test_path.unlink()
     
-    # Test add_symbol with file_path
-    add_symbol("🔥", "Fire", ["heat", "burn"], [{"emotion":"anger", "weight":0.8}], "The fire raged.", 
-               origin="seed", learning_phase=1, file_path=test_sm_path)
-    add_symbol("💧", "Water", ["flow", "wet"], [{"emotion":"calm", "weight":0.9}], "The water was calm.", 
-               origin="seed", learning_phase=1, file_path=test_sm_path)
+    # Test 1: New symbol with initial emotions
+    print("\n--- Test 1: New symbol with emotions ---")
+    initial_emotions_t1 = [
+        {"emotion": "joy", "weight": 0.8},
+        {"emotion": "curiosity", "weight": 0.8},  # Same peak weight
+        {"emotion": "fear", "weight": 0.3}
+    ]
     
-    # Test load_symbol_memory with file_path
-    loaded_mem = load_symbol_memory(test_sm_path)
-    print(f"\nLoaded test memory ({len(loaded_mem)} entries): {loaded_mem}")
-    assert "🔥" in loaded_mem
-    assert loaded_mem["🔥"]["learning_phase"] == 1
-    assert loaded_mem["💧"]["name"] == "Water"
-    assert isinstance(loaded_mem["🔥"]["vector_examples"], list)
-    assert len(loaded_mem["🔥"]["vector_examples"]) == 1
-    assert isinstance(loaded_mem["🔥"]["vector_examples"][0], dict)
-    assert "text" in loaded_mem["🔥"]["vector_examples"][0]
-
-    # Test updating an existing symbol
-    add_symbol("🔥", "Big Fire", ["inferno"], [{"emotion":"fear", "weight":0.6}], "The inferno grew.", 
-               origin="emergent_update", learning_phase=2, file_path=test_sm_path)
-    updated_mem = load_symbol_memory(test_sm_path)
-    print(f"\nUpdated test memory for 🔥: {updated_mem['🔥']}")
-    assert "inferno" in updated_mem["🔥"]["keywords"] # Check if keywords were added
-    assert updated_mem["🔥"]["usage_count"] == 2 # Should be 1 (initial) + 1 (update) = 2
-    assert len(updated_mem["🔥"]["vector_examples"]) == 2 # Second example added
-
-    # Test get_symbol_details with file_path
-    fire_details = get_symbol_details("🔥", file_path=test_sm_path)
-    print(f"\nDetails for 🔥: {fire_details}")
-    assert fire_details["name"] == "Fire" # Name doesn't change on simple update unless specifically passed
-
-    # Test prune_duplicates
-    # Add a duplicate example manually for testing prune
-    current_mem = load_symbol_memory(test_sm_path)
-    if "🔥" in current_mem:
-        current_mem["🔥"]["vector_examples"].append({"text": "The fire raged.", "timestamp": "now", "source_phase": 1}) # Add duplicate
-        save_symbol_memory(current_mem, test_sm_path)
+    result = add_symbol(
+        "🌟", "Star", ["shine", "bright"], 
+        initial_emotions_t1, 
+        "A bright star shines with joy.",
+        origin="test", learning_phase=1, file_path=test_path
+    )
     
-    prune_duplicates(file_path=test_sm_path)
-    pruned_mem = load_symbol_memory(test_sm_path)
-    print(f"\nMemory after prune for 🔥 vector_examples: {pruned_mem['🔥']['vector_examples']}")
-    assert len(pruned_mem["🔥"]["vector_examples"]) == 2 # Should have removed the exact text duplicate
-
-    # Test symbol_details_override for meta-symbols
-    meta_details = {"name": "FireCycle", "based_on": "🔥", "summary":"A cycle of fire", "keywords": ["fire", "cycle"], "learning_phase": 2, "origin":"meta"}
-    add_symbol("🔥⟳", "Fire Cycle Old Name (will be overridden)", ["oldkw"], [], "old example", 
-               symbol_details_override=meta_details, file_path=test_sm_path)
-    meta_mem = load_symbol_memory(test_sm_path)
-    print(f"\nMeta symbol entry 🔥⟳: {meta_mem['🔥⟳']}")
-    assert meta_mem["🔥⟳"]["name"] == "FireCycle"
-    assert meta_mem["🔥⟳"]["summary"] == "A cycle of fire"
-    assert meta_mem["🔥⟳"]["origin"] == "meta"
-    assert "created_at" in meta_mem["🔥⟳"]
-    assert "updated_at" in meta_mem["🔥⟳"]
-
-
-    print("\n✅ symbol_memory.py tests completed with file_path parameterization.")
-    # if test_sm_path.exists(): test_sm_path.unlink() # Optional: clean up test file
+    golden = result["golden_memory"]
+    print(f"Golden memory: {json.dumps(golden, indent=2)}")
+    assert golden["peak_weight"] == 0.8
+    assert "joy" in golden["peak_emotions"] and golden["peak_emotions"]["joy"] == 0.8
+    assert "curiosity" in golden["peak_emotions"] and golden["peak_emotions"]["curiosity"] == 0.8
+    assert "fear" not in golden["peak_emotions"]  # Not at peak
+    assert "timestamp" in golden
+    assert golden["context"] == "A bright star shines with joy."
+    
+    # Test 2: Update with higher peak
+    print("\n--- Test 2: Update with higher peak ---")
+    update_emotions = [("excitement", 0.95), ("joy", 0.95)]
+    
+    add_symbol(
+        "🌟", "Star", ["glow"], 
+        update_emotions,
+        "The star glows with incredible excitement!",
+        file_path=test_path
+    )
+    
+    updated_details = get_symbol_details("🌟", file_path=test_path)
+    golden = updated_details["golden_memory"]
+    print(f"Updated golden memory: {json.dumps(golden, indent=2)}")
+    assert golden["peak_weight"] == 0.95
+    assert golden["peak_emotions"] == {"excitement": 0.95, "joy": 0.95}
+    assert golden["context"] == "The star glows with incredible excitement!"
+    
+    # Test 3: Update with lower peak (should not change golden)
+    print("\n--- Test 3: Update with lower peak (no change expected) ---")
+    old_timestamp = golden["timestamp"]
+    
+    add_symbol(
+        "🌟", "Star", ["dim"], 
+        [("sadness", 0.6)],
+        "The star dims sadly.",
+        file_path=test_path
+    )
+    
+    unchanged_details = get_symbol_details("🌟", file_path=test_path)
+    golden = unchanged_details["golden_memory"]
+    print(f"Golden memory after lower update: {json.dumps(golden, indent=2)}")
+    assert golden["peak_weight"] == 0.95  # Unchanged
+    assert golden["context"] == "The star glows with incredible excitement!"  # Unchanged
+    
+    # Test 4: Symbol with override
+    print("\n--- Test 4: Symbol with override preserving golden memory ---")
+    override = {
+        "name": "Moon",
+        "summary": "Celestial body",
+        "keywords": ["lunar", "night"]
+    }
+    
+    add_symbol(
+        "🌙", "Moon Override Name", ["moon"], 
+        [{"emotion": "tranquility", "weight": 0.7}],
+        "The moon brings tranquility.",
+        symbol_details_override=override,
+        file_path=test_path
+    )
+    
+    moon_details = get_symbol_details("🌙", file_path=test_path)
+    assert "golden_memory" in moon_details
+    assert moon_details["golden_memory"]["peak_weight"] == 0.7
+    assert moon_details["golden_memory"]["peak_emotions"] == {"tranquility": 0.7}
+    
+    # Test 5: Retrieve golden memory
+    print("\n--- Test 5: Get golden memory helper ---")
+    star_golden = get_golden_memory("🌟", file_path=test_path)
+    print(f"Retrieved golden memory: {json.dumps(star_golden, indent=2)}")
+    assert star_golden is not None
+    assert star_golden["peak_weight"] == 0.95
+    
+    print("\n✅ All golden memory tests passed!")

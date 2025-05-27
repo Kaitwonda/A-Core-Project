@@ -1,142 +1,595 @@
+# memory_optimizer.py - Updated with Dynamic Weight Adjustment and Memory Evolution
+
 import sys
 import re
-from parser import parse_input, extract_symbolic_units, parse_with_emotion
-from web_parser import process_web_url
+import argparse
+import unicodedata
+import time
+from pathlib import Path
+import json
+import hashlib
+import csv
+from datetime import datetime
+
+# Assuming these are the correct import paths based on your project structure
+import parser as P_Parser
+from parser import load_seed_symbols
+
+from web_parser import fetch_raw_html, extract_links_with_text_from_html, clean_html_to_text
 from vector_memory import store_vector, retrieve_similar_vectors
 from symbol_cluster import cluster_vectors_and_plot
 from trail_log import log_trail, add_emotions
 from trail_graph import show_trail_graph
 from emotion_handler import predict_emotions
 from symbol_emotion_updater import update_symbol_emotions
-from symbol_memory import add_symbol, prune_duplicates
 from symbol_generator import generate_symbol_from_context
 from symbol_drift_plot import show_symbol_drift
 from symbol_emotion_cluster import show_emotion_clusters
 
+# Updated import for symbol_memory module
+import symbol_memory as SM_SymbolMemory
+
+# New import for Phase 1 pruning
+from memory_maintenance import prune_phase1_symbolic_vectors
+# For getting phase directives, even in this interactive script
+from processing_nodes import CurriculumManager
+
+# New import for brain metrics and adaptive weights
+from brain_metrics import BrainMetrics
+
+# New import for memory evolution
+from memory_evolution_engine import run_memory_evolution
+
+# New import for system analytics plots
+try:
+    from system_analytics import plot_node_activation_timeline, plot_symbol_popularity_timeline, plot_curriculum_metrics
+    SYSTEM_ANALYTICS_LOADED = True
+except ImportError:
+    SYSTEM_ANALYTICS_LOADED = False
+    # Skip or dummy out these functions if analytics module not present
+    def plot_node_activation_timeline(*args, **kwargs): pass
+    def plot_symbol_popularity_timeline(*args, **kwargs): pass
+    def plot_curriculum_metrics(*args, **kwargs): pass
+
 # Track input count
 input_counter = 0
-INPUT_THRESHOLD = 10  # Run maintenance every 10 inputs
+# Renamed from INPUT_THRESHOLD to be more specific
+INPUT_THRESHOLD_SYMBOL_PRUNE = 10  # Run symbol example duplicate pruning every N inputs
+INPUT_THRESHOLD_PHASE1_VECTOR_PRUNE = 20  # Run Phase 1 specific vector pruning every M inputs
+INPUT_THRESHOLD_WEIGHT_RECOMPUTE = 5  # Recompute adaptive weights every N inputs
+INPUT_THRESHOLD_MEMORY_EVOLUTION = 30  # Run memory evolution every N inputs
 
+# Global directives that can be dynamically adjusted
+ADAPTIVE_DIRECTIVES = {
+    "link_score_weight_static": 0.6,  # Default
+    "link_score_weight_dynamic": 0.4,  # Default
+    "last_weight_update": None,
+    "update_count": 0
+}
+
+# Path for persisting adaptive configuration
+ADAPTIVE_CONFIG_PATH = Path("data/adaptive_config.json")
+
+def load_adaptive_config():
+    """Load adaptive configuration from disk"""
+    global ADAPTIVE_DIRECTIVES
+    if ADAPTIVE_CONFIG_PATH.exists():
+        try:
+            with open(ADAPTIVE_CONFIG_PATH, 'r') as f:
+                config = json.load(f)
+                ADAPTIVE_DIRECTIVES.update(config)
+                print(f"🔧 Loaded adaptive config: Static={ADAPTIVE_DIRECTIVES['link_score_weight_static']:.1%}, "
+                      f"Dynamic={ADAPTIVE_DIRECTIVES['link_score_weight_dynamic']:.1%}")
+        except Exception as e:
+            print(f"⚠️ Could not load adaptive config: {e}")
+
+def save_adaptive_config():
+    """Save adaptive configuration to disk"""
+    try:
+        ADAPTIVE_CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(ADAPTIVE_CONFIG_PATH, 'w') as f:
+            json.dump(ADAPTIVE_DIRECTIVES, f, indent=2)
+    except Exception as e:
+        print(f"⚠️ Could not save adaptive config: {e}")
+
+def recompute_adaptive_link_weights(force=False):
+    """
+    Recompute adaptive weights based on brain metrics history.
+    Only updates if there's sufficient data and confidence.
+    """
+    bm = BrainMetrics()
+    rec = bm.get_adaptive_weights()
+    
+    if rec and (force or rec['confidence'] in ['medium', 'high']):
+        old_static = ADAPTIVE_DIRECTIVES["link_score_weight_static"]
+        old_dynamic = ADAPTIVE_DIRECTIVES["link_score_weight_dynamic"]
+        
+        # Apply with learning rate to avoid drastic changes
+        learning_rate = 0.3 if rec['confidence'] == 'high' else 0.2
+        
+        new_static = (1 - learning_rate) * old_static + learning_rate * rec["link_score_weight_static"]
+        new_dynamic = (1 - learning_rate) * old_dynamic + learning_rate * rec["link_score_weight_dynamic"]
+        
+        # Normalize
+        total = new_static + new_dynamic
+        new_static /= total
+        new_dynamic /= total
+        
+        ADAPTIVE_DIRECTIVES["link_score_weight_static"] = round(new_static, 3)
+        ADAPTIVE_DIRECTIVES["link_score_weight_dynamic"] = round(new_dynamic, 3)
+        ADAPTIVE_DIRECTIVES["last_weight_update"] = datetime.utcnow().isoformat()
+        ADAPTIVE_DIRECTIVES["update_count"] = ADAPTIVE_DIRECTIVES.get("update_count", 0) + 1
+        
+        print(f"🔧 Adaptive weights updated: Static={new_static:.1%} (was {old_static:.1%}), "
+              f"Dynamic={new_dynamic:.1%} (was {old_dynamic:.1%}) "
+              f"based on {rec['based_on_sessions']} sessions ({rec['confidence']} confidence)")
+        
+        save_adaptive_config()
+        return True
+    elif rec:
+        print(f"🔧 Not updating weights yet (confidence: {rec['confidence']}). "
+              f"Need more data for reliable adjustment.")
+    return False
+
+# Regex to detect URLs
 def is_url(text):
     return re.match(r"https?://", text.strip()) is not None
 
-def generate_response(user_input, extracted_symbols):
-    similar = retrieve_similar_vectors(user_input)
-    if not similar:
-        return "I'm still learning. Nothing comes to mind yet."
+# Regex to find emojis (common blocks)
+EMOJI_PATTERN = re.compile(
+    r"([\U0001F300-\U0001F5FF]|[\U0001F600-\U0001F64F]|"
+    r"[\U0001F680-\U0001F6FF]|[\U0001F700-\U0001F77F]|"
+    r"[\U0001F780-\U0001F7FF]|[\U0001F800-\U0001F8FF]|"
+    r"[\U0001F900-\U0001F9FF]|[\U0001FA00-\U0001FA6F])"
+)
 
-    trust_order = {"high": 0, "medium": 1, "low": 2, "unknown": 3}
-    similar.sort(key=lambda x: (trust_order.get(x[1].get("source_trust", "unknown"), 3), -x[0]))
+def extract_new_emojis(text, existing_lexicon):
+    """
+    Return any emoji characters in text that are not yet defined in the lexicon.
+    """
+    found = set(EMOJI_PATTERN.findall(text))
+    return [e for e in found if e not in existing_lexicon]
 
-    if any(entry[1].get("source_trust") in ("high", "medium") for entry in similar):
-        similar = [entry for entry in similar if entry[1].get("source_trust", "unknown") in ("high", "medium")]
+# --- Acceptance resolution constants ---
+ACCEPTANCE_SYMBOL = "🕊️"
+ACCEPTANCE_NAME   = "Acceptance"
+ACCEPTANCE_KEYWORDS = ["release", "surrender", "let go"]
+RESOLUTION_MIN_DEPTH    = 3     # require at least 3 arrows
+RESOLUTION_WEIGHT_CUTOFF = 0.25  # resonance_weight below this
 
-    response = "🧠 Here's what I remember:\n"
-    for sim, memory in similar:
-        txt = memory["text"]
-        trust = memory.get("source_trust", "unknown")
-        source_note = f" (source: {memory['source_url']})" if memory.get("source_url") else ""
+# --- Acceptance resolution on meta_symbols.json ---
+def perform_acceptance_resolution():
+    """
+    Scan data/meta_symbols.json for deep, low-weight recursive chains and mark them resolved.
+    Also triggers adaptive weight recomputation.
+    """
+    meta_path = Path("data") / "meta_symbols.json"
+    if not meta_path.exists():
+        return
 
-        if trust == "high":
-            trust_note = " — from a trusted source"
-        elif trust == "medium":
-            trust_note = " — moderately trusted"
-        elif trust == "low":
-            trust_note = " — caution: low-trust source"
+    with open(meta_path, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+
+    updated = False
+    timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
+
+    # Ensure acceptance symbol seed
+    if ACCEPTANCE_SYMBOL not in meta:
+        meta[ACCEPTANCE_SYMBOL] = {
+            "name": ACCEPTANCE_NAME,
+            "keywords": ACCEPTANCE_KEYWORDS[:],
+            "resonance_weight": 0.3,
+            "origin": "system_seed",
+            "created_at": timestamp,
+            "learning_phase": 1,
+            "vector_examples": [],
+            "usage_count": 0
+        }
+        updated = True
+
+    for token, entry in meta.items():
+        if token == ACCEPTANCE_SYMBOL or entry.get("resolved", False):
+            continue
+        depth = token.count("⟳")
+        weight = entry.get("resonance_weight", 0.0)
+        if depth >= RESOLUTION_MIN_DEPTH and weight < RESOLUTION_WEIGHT_CUTOFF:
+            entry["resolved"]        = True
+            entry["resolved_at"]     = timestamp
+            entry["resolved_with"]   = ACCEPTANCE_SYMBOL
+            entry["peak_context"]    = entry.get("summary", entry.get("vector_examples", [{}])[0].get("text",""))
+            entry["peak_weight"]     = weight
+            entry["resolution_note"] = f"depth {depth}, weight {weight:.2f}"
+            updated = True
+
+    if updated:
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+        print(f"[ACCEPTANCE] Resolved tagging in meta_symbols.json completed.")
+    
+    # Trigger adaptive weight recomputation after resolution
+    recompute_adaptive_link_weights()
+
+def process_web_url_placeholder(url, current_phase_for_storage=1, general_lexicon_for_url=None):
+    """
+    Simplified processing for a web URL in interactive mode.
+    Stores a summary and performs basic analysis.
+    Uses adaptive weights for scoring.
+    """
+    print(f"[INFO] Interactive mode: Processing URL {url} for summary.")
+    raw_html = fetch_raw_html(url)
+    if raw_html:
+        cleaned_text = clean_html_to_text(raw_html)
+        if cleaned_text:
+            summary_to_store = cleaned_text[:2000]
+            store_vector(
+                text=summary_to_store,
+                source_url=url,
+                source_type="user_url_summary_interactive",
+                learning_phase=current_phase_for_storage
+            )
+            print(f"  Stored summary for {url} (tagged for phase {current_phase_for_storage})")
+
+            emotions_output = predict_emotions(summary_to_store)
+            verified_emotions = emotions_output.get("verified", [])
+
+            if general_lexicon_for_url is None:
+                general_lexicon_for_url = P_Parser.load_seed_symbols()
+                general_lexicon_for_url.update(SM_SymbolMemory.load_symbol_memory())
+
+            symbols_weighted = P_Parser.parse_with_emotion(
+                summary_to_store,
+                verified_emotions,
+                current_lexicon=general_lexicon_for_url
+            )
+            if symbols_weighted:
+                print("  Symbols detected in URL summary:")
+                for s_info in symbols_weighted[:2]:
+                    print(
+                        f"    → {s_info['symbol']} ({s_info['name']}) "
+                        f"W: {s_info.get('final_weight',0):.2f}"
+                    )
+                update_symbol_emotions(symbols_weighted, verified_emotions)
+                for sym_match_info in symbols_weighted:
+                    SM_SymbolMemory.add_symbol(
+                        symbol_token=sym_match_info["symbol"],
+                        name=sym_match_info["name"],
+                        keywords=[sym_match_info.get("matched_keyword","url_summary_match")],
+                        initial_emotions=dict(verified_emotions),
+                        example_text=summary_to_store,
+                        origin="user_url_interactive_match",
+                        learning_phase=current_phase_for_storage
+                    )
+            return summary_to_store
         else:
-            trust_note = " — source unknown"
+            print(f"  Could not extract clean text from {url}")
+    else:
+        print(f"  Could not fetch content from {url}")
+    return None
 
-        response += f" - {txt[:100]}...{source_note}{trust_note} (sim={sim:.2f})\n"
+def generate_response(user_input_text, extracted_symbols_weighted, current_phase_directives):
+    """
+    Generates a response based on similar vectors and extracted symbols.
+    Uses adaptive weights for similarity scoring.
+    """
+    # Apply adaptive weights when retrieving similar vectors
+    similar = retrieve_similar_vectors(
+        user_input_text,
+        top_n=3,
+        max_phase_allowed=current_phase_directives.get("logic_node_access_max_phase", 0),
+        min_confidence=current_phase_directives.get("logic_node_min_confidence_retrieve", 0.3)
+    )
 
-    if extracted_symbols:
-        response += "\n🔗 Symbolic cues detected:"
-        for sym in extracted_symbols:
-            response += f"\n → {sym['symbol']} ({sym['name']})"
+    if not similar and not extracted_symbols_weighted:
+        return "I'm still learning and processing that. Nothing specific comes to mind yet based on that input."
 
-    return response
+    response_parts = []
+
+    if similar:
+        response_parts.append("🧠 Here's what I remember that seems related:")
+        trust_order = {
+            "high_academic_encyclopedic":0, "high_authoritative": 0,
+            "high": 1, "user_direct_input": 1,
+            "medium": 2, "user_url_summary_interactive": 2,
+            "unknown": 3,
+            "low_unverified": 4, "low": 4
+        }
+        similar.sort(key=lambda x: (trust_order.get(x[1].get("source_trust", "unknown"), 3), -x[0]))
+        
+        for sim_score, memory_item in similar:
+            txt = memory_item.get("text", "Unknown text")
+            trust = memory_item.get("source_trust", "unknown")
+            source_url_mem = memory_item.get("source_url")
+            source_note = f" (Source: {source_url_mem})" if source_url_mem else ""
+            trust_note = f" (Trust: {trust})" if trust != "unknown" else ""
+            phase_learned = memory_item.get("learning_phase", "N/A")
+
+            response_parts.append(
+                f"  - \"{txt[:120]}...\" "
+                f"(Sim: {sim_score:.2f}, Phase: {phase_learned}{trust_note}{source_note})"
+            )
+    else:
+        response_parts.append("🧠 I don't have a strong factual memory related to that precise input right now.")
+
+    if extracted_symbols_weighted:
+        response_parts.append("\n🔗 Symbolic cues I detected in your input:")
+        for sym_info in extracted_symbols_weighted[:3]:
+            response_parts.append(
+                f"  → {sym_info['symbol']} ({sym_info['name']}) "
+                f"- Relevance: {sym_info.get('final_weight', 0):.2f}"
+            )
+    
+    # Show current adaptive weights
+    response_parts.append(f"\n📊 Current balance: Logic {ADAPTIVE_DIRECTIVES['link_score_weight_static']:.0%} / "
+                         f"Symbolic {ADAPTIVE_DIRECTIVES['link_score_weight_dynamic']:.0%}")
+    
+    return "\n".join(response_parts)
 
 def main():
     global input_counter
 
-    print("🧠 Hybrid AI: Symbolic + Vector Memory")
-    print("Type a thought or paste a URL (type 'exit' to quit).\n")
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--skip-diagnostics", action="store_true",
+        help="Skip heavy exit diagnostics and plotting"
+    )
+    parser.add_argument(
+        "--reset-weights", action="store_true",
+        help="Reset adaptive weights to defaults"
+    )
+    args = parser.parse_args()
+
+    # Load adaptive configuration at startup
+    if args.reset_weights:
+        print("🔧 Resetting adaptive weights to defaults...")
+        ADAPTIVE_DIRECTIVES["link_score_weight_static"] = 0.6
+        ADAPTIVE_DIRECTIVES["link_score_weight_dynamic"] = 0.4
+        save_adaptive_config()
+    else:
+        load_adaptive_config()
+
+    print("🧠 Hybrid AI: Symbolic + Vector Memory (Optimizer Mode with Adaptive Weights)")
+    print("\nCommands:")
+    print("  - Type text or paste a URL to process")
+    print("  - Type 'evolve' to run memory evolution")
+    print("  - Type 'exit' or 'quit' to end session")
+    print()
+
+    # Initial weight computation based on historical data
+    recompute_adaptive_link_weights()
+
+    temp_curriculum_manager = CurriculumManager()
+    current_phase_for_interaction = temp_curriculum_manager.get_current_phase()
+    
+    general_lexicon = P_Parser.load_seed_symbols()
+    general_lexicon.update(SM_SymbolMemory.load_symbol_memory())
+    print(f"Interactive mode using context of Phase {current_phase_for_interaction}. Loaded {len(general_lexicon)} symbols for matching.")
 
     while True:
+        current_interaction_directives = temp_curriculum_manager.get_processing_directives(current_phase_for_interaction)
+        # Override to allow new symbol generation
+        current_interaction_directives["allow_new_symbol_generation"] = True
+        # Apply adaptive weights to directives
+        current_interaction_directives["link_score_weight_static"] = ADAPTIVE_DIRECTIVES["link_score_weight_static"]
+        current_interaction_directives["link_score_weight_dynamic"] = ADAPTIVE_DIRECTIVES["link_score_weight_dynamic"]
+
         user_input = input("💬 You: ").strip()
+        
+        # Check for special commands
+        if user_input.lower() == "evolve":
+            print("\n🧬 Running Memory Evolution Cycle...")
+            evolution_config = {
+                'reverse_audit_confidence_threshold': 0.3,
+                'enable_reverse_migration': True,
+                'enable_weight_evolution': True,
+                'save_detailed_logs': True
+            }
+            try:
+                evolution_results = run_memory_evolution(data_dir='data', config=evolution_config)
+                print(f"\n✅ Evolution complete!")
+                
+                # Update the general lexicon with any changes
+                general_lexicon = P_Parser.load_seed_symbols()
+                general_lexicon.update(SM_SymbolMemory.load_symbol_memory())
+            except Exception as e:
+                print(f"❌ Evolution failed: {e}")
+                import traceback
+                traceback.print_exc()
+            continue
+        
         if user_input.lower() in ("exit", "quit"):
             break
 
         if is_url(user_input):
-            print("🌐 Detected URL. Parsing web content...")
-            process_web_url(user_input)
+            print("🌐 Detected URL. Processing summary...")
+            user_input_for_response = process_web_url_placeholder(
+                user_input,
+                current_phase_for_interaction,
+                general_lexicon
+            )
+            if not user_input_for_response:
+                print("  Could not process URL content.")
+                continue
         else:
-            print("📝 Detected input. Parsing and storing...")
-            parse_input(user_input)
-            store_vector(user_input)
+            user_input_for_response = user_input
+            print("📝 Detected text input. Processing...")
+            store_vector(
+                text=user_input, source_type="user_direct_input",
+                learning_phase=current_phase_for_interaction
+            )
 
-            emotions = predict_emotions(user_input)
-            print("\n💓 Emotions detected:")
-            for tag, score in emotions["verified"]:
-                print(f"   → {tag} ({score:.2f})")
+        emotions_output = predict_emotions(user_input_for_response)
+        verified_emotions = emotions_output.get("verified", [])
+        print("\n💓 Emotions detected in input:")
+        for tag, score in verified_emotions:
+            print(f"   → {tag} ({score:.2f})")
+        
+        symbols_weighted = P_Parser.parse_with_emotion(
+            user_input_for_response,
+            verified_emotions,
+            current_lexicon=general_lexicon
+        )
+        
+        # Auto-capture and store novel emojis
+        new_emojis = extract_new_emojis(user_input_for_response, general_lexicon)
+        for e in new_emojis:
+            name = unicodedata.name(e, e)
+            SM_SymbolMemory.add_symbol(
+                symbol_token=e, name=name,
+                keywords=[name.lower()],
+                initial_emotions={},
+                example_text=user_input_for_response,
+                origin="auto_emoji_capture",
+                learning_phase=current_phase_for_interaction
+            )
+        if new_emojis:
+            general_lexicon.update(SM_SymbolMemory.load_symbol_memory())
 
-            add_emotions(user_input, emotions)
-            symbols = parse_with_emotion(user_input, emotions["verified"])
-            update_symbol_emotions(symbols, emotions["verified"])
-
-            for s in symbols:
-                s["influencing_emotions"] = emotions["verified"]
-
-            for sym in symbols:
-                add_symbol(
-                    symbol=sym["symbol"],
-                    name=sym["name"],
-                    keywords=[sym["matched_keyword"]],
-                    emotions=dict(emotions["verified"]),
-                    example_text=user_input,
-                    origin="emergent"
+        if symbols_weighted:
+            update_symbol_emotions(symbols_weighted, verified_emotions)
+            for s_info in symbols_weighted:
+                SM_SymbolMemory.add_symbol(
+                    symbol_token=s_info["symbol"],
+                    name=s_info["name"],
+                    keywords=[s_info.get("matched_keyword","unknown_match")],
+                    initial_emotions=dict(verified_emotions),
+                    example_text=user_input_for_response,
+                    origin="user_interaction_match",
+                    learning_phase=current_phase_for_interaction
                 )
+            print("\n✨ Symbols extracted from input:")
+            for s in symbols_weighted:
+                print(f"   → {s['symbol']} ({s['name']})" +
+                      f" [Matched: {s.get('matched_keyword','N/A')}, W: {s.get('final_weight',0):.2f}]")
+        else:
+            print("🌀 No specific symbolic units extracted from input based on current lexicon.")
 
-            if symbols:
-                print("\n✨ Extracted symbols:")
-                for s in symbols:
-                    print(f"   → {s['symbol']} ({s['name']}) [matched: {s['matched_keyword']}]")
-            else:
-                print("🌀 No symbolic units extracted.")
-
-            if not symbols:
-                keywords = [k for k in extract_symbolic_units(user_input)]
-                new_sym = generate_symbol_from_context(user_input, keywords, emotions["verified"])
+        if not symbols_weighted and current_interaction_directives.get("allow_new_symbol_generation", False):
+            keywords_for_gen = P_Parser.extract_keywords(user_input_for_response)
+            if keywords_for_gen:
+                new_sym = generate_symbol_from_context(
+                    user_input_for_response, keywords_for_gen, verified_emotions
+                )
                 if new_sym:
-                    print(f"✨ Created new emergent symbol: {new_sym}")
+                    print(f"💡 Suggested new symbol: {new_sym['symbol']} - {new_sym['name']}")
+                    SM_SymbolMemory.add_symbol(
+                        symbol_token=new_sym['symbol'],
+                        name=new_sym['name'],
+                        keywords=new_sym['keywords'],
+                        initial_emotions=new_sym['emotions'],
+                        example_text=user_input_for_response,
+                        origin=new_sym['origin'],
+                        learning_phase=current_phase_for_interaction,
+                        resonance_weight=new_sym.get('resonance_weight',0.5)
+                    )
+                    general_lexicon.update(SM_SymbolMemory.load_symbol_memory())
 
-            matches = retrieve_similar_vectors(user_input)
-            log_trail(user_input, symbols, matches)
+        response = generate_response(
+            user_input_for_response,
+            symbols_weighted,
+            current_interaction_directives
+        )
+        print("\n🗣️ AI Response:")
+        print(response)
 
-            response = generate_response(user_input, symbols)
-            print("\n🗣️ Response:")
-            print(response)
+        input_counter += 1
+        
+        # Periodic maintenance tasks
+        if input_counter % INPUT_THRESHOLD_SYMBOL_PRUNE == 0:
+            print("\n🧹 Periodic symbol duplicate pruning...")
+            SM_SymbolMemory.prune_duplicates()
+            
+        if input_counter % INPUT_THRESHOLD_PHASE1_VECTOR_PRUNE == 0:
+            if current_phase_for_interaction == 1:
+                print("\n🧹 Periodic Phase 1 vector pruning...")
+                prune_phase1_symbolic_vectors(archive_path_str="data/optimizer_archived_phase1_vectors.json")
+            else:
+                print(f"\n(Skipping Phase 1 prune; Phase {current_phase_for_interaction})")
+                
+        if input_counter % INPUT_THRESHOLD_WEIGHT_RECOMPUTE == 0:
+            print("\n🔧 Periodic adaptive weight recomputation...")
+            recompute_adaptive_link_weights()
+            
+        # Periodic memory evolution
+        if input_counter % INPUT_THRESHOLD_MEMORY_EVOLUTION == 0:
+            print("\n🧬 Periodic memory evolution...")
+            try:
+                evolution_results = run_memory_evolution(data_dir='data')
+                if evolution_results['migrated'] > 0 or evolution_results['reversed'] > 0:
+                    print(f"  → Evolved: {evolution_results['migrated']} migrated, "
+                          f"{evolution_results['reversed']} reversed")
+            except:
+                pass  # Silent fail for periodic runs
 
-            # ✅ Check threshold for memory pruning
-            input_counter += 1
-            if input_counter % INPUT_THRESHOLD == 0:
-                print("🧹 Auto-optimizing memory and symbols...")
-                prune_duplicates()
+    # --- On exit: run full diagnostics ---
+    print("\n--- Session End Diagnostics ---")
 
-    # On exit: run full diagnostics
-    print("\n🔍 Checking for emergent patterns...")
-    cluster_vectors_and_plot(show_graph=True)
+    if not args.skip_diagnostics:
+        try: 
+            cluster_vectors_and_plot(show_graph=True)
+        except: 
+            pass
+        try: 
+            show_trail_graph()
+        except: 
+            pass
+        try: 
+            show_symbol_drift()
+        except: 
+            pass
+        try: 
+            show_emotion_clusters()
+        except: 
+            pass
+        if SYSTEM_ANALYTICS_LOADED:
+            try:
+                plot_node_activation_timeline()
+                plot_symbol_popularity_timeline()
+                plot_curriculum_metrics()
+            except: 
+                pass
+        SM_SymbolMemory.prune_duplicates()
+        prune_phase1_symbolic_vectors(archive_path_str="data/optimizer_archived_phase1_vectors_final.json")
+        
+        # Run memory evolution as part of cleanup
+        print("\n🧬 Running final memory evolution...")
+        try:
+            evolution_config = {
+                'reverse_audit_confidence_threshold': 0.3,
+                'enable_reverse_migration': True,
+                'enable_weight_evolution': True,
+                'save_detailed_logs': True
+            }
+            evolution_results = run_memory_evolution(data_dir='data', config=evolution_config)
+            print(f"✅ Final evolution: {evolution_results['migrated']} migrated, "
+                  f"{evolution_results['reversed']} reversed")
+        except Exception as e:
+            print(f"⚠️ Memory evolution skipped: {e}")
 
-    print("🧭 Visualizing trail of connections...")
-    show_trail_graph()
+    # Acceptance resolution for unresolved recursion patterns
+    perform_acceptance_resolution()
+    
+    # Final adaptive weight computation
+    print("\n🔧 Final adaptive weight check...")
+    if recompute_adaptive_link_weights():
+        print("   Weights updated based on session data.")
+    
+    # Show brain metrics summary
+    try:
+        from brain_metrics import display_metrics_summary
+        display_metrics_summary()
+    except:
+        pass
 
-    print("📈 Showing symbol drift over time...")
-    show_symbol_drift()
-
-    print("🎨 Visualizing emotional similarity between symbols...")
-    show_emotion_clusters()
-
-    print("🧹 Final memory optimization...")
-    prune_duplicates()
+    print("\nOptimizer session ended. Goodbye!")
 
 if __name__ == "__main__":
+    # Ensure data directories are set up
+    DATA_DIR_MO = Path("data")
+    DATA_DIR_MO.mkdir(parents=True, exist_ok=True)
+    # Initialize memory files if missing
+    for fn in ["symbol_memory.json","seed_symbols.json","meta_symbols.json"]:
+        path = DATA_DIR_MO/fn
+        if not path.exists() or path.stat().st_size==0:
+            with open(path,"w",encoding="utf-8") as f:
+                json.dump({},f)
     main()

@@ -28,16 +28,17 @@ def _save_log(log_entries):
     with open(TRAIL_LOG_FILE_PATH, "w", encoding="utf-8") as f:
         json.dump(log_entries, f, indent=2, ensure_ascii=False)
 
-# APPENDED: log_dynamic_bridge_processing_step function
-def log_dynamic_bridge_processing_step(log_id=None, # Added log_id as first param
+# MODIFIED: log_dynamic_bridge_processing_step function to include content_type_heuristic
+def log_dynamic_bridge_processing_step(log_id=None, 
                                      text_input=None, source_url=None, current_phase=0,
                                      directives=None, is_highly_relevant_for_phase=False,
-                                     target_storage_phase_for_chunk=None, # New param
-                                     is_shallow_content=False, # New param
+                                     target_storage_phase_for_chunk=None, 
+                                     is_shallow_content=False, 
+                                     content_type_heuristic="ambiguous", # New parameter
                                      detected_emotions_output=None,
                                      logic_node_output=None,
                                      symbolic_node_output=None,
-                                     generated_response_preview=None): # Added for completeness
+                                     generated_response_preview=None):
     """
     Logs a detailed record of a single processing step from the DynamicBridge.
     """
@@ -62,25 +63,20 @@ def log_dynamic_bridge_processing_step(log_id=None, # Added log_id as first para
             else:
                 serializable_directives[k] = v
     
-    # Summarize outputs for brevity if they are too verbose, especially lists of texts
-    # Logic node output already seems summarized by DynamicBridge.
-    # Symbolic node output seems summarized by DynamicBridge.
-    # Detected emotions output: The 'verified' list of tuples should be fine.
-
     log_entry = {
         "log_id": log_id,
         "timestamp": datetime.utcnow().isoformat(),
         "input_text_preview": text_input[:200] + "..." if text_input and len(text_input) > 200 else text_input,
         "source_url": source_url,
-        "processing_phase": current_phase, # Phase in which this processing occurred
-        "target_storage_phase_for_chunk": target_storage_phase_for_chunk, # Phase this chunk is deemed most relevant for
+        "processing_phase": current_phase, 
+        "target_storage_phase_for_chunk": target_storage_phase_for_chunk, 
         "is_shallow_content": is_shallow_content,
-        "phase_directives_info": serializable_directives.get("info", "N/A") if serializable_directives else "N/A", # A summary of directives
-        "phase_directives_full": serializable_directives, # Store all directives for detailed review
+        "content_type_heuristic": content_type_heuristic, # Store the content type
+        "phase_directives_info": serializable_directives.get("info", "N/A") if serializable_directives else "N/A", 
+        "phase_directives_full": serializable_directives, 
         "is_highly_relevant_for_current_processing_phase": is_highly_relevant_for_phase,
-        "detected_emotions_summary": { # Summarize emotions
+        "detected_emotions_summary": { 
              "top_verified": detected_emotions_output.get("verified", [])[:3] if detected_emotions_output else [],
-             # "top_hartmann": detected_emotions_output.get("hartmann_emotions", [])[:2] if detected_emotions_output else [] # Optional more detail
         },
         "logic_node_summary": logic_node_output,
         "symbolic_node_summary": symbolic_node_output,
@@ -93,22 +89,19 @@ def log_dynamic_bridge_processing_step(log_id=None, # Added log_id as first para
 
 # --- Old logging functions, can be kept for compatibility or refactored/removed later ---
 # These are likely used by main.py or memory_optimizer.py
-
 def log_trail(text, symbols, matches, file_path=TRAIL_LOG_FILE_PATH): # Ensure file_path consistency
     """Appends an entry to the trail log for older interaction style."""
-    # This function logs a different structure than log_dynamic_bridge_processing_step
-    # It might be from an older version or for a different purpose (e.g., direct user interaction logging)
-    # For now, we keep it separate. If it's meant to be the same, it needs refactoring.
     log_data = _load_log() # Uses the main TRAIL_LOG_FILE_PATH
 
     entry_id = hashlib.md5(text.encode('utf-8')).hexdigest() # Simple ID for this style
     new_entry = {
-        "id": entry_id,
+        "id": entry_id, # This ID is different from log_dynamic_bridge_processing_step's log_id
         "timestamp": datetime.utcnow().isoformat(),
         "text": text,
         "symbols": symbols, # Expects a list of symbol dicts from parser
         "matches": matches, # Expects list of (score, item_dict) from vector_memory
-        "emotions": [] # Placeholder, to be filled by add_emotions
+        "emotions": [], # Placeholder, to be filled by add_emotions
+        "type": "legacy_trail" # Add a type to distinguish from new logs
     }
     log_data.append(new_entry)
     _save_log(log_data) # Uses the main TRAIL_LOG_FILE_PATH
@@ -118,19 +111,21 @@ def add_emotions(entry_id, emotions, file_path=TRAIL_LOG_FILE_PATH): # Ensure fi
     """Adds detected emotions to a specific log entry for older style."""
     log_data = _load_log()
     for entry in log_data:
-        if entry.get("id") == entry_id: # Check if "id" key exists
+        if entry.get("id") == entry_id and entry.get("type") == "legacy_trail": # Check for "id" and type
             entry["emotions"] = emotions # Assumes emotions is a serializable list/dict
             break
     _save_log(log_data)
 
 
 if __name__ == '__main__':
-    print("Testing trail_log.py with new log_dynamic_bridge_processing_step...")
+    print("Testing trail_log.py with new log_dynamic_bridge_processing_step (and content_type_heuristic)...")
 
     # Dummy data for testing log_dynamic_bridge_processing_step
-    dummy_text = "This is a test chunk processed by DynamicBridge."
+    dummy_text_fact = "This is a factual test chunk processed by DynamicBridge."
+    dummy_text_sym = "A symbolic dream of fire and water."
     dummy_url = "http://example.com/test_page"
-    dummy_phase = 1
+    dummy_phase_1 = 1
+    dummy_phase_2 = 2
     dummy_target_phase = 1
     dummy_directives = {
         "phase": 1, "info": "Test Phase 1 directives", 
@@ -145,25 +140,30 @@ if __name__ == '__main__':
     dummy_response = "[BRIDGE] Processed test chunk."
 
     # Test with a clean log or a temporary one for the new function
-    temp_bridge_log_path = Path("data/test_dynamic_bridge_trail_log.json") 
+    temp_bridge_log_path = Path("data/test_dynamic_bridge_trail_log_v_full.json") # New name for fresh test
     if temp_bridge_log_path.exists(): temp_bridge_log_path.unlink()
     
     original_global_path = TRAIL_LOG_FILE_PATH # Save global
     globals()['TRAIL_LOG_FILE_PATH'] = temp_bridge_log_path # Override global for this test call
 
+    # Test first log entry
     log_dynamic_bridge_processing_step(
-        text_input=dummy_text, source_url=dummy_url, current_phase=dummy_phase,
+        text_input=dummy_text_fact, source_url=dummy_url, current_phase=dummy_phase_1,
         directives=dummy_directives, is_highly_relevant_for_phase=dummy_relevance,
         target_storage_phase_for_chunk=dummy_target_phase, is_shallow_content=dummy_is_shallow,
+        content_type_heuristic="factual", # Test new field
         detected_emotions_output=dummy_emotions_out, logic_node_output=dummy_logic_out,
         symbolic_node_output=dummy_symbolic_out, generated_response_preview=dummy_response
     )
     
-    log_dynamic_bridge_processing_step( # Log another to ensure list append works
-        text_input="Another chunk, less relevant.", source_url=dummy_url, current_phase=dummy_phase,
+    # Test second log entry
+    log_dynamic_bridge_processing_step( 
+        text_input=dummy_text_sym, source_url=dummy_url, current_phase=dummy_phase_2,
         directives=dummy_directives, is_highly_relevant_for_phase=False,
-        target_storage_phase_for_chunk=2, is_shallow_content=True, # e.g. shallow content for next phase
-        detected_emotions_output={"verified": [("neutral", 0.9)]}, logic_node_output={"retrieved_memories_count": 0},
+        target_storage_phase_for_chunk=2, is_shallow_content=True, 
+        content_type_heuristic="symbolic", # Test new field
+        detected_emotions_output={"verified": [("neutral", 0.9)]}, 
+        logic_node_output={"retrieved_memories_count": 0},
         symbolic_node_output={"matched_symbols_count": 0, "generated_symbol": None}
     )
 
@@ -173,12 +173,13 @@ if __name__ == '__main__':
         bridge_log_data = json.load(f)
     print(f"\nContent of {temp_bridge_log_path} ({len(bridge_log_data)} entries):")
     for i, entry in enumerate(bridge_log_data):
-        print(f"  Entry {i+1}: Log ID: {entry['log_id']}, Phase: {entry['processing_phase']}, TargetStore: {entry.get('target_storage_phase_for_chunk')}, Relevant: {entry['is_highly_relevant_for_current_processing_phase']}")
+        print(f"  Entry {i+1}: Log ID: {entry['log_id']}, ContentType: {entry.get('content_type_heuristic', 'N/A')}, Phase: {entry['processing_phase']}")
     assert len(bridge_log_data) == 2
     assert bridge_log_data[0]["processing_phase"] == 1
-    assert bridge_log_data[0]["target_storage_phase_for_chunk"] == 1
+    assert bridge_log_data[0]["content_type_heuristic"] == "factual"
     assert bridge_log_data[1]["target_storage_phase_for_chunk"] == 2
     assert bridge_log_data[1]["is_shallow_content"] is True
+    assert bridge_log_data[1]["content_type_heuristic"] == "symbolic"
 
 
     # Test old functions (they use the global TRAIL_LOG_FILE_PATH, which is currently our temp path)
@@ -189,7 +190,13 @@ if __name__ == '__main__':
     bridge_log_data_after_old = json.load(open(temp_bridge_log_path, "r"))
     print(f"Log now has {len(bridge_log_data_after_old)} entries.")
     assert len(bridge_log_data_after_old) == 3 # 2 new style, 1 old style
-    assert any(e.get("id") == old_log_id and e.get("emotions") for e in bridge_log_data_after_old)
+    found_legacy = False
+    for entry in bridge_log_data_after_old:
+        if entry.get("id") == old_log_id and entry.get("type") == "legacy_trail":
+            assert entry.get("emotions") == [("test_emo", 0.99)]
+            found_legacy = True
+            break
+    assert found_legacy
 
 
     globals()['TRAIL_LOG_FILE_PATH'] = original_global_path # Restore global

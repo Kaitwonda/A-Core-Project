@@ -248,13 +248,29 @@ def parse_with_emotion(text_input, detected_emotions_verified, current_lexicon):
         # Get symbol's defined emotions (e.g., from seed_symbols "emotions" list or symbol_memory)
         defined_symbol_emotions_raw = symbol_details.get("emotions", [])
         defined_symbol_emotions_lc = []
-        if defined_symbol_emotions_raw: # Convert to simple list of lowercase emotion strings
-            if isinstance(defined_symbol_emotions_raw[0], dict): # e.g. [{"emotion": "anger", "weight": 0.8}]
-                defined_symbol_emotions_lc = [e.get("emotion","").lower() for e in defined_symbol_emotions_raw if e.get("emotion")]
-            elif isinstance(defined_symbol_emotions_raw[0], tuple): # e.g. [("anger", 0.8)]
-                defined_symbol_emotions_lc = [e[0].lower() for e in defined_symbol_emotions_raw if e and e[0]]
-            elif isinstance(defined_symbol_emotions_raw[0], str): # assume list of strings
+        
+        # FIXED: Handle emotions whether they're stored as dict or list
+        if isinstance(defined_symbol_emotions_raw, dict):
+            # If someone stored a dict (emotion->weight), treat keys as emotions
+            defined_symbol_emotions_lc = [emo.lower() for emo in defined_symbol_emotions_raw.keys()]
+        elif isinstance(defined_symbol_emotions_raw, list) and defined_symbol_emotions_raw:
+            # If it's a list, only index into it when it really is a list
+            first = defined_symbol_emotions_raw[0]
+            if isinstance(first, dict):
+                defined_symbol_emotions_lc = [
+                    e.get("emotion","").lower() 
+                    for e in defined_symbol_emotions_raw 
+                    if isinstance(e, dict) and e.get("emotion")
+                ]
+            elif isinstance(first, tuple):
+                defined_symbol_emotions_lc = [
+                    e[0].lower() 
+                    for e in defined_symbol_emotions_raw 
+                    if isinstance(e, tuple) and len(e)>=1 and isinstance(e[0], str)
+                ]
+            elif isinstance(first, str):
                 defined_symbol_emotions_lc = [e.lower() for e in defined_symbol_emotions_raw]
+        # Else leave defined_symbol_emotions_lc empty
 
         for text_emo, text_emo_strength in current_text_emotions_map.items():
             if text_emo in defined_symbol_emotions_lc: # text_emo is already lowercased
