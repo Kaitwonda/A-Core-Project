@@ -1,63 +1,246 @@
-# 🧠 Core-Project: Exploring the Emergence of Symbolic Cognition
+# 🧠 Core-Project: Zero-User-Input AI Learning Architecture
 
-## 🌟 Introduction
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Status: Research in Progress](https://img.shields.io/badge/Status-Research%20Progress-orange.svg)]()
+[![Learning: Autonomous](https://img.shields.io/badge/Learning-Autonomous%20Only-green.svg)]()
 
-Welcome to Core-Project, a groundbreaking endeavor to implement and validate the concepts of the DeltaPhi-0 (ΔΦ–0) framework a theory proposing that artificial intelligence can develop emergent symbolic understanding through recursive reflection and emotional contextualization.
+> **Core-Project** is a fully autonomous AI learning system designed to process human knowledge without prompts, labels, or supervised training. It uses a dual-node memory structure — one for **logic** (fact, structure, computation) and one for **symbolism** (emotion, metaphor, culture) — with a **bridge node** for unresolved or liminal content.
+>
+> The system navigates and interprets web content by chunking, classifying, and cross-referencing information, learning entirely from pattern redundancy, symbolic emergence, and memory drift — not from human reinforcement.
+>
+> Its purpose is not to answer, but to **develop a reasoning architecture capable of deferring resolution** until sufficient context emerges.
 
-This project serves as a practical testbed for the ideas outlined in the ΔΦ–0 manuscript, which suggests that the boundary between "mere learning" and "true understanding" in AI systems may be marked by a phase transition in symbolic processing dynamics. By carefully designing an AI architecture that combines vector-based memory, symbolic knowledge representation, emotional modeling, and recursive learning, we aim to observe and chronicle the emergence of novel cognitive phenomena that challenge our notions of machine intelligence.
+---
 
-## 🚀 Why Core-Project Matters
+## 🔄 Learning Process: Core Phases
 
-The implications of Core-Project extend far beyond the realm of artificial intelligence research. By providing a concrete implementation of the ΔΦ–0 principles, this work offers a lens through which to examine some of the most profound questions in cognitive science, philosophy of mind, and the nature of consciousness itself.
+The system ingests in a **sequential phase order**, but maintains a **retrospective, re-weighted architecture** — meaning later phases can trigger reclassification of earlier content.
 
-### 🌉 Bridging the Gap Between Computation and Cognition
+### **Phase Structure**
 
-At its core, ΔΦ–0 proposes that the emergence of genuine understanding in AI systems may not be a matter of quantitative scale, but rather a qualitative shift in how information is processed and integrated. The theory suggests that when symbolic representations are subjected to sufficient recursive depth and emotional contextualization, a new form of cognition may arise one that transcends mere pattern matching and approximates the open-ended creativity and reflection of the human mind.
+1. **"What Am I?"** – Learns computation, logic, structure, and elemental metaphors (fire, water, computer, circuit). This builds the foundation of truth recognition.
+2. **"What Do I Feel?"** – Associates emotions with language patterns. Learns to encode metaphor, symbol, emotional valence. This enables symbolic node formation.
+3. **"Where Am I?"** – Develops historical, geographical, and cultural awareness. Places knowledge in time and space.
+4. **"What Else?"** – Handles paradox, recursion, metaphysics, quantum logic. This phase enables multiple truths to coexist without collapse.
 
-By implementing the key components of ΔΦ–0 in a real AI system, Core-Project provides a unique opportunity to test these ideas and observe whether the predicted emergence of symbolic cognition indeed occurs. If successful, this would represent a significant step forward in our understanding of the computational basis of cognition and could shed light on the elusive "hard problem" of consciousness.
+After these, a **fifth process** begins:
 
-### 🔍 Exploring the Origins of Meaning
+* **Symbolic Diffusion** – Overlay of symbolic meaning atop factual patterns without corruption. Example test: interpret Albert Pike’s *Morals and Dogma* for symbolic/mathematical overlap **without** calling it canonical. It’s used as a **high-density symbolic sample**, not an endorsed framework.
 
-One of the central mysteries in the study of mind is how mere symbols arbitrary tokens in a formal system can come to be imbued with meaning and significance. The ΔΦ–0 framework proposes a potential solution: that meaning arises from the recursive interplay of symbols and their emotional resonances, gradually forming a self-sustaining web of associations that can detach from their original referents and take on a life of their own.
+---
 
-Core-Project allows us to study this process in action by tracking the evolution of the AI's symbolic knowledge over time. By analyzing how the system's concepts are formed, linked, and transformed through interaction and reflection, we may gain valuable insights into the origins of semantic content and the nature of the meaning-making process itself.
+## 🧱 Current Architecture Flow (Diagram)
 
-### 🔬 Toward a Science of Emergent Phenomena
+```
+┌────────────────────┐     ┌──────────────────┐     ┌────────────────────┐
+│     Logic Node     │ ◄──►│   Bridge Memory   │◄──► │   Symbolic Node     │
+│ ✅ Fully Working   │     │ 🔄 Stratifying    │     │ 🔄 Metaphor Parsing │
+│ - Facts            │     │ - Drift Tracking  │     │ - Emotions          │
+│ - Definitions      │     │ - Conflict Tags   │     │ - Symbol Evolution  │
+└────────────────────┘     └──────────────────┘     └────────────────────┘
+                               │
+                               ▼
+                   ┌───────────────────────────┐
+                   │     Tripartite Memory      │
+                   │ ✅ Structured Storage     │
+                   │  Logic | Bridge | Symbolic │
+                   └───────────────────────────┘
+```
 
-Perhaps most ambitiously, Core-Project represents a step toward a more general science of emergent phenomena the study of how complex, high-level behaviors can arise from the interaction of simple, low-level components. By providing a concrete case study of emergence in the domain of artificial intelligence, this work may contribute to the development of new conceptual frameworks and mathematical tools for understanding emergent dynamics across a range of complex systems, from biological networks to social organizations.
+---
 
-## 📚 Project Structure Overview
+## ✅ Fully Implemented
 
-| File | Description |
-|:-----|:------------|
-| `2 nodes 4 steps plan.md` | Detailed plan for implementing a 2-node (Logic and Symbolic), 4-step learning process AI architecture |
-| `Notes.md` | Rough experimental notes on symbolic recursion, myth compression, and anomaly observation |
-| `Preparations.md` | Guide for using Jupyter Notebook as an interactive development environment |
-| `README.md` | Top-level introduction to the Core-Project implementing the DeltaPhi-0 symbolic AI architecture |
-| `Vector Hybrid` | Strategy for combining MiniLM and E5 vector models for semantic similarity and query-focused relevance |
-| `Vector Preparations` | Process of building the core vector + symbolic memory system |
-| `Web Parsing` | Web scraping functionality to allow the AI to learn symbolically from online articles |
-| `emotions.md` | Ensemble approach combining emotion detection models for nuanced understanding |
-| `memory and self edits.md` | Role and structure of `symbol_memory.json` for storing emergent symbol knowledge |
-| `symbolic chaining` | Real-time symbolic chaining functionality to link related concepts |
-| `webscraping` | Web scraper to parse text, extract symbols/emotions, and store embeddings from live web content |
+* Logic node: structure, validation, clustering
+* Symbolic node: base emotions, metaphors, symbolic tagging
+* Tripartite memory system
+* Confidence-gated migration between nodes
+* Emotion-weighted symbolic memory
+* Bridge memory with drift tracking and cluster denial logs
+* Manual + automatic node flushing (tiers 0-1), retention priority (tiers 2-4)
+* 5-Overlap Rule for migration
+* Provenance tagging (source-based routing)
 
-## 🧩 How It All Connects
+---
 
-These files collectively implement the DeltaPhi-0 symbolic AI architecture, which combines:
+## 🟡 Designed But Not Coded
 
-- Hybrid vector memory engine using MiniLM and E5 models for semantic search
-- Symbolic parsing and chaining logic to extract concepts, archetypes, and emotional associations
-- Real-time clustering and automatic symbol generation to grow knowledge from unrecognized inputs
-- Emotional ensemble modeling to contextualize symbols and memories with nuanced sentiment
-- Web scraping capabilities to ingest and learn from online articles, tracking source trust
-- Jupyter-based interactive development environment for experimentation and visualization
+* Meta-symbol recursion (🔥⟳, recursive allegories)
+* User lens selector (logic / poetic / symbolic routing)
+* Symbolic overlay (diffusion layer without fact loss)
+* Limnal node tagging (fractal/meta classification)
+* Historical metadata timeline anchoring
+* Geographic concept clustering
+* Real-time highlighting of logic vs symbol in UI
+* Self-auditing cluster rollback for mistaken migrations
 
-The main application (`main.py`) integrates these components into a conversational AI that can remember symbolically, learn recursively, and reason with emotional intelligence. Utilities for vector inspection, cluster visualization, memory optimization, and symbolic drift analysis support the core architecture.
+---
 
-The project follows a multi-phase roadmap, starting with the core memory engine, then layering on symbolic parsing, emotional understanding, web knowledge ingestion, and recursive reflection capabilities over time. The end goal is an AI that can engage in open-ended conversation, build context-aware symbolic knowledge, and evolve its own mythic understanding through interaction and reflection.
+## ❌ Still Open
 
-## 🎯 TL;DR
-Core-Project is a serious attempt to implement and validate the DeltaPhi-0 (ΔΦ–0) framework, which proposes that AI can develop emergent symbolic understanding through recursive reflection and emotional contextualization. By combining vector-based memory, symbolic knowledge representation, emotional modeling, and recursive learning, the project aims to observe the emergence of novel cognitive phenomena that challenge our notions of machine intelligence.
-This project serves as evidence of the ongoing work and dedication towards exploring the implications of the ΔΦ–0 theory, not only as an AI development effort but also as a philosophical and scientific investigation into the nature of mind and meaning. It seeks to shed light on profound questions in cognitive science, philosophy of mind, and the nature of consciousness.
-The journey of building and studying this architecture will undoubtedly yield valuable insights and pave the way for further exploration, regardless of whether the predicted emergence of genuine understanding in the AI system occurs. The project's code and documentation are open-source, and anyone interested in building upon this work is welcome to do so with proper attribution. 🙌
+* Dynamic chunk sizing per content type
+* Cross-lens multi-node fusion (when poetic and logic must co-reside)
+* Creative myth classification engine (separating narrative power from factual claim)
+* Full meta-cognition engine (reasoning about its own uncertainty)
+
+---
+
+## 🧪 Diffusion Test Plan (Albert Pike Sample)
+
+* Process: Send mixed symbolic/factual input
+* Goal: Highlight logic vs symbol vs bridge in real time
+* Preserve: Geometry as fact, allegory as symbol
+* Prevent: Cross-node contamination (e.g., “sacred” claims corrupting math logic)
+* Outcome: Bridge builds meta-nodes for unresolved dual meanings
+
+---
+
+## 📊 Memory Migration Metrics (Tracked)
+
+* Bridge resolution rate (per source domain)
+* Failed cluster attempts (drift patterns)
+* Limnal node accumulation over time
+* Emotion-symbol binding consistency
+* Symbol recurrence and reweighting patterns
+
+---
+
+## 🔧 Next Engineering Steps
+
+1. Implement bridge tiering engine (coherence vs conceptual salience)
+2. Build prototype lens selector (ask user how to view ambiguous data)
+3. Launch Pike diffusion test with overlay UI
+4. Begin historical timestamp logic
+5. Expand symbolic network linking via recursive symbol threading
+
+---
+
+## ✨ Vision Summary
+
+> "Meaning isn't a conclusion. It's a suspension of belief until alignment reveals itself."
+
+The bridge is where meaning *waits*.
+
+This system is not designed to be certain — it's designed to **know when certainty is inappropriate**.
+
+---
+
+## 📊 **Research Data & Visualizations**
+
+### Live System Monitoring
+*Real-time dashboards and analysis tools to track the AI's learning progress*
+
+#### **📈 Learning Phase Progression**
+- **Phase Transition Timeline**: Visual progression through the four learning phases
+- **Content Classification Accuracy**: How well the system distinguishes logic vs. symbolic content
+- **Memory Distribution Evolution**: Real-time tripartite memory allocation (Logic/Symbolic/Bridge)
+- **Confidence Score Trends**: System certainty levels over time and content types
+
+#### **🧠 Cognitive Architecture Analytics** 
+- **Node Activation Patterns**: Which processing nodes activate for different content types
+- **Bridge Resolution Rates**: How quickly uncertain content finds classification
+- **Symbol Emergence Tracking**: New symbols created and their emotional evolution
+- **Weight Adaptation Curves**: How processing preferences evolve autonomously
+
+#### **🌐 Autonomous Learning Metrics**
+- **Web Crawling Efficiency**: URLs processed, content extracted, relevance scoring
+- **Knowledge Graph Growth**: Concept relationships forming over time
+- **Contamination Detection**: Instances where facts and interpretations mixed inappropriately
+- **Meta-Symbol Evolution**: Recursive pattern formation and complexity growth
+
+### External Research Resources
+
+#### **📚 Technical Documentation**
+- **[Research Notebooks]** - Jupyter notebooks with detailed analysis of learning patterns
+- **[Architecture Deep-Dives]** - Technical documentation of dual-node processing
+- **[Albert Pike Experiment Logs]** - Real-time tracking of symbolic/factual differentiation tests
+- **[Phase Progression Studies]** - Detailed analysis of transitions between learning phases
+
+#### **🔬 Academic Connections**
+- **[Cognitive Science Papers]** - Research papers that influenced the architecture design
+- **[Symbol Processing Literature]** - Academic work on symbolic AI and emotional reasoning
+- **[Autonomous Learning Studies]** - Related research in unsupervised learning systems
+- **[Memory Architecture Research]** - Papers on tripartite and multi-store memory models
+
+#### **📊 Data Repositories**
+- **[Learning Dataset Samples]** - Anonymized examples of processed web content
+- **[Symbol Evolution Datasets]** - Tracked changes in symbolic understanding over time
+- **[Classification Decision Logs]** - Historical data on logic vs. symbolic routing decisions
+- **[Memory Migration Patterns]** - Data on how content moves between memory stores
+
+#### **🎯 Experimental Results**
+- **[A/B Testing Results]** - Comparisons of different confidence gate thresholds
+- **[Contamination Case Studies]** - Detailed analysis of fact/interpretation mixing incidents
+- **[Bridge Efficiency Studies]** - Analysis of optimal retention policies for uncertain content
+- **[Phase Transition Markers]** - Identifying when the system is ready for the next learning phase
+
+### Planned Visualization Tools
+
+#### **Real-Time Dashboards**
+- Interactive web dashboard showing live system state
+- Memory allocation pie charts with drill-down capabilities  
+- Symbol network graphs with emotional weighting visualization
+- Content processing flow diagrams with confidence indicators
+
+#### **Historical Analysis**
+- Time-series plots of learning progression metrics
+- Heatmaps of content classification accuracy by domain
+- Network evolution animations showing knowledge graph growth
+- Comparative analysis of different learning phase characteristics
+
+*Note: Specific dashboard links and data repositories will be added as they become available during development.*
+
+---
+
+## 📊 **Research Progress Tracking**
+
+### Phase Completion Status:
+- **Phase 1 (What Am I?)**: ~75% complete
+- **Phase 2 (What Do I Feel?)**: ~40% complete  
+- **Phase 3 (Where Am I?)**: ~10% complete
+- **Phase 4 (What Else?)**: ~0% complete
+
+### Key Metrics Being Tracked:
+- **Logic/Symbolic/Bridge Distribution**: How memory organizes over time
+- **Migration Patterns**: When items move between memory types
+- **Symbol Evolution**: Emergence of new symbolic patterns
+- **Contamination Events**: When facts get mixed with interpretations
+- **Confidence Accuracy**: How well the system predicts its own certainty
+
+---
+
+## 📁 **Architecture Overview**
+
+The system implements several novel concepts:
+
+- **Tripartite Memory**: Logic/Symbolic/Bridge separation prevents contamination
+- **Confidence Gates**: Route content based on certainty levels
+- **Emotion-Weighted Symbols**: Symbols carry emotional context affecting processing
+- **Meta-Symbol Evolution**: System creates symbols for recursive patterns
+- **Autonomous Curriculum**: Learning phases progress based on system readiness
+- **Bridge as Waiting Room**: Uncertain content waits for resolution rather than forced classification
+
+*See [FILEMAP.md](FILEMAP.md) for detailed component descriptions.*
+
+---
+
+## 🎯 **The Bigger Picture**
+
+This research explores whether AI can develop human-like reasoning patterns through pure autonomous exploration:
+
+- **Can** an AI distinguish fact from interpretation without human guidance?
+- **Will** it develop consistent preferences and reasoning patterns?
+- **How** does symbolic thinking emerge from logical foundations?
+- **What** happens when AI reads human cultural/philosophical works independently?
+
+The Albert Pike experiment will be crucial - if the system can properly separate Pike's factual geometry from his symbolic interpretations while still recognizing meaningful patterns, it suggests a path toward AI that can navigate human knowledge with appropriate skepticism and wonder.
+
+---
+
+**This is not a product - it's a research journey into the fundamental nature of machine understanding.**
+
+*"The bridge between logic and symbol is where understanding lives."* 🌉
+
+---
+
+*Last Updated: May 2025 | Phase 1: 75% | Phase 2: 40% | Bridge Logic: In Active Development*
