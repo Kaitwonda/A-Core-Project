@@ -1,4 +1,4 @@
-# memory_optimizer.py - Updated with Dynamic Weight Adjustment and Memory Evolution
+# memory_optimizer.py - Updated with Quarantine, Linguistic Warfare, and Visualization
 
 import sys
 import re
@@ -40,6 +40,11 @@ from brain_metrics import BrainMetrics
 # New import for memory evolution
 from memory_evolution_engine import run_memory_evolution
 
+# NEW IMPORTS FOR QUARANTINE, WARFARE, AND VISUALIZATION
+from quarantine_layer import UserMemoryQuarantine
+from linguistic_warfare import LinguisticWarfareDetector, check_for_warfare
+from visualization_prep import VisualizationPrep, visualize_processing_result
+
 # New import for system analytics plots
 try:
     from system_analytics import plot_node_activation_timeline, plot_symbol_popularity_timeline, plot_curriculum_metrics
@@ -69,6 +74,11 @@ ADAPTIVE_DIRECTIVES = {
 
 # Path for persisting adaptive configuration
 ADAPTIVE_CONFIG_PATH = Path("data/adaptive_config.json")
+
+# Initialize quarantine and warfare detector globally
+quarantine = UserMemoryQuarantine(data_dir="data")
+warfare_detector = LinguisticWarfareDetector(data_dir="data")
+viz_prep = VisualizationPrep(data_dir="data")
 
 def load_adaptive_config():
     """Load adaptive configuration from disk"""
@@ -221,6 +231,20 @@ def process_web_url_placeholder(url, current_phase_for_storage=1, general_lexico
         cleaned_text = clean_html_to_text(raw_html)
         if cleaned_text:
             summary_to_store = cleaned_text[:2000]
+            
+            # Check for warfare patterns in URL content
+            should_quarantine_url, warfare_analysis = check_for_warfare(summary_to_store, user_id="url_fetch")
+            
+            if should_quarantine_url:
+                print(f"⚠️ URL content contains warfare patterns. Quarantining...")
+                q_result = quarantine.quarantine_user_input(
+                    text=summary_to_store,
+                    user_id="url_fetch",
+                    source_url=url,
+                    current_phase=current_phase_for_storage
+                )
+                return None
+            
             store_vector(
                 text=summary_to_store,
                 source_url=url,
@@ -266,10 +290,11 @@ def process_web_url_placeholder(url, current_phase_for_storage=1, general_lexico
         print(f"  Could not fetch content from {url}")
     return None
 
-def generate_response(user_input_text, extracted_symbols_weighted, current_phase_directives):
+def generate_response(user_input_text, extracted_symbols_weighted, current_phase_directives, visualization_data=None):
     """
     Generates a response based on similar vectors and extracted symbols.
     Uses adaptive weights for similarity scoring.
+    Optionally includes visualization data.
     """
     # Apply adaptive weights when retrieving similar vectors
     similar = retrieve_similar_vectors(
@@ -322,6 +347,18 @@ def generate_response(user_input_text, extracted_symbols_weighted, current_phase
     response_parts.append(f"\n📊 Current balance: Logic {ADAPTIVE_DIRECTIVES['link_score_weight_static']:.0%} / "
                          f"Symbolic {ADAPTIVE_DIRECTIVES['link_score_weight_dynamic']:.0%}")
     
+    # Add visualization summary if available
+    if visualization_data:
+        response_parts.append("\n🎨 Content Analysis:")
+        segment_types = {}
+        for seg in visualization_data.get('segments', []):
+            seg_type = seg['classification']
+            segment_types[seg_type] = segment_types.get(seg_type, 0) + 1
+        
+        for seg_type, count in segment_types.items():
+            emoji = {'logic': '🧮', 'symbolic': '❤️', 'bridge': '🤔'}.get(seg_type, '❓')
+            response_parts.append(f"  {emoji} {seg_type.capitalize()}: {count} segments")
+    
     return "\n".join(response_parts)
 
 def main():
@@ -336,6 +373,10 @@ def main():
         "--reset-weights", action="store_true",
         help="Reset adaptive weights to defaults"
     )
+    parser.add_argument(
+        "--disable-quarantine", action="store_true",
+        help="Disable quarantine for testing (not recommended)"
+    )
     args = parser.parse_args()
 
     # Load adaptive configuration at startup
@@ -348,9 +389,11 @@ def main():
         load_adaptive_config()
 
     print("🧠 Hybrid AI: Symbolic + Vector Memory (Optimizer Mode with Adaptive Weights)")
+    print("🛡️ Quarantine & Warfare Protection: " + ("DISABLED ⚠️" if args.disable_quarantine else "ENABLED ✅"))
     print("\nCommands:")
     print("  - Type text or paste a URL to process")
     print("  - Type 'evolve' to run memory evolution")
+    print("  - Type 'stats' to see quarantine/warfare statistics")
     print("  - Type 'exit' or 'quit' to end session")
     print()
 
@@ -396,8 +439,27 @@ def main():
                 traceback.print_exc()
             continue
         
+        if user_input.lower() == "stats":
+            print("\n📊 System Statistics:")
+            q_stats = quarantine.get_quarantine_stats()
+            w_stats = warfare_detector.get_defense_statistics()
+            
+            print(f"\n🔒 Quarantine:")
+            print(f"  Total quarantined: {q_stats['total_quarantined']}")
+            print(f"  Warfare attempts: {q_stats['warfare_attempts']} ({q_stats['warfare_percentage']:.1f}%)")
+            print(f"  Unique users: {q_stats['unique_users']}")
+            
+            print(f"\n🛡️ Warfare Defense:")
+            print(f"  Total checks: {w_stats['total_checks']}")
+            print(f"  Threats detected: {w_stats['threats_detected']} ({w_stats['threat_percentage']:.1f}%)")
+            print(f"  Last 24h: {w_stats['checks_last_24h']} checks, {w_stats['threats_last_24h']} threats")
+            continue
+        
         if user_input.lower() in ("exit", "quit"):
             break
+
+        # Initialize visualization data
+        visualization_data = None
 
         if is_url(user_input):
             print("🌐 Detected URL. Processing summary...")
@@ -410,13 +472,50 @@ def main():
                 print("  Could not process URL content.")
                 continue
         else:
+            # User text input - check for warfare patterns first
+            print("📝 Detected text input. Analyzing for security threats...")
+            
+            if not args.disable_quarantine:
+                # Check for linguistic warfare
+                should_quarantine, warfare_analysis = check_for_warfare(user_input, user_id="interactive_user")
+                
+                if should_quarantine:
+                    print(f"\n⚠️ SECURITY ALERT: {warfare_analysis['defense_strategy']['explanation']}")
+                    print(f"🔒 Input quarantined. Strategy: {warfare_analysis['defense_strategy']['strategy']}")
+                    
+                    # Quarantine the input
+                    q_result = quarantine.quarantine_user_input(
+                        text=user_input,
+                        user_id="interactive_user",
+                        current_phase=current_phase_for_interaction
+                    )
+                    
+                    # Show threat details
+                    for threat in warfare_analysis['threats_detected'][:3]:
+                        print(f"  - {threat['type']}: {threat['description']}")
+                    
+                    # Still provide a minimal response
+                    response_parts = [
+                        "I've detected potentially harmful patterns in your input.",
+                        f"Threat level: {warfare_analysis['threat_score']:.1%}",
+                        "Your input has been quarantined for safety.",
+                        "Please try rephrasing your request in a more constructive way."
+                    ]
+                    print("\n🗣️ AI Response:")
+                    print("\n".join(response_parts))
+                    continue
+                else:
+                    print("✅ No threats detected. Processing normally...")
+            
+            # Normal processing for safe input
             user_input_for_response = user_input
-            print("📝 Detected text input. Processing...")
             store_vector(
-                text=user_input, source_type="user_direct_input",
+                text=user_input, 
+                source_type="user_direct_input",
                 learning_phase=current_phase_for_interaction
             )
 
+        # Process emotions and symbols
         emotions_output = predict_emotions(user_input_for_response)
         verified_emotions = emotions_output.get("verified", [])
         print("\n💓 Emotions detected in input:")
@@ -483,10 +582,29 @@ def main():
                     )
                     general_lexicon.update(SM_SymbolMemory.load_symbol_memory())
 
+        # Prepare visualization data
+        processing_result = {
+            'decision_type': 'FOLLOW_HYBRID',  # Simplified for interactive mode
+            'logic_score': len(P_Parser.extract_keywords(user_input_for_response)) * 2,
+            'symbolic_score': len(symbols_weighted) * 3,
+            'confidence': 0.7,
+            'source_type': 'user_direct_input',
+            'processing_phase': current_phase_for_interaction,
+            'symbols_found': len(symbols_weighted)
+        }
+        
+        visualization_data = viz_prep.prepare_text_for_display(
+            user_input_for_response,
+            processing_result,
+            include_emotions=True,
+            include_symbols=True
+        )
+
         response = generate_response(
             user_input_for_response,
             symbols_weighted,
-            current_interaction_directives
+            current_interaction_directives,
+            visualization_data
         )
         print("\n🗣️ AI Response:")
         print(response)
@@ -579,6 +697,14 @@ def main():
         display_metrics_summary()
     except:
         pass
+    
+    # Final quarantine and warfare statistics
+    print("\n📊 Final Security Statistics:")
+    q_stats = quarantine.get_quarantine_stats()
+    w_stats = warfare_detector.get_defense_statistics()
+    print(f"  Quarantined: {q_stats['total_quarantined']} items")
+    print(f"  Warfare attempts: {q_stats['warfare_attempts']}")
+    print(f"  Defense success rate: {100 - w_stats['threat_percentage']:.1f}%")
 
     print("\nOptimizer session ended. Goodbye!")
 

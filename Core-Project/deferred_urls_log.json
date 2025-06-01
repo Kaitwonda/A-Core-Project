@@ -1,0 +1,125 @@
+{
+  "3": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Condensed_matter_physics",
+      "anchor": "Condensed matter physics",
+      "priority_score_at_deferral": 4.0,
+      "original_discovery_phase": 4,
+      "original_discovery_hop_count": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/History_of_physics",
+      "anchor": "History of physics",
+      "priority_score_at_deferral": 4.0,
+      "original_discovery_phase": 4,
+      "original_discovery_hop_count": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Timeline_of_fundamental_physics_discoveries",
+      "anchor": "Timeline of physics discoveries",
+      "priority_score_at_deferral": 4.0,
+      "original_discovery_phase": 4,
+      "original_discovery_hop_count": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:History_of_science",
+      "anchor": "History of science",
+      "priority_score_at_deferral": 4.0,
+      "original_discovery_phase": 4,
+      "original_discovery_hop_count": 1
+    }
+  ],
+  "1": [
+    {
+      "url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+      "anchor": "Programming and Computer Science",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+      "anchor": "Computer Information System Program",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/can-the-shunting-yard-algorithm-handle-logic-processing.1067839/",
+      "anchor": "Can the shunting-yard algorithm handle logic processing?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/tags/algorithm/",
+      "anchor": "Algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+      "anchor": "How do you handle algorithms (memorize vs. reference)?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/a-brain-like-implementation-of-a-turing-machine.949656/",
+      "anchor": "A brain-like implementation of a Turing machine",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+      "anchor": "Help with Python: Implementing Algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+      "anchor": "Von Neumann replicator vehicle model",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/prime-number-detection-running-time-of-algorithm.985283/",
+      "anchor": "Prime Number Detection: Running Time of Algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+      "anchor": "Permutation Counting Algorithm for Large Integers",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/determining-efficiency-of-multiplication-algorithm.665486/",
+      "anchor": "Determining efficiency of multiplication algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/det-of-triangular-like-matrix-getting-stuck-in-algorithmic-proof.998790/",
+      "anchor": "Det of Triangular-like Matrix & getting stuck in Algorithmic Proof",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/complexity-of-this-heap-algorithm.976741/",
+      "anchor": "Complexity of this heap algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 3
+    }
+  ]
+}

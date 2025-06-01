@@ -1,0 +1,580 @@
+[
+  {
+    "timestamp": "2025-05-26T00:06:39.517648",
+    "run_count": 1,
+    "old_weights": {
+      "static": 0.6,
+      "dynamic": 0.4
+    },
+    "new_weights": {
+      "static": 0.62,
+      "dynamic": 0.38
+    },
+    "target_specialization": 0.35,
+    "actual_specialization": 0.24,
+    "momentum": {
+      "static_wins": 1,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 1
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:06:39.517648",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:08:11.893060",
+    "run_count": 2,
+    "old_weights": {
+      "static": 0.62,
+      "dynamic": 0.38
+    },
+    "new_weights": {
+      "static": 0.644,
+      "dynamic": 0.356
+    },
+    "target_specialization": 0.4,
+    "actual_specialization": 0.28800000000000003,
+    "momentum": {
+      "static_wins": 2,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 2
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:08:11.893060",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:10:23.650871",
+    "run_count": 3,
+    "old_weights": {
+      "static": 0.644,
+      "dynamic": 0.356
+    },
+    "new_weights": {
+      "static": 0.67,
+      "dynamic": 0.33
+    },
+    "target_specialization": 0.45,
+    "actual_specialization": 0.34,
+    "momentum": {
+      "static_wins": 3,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 3
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:10:23.650871",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:11:04.296921",
+    "run_count": 4,
+    "old_weights": {
+      "static": 0.67,
+      "dynamic": 0.33
+    },
+    "new_weights": {
+      "static": 0.698,
+      "dynamic": 0.302
+    },
+    "target_specialization": 0.5,
+    "actual_specialization": 0.39599999999999996,
+    "momentum": {
+      "static_wins": 4,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 4
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:11:04.296921",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:11:28.807135",
+    "run_count": 5,
+    "old_weights": {
+      "static": 0.698,
+      "dynamic": 0.302
+    },
+    "new_weights": {
+      "static": 0.728,
+      "dynamic": 0.272
+    },
+    "target_specialization": 0.55,
+    "actual_specialization": 0.45599999999999996,
+    "momentum": {
+      "static_wins": 5,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 5
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:11:28.807135",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:13:28.403649",
+    "run_count": 6,
+    "old_weights": {
+      "static": 0.728,
+      "dynamic": 0.272
+    },
+    "new_weights": {
+      "static": 0.76,
+      "dynamic": 0.24
+    },
+    "target_specialization": 0.6000000000000001,
+    "actual_specialization": 0.52,
+    "momentum": {
+      "static_wins": 6,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 6
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:13:28.403649",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:13:58.716501",
+    "run_count": 7,
+    "old_weights": {
+      "static": 0.76,
+      "dynamic": 0.24
+    },
+    "new_weights": {
+      "static": 0.794,
+      "dynamic": 0.206
+    },
+    "target_specialization": 0.65,
+    "actual_specialization": 0.5880000000000001,
+    "momentum": {
+      "static_wins": 7,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 7
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:13:58.716501",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:14:09.253380",
+    "run_count": 8,
+    "old_weights": {
+      "static": 0.794,
+      "dynamic": 0.206
+    },
+    "new_weights": {
+      "static": 0.83,
+      "dynamic": 0.17
+    },
+    "target_specialization": 0.7,
+    "actual_specialization": 0.6599999999999999,
+    "momentum": {
+      "static_wins": 8,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 8
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:14:09.253380",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:16:23.386507",
+    "run_count": 9,
+    "old_weights": {
+      "static": 0.83,
+      "dynamic": 0.17
+    },
+    "new_weights": {
+      "static": 0.868,
+      "dynamic": 0.132
+    },
+    "target_specialization": 0.75,
+    "actual_specialization": 0.736,
+    "momentum": {
+      "static_wins": 9,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 9
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:16:23.386507",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  },
+  {
+    "timestamp": "2025-05-26T00:18:55.308689",
+    "run_count": 10,
+    "old_weights": {
+      "static": 0.868,
+      "dynamic": 0.132
+    },
+    "new_weights": {
+      "static": 0.9,
+      "dynamic": 0.1
+    },
+    "target_specialization": 0.8,
+    "actual_specialization": 0.8,
+    "momentum": {
+      "static_wins": 10,
+      "dynamic_wins": 0,
+      "last_direction": "static",
+      "consecutive_moves": 10
+    },
+    "memory_stats": {
+      "timestamp": "2025-05-26T00:18:55.308689",
+      "distribution": {
+        "logic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "symbolic": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0
+        },
+        "bridge": {
+          "count": 0,
+          "percentage": 0.0,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 0.0,
+          "stability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 0,
+      "health_indicators": {
+        "status": "empty",
+        "issues": [
+          "No items in memory"
+        ],
+        "recommendations": [
+          "Process some content to build knowledge base"
+        ]
+      }
+    },
+    "performance_stats": null
+  }
+]

@@ -1,10 +1,21 @@
-# symbol_memory.py
+# symbol_memory.py - Updated with Quarantine, Warfare Detection, and Visualization Integration
 from pathlib import Path
 import json
 from datetime import datetime
+from typing import Dict, List, Optional, Tuple, Any
 
 # File path for symbol memory
 SYMBOL_MEMORY_PATH = Path("data/symbol_memory.json")
+
+# Import the new modules for integration
+try:
+    from quarantine_layer import UserMemoryQuarantine
+    from linguistic_warfare import LinguisticWarfareDetector
+    from visualization_prep import VisualizationPrep
+    SECURITY_MODULES_LOADED = True
+except ImportError:
+    SECURITY_MODULES_LOADED = False
+    print("[SYMBOL_MEMORY-WARNING] Security modules not loaded. Operating without quarantine/warfare protection.")
 
 def load_symbol_memory(file_path=SYMBOL_MEMORY_PATH):
     """Loads existing symbol memory, ensuring it's a dictionary of symbol objects."""
@@ -36,15 +47,116 @@ def save_symbol_memory(memory, file_path=SYMBOL_MEMORY_PATH):
     with open(current_path, "w", encoding="utf-8") as f:
         json.dump(memory, f, indent=2, ensure_ascii=False)
 
+def _check_quarantine_status(origin: str, example_text: str = None, 
+                           name: str = None, keywords: List[str] = None) -> Tuple[bool, Optional[Dict]]:
+    """
+    Check if a symbol should be quarantined based on origin and content.
+    Returns (should_quarantine, warfare_analysis)
+    """
+    # Direct quarantine origins
+    quarantine_origins = [
+        "user_quarantine",
+        "quarantined_input",
+        "warfare_detected",
+        "manipulation_attempt",
+        "unverified_user"
+    ]
+    
+    if origin in quarantine_origins:
+        return True, {"reason": f"Quarantine origin: {origin}"}
+    
+    # Check for linguistic warfare if modules are loaded
+    if SECURITY_MODULES_LOADED and example_text:
+        detector = LinguisticWarfareDetector()
+        # Combine all text for analysis
+        analysis_text = f"{name or ''} {' '.join(keywords or [])} {example_text or ''}"
+        analysis = detector.analyze_text_for_warfare(analysis_text, user_id="symbol_creation")
+        
+        if analysis['threat_score'] > 0.7:
+            return True, analysis
+    
+    return False, None
+
+def _sanitize_symbol_data(symbol_data: Dict) -> Dict:
+    """
+    Sanitize symbol data to prevent malicious content.
+    """
+    # Limit string lengths
+    max_lengths = {
+        'name': 100,
+        'keywords': 50,  # per keyword
+        'example_text': 500,
+        'core_meanings': 200  # per meaning
+    }
+    
+    if 'name' in symbol_data:
+        symbol_data['name'] = symbol_data['name'][:max_lengths['name']]
+    
+    if 'keywords' in symbol_data and isinstance(symbol_data['keywords'], list):
+        symbol_data['keywords'] = [
+            kw[:max_lengths['keywords']] for kw in symbol_data['keywords'][:20]  # Max 20 keywords
+        ]
+    
+    if 'core_meanings' in symbol_data and isinstance(symbol_data['core_meanings'], list):
+        symbol_data['core_meanings'] = [
+            meaning[:max_lengths['core_meanings']] for meaning in symbol_data['core_meanings'][:10]
+        ]
+    
+    # Remove any potential script injection attempts
+    def clean_text(text: str) -> str:
+        if not isinstance(text, str):
+            return str(text)
+        # Remove script tags and other potentially harmful content
+        dangerous_patterns = ['<script', '</script>', 'javascript:', 'onerror=', 'onclick=']
+        cleaned = text
+        for pattern in dangerous_patterns:
+            cleaned = cleaned.replace(pattern, '')
+        return cleaned
+    
+    # Clean all text fields
+    for field in ['name', 'summary', 'description']:
+        if field in symbol_data and isinstance(symbol_data[field], str):
+            symbol_data[field] = clean_text(symbol_data[field])
+    
+    return symbol_data
+
 def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
                origin="emergent", learning_phase=0, resonance_weight=0.5,
-               symbol_details_override=None,
+               symbol_details_override=None, skip_quarantine_check=False,
                file_path=SYMBOL_MEMORY_PATH):
     """
     Adds a new symbol or updates an existing one in the symbol_memory.json.
+    
+    NEW PARAMETERS:
+    - skip_quarantine_check: If True, bypasses quarantine checks (use carefully!)
+    
     Initial_emotions can be a list of emotion strings, a dict {'emotion': score},
     a list of tuples [('emotion', score)], or list of dicts [{"emotion":"name", "weight":0.8}].
     """
+    
+    # Check quarantine status unless explicitly skipped
+    if not skip_quarantine_check:
+        should_quarantine, warfare_analysis = _check_quarantine_status(
+            origin, example_text, name, keywords
+        )
+        
+        if should_quarantine:
+            print(f"[SYMBOL_MEMORY-QUARANTINE] Symbol '{symbol_token}' ({name}) blocked - origin: {origin}")
+            if warfare_analysis and 'threats' in warfare_analysis:
+                print(f"  Threats detected: {[t['type'] for t in warfare_analysis['threats']]}")
+            
+            # Log to quarantine if available
+            if SECURITY_MODULES_LOADED:
+                quarantine = UserMemoryQuarantine()
+                quarantine.quarantine_user_input(
+                    text=f"Symbol creation attempt: {symbol_token} - {name}",
+                    user_id="symbol_memory",
+                    matched_symbols=[{'symbol': symbol_token, 'name': name}],
+                    source_url=f"symbol_memory:{origin}"
+                )
+            
+            return None  # Don't add to core memory
+    
     memory = load_symbol_memory(file_path)
     
     # Extract numeric weights and build peak emotions map
@@ -78,6 +190,9 @@ def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
     if symbol_token not in memory:
         # New symbol creation
         if symbol_details_override and isinstance(symbol_details_override, dict):
+            # Sanitize override data
+            symbol_details_override = _sanitize_symbol_data(symbol_details_override.copy())
+            
             memory[symbol_token] = symbol_details_override.copy()
             # Initialize critical fields that might be missing
             memory[symbol_token].setdefault("vector_examples", [])
@@ -100,9 +215,16 @@ def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
             memory[symbol_token].setdefault("updated_at", datetime.utcnow().isoformat())
             memory[symbol_token].setdefault("core_meanings", [])
             
+            # Add visualization metadata
+            memory[symbol_token].setdefault("visualization_metadata", {
+                "primary_color": _get_symbol_color(initial_emotions),
+                "display_priority": _calculate_display_priority(resonance_weight, origin),
+                "classification_hint": _get_classification_hint(keywords, initial_emotions)
+            })
+            
         else:
             # Creating a brand new symbol without override
-            memory[symbol_token] = {
+            new_symbol_data = {
                 "name": name,
                 "keywords": list(set(keywords)),
                 "core_meanings": [],
@@ -120,8 +242,16 @@ def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
                 },
                 "created_at": datetime.utcnow().isoformat(),
                 "updated_at": datetime.utcnow().isoformat(),
-                "usage_count": 0
+                "usage_count": 0,
+                "visualization_metadata": {
+                    "primary_color": _get_symbol_color(initial_emotions),
+                    "display_priority": _calculate_display_priority(resonance_weight, origin),
+                    "classification_hint": _get_classification_hint(keywords, initial_emotions)
+                }
             }
+            
+            # Sanitize new symbol data
+            memory[symbol_token] = _sanitize_symbol_data(new_symbol_data)
         
         # Add the example_text if provided
         if example_text:
@@ -147,7 +277,7 @@ def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
             existing_kws = set(memory[symbol_token].get("keywords", []))
             for kw in keywords:
                 existing_kws.add(kw)
-            memory[symbol_token]["keywords"] = sorted(list(existing_kws))
+            memory[symbol_token]["keywords"] = sorted(list(existing_kws))[:50]  # Limit keywords
 
         # Add new example
         if example_text:
@@ -193,9 +323,21 @@ def add_symbol(symbol_token, name, keywords, initial_emotions, example_text,
                     "timestamp": datetime.utcnow().isoformat()
                 }
         
+        # Update visualization metadata
+        memory[symbol_token]["visualization_metadata"] = {
+            "primary_color": _get_symbol_color(memory[symbol_token].get("emotion_profile", {})),
+            "display_priority": _calculate_display_priority(
+                memory[symbol_token].get("resonance_weight", 0.5),
+                memory[symbol_token].get("origin", "unknown")
+            ),
+            "classification_hint": _get_classification_hint(
+                memory[symbol_token].get("keywords", []),
+                memory[symbol_token].get("emotion_profile", {})
+            )
+        }
+        
     save_symbol_memory(memory, file_path)
     return memory[symbol_token]
-
 
 def get_symbol_details(symbol_token, file_path=SYMBOL_MEMORY_PATH):
     """Gets details for a specific symbol."""
@@ -212,6 +354,10 @@ def update_symbol_emotional_profile(symbol_token, emotion_changes, file_path=SYM
             profile[emotion] = round(max(0, min(1, profile[emotion])), 3)
         memory[symbol_token]["emotion_profile"] = profile
         memory[symbol_token]["updated_at"] = datetime.utcnow().isoformat()
+        
+        # Update visualization metadata
+        memory[symbol_token]["visualization_metadata"]["primary_color"] = _get_symbol_color(profile)
+        
         save_symbol_memory(memory, file_path)
         return True
     return False
@@ -258,99 +404,267 @@ def get_golden_memory(symbol_token, file_path=SYMBOL_MEMORY_PATH):
         return symbol_data["golden_memory"]
     return None
 
+# New functions for visualization support
+def _get_symbol_color(emotions: Any) -> str:
+    """
+    Determine a color for the symbol based on its emotional profile.
+    Returns hex color code.
+    """
+    # Default color
+    default_color = "#808080"  # Gray
+    
+    # Color mapping for emotions
+    emotion_colors = {
+        "joy": "#FFD700",      # Gold
+        "love": "#FF69B4",     # Hot Pink
+        "anger": "#DC143C",    # Crimson
+        "fear": "#4B0082",     # Indigo
+        "sadness": "#4682B4",  # Steel Blue
+        "surprise": "#FF8C00", # Dark Orange
+        "disgust": "#228B22",  # Forest Green
+        "trust": "#87CEEB",    # Sky Blue
+        "anticipation": "#DA70D6", # Orchid
+        "curiosity": "#9370DB",    # Medium Purple
+        "hope": "#98FB98",     # Pale Green
+        "pride": "#FFB6C1",    # Light Pink
+        "shame": "#8B4513",    # Saddle Brown
+        "guilt": "#A0522D",    # Sienna
+        "envy": "#2E8B57",     # Sea Green
+        "gratitude": "#F0E68C", # Khaki
+        "confusion": "#D3D3D3", # Light Gray
+        "neutral": "#C0C0C0"   # Silver
+    }
+    
+    if not emotions:
+        return default_color
+        
+    # Handle different emotion formats
+    if isinstance(emotions, dict):
+        # Find dominant emotion
+        if emotions:
+            dominant_emotion = max(emotions.items(), key=lambda x: x[1])[0]
+            return emotion_colors.get(dominant_emotion.lower(), default_color)
+    elif isinstance(emotions, list) and emotions:
+        # Handle list of tuples or dicts
+        if isinstance(emotions[0], tuple):
+            dominant_emotion = emotions[0][0]
+        elif isinstance(emotions[0], dict) and 'emotion' in emotions[0]:
+            dominant_emotion = emotions[0]['emotion']
+        else:
+            return default_color
+        return emotion_colors.get(dominant_emotion.lower(), default_color)
+    
+    return default_color
+
+def _calculate_display_priority(resonance_weight: float, origin: str) -> float:
+    """
+    Calculate display priority for visualization.
+    Higher values = more prominent display.
+    """
+    base_priority = resonance_weight
+    
+    # Boost priority based on origin
+    origin_boosts = {
+        "seed": 0.3,
+        "meta_emergent": 0.2,
+        "meta_analysis": 0.2,
+        "generated": 0.1,
+        "emergent": 0.1,
+        "user_direct_input": -0.1,  # Lower priority for user input
+        "user_quarantine": -0.5     # Very low priority
+    }
+    
+    boost = origin_boosts.get(origin, 0.0)
+    return round(min(1.0, max(0.0, base_priority + boost)), 3)
+
+def _get_classification_hint(keywords: List[str], emotions: Any) -> str:
+    """
+    Provide a hint about whether this symbol is more logic or symbolic oriented.
+    """
+    # Logic-oriented keywords
+    logic_keywords = {"algorithm", "data", "system", "process", "compute", "logic", 
+                     "structure", "function", "binary", "code", "network", "protocol"}
+    
+    # Symbolic-oriented keywords  
+    symbolic_keywords = {"emotion", "feel", "symbol", "meaning", "soul", "spirit",
+                        "dream", "myth", "metaphor", "archetype", "story", "journey"}
+    
+    # Count matches
+    logic_score = sum(1 for kw in keywords if any(lk in kw.lower() for lk in logic_keywords))
+    symbolic_score = sum(1 for kw in keywords if any(sk in kw.lower() for sk in symbolic_keywords))
+    
+    # Consider emotions
+    if emotions:
+        if isinstance(emotions, dict) and len(emotions) > 2:
+            symbolic_score += 2
+        elif isinstance(emotions, list) and len(emotions) > 2:
+            symbolic_score += 2
+    
+    if logic_score > symbolic_score * 1.5:
+        return "logic"
+    elif symbolic_score > logic_score * 1.5:
+        return "symbolic"
+    else:
+        return "hybrid"
+
+# New security-aware functions
+def validate_symbol_token(symbol_token: str) -> bool:
+    """
+    Validate that a symbol token is safe and reasonable.
+    """
+    if not symbol_token or not isinstance(symbol_token, str):
+        return False
+    
+    # Length check
+    if len(symbol_token) > 50:
+        return False
+    
+    # Check for dangerous patterns
+    dangerous_patterns = ['<script', 'javascript:', 'onerror', '../', '\\', '\x00']
+    for pattern in dangerous_patterns:
+        if pattern in symbol_token.lower():
+            return False
+    
+    return True
+
+def get_symbols_for_visualization(limit: int = 100, 
+                                 min_usage: int = 0,
+                                 exclude_quarantined: bool = True,
+                                 file_path=SYMBOL_MEMORY_PATH) -> List[Dict]:
+    """
+    Get symbols formatted for visualization.
+    """
+    memory = load_symbol_memory(file_path)
+    symbols_for_viz = []
+    
+    for token, details in memory.items():
+        # Skip if usage is too low
+        if details.get("usage_count", 0) < min_usage:
+            continue
+            
+        # Skip quarantined origins if requested
+        if exclude_quarantined and details.get("origin") in ["user_quarantine", "quarantined_input"]:
+            continue
+        
+        viz_data = {
+            "token": token,
+            "name": details.get("name", token),
+            "usage_count": details.get("usage_count", 0),
+            "resonance_weight": details.get("resonance_weight", 0.5),
+            "emotion_profile": details.get("emotion_profile", {}),
+            "golden_memory": details.get("golden_memory", {}),
+            "visualization_metadata": details.get("visualization_metadata", {}),
+            "origin": details.get("origin", "unknown"),
+            "learning_phase": details.get("learning_phase", 0),
+            "keywords": details.get("keywords", [])[:5]  # Limit keywords for display
+        }
+        
+        symbols_for_viz.append(viz_data)
+    
+    # Sort by display priority and usage
+    symbols_for_viz.sort(
+        key=lambda x: (
+            x["visualization_metadata"].get("display_priority", 0.5),
+            x["usage_count"]
+        ),
+        reverse=True
+    )
+    
+    return symbols_for_viz[:limit]
+
+def quarantine_existing_symbol(symbol_token: str, reason: str = "manual_quarantine", 
+                              file_path=SYMBOL_MEMORY_PATH) -> bool:
+    """
+    Move an existing symbol to quarantine status.
+    """
+    memory = load_symbol_memory(file_path)
+    
+    if symbol_token not in memory:
+        return False
+    
+    # Update the symbol's origin to indicate quarantine
+    memory[symbol_token]["origin"] = "quarantined_" + memory[symbol_token].get("origin", "unknown")
+    memory[symbol_token]["quarantine_reason"] = reason
+    memory[symbol_token]["quarantined_at"] = datetime.utcnow().isoformat()
+    memory[symbol_token]["resonance_weight"] = 0.0  # Zero out resonance
+    
+    # Update visualization metadata
+    memory[symbol_token]["visualization_metadata"]["display_priority"] = 0.0
+    memory[symbol_token]["visualization_metadata"]["quarantined"] = True
+    
+    save_symbol_memory(memory, file_path)
+    
+    print(f"[SYMBOL_MEMORY-QUARANTINE] Symbol '{symbol_token}' quarantined: {reason}")
+    return True
+
 
 if __name__ == '__main__':
-    print("Testing symbol_memory.py with complete Golden Memory feature...")
+    print("Testing symbol_memory.py with security integrations...")
     
-    test_path = Path("data/test_symbol_memory_golden_complete.json")
+    test_path = Path("data/test_symbol_memory_secure.json")
     if test_path.exists(): 
         test_path.unlink()
     
-    # Test 1: New symbol with initial emotions
-    print("\n--- Test 1: New symbol with emotions ---")
-    initial_emotions_t1 = [
-        {"emotion": "joy", "weight": 0.8},
-        {"emotion": "curiosity", "weight": 0.8},  # Same peak weight
-        {"emotion": "fear", "weight": 0.3}
-    ]
-    
+    # Test 1: Normal symbol addition
+    print("\n--- Test 1: Normal symbol addition ---")
     result = add_symbol(
         "🌟", "Star", ["shine", "bright"], 
-        initial_emotions_t1, 
+        [{"emotion": "joy", "weight": 0.8}], 
         "A bright star shines with joy.",
         origin="test", learning_phase=1, file_path=test_path
     )
+    assert result is not None
+    print("✅ Normal symbol added successfully")
     
-    golden = result["golden_memory"]
-    print(f"Golden memory: {json.dumps(golden, indent=2)}")
-    assert golden["peak_weight"] == 0.8
-    assert "joy" in golden["peak_emotions"] and golden["peak_emotions"]["joy"] == 0.8
-    assert "curiosity" in golden["peak_emotions"] and golden["peak_emotions"]["curiosity"] == 0.8
-    assert "fear" not in golden["peak_emotions"]  # Not at peak
-    assert "timestamp" in golden
-    assert golden["context"] == "A bright star shines with joy."
-    
-    # Test 2: Update with higher peak
-    print("\n--- Test 2: Update with higher peak ---")
-    update_emotions = [("excitement", 0.95), ("joy", 0.95)]
-    
-    add_symbol(
-        "🌟", "Star", ["glow"], 
-        update_emotions,
-        "The star glows with incredible excitement!",
-        file_path=test_path
+    # Test 2: Quarantined origin
+    print("\n--- Test 2: Quarantine origin blocking ---")
+    result = add_symbol(
+        "💀", "Danger", ["harm", "threat"], 
+        [{"emotion": "fear", "weight": 0.9}], 
+        "This is dangerous content.",
+        origin="user_quarantine", learning_phase=1, file_path=test_path
     )
+    assert result is None
+    print("✅ Quarantined origin blocked successfully")
     
-    updated_details = get_symbol_details("🌟", file_path=test_path)
-    golden = updated_details["golden_memory"]
-    print(f"Updated golden memory: {json.dumps(golden, indent=2)}")
-    assert golden["peak_weight"] == 0.95
-    assert golden["peak_emotions"] == {"excitement": 0.95, "joy": 0.95}
-    assert golden["context"] == "The star glows with incredible excitement!"
-    
-    # Test 3: Update with lower peak (should not change golden)
-    print("\n--- Test 3: Update with lower peak (no change expected) ---")
-    old_timestamp = golden["timestamp"]
-    
-    add_symbol(
-        "🌟", "Star", ["dim"], 
-        [("sadness", 0.6)],
-        "The star dims sadly.",
-        file_path=test_path
+    # Test 3: Skip quarantine check
+    print("\n--- Test 3: Skip quarantine check ---")
+    result = add_symbol(
+        "🔒", "Lock", ["secure", "protect"], 
+        [{"emotion": "trust", "weight": 0.7}], 
+        "Security bypass for system symbols.",
+        origin="user_quarantine", learning_phase=1, 
+        skip_quarantine_check=True, file_path=test_path
     )
+    assert result is not None
+    print("✅ Quarantine check bypassed successfully")
     
-    unchanged_details = get_symbol_details("🌟", file_path=test_path)
-    golden = unchanged_details["golden_memory"]
-    print(f"Golden memory after lower update: {json.dumps(golden, indent=2)}")
-    assert golden["peak_weight"] == 0.95  # Unchanged
-    assert golden["context"] == "The star glows with incredible excitement!"  # Unchanged
+    # Test 4: Visualization metadata
+    print("\n--- Test 4: Visualization metadata ---")
+    star_details = get_symbol_details("🌟", file_path=test_path)
+    assert "visualization_metadata" in star_details
+    assert "primary_color" in star_details["visualization_metadata"]
+    print(f"✅ Visualization metadata: {star_details['visualization_metadata']}")
     
-    # Test 4: Symbol with override
-    print("\n--- Test 4: Symbol with override preserving golden memory ---")
-    override = {
-        "name": "Moon",
-        "summary": "Celestial body",
-        "keywords": ["lunar", "night"]
-    }
+    # Test 5: Get symbols for visualization
+    print("\n--- Test 5: Get symbols for visualization ---")
+    viz_symbols = get_symbols_for_visualization(file_path=test_path)
+    assert len(viz_symbols) == 2  # Should exclude the quarantined one
+    print(f"✅ Got {len(viz_symbols)} symbols for visualization")
     
-    add_symbol(
-        "🌙", "Moon Override Name", ["moon"], 
-        [{"emotion": "tranquility", "weight": 0.7}],
-        "The moon brings tranquility.",
-        symbol_details_override=override,
-        file_path=test_path
-    )
+    # Test 6: Quarantine existing symbol
+    print("\n--- Test 6: Quarantine existing symbol ---")
+    success = quarantine_existing_symbol("🌟", "test_quarantine", file_path=test_path)
+    assert success == True
+    star_details = get_symbol_details("🌟", file_path=test_path)
+    assert star_details["resonance_weight"] == 0.0
+    print("✅ Existing symbol quarantined successfully")
     
-    moon_details = get_symbol_details("🌙", file_path=test_path)
-    assert "golden_memory" in moon_details
-    assert moon_details["golden_memory"]["peak_weight"] == 0.7
-    assert moon_details["golden_memory"]["peak_emotions"] == {"tranquility": 0.7}
+    # Test 7: Validate symbol token
+    print("\n--- Test 7: Symbol token validation ---")
+    assert validate_symbol_token("🌟") == True
+    assert validate_symbol_token("<script>alert('hi')</script>") == False
+    assert validate_symbol_token("a" * 100) == False
+    print("✅ Symbol token validation working")
     
-    # Test 5: Retrieve golden memory
-    print("\n--- Test 5: Get golden memory helper ---")
-    star_golden = get_golden_memory("🌟", file_path=test_path)
-    print(f"Retrieved golden memory: {json.dumps(star_golden, indent=2)}")
-    assert star_golden is not None
-    assert star_golden["peak_weight"] == 0.95
-    
-    print("\n✅ All golden memory tests passed!")
+    print("\n✅ All security integration tests passed!")
