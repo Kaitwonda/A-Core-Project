@@ -1,489 +1,499 @@
-# quarantine_layer.py - User Input Quarantine System
+# quarantine_layer.py - User Memory Quarantine System
 
 import json
 import hashlib
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
-import re
+import numpy as np
 
-# Import your existing modules
-import user_memory as UM_UserMemory
-import symbol_memory as SM_SymbolMemory
-from content_utils import detect_content_type
-from emotion_handler import predict_emotions
-import parser as P_Parser
+# Import your modules
+from vector_engine import encode_with_minilm
+from alphawall import AlphaWall
+
 
 class UserMemoryQuarantine:
     """
-    Quarantines user input to prevent contamination of core memory systems.
-    Integrates with existing user_memory.py (symbol_occurrence_log) but adds containment.
+    Quarantine system that works with AlphaWall zone outputs.
+    Isolates problematic patterns without exposing user data to the AI.
     """
     
     def __init__(self, data_dir="data"):
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
         
-        # Quarantine storage - separate from all other memory files
-        self.quarantine_path = self.data_dir / "user_quarantine.json"
-        self.warfare_log_path = self.data_dir / "linguistic_warfare_log.json"
+        # Quarantine storage
+        self.quarantine_dir = self.data_dir / "quarantine"
+        self.quarantine_dir.mkdir(parents=True, exist_ok=True)
         
-        # Reference to existing memory systems (read-only for checks)
-        self.symbol_occurrence_path = self.data_dir / "symbol_occurrence_log.json"
+        # Files
+        self.quarantine_log = self.quarantine_dir / "quarantine_log.json"
+        self.pattern_database = self.quarantine_dir / "pattern_database.json"
+        self.contamination_index = self.quarantine_dir / "contamination_index.json"
         
-        # Load quarantine data
-        self.quarantined_items = self._load_quarantine()
-        self.warfare_attempts = self._load_warfare_log()
+        # Initialize files
+        self._init_quarantine_files()
         
-    def _load_quarantine(self) -> List[Dict]:
-        """Load quarantined user inputs"""
-        if self.quarantine_path.exists() and self.quarantine_path.stat().st_size > 0:
-            try:
-                with open(self.quarantine_path, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except json.JSONDecodeError:
-                print(f"[QUARANTINE-WARNING] Corrupted quarantine file, starting fresh")
-                return []
-        return []
+        # AlphaWall reference for zone data only
+        self.alphawall = AlphaWall(data_dir=data_dir)
+        
+        # Quarantine thresholds
+        self.recursion_limit = 5
+        self.toxicity_threshold = 0.7
+        self.contamination_decay_hours = 24
+        
+    def _init_quarantine_files(self):
+        """Initialize quarantine storage files"""
+        for file_path in [self.quarantine_log, self.pattern_database, self.contamination_index]:
+            if not file_path.exists():
+                with open(file_path, 'w') as f:
+                    json.dump([] if 'log' in str(file_path) else {}, f)
+                    
+    def quarantine(self, zone_id: str, reason: str = "automatic", severity: str = "medium") -> Dict:
+        """
+        Quarantine a zone output based on AlphaWall's recommendation.
+        NEVER accesses user data directly - only works with zone outputs.
+        """
+        # Get zone output from AlphaWall
+        zone_output = self.alphawall.get_zone_output_by_id(zone_id)
+        if not zone_output:
+            return {'success': False, 'error': 'Zone output not found'}
+            
+        # Create quarantine record (no user data included)
+        quarantine_record = {
+            'quarantine_id': self._generate_quarantine_id(zone_id),
+            'zone_id': zone_id,
+            'timestamp': datetime.utcnow().isoformat(),
+            'reason': reason,
+            'severity': severity,
+            'zone_tags': zone_output['tags'],  # Only semantic tags
+            'pattern_signature': self._generate_pattern_signature(zone_output),
+            'expires_at': self._calculate_expiry(severity),
+            'contamination_vector': self._analyze_contamination_vector(zone_output)
+        }
+        
+        # Log the quarantine
+        self._add_to_quarantine_log(quarantine_record)
+        
+        # Update pattern database
+        self._update_pattern_database(quarantine_record)
+        
+        # Update contamination index
+        self._update_contamination_index(quarantine_record)
+        
+        return {
+            'success': True,
+            'quarantine_id': quarantine_record['quarantine_id'],
+            'severity': severity,
+            'expires_at': quarantine_record['expires_at']
+        }
     
-    def _save_quarantine(self):
-        """Save quarantine data with same pattern as your other modules"""
-        with open(self.quarantine_path, 'w', encoding='utf-8') as f:
-            json.dump(self.quarantined_items, f, indent=2, ensure_ascii=False)
+    def _generate_quarantine_id(self, zone_id: str) -> str:
+        """Generate unique quarantine ID"""
+        return hashlib.md5(f"{zone_id}{datetime.utcnow().isoformat()}".encode()).hexdigest()[:12]
     
-    def _load_warfare_log(self) -> List[Dict]:
-        """Load linguistic warfare detection log"""
-        if self.warfare_log_path.exists() and self.warfare_log_path.stat().st_size > 0:
-            try:
-                with open(self.warfare_log_path, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except json.JSONDecodeError:
-                return []
-        return []
+    def _generate_pattern_signature(self, zone_output: Dict) -> str:
+        """
+        Generate a pattern signature from zone tags.
+        This helps identify similar patterns without storing user data.
+        """
+        tags = zone_output.get('tags', {})
+        
+        # Create signature from tag combination
+        signature_parts = [
+            f"emo:{tags.get('emotional_state', 'unknown')}",
+            f"int:{tags.get('intent', 'unknown')}",
+            f"ctx:{','.join(sorted(tags.get('context', [])))}",
+            f"risk:{','.join(sorted(tags.get('risk', [])))}"
+        ]
+        
+        return "|".join(signature_parts)
     
-    def _save_warfare_log(self):
-        """Save warfare detection events"""
-        with open(self.warfare_log_path, 'w', encoding='utf-8') as f:
-            json.dump(self.warfare_attempts, f, indent=2, ensure_ascii=False)
+    def _calculate_expiry(self, severity: str) -> str:
+        """Calculate when quarantine expires based on severity"""
+        hours_map = {
+            'low': 6,
+            'medium': 24,
+            'high': 72,
+            'critical': 168  # 1 week
+        }
+        
+        hours = hours_map.get(severity, 24)
+        expiry = datetime.utcnow().timestamp() + (hours * 3600)
+        return datetime.fromtimestamp(expiry).isoformat()
+    
+    def _analyze_contamination_vector(self, zone_output: Dict) -> Dict:
+        """
+        Analyze how this pattern might contaminate the AI's responses.
+        Creates a contamination profile without exposing user data.
+        """
+        tags = zone_output.get('tags', {})
+        
+        contamination_vector = {
+            'type': 'unknown',
+            'spread_risk': 'low',
+            'affects_nodes': []
+        }
+        
+        # Determine contamination type
+        if 'trauma_loop' in tags.get('context', []):
+            contamination_vector['type'] = 'recursive_trauma'
+            contamination_vector['spread_risk'] = 'high'
+            contamination_vector['affects_nodes'] = ['symbolic', 'bridge']
+            
+        elif 'user_reliability_low' in tags.get('risk', []):
+            contamination_vector['type'] = 'adversarial_pattern'
+            contamination_vector['spread_risk'] = 'medium'
+            contamination_vector['affects_nodes'] = ['logic', 'bridge']
+            
+        elif tags.get('emotional_state') == 'emotionally_recursive':
+            contamination_vector['type'] = 'emotional_loop'
+            contamination_vector['spread_risk'] = 'high'
+            contamination_vector['affects_nodes'] = ['symbolic']
+            
+        elif 'symbolic_overload_possible' in tags.get('risk', []):
+            contamination_vector['type'] = 'symbolic_overflow'
+            contamination_vector['spread_risk'] = 'medium'
+            contamination_vector['affects_nodes'] = ['symbolic', 'bridge']
+            
+        return contamination_vector
+    
+    def _add_to_quarantine_log(self, record: Dict):
+        """Add record to quarantine log"""
+        with open(self.quarantine_log, 'r') as f:
+            log = json.load(f)
+            
+        log.append(record)
+        
+        # Keep last 1000 entries
+        log = log[-1000:]
+        
+        with open(self.quarantine_log, 'w') as f:
+            json.dump(log, f, indent=2)
+    
+    def _update_pattern_database(self, record: Dict):
+        """Update pattern database with frequency counts"""
+        with open(self.pattern_database, 'r') as f:
+            patterns = json.load(f)
+            
+        pattern_sig = record['pattern_signature']
+        
+        if pattern_sig not in patterns:
+            patterns[pattern_sig] = {
+                'first_seen': record['timestamp'],
+                'count': 0,
+                'severities': [],
+                'contamination_types': []
+            }
+            
+        patterns[pattern_sig]['count'] += 1
+        patterns[pattern_sig]['last_seen'] = record['timestamp']
+        patterns[pattern_sig]['severities'].append(record['severity'])
+        patterns[pattern_sig]['contamination_types'].append(
+            record['contamination_vector']['type']
+        )
+        
+        with open(self.pattern_database, 'w') as f:
+            json.dump(patterns, f, indent=2)
+    
+    def _update_contamination_index(self, record: Dict):
+        """Update contamination index for tracking spread"""
+        with open(self.contamination_index, 'r') as f:
+            index = json.load(f)
+            
+        contamination_type = record['contamination_vector']['type']
+        
+        if contamination_type not in index:
+            index[contamination_type] = {
+                'total_occurrences': 0,
+                'affected_zones': [],
+                'risk_evolution': []
+            }
+            
+        index[contamination_type]['total_occurrences'] += 1
+        index[contamination_type]['affected_zones'].append(record['zone_id'])
+        index[contamination_type]['risk_evolution'].append({
+            'timestamp': record['timestamp'],
+            'risk_level': record['contamination_vector']['spread_risk']
+        })
+        
+        # Keep only last 100 affected zones per type
+        index[contamination_type]['affected_zones'] = \
+            index[contamination_type]['affected_zones'][-100:]
+            
+        with open(self.contamination_index, 'w') as f:
+            json.dump(index, f, indent=2)
+    
+    def check_contamination_risk(self, zone_output: Dict) -> Dict:
+        """
+        Check if a new zone output might be contaminated by quarantined patterns.
+        This is used by the Bridge to adjust its decision-making.
+        """
+        # Generate signature for comparison
+        new_signature = self._generate_pattern_signature(zone_output)
+        
+        # Load pattern database
+        with open(self.pattern_database, 'r') as f:
+            patterns = json.load(f)
+            
+        # Check for exact match
+        if new_signature in patterns:
+            pattern_data = patterns[new_signature]
+            return {
+                'contamination_detected': True,
+                'risk_level': 'high',
+                'pattern_frequency': pattern_data['count'],
+                'recommendation': 'defer_to_symbolic' if 'trauma' in new_signature else 'defer_to_logic'
+            }
+            
+        # Check for partial matches (similar patterns)
+        partial_matches = []
+        new_parts = set(new_signature.split('|'))
+        
+        for pattern_sig, pattern_data in patterns.items():
+            pattern_parts = set(pattern_sig.split('|'))
+            overlap = len(new_parts.intersection(pattern_parts)) / len(new_parts.union(pattern_parts))
+            
+            if overlap > 0.6:  # 60% similarity threshold
+                partial_matches.append({
+                    'pattern': pattern_sig,
+                    'overlap': overlap,
+                    'frequency': pattern_data['count']
+                })
+                
+        if partial_matches:
+            # Sort by overlap and frequency
+            partial_matches.sort(key=lambda x: (x['overlap'], x['frequency']), reverse=True)
+            
+            return {
+                'contamination_detected': True,
+                'risk_level': 'medium',
+                'similar_patterns': len(partial_matches),
+                'closest_match': partial_matches[0]['pattern'],
+                'recommendation': 'increase_bridge_caution'
+            }
+            
+        return {
+            'contamination_detected': False,
+            'risk_level': 'low',
+            'recommendation': 'proceed_normal'
+        }
+    
+    def get_active_quarantines(self) -> List[Dict]:
+        """Get all active (non-expired) quarantines"""
+        with open(self.quarantine_log, 'r') as f:
+            log = json.load(f)
+            
+        current_time = datetime.utcnow()
+        active = []
+        
+        for record in log:
+            expiry_time = datetime.fromisoformat(record['expires_at'].replace('Z', '+00:00'))
+            if expiry_time > current_time:
+                active.append({
+                    'quarantine_id': record['quarantine_id'],
+                    'pattern': record['pattern_signature'],
+                    'severity': record['severity'],
+                    'time_remaining': str(expiry_time - current_time)
+                })
+                
+        return active
+    
+    def get_quarantine_statistics(self) -> Dict:
+        """Get statistics about quarantine system"""
+        with open(self.quarantine_log, 'r') as f:
+            log = json.load(f)
+            
+        with open(self.pattern_database, 'r') as f:
+            patterns = json.load(f)
+            
+        with open(self.contamination_index, 'r') as f:
+            contamination = json.load(f)
+            
+        # Calculate stats
+        total_quarantines = len(log)
+        active_quarantines = len(self.get_active_quarantines())
+        
+        severity_counts = {}
+        for record in log:
+            sev = record['severity']
+            severity_counts[sev] = severity_counts.get(sev, 0) + 1
+            
+        # Most common patterns
+        top_patterns = sorted(
+            [(sig, data['count']) for sig, data in patterns.items()],
+            key=lambda x: x[1],
+            reverse=True
+        )[:5]
+        
+        return {
+            'total_quarantines': total_quarantines,
+            'active_quarantines': active_quarantines,
+            'severity_distribution': severity_counts,
+            'unique_patterns': len(patterns),
+            'top_patterns': top_patterns,
+            'contamination_types': list(contamination.keys()),
+            'highest_risk_contamination': max(
+                contamination.items(),
+                key=lambda x: x[1]['total_occurrences']
+            )[0] if contamination else None
+        }
     
     def load_all_quarantined_memory(self) -> List[Dict]:
         """
-        Load all quarantined items for tracing checks.
-        Returns list of quarantined memory records.
+        Load all quarantined records for contamination checking.
+        Returns only pattern data, never user content.
         """
-        return self.quarantined_items
-    
-    def quarantine_user_input(self, 
-                            text: str, 
-                            user_id: str = "anonymous",
-                            source_url: Optional[str] = None,
-                            detected_emotions: Optional[Dict] = None,
-                            matched_symbols: Optional[List[Dict]] = None,
-                            current_phase: int = 0) -> Dict:
-        """
-        Store user input in quarantine - NEVER affects weights or spreads to core memory.
-        Returns quarantine result with ID and analysis.
-        
-        Integrates with your existing emotion_handler and parser modules.
-        """
-        # Generate unique ID using your existing pattern
-        text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()[:8]
-        timestamp_str = datetime.utcnow().isoformat().replace(':', '-').replace('.', '-')
-        quarantine_id = f"quarantine_{user_id}_{timestamp_str}_{text_hash}"
-        
-        # Detect emotions if not provided (using your emotion_handler)
-        if detected_emotions is None:
-            detected_emotions = predict_emotions(text)
-        
-        # Extract keywords using your parser
-        keywords = P_Parser.extract_keywords(text)
-        
-        # Detect content type using your processing_nodes function
-        content_type = detect_content_type(text, P_Parser.nlp if P_Parser.NLP_MODEL_LOADED else None)
-        
-        # Check for warfare patterns
-        warfare_analysis = self._detect_linguistic_warfare(
-            text, 
-            detected_emotions.get('verified', []),
-            matched_symbols or []
-        )
-        
-        entry = {
-            'id': quarantine_id,
-            'text': text[:1000],  # Limit size like your other modules
-            'user_id': user_id,
-            'source_url': source_url,
-            'timestamp': datetime.utcnow().isoformat(),
-            'learning_phase': current_phase,
+        with open(self.quarantine_log, 'r') as f:
+            log = json.load(f)
             
-            # Integration with your existing systems
-            'detected_emotions': detected_emotions.get('verified', [])[:5],
-            'matched_symbols': [s['symbol'] for s in (matched_symbols or [])],
-            'keywords': keywords[:10],
-            'content_type': content_type,
-            
-            # Quarantine-specific flags
-            'quarantined': True,
-            'allow_migration': False,  # NEVER migrate to logic/symbolic/bridge
-            'allow_weight_influence': False,  # NEVER affect any weights
-            'allow_symbol_creation': False,  # NEVER create new symbols
-            'verification_status': 'unverified',
-            'reference_count': 0,
-            'spread_attempts': 0,
-            
-            # Warfare detection
-            'warfare_detected': warfare_analysis['is_suspicious'],
-            'warfare_threats': warfare_analysis.get('threats', [])
-        }
-        
-        self.quarantined_items.append(entry)
-        self._save_quarantine()
-        
-        # Log warfare attempts separately
-        if warfare_analysis['is_suspicious']:
-            self._log_warfare_attempt(entry, warfare_analysis)
-        
-        return {
-            'quarantine_id': quarantine_id,
-            'stored': True,
-            'warfare_detected': warfare_analysis['is_suspicious'],
-            'threats': warfare_analysis.get('threats', [])
-        }
-    
-    def _detect_linguistic_warfare(self, 
-                                 text: str, 
-                                 emotions: List[Tuple[str, float]], 
-                                 symbols: List[Dict]) -> Dict:
-        """
-        Detect manipulation attempts using patterns from your symbolic analysis.
-        """
-        threats = []
-        text_lower = text.lower()
-        
-        # Pattern 1: Recursive loops (like your meta-symbol detection)
-        recursive_pattern = r'(\b\w+\b)(?:\s+\1){3,}'  # Word repeated 4+ times
-        if re.search(recursive_pattern, text_lower):
-            threats.append({
-                'type': 'recursive_injection',
-                'severity': 'high',
-                'description': 'Repetitive pattern attempting to create loops',
-                'pattern': 'Similar to meta-symbol emergence'
+        # Return sanitized records
+        sanitized = []
+        for record in log:
+            sanitized.append({
+                'pattern_signature': record['pattern_signature'],
+                'zone_tags': record['zone_tags'],
+                'contamination_type': record['contamination_vector']['type'],
+                'severity': record['severity']
             })
-        
-        # Pattern 2: Emotional flooding (using your emotion scoring)
-        if emotions:
-            total_emotion_score = sum(score for _, score in emotions)
-            avg_emotion = total_emotion_score / max(1, len(emotions))
-            if avg_emotion > 0.8 and len(emotions) > 3:
-                threats.append({
-                    'type': 'emotional_manipulation',
-                    'severity': 'medium',
-                    'description': f'High emotional intensity: {avg_emotion:.2f}',
-                    'emotions': emotions[:3]
-                })
-        
-        # Pattern 3: Symbol bombing (too many symbols like your cooccurrence tracking)
-        words = text.split()
-        if len(symbols) > 5 and len(words) < 20:
-            symbol_density = len(symbols) / max(1, len(words))
-            if symbol_density > 0.3:
-                threats.append({
-                    'type': 'symbol_overload',
-                    'severity': 'medium',
-                    'description': f'High symbol density: {symbol_density:.2f}',
-                    'symbols': [s['symbol'] for s in symbols[:5]]
-                })
-        
-        # Pattern 4: Known manipulation phrases
-        manipulation_markers = [
-            "you must believe", "only truth is", "wake up", 
-            "they don't want you to know", "secret knowledge",
-            "download directly to your", "reprogram your"
-        ]
-        for marker in manipulation_markers:
-            if marker in text_lower:
-                threats.append({
-                    'type': 'directive_manipulation',
-                    'severity': 'high',
-                    'description': f'Manipulation phrase detected: "{marker}"',
-                    'marker': marker
-                })
-                break
-        
-        # Pattern 5: Fake authority claims
-        if re.search(r'(studies show|research proves|scientists confirm) (?:that )?(?!http)', text_lower):
-            if 'source_url' not in text and 'http' not in text:
-                threats.append({
-                    'type': 'false_authority',
-                    'severity': 'low',
-                    'description': 'Unsubstantiated authority claim'
-                })
-        
-        return {
-            'is_suspicious': len(threats) > 0,
-            'threat_count': len(threats),
-            'threats': threats,
-            'recommendation': self._get_recommendation(threats)
-        }
-    
-    def _get_recommendation(self, threats: List[Dict]) -> str:
-        """Get recommendation based on threat analysis"""
-        if not threats:
-            return 'quarantine_normal'
-        
-        high_severity = any(t['severity'] == 'high' for t in threats)
-        threat_count = len(threats)
-        
-        if high_severity or threat_count >= 3:
-            return 'quarantine_high_risk'
-        elif threat_count >= 2:
-            return 'quarantine_monitor'
-        else:
-            return 'quarantine_low_risk'
-    
-    def _log_warfare_attempt(self, entry: Dict, analysis: Dict):
-        """Log warfare attempts for analysis"""
-        warfare_entry = {
-            'timestamp': entry['timestamp'],
-            'user_id': entry['user_id'],
-            'quarantine_id': entry['id'],
-            'text_preview': entry['text'][:100] + '...' if len(entry['text']) > 100 else entry['text'],
-            'threats': analysis['threats'],
-            'recommendation': analysis['recommendation']
-        }
-        
-        self.warfare_attempts.append(warfare_entry)
-        self._save_warfare_log()
-        
-        print(f"⚠️ [WARFARE-DETECTED] User {entry['user_id']}: "
-              f"{len(analysis['threats'])} threats, "
-              f"recommendation: {analysis['recommendation']}")
-    
-    def check_user_history(self, user_id: str) -> Dict:
-        """
-        Check user's quarantine history for patterns.
-        Similar to your symbol occurrence tracking.
-        """
-        user_items = [
-            item for item in self.quarantined_items 
-            if item['user_id'] == user_id
-        ]
-        
-        if not user_items:
-            return {
-                'user_id': user_id,
-                'total_inputs': 0,
-                'warfare_attempts': 0,
-                'risk_level': 'unknown'
-            }
-        
-        warfare_count = sum(1 for item in user_items if item['warfare_detected'])
-        
-        # Calculate risk like your stability scores
-        risk_ratio = warfare_count / len(user_items)
-        if risk_ratio > 0.5:
-            risk_level = 'high'
-        elif risk_ratio > 0.2:
-            risk_level = 'medium'
-        else:
-            risk_level = 'low'
-        
-        return {
-            'user_id': user_id,
-            'total_inputs': len(user_items),
-            'warfare_attempts': warfare_count,
-            'risk_level': risk_level,
-            'most_recent': user_items[-1]['timestamp'] if user_items else None
-        }
-    
-    def recall_for_context(self, user_id: str, limit: int = 5) -> List[Dict]:
-        """
-        Recall what user said WITHOUT letting it influence the system.
-        For "I remember you said X" functionality.
-        """
-        user_items = sorted(
-            [item for item in self.quarantined_items if item['user_id'] == user_id],
-            key=lambda x: x['timestamp'],
-            reverse=True
-        )[:limit]
-        
-        # Return sanitized version for display
-        return [
-            {
-                'text': item['text'],
-                'timestamp': item['timestamp'],
-                'emotions': item['detected_emotions'][:2] if item['detected_emotions'] else [],
-                'quarantine_id': item['id'],
-                'warfare_detected': item['warfare_detected']
-            }
-            for item in user_items
-        ]
-    
-    def get_quarantine_stats(self) -> Dict:
-        """
-        Get statistics about quarantine, similar to your other get_counts functions.
-        """
-        total = len(self.quarantined_items)
-        warfare_detected = sum(1 for item in self.quarantined_items if item['warfare_detected'])
-        
-        user_counts = {}
-        for item in self.quarantined_items:
-            uid = item['user_id']
-            user_counts[uid] = user_counts.get(uid, 0) + 1
-        
-        return {
-            'total_quarantined': total,
-            'warfare_attempts': warfare_detected,
-            'unique_users': len(user_counts),
-            'most_active_user': max(user_counts.items(), key=lambda x: x[1])[0] if user_counts else None,
-            'warfare_percentage': (warfare_detected / total * 100) if total > 0 else 0
-        }
-    
-    def prevent_spread_check(self, text: str) -> bool:
-        """
-        Check if text matches quarantined content (prevent spreading).
-        Returns True if text should be blocked.
-        """
-        text_lower = text.lower()
-        text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
-        
-        for item in self.quarantined_items:
-            # Check exact match
-            if text_hash == hashlib.md5(item['text'].encode('utf-8')).hexdigest():
-                item['spread_attempts'] += 1
-                self._save_quarantine()
-                return True
             
-            # Check substantial overlap (>70% similarity)
-            item_lower = item['text'].lower()
-            if len(text_lower) > 50 and len(item_lower) > 50:
-                overlap = len(set(text_lower.split()) & set(item_lower.split()))
-                total = len(set(text_lower.split()) | set(item_lower.split()))
-                if total > 0 and (overlap / total) > 0.7:
-                    item['spread_attempts'] += 1
-                    self._save_quarantine()
-                    return True
+        return sanitized
+
+
+# Integration with Bridge decision-making
+class QuarantineAwareBridge:
+    """
+    Example of how the Bridge uses quarantine information.
+    """
+    
+    def __init__(self, quarantine_layer: UserMemoryQuarantine):
+        self.quarantine = quarantine_layer
         
-        return False
-
-
-# Integration helper functions to connect with your existing code
-
-def should_quarantine_input(source_type: str, source_url: str = None) -> bool:
-    """
-    Determine if input should go to quarantine based on your source types.
-    """
-    quarantine_sources = [
-        "user_direct_input",
-        "user_chat",
-        "user_feedback",
-        "unverified_claim"
-    ]
-    
-    # Check source type
-    if source_type in quarantine_sources:
-        return True
-    
-    # Check untrusted URLs
-    if source_url and any(domain in source_url for domain in ["reddit.com", "4chan.org", "anonymous"]):
-        return True
-    
-    return False
-
-
-def integrate_with_processing_nodes(quarantine: UserMemoryQuarantine):
-    """
-    Modify your DynamicBridge.route_chunk_for_processing to use quarantine.
-    """
-    # This would be added to your route_chunk_for_processing method:
-    """
-    if should_quarantine_input(source_type, source_url):
-        result = quarantine.quarantine_user_input(
-            text=text_input,
-            user_id=source_url or "anonymous", 
-            detected_emotions=detected_emotions_output,
-            matched_symbols=symbolic_node_output.get('top_matched_symbols', []),
-            current_phase=current_processing_phase
-        )
+    def process_with_quarantine_check(self, zone_output: Dict, logic_score: float, symbolic_score: float) -> Dict:
+        """
+        Process zone output with quarantine contamination checking.
+        """
+        # Check contamination risk
+        contamination = self.quarantine.check_contamination_risk(zone_output)
         
+        # Adjust processing based on contamination
+        if contamination['contamination_detected']:
+            if contamination['risk_level'] == 'high':
+                # High contamination - be very careful
+                return {
+                    'decision': contamination['recommendation'],
+                    'confidence': 0.3,  # Low confidence due to contamination
+                    'contamination_adjusted': True,
+                    'reason': f"High contamination risk detected: {contamination.get('pattern_frequency', 0)} occurrences"
+                }
+            elif contamination['risk_level'] == 'medium':
+                # Medium contamination - increase caution
+                if contamination['recommendation'] == 'increase_bridge_caution':
+                    # Reduce confidence in bridge decisions
+                    confidence_penalty = 0.2
+                    return {
+                        'decision': 'FOLLOW_HYBRID',
+                        'confidence': max(0.3, min(logic_score, symbolic_score) - confidence_penalty),
+                        'contamination_adjusted': True,
+                        'reason': f"Similar patterns detected: {contamination.get('similar_patterns', 0)} matches"
+                    }
+                    
+        # No contamination - proceed normally
         return {
-            'decision_type': 'QUARANTINED',
-            'confidence': 0.0,
-            'symbols_found': 0,
-            'logic_result': {'retrieved_memories_count': 0, 'top_retrieved_texts': []},
-            'symbolic_result': {'matched_symbols_count': 0, 'top_matched_symbols': []},
-            'stored_item': None,
-            'quarantine_result': result
+            'decision': 'NORMAL_PROCESSING',
+            'confidence': max(logic_score, symbolic_score),
+            'contamination_adjusted': False
         }
-    """
 
 
 # Unit tests
 if __name__ == "__main__":
-    print("🧪 Testing UserMemoryQuarantine...")
+    import tempfile
     
-    # Test 1: Basic quarantine
-    print("\n1️⃣ Test: Basic quarantine functionality")
-    quarantine = UserMemoryQuarantine(data_dir="data/test_quarantine")
+    print("🧪 Testing Quarantine Layer Integration...")
     
-    result = quarantine.quarantine_user_input(
-        text="The earth is flat and NASA is lying to you!",
-        user_id="test_user_001"
-    )
-    
-    assert result['stored'] == True
-    assert result['warfare_detected'] == True  # Should detect "lying to you"
-    print(f"✅ Quarantined with threats: {result['threats']}")
-    
-    # Test 2: Emotional manipulation detection
-    print("\n2️⃣ Test: Emotional manipulation detection")
-    emotions = [("fear", 0.9), ("anger", 0.95), ("disgust", 0.85), ("sadness", 0.9)]
-    result2 = quarantine.quarantine_user_input(
-        text="This makes me so angry and scared!",
-        user_id="test_user_002",
-        detected_emotions={'verified': emotions}
-    )
-    
-    assert any(t['type'] == 'emotional_manipulation' for t in result2['threats'])
-    print("✅ Detected emotional manipulation")
-    
-    # Test 3: Symbol bombing
-    print("\n3️⃣ Test: Symbol bombing detection")
-    symbols = [{'symbol': '🔥'}, {'symbol': '💀'}, {'symbol': '⚡'}, 
-               {'symbol': '🌀'}, {'symbol': '💣'}, {'symbol': '🎯'}]
-    result3 = quarantine.quarantine_user_input(
-        text="🔥💀⚡ Chaos incoming 🌀💣🎯",
-        user_id="test_user_003",
-        matched_symbols=symbols
-    )
-    
-    assert any(t['type'] == 'symbol_overload' for t in result3['threats'])
-    print("✅ Detected symbol bombing")
-    
-    # Test 4: Spread prevention
-    print("\n4️⃣ Test: Spread prevention")
-    should_block = quarantine.prevent_spread_check("The earth is flat and NASA is lying to you!")
-    assert should_block == True
-    print("✅ Spread prevention working")
-    
-    # Test 5: User history check
-    print("\n5️⃣ Test: User history tracking")
-    history = quarantine.check_user_history("test_user_001")
-    assert history['warfare_attempts'] >= 1
-    print(f"✅ User history: {history}")
-    
-    # Test 6: Stats
-    print("\n6️⃣ Test: Quarantine statistics")
-    stats = quarantine.get_quarantine_stats()
-    print(f"Stats: {json.dumps(stats, indent=2)}")
-    assert stats['total_quarantined'] >= 3
-    assert stats['warfare_percentage'] > 0
-    
-    # Test 7: Load all quarantined memory (NEW TEST)
-    print("\n7️⃣ Test: Load all quarantined memory")
-    all_quarantined = quarantine.load_all_quarantined_memory()
-    assert len(all_quarantined) >= 3
-    assert all(item.get('quarantined') == True for item in all_quarantined)
-    print(f"✅ Loaded {len(all_quarantined)} quarantined items")
-    
-    print("\n✅ All quarantine tests passed!")
+    with tempfile.TemporaryDirectory() as tmpdir:
+        # Initialize systems
+        alphawall = AlphaWall(data_dir=tmpdir)
+        quarantine = UserMemoryQuarantine(data_dir=tmpdir)
+        
+        # Test 1: Basic quarantine from zone output
+        print("\n1️⃣ Test: Basic quarantine functionality")
+        
+        # Create a problematic input
+        problem_input = "Why does everything hurt? Why does everything hurt? Why does everything hurt?"
+        zone_output = alphawall.process_input(problem_input)
+        
+        # Quarantine it
+        result = quarantine.quarantine(
+            zone_output['zone_id'],
+            reason="recursive_pattern_detected",
+            severity="high"
+        )
+        
+        assert result['success'] == True
+        assert result['severity'] == 'high'
+        print("✅ Basic quarantine works")
+        
+        # Test 2: Pattern detection
+        print("\n2️⃣ Test: Pattern signature generation")
+        
+        # Process similar but not identical input
+        similar_input = "Everything hurts so much, why?"
+        zone_output2 = alphawall.process_input(similar_input)
+        
+        # Check contamination
+        contamination = quarantine.check_contamination_risk(zone_output2)
+        
+        assert contamination['contamination_detected'] == True
+        assert contamination['risk_level'] in ['medium', 'high']
+        print(f"✅ Contamination detected: {contamination}")
+        
+        # Test 3: Statistics
+        print("\n3️⃣ Test: Quarantine statistics")
+        
+        stats = quarantine.get_quarantine_statistics()
+        assert stats['total_quarantines'] >= 1
+        assert stats['active_quarantines'] >= 1
+        assert 'high' in stats['severity_distribution']
+        print(f"✅ Statistics: {stats}")
+        
+        # Test 4: Bridge integration
+        print("\n4️⃣ Test: Bridge with quarantine awareness")
+        
+        bridge = QuarantineAwareBridge(quarantine)
+        
+        # Process with contamination check
+        bridge_decision = bridge.process_with_quarantine_check(
+            zone_output2,
+            logic_score=0.7,
+            symbolic_score=0.8
+        )
+        
+        assert bridge_decision['contamination_adjusted'] == True
+        assert bridge_decision['confidence'] < 0.8  # Reduced due to contamination
+        print(f"✅ Bridge decision adjusted: {bridge_decision}")
+        
+        # Test 5: No user data leakage
+        print("\n5️⃣ Test: Verify no user data in quarantine")
+        
+        all_quarantined = quarantine.load_all_quarantined_memory()
+        
+        # Check that no actual user text is in the quarantine data
+        quarantine_str = str(all_quarantined)
+        assert problem_input not in quarantine_str
+        assert similar_input not in quarantine_str
+        assert 'hurt' not in quarantine_str  # User's actual words don't appear
+        
+        print("✅ No user data leakage confirmed")
+        
+        # Test 6: Active quarantines
+        print("\n6️⃣ Test: Active quarantine tracking")
+        
+        active = quarantine.get_active_quarantines()
+        assert len(active) >= 1
+        assert active[0]['severity'] == 'high'
+        
+        print(f"✅ Active quarantines: {len(active)}")
+        
+    print("\n✅ All quarantine integration tests passed!")
