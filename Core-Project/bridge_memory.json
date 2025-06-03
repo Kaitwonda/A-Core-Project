@@ -3773,5 +3773,330 @@
     "history_length": 1,
     "stored_at": "2025-05-26T20:01:04.533096",
     "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118074_8078",
+    "text": "May 16, 2024 Replies 7 Views 2K Python Most efficient way to randomly choose a word from a file with a list of words May 10, 2024 2 Replies 35 Views 5K C/C++ Parallel processing for loops and pointer defined outside the loop May 9, 2024 Replies 14 Views 2K JavaScript Links from navbar made with React don't work May 6, 2024 Replies 2 Views 2K Fortran Passing variables in FORTRAN May 2, 2024 Replies 25 Views 3K Classifiers, threshold, and ROC curve Apr 30, 2024 Replies 5 Views 2K My Website For Creating Interactive Visuals Linked To Equations Apr 19, 2024 Replies 4 Views 2K JavaScript Error logging in: onLoginSuccess is not a function Apr 18, 2024 Replies 8 Views 2K Python Building a homemade Long Short Term Memory with FSMs Apr 7, 2024 Replies 2 Views 2K Git, staging and committing files Mar 31, 2024 Replies 20 Views 3K HTML/CSS Is it possible to use js variables in html while using Puppeteer? Mar 27, 2024 Replies 5 Views 2K How do I make Browserify work with Puppeteer?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.074722",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.074722",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.074722",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118106_3570",
+    "text": "Mar 27, 2024 Replies 5 Views 2K How do I make Browserify work with Puppeteer? Mar 25, 2024 Replies 1 Views 2K Python Query runs fine in MySQL, but returns empty list in Python Mar 12, 2024 Replies 7 Views 3K Python Python scipy.optimize.minimize: ‘trust-constr’ and Hessian output Mar 12, 2024 Replies 5 Views 2K How to install Cheerio in Visual Studio Code v 1.87.1 Mar 9, 2024 Replies 2 Views 2K C/C++ Cpp in visual studio: cmake and being able to compile Mar 9, 2024 Replies 0 Views 2K F(x) row isn't shown in origin software Mar 3, 2024 Replies 3 Views 2K Iterators and generators and the data they generate Mar 1, 2024 Replies 1 Views 2K JavaScript How do I run an exe file on an Apple iPad? Feb 27, 2024 Replies 6 Views 4K Python Best way to fix \"externally managed environment\" error? Feb 26, 2024 Replies 1 Views 6K My app has a generic Android icon when I download it from Google Play Feb 25, 2024 Replies 10 Views 5K [Godot] Can I directly access files saved on Android to user:// ?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.106141",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.106141",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.106141",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118121_7821",
+    "text": "Feb 21, 2024 Replies 3 Views 2K Python Docker containers in Windows \"look\" like VMs... Feb 15, 2024 Replies 4 Views 2K Python Stop current Python REPL command, but keep REPL session open? Feb 12, 2024 Replies 1 Views 2K Why do many applications come with their own terminal instead of using the native shell? Feb 11, 2024 Replies 3 Views 2K Docker and Containers:",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.121141",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.121141",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.121141",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118150_9159",
+    "text": "Feb 11, 2024 Replies 3 Views 2K Docker and Containers: Understanding the Basics and Common Doubts Explained Feb 11, 2024 Replies 6 Views 2K Bash shell via Git Bash or WSL in Windows Feb 8, 2024 Replies 1 Views 3K Python How to store a large data-set in a \"grid\" in Python/NumPy Feb 6, 2024 Replies 14 Views 3K Java When an Athlete Throws His Javalin A Meter Too Far Feb 5, 2024 Replies 2 Views 2K C/C++ Interpolation of a rapidly oscillating function Feb 5, 2024 Replies 3 Views 2K Windows OS: Administrator status vs regular user Feb 4, 2024 Replies 5 Views 2K Confusion On Frontend vs. Backend for Web Developement Feb 3, 2024 Replies 13 Views 3K Can globals in Godot randomly fail to update? Feb 1, 2024 Replies 4 Views 2K Problems installing the TMDlib package Jan 31, 2024 Replies 1 Views 2K DeepMind AlphaGeometry: Is AGI just around the corner? Jan 31, 2024 Replies 9 Views 2K C/C++",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.150801",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.150801",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.150801",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826144986_4130",
+    "text": "FallArk 127 0 Update: I figured out how to make the output an integer. By doing this: Code: def eval_infix_sum(expr,pos):\n    if expr[pos+1] == '+' :\n        ans = int(expr[pos]) + int(expr[pos+2])\n    elif expr[pos+1] == '-' :\n        ans = int(expr[pos]) - int(expr[pos+2])\n    pos = pos + 1\n    return ans,pos But I am still confused about how the \"pos\" will correspond with the other functions. I know after finishing the code, the function \"eval_infix\" should be able to call the related functions and get the output, but I don't really understand it clearly I like Serena Homework Helper MHB 16,335 258 Hey FallArk! ;) Suppose we want to evalute [1,\"+\",2,\"+\",3]. Then after calling eval_sum_infix, we will have evaluated \"1+2\", leaving \"+3\". We can call eval_sum_infix again, but then we should continue at pos=3... FallArk 127 0 I like Serena said: Hey FallArk! ;) Suppose we want to evalute [1,\"+\",2,\"+\",3]. Then after calling eval_sum_infix, we will have evaluated \"1+2\", leaving \"+3\".",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:24.986890",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:24.986890",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:24.986890",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145080_8989",
+    "text": "FallArk 127 0 My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] ! = ';':\n        if expr[pos+1] == '+' :\n            ans = int(expr[pos]) + int(expr[pos+2])\n        elif expr[pos+1] == '-' :\n            ans = int(expr[pos]) - int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos\ndef eval_infix_product(expr,pos): while expr[pos] != ';':\n        if expr[pos+1] == '*' :\n            ans = int(expr[pos]) * int(expr[pos+2])\n        elif expr[pos+1] == '/' :\n            ans = int(expr[pos]) / int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos Inputs like : Code: [\"1\",\"+\",\"2\",\"-3\",\";\"],0 works out just fine. Thanks for the comments, so inside the \"eval_infix_factor\" function, I should do something so that the \"(\" token can be dealt with then? I like Serena Homework Helper MHB 16,335 258 FallArk said: My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] !",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.080306",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.080306",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.080306",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145113_1191",
+    "text": "FallArk said: My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] ! = ';':\n        if expr[pos+1] == '+' :\n            ans = int(expr[pos]) + int(expr[pos+2])\n        elif expr[pos+1] == '-' :\n            ans = int(expr[pos]) - int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos\ndef eval_infix_product(expr,pos): while expr[pos] != ';':\n        if expr[pos+1] == '*' :\n            ans = int(expr[pos]) * int(expr[pos+2])\n        elif expr[pos+1] == '/' :\n            ans = int(expr[pos]) / int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos Inputs like : Code: [\"1\",\"+\",\"2\",\"-3\",\";\"],0 works out just fine. Thanks for the comments, so inside the \"eval_infix_factor\" function, I should do something so that the \"(\" token can be dealt with then? What we have is sum-expressions that consist of multiplicative-expressions that consist of either constants or parenthesized expressions. In pseudo code it's something like this. (\"rhs\" is short for right hand side .)",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.113836",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.113836",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.113836",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145142_9311",
+    "text": "In pseudo code it's something like this. (\"rhs\" is short for right hand side .) Code: def sum_expr\n    result = mul_expr\n    while next token == \"+\"\n        rhs = mul_expr\n        result += rhs\n    return result\n\ndef mul_expr\n    result = factor_expr\n    while next token == \"*\"\n        rhs =factor_expr\n        result *= rhs\n    return result\n\ndef factor_expr\n    if next token == \"(\"\n        result = sum_expr\n        skip following \")\"\n    else\n        result = constant\n    return result All the parameters, and tracking of the position still have to be added. FallArk 127 0 duh, I just realized that if input like \" '2 + 3' \" is entered, the function \"eval_infix\" will split it up into a list with semicolon and then call function \"eval_infix_list\" which will call \"eval_infix_sum\". :D I will talk to my instructor today and also ask him about it again. Thank you!",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.142052",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.142052",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.142052",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826147893_9960",
+    "text": "do you have a link to Marletto's proof HrvojeDjurdjevic 23 4 Here you are https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1226#d3e2524 tade 720 26 HrvojeDjurdjevic said: Here you are https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1226#d3e2524 thanks, and which part of it describes her proof that the second model is the only possible accurate way pbuk Science Advisor Homework Helper Gold Member 4,947 3,191 HrvojeDjurdjevic said: How sound and rigorous is her proof? It seems tautological to me: \"we define a replicator as something that replicates, therefore in order for something to replicate itself it must contain a replicator\". HrvojeDjurdjevic said: Would you be able to prove the same without looking at her proof? Yes, unless I am wrong in believing it to be vacuously true. HrvojeDjurdjevic said: Can you point to the relevant source that contains already performed and published proofreading of that text?",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.893860",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:27.893860",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.893860",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153330_1254",
+    "text": "Each node keeps track of how many higher children it has. You start with a root node containing 5. Then you add 2 as the \"lower child\" of 5, then 3 as the \"higher child\" of 2 (because it's lower than 5, but 5 already has a lower child but 2 doesn't have a higher child), then 1 as the \"lower child\" of 2 (5 already has a lower child but 2 doesn't), then 4 as the \"higher child\" of 3 (5 has a lower child, 2 has a higher child, but 3 doesn't). If you keep track of how many child nodes have been added on the higher subtree of each one, I think you can work out how many higher numbers you've already seen without having to check every one, which ought to be better than ##O(n^2)##. Last edited: Oct 12, 2019 Ibix Science Advisor Insights Author 13,111 15,409 Python: class TreeNode:\n    def __init__(self,v):\n        self.v=v # A number from the original list\n        self.nGreater=0 # The number of higher numbers we've seen.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.330246",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.331246",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.331246",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153348_4067",
+    "text": "The number of higher numbers we've seen. self.lowerChild=None\n        self.greaterChild=None\n    def addNode(self,newV):\n        if newV<self.v:\n            if self.lowerChild is None:\n                # New number is lower than this node and we have not seen any such numbers before. Return 1 (this node) plus how many greater-than-this-node children\n                self.lowerChild=TreeNode(newV)\n                return 1+self.nGreater\n            else:\n                # New number is lower than this node.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.348133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.348133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.348133",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153368_8636",
+    "text": "New number is lower than this node. Return 1 (this node) plus how many greater-than-this-node children plus anything between the new node and this node\n                return 1+self.nGreater+self.lowerChild.addNode(newV)\n        else:\n            self.nGreater+=1\n            if self.greaterChild is None:\n                # Greater than this node and we haven't seen such a number before - return that there are no larger numbers below this node\n                self.greaterChild=TreeNode(newV)\n                return 0\n            else:\n                # Greater than this node - return how many greater-than-the-new-node values are found in the subtree\n                return self.greaterChild.addNode(newV)",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.368133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.368133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.368133",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153396_3470",
+    "text": "def printTree(self):\n        chstr=\"\"\n        if self.lowerChild is None:\n            chstr+=\"-\"\n        else:\n            chstr+=str(self.lowerChild.v)\n        if self.greaterChild is None:\n            chstr+=\" -\"\n        else:\n            chstr+=\" \"+str(self.greaterChild.v)\n        print \"Node:\",self.v,\" Children:\",chstr\n        if self.lowerChild is not None:\n            self.lowerChild.printTree()\n        if self.greaterChild is not None:\n            self.greaterChild.printTree()\n\na=[5,2,3,1,4]\nrootNode=TreeNode(a[0])\nb=[0]\nfor a_i in a[1:]:\n    b.append(rootNode.addNode(a_i))\nprint b\nrootNode.printTree() This has not been extensively tested, and was put together in half an hour on a tiny phone. No guarantees it's right! Last edited: Oct 13, 2019 DrDu Science Advisor 6,404 1,002 Thank you Ibix! In the meanwhile, I figured out how to do this using mergesort: 1. Initialize the vector b to n times 0.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.396133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.396133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.396133",
+    "decision_type": "FOLLOW_HYBRID"
   }
 ]

@@ -1306,14 +1306,6 @@
     "decision_history": [
       {
         "decision": "FOLLOW_SYMBOLIC",
-        "timestamp": "2025-05-26T19:20:39.111343",
-        "weights": {
-          "static": 0.6,
-          "dynamic": 0.4
-        }
-      },
-      {
-        "decision": "FOLLOW_SYMBOLIC",
         "timestamp": "2025-05-26T19:24:17.168099",
         "weights": {
           "static": 0.6,
@@ -1343,20 +1335,28 @@
           "static": 0.6,
           "dynamic": 0.4
         }
+      },
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-05-26T20:12:03.158046",
+        "weights": {
+          "static": 0.6,
+          "dynamic": 0.4
+        }
       }
     ],
     "last_decision": "FOLLOW_SYMBOLIC",
     "history_length": 5,
-    "stored_at": "2025-05-26T20:09:19.127534",
+    "stored_at": "2025-05-26T20:12:03.158046",
     "decision_type": "FOLLOW_SYMBOLIC",
     "migrated_from": "bridge",
     "migration_threshold": 0.3,
-    "migration_date": "2025-05-26T20:09:19.127534",
+    "migration_date": "2025-05-26T20:12:03.158046",
     "migration_method": "overlap",
     "reverse_migrated": true,
     "reverse_migration_reason": "Reclassified as FOLLOW_HYBRID",
-    "reverse_migration_date": "2025-05-26T20:07:53.448861",
-    "reverse_migration_count": 5
+    "reverse_migration_date": "2025-05-26T20:11:16.010515",
+    "reverse_migration_count": 6
   },
   {
     "id": "FOLLOW_HYBRID_Symbol_1_1748286320190_1651",
@@ -1371,14 +1371,6 @@
     "decision_history": [
       {
         "decision": "FOLLOW_SYMBOLIC",
-        "timestamp": "2025-05-26T19:20:39.111343",
-        "weights": {
-          "static": 0.6,
-          "dynamic": 0.4
-        }
-      },
-      {
-        "decision": "FOLLOW_SYMBOLIC",
         "timestamp": "2025-05-26T19:24:17.168099",
         "weights": {
           "static": 0.6,
@@ -1408,20 +1400,28 @@
           "static": 0.6,
           "dynamic": 0.4
         }
+      },
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-05-26T20:12:03.158046",
+        "weights": {
+          "static": 0.6,
+          "dynamic": 0.4
+        }
       }
     ],
     "last_decision": "FOLLOW_SYMBOLIC",
     "history_length": 5,
-    "stored_at": "2025-05-26T20:09:19.127534",
+    "stored_at": "2025-05-26T20:12:03.158046",
     "decision_type": "FOLLOW_SYMBOLIC",
     "migrated_from": "bridge",
     "migration_threshold": 0.3,
-    "migration_date": "2025-05-26T20:09:19.127534",
+    "migration_date": "2025-05-26T20:12:03.158046",
     "migration_method": "overlap",
     "reverse_migrated": true,
     "reverse_migration_reason": "Reclassified as FOLLOW_HYBRID",
-    "reverse_migration_date": "2025-05-26T20:07:53.448861",
-    "reverse_migration_count": 6
+    "reverse_migration_date": "2025-05-26T20:11:16.010515",
+    "reverse_migration_count": 7
   },
   {
     "id": "FOLLOW_HYBRID_Symbol_1_1748286320337_6622",
@@ -1436,14 +1436,6 @@
     "decision_history": [
       {
         "decision": "FOLLOW_SYMBOLIC",
-        "timestamp": "2025-05-26T19:20:39.111343",
-        "weights": {
-          "static": 0.6,
-          "dynamic": 0.4
-        }
-      },
-      {
-        "decision": "FOLLOW_SYMBOLIC",
         "timestamp": "2025-05-26T19:24:17.168099",
         "weights": {
           "static": 0.6,
@@ -1473,20 +1465,28 @@
           "static": 0.6,
           "dynamic": 0.4
         }
+      },
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-05-26T20:12:03.158046",
+        "weights": {
+          "static": 0.6,
+          "dynamic": 0.4
+        }
       }
     ],
     "last_decision": "FOLLOW_SYMBOLIC",
     "history_length": 5,
-    "stored_at": "2025-05-26T20:09:19.127534",
+    "stored_at": "2025-05-26T20:12:03.158046",
     "decision_type": "FOLLOW_SYMBOLIC",
     "migrated_from": "bridge",
     "migration_threshold": 0.3,
-    "migration_date": "2025-05-26T20:09:19.127534",
+    "migration_date": "2025-05-26T20:12:03.158046",
     "migration_method": "overlap",
     "reverse_migrated": true,
     "reverse_migration_reason": "Reclassified as FOLLOW_HYBRID",
-    "reverse_migration_date": "2025-05-26T20:07:53.448861",
-    "reverse_migration_count": 6
+    "reverse_migration_date": "2025-05-26T20:11:16.010515",
+    "reverse_migration_count": 7
   },
   {
     "id": "FOLLOW_HYBRID_Symbolism_(arts)_1_1748286321666_1256",
@@ -1501,14 +1501,6 @@
     "decision_history": [
       {
         "decision": "FOLLOW_SYMBOLIC",
-        "timestamp": "2025-05-26T19:20:39.111343",
-        "weights": {
-          "static": 0.6,
-          "dynamic": 0.4
-        }
-      },
-      {
-        "decision": "FOLLOW_SYMBOLIC",
         "timestamp": "2025-05-26T19:24:17.168099",
         "weights": {
           "static": 0.6,
@@ -1538,19 +1530,177 @@
           "static": 0.6,
           "dynamic": 0.4
         }
+      },
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-05-26T20:12:03.159046",
+        "weights": {
+          "static": 0.6,
+          "dynamic": 0.4
+        }
       }
     ],
     "last_decision": "FOLLOW_SYMBOLIC",
     "history_length": 5,
-    "stored_at": "2025-05-26T20:09:19.127534",
+    "stored_at": "2025-05-26T20:12:03.159046",
     "decision_type": "FOLLOW_SYMBOLIC",
     "migrated_from": "bridge",
     "migration_threshold": 0.3,
-    "migration_date": "2025-05-26T20:09:19.127534",
+    "migration_date": "2025-05-26T20:12:03.158046",
     "migration_method": "overlap",
     "reverse_migrated": true,
     "reverse_migration_reason": "Reclassified as FOLLOW_HYBRID",
-    "reverse_migration_date": "2025-05-26T20:07:53.448861",
-    "reverse_migration_count": 6
+    "reverse_migration_date": "2025-05-26T20:11:16.010515",
+    "reverse_migration_count": 7
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826118002_3991",
+    "text": "Zipping identical iterables Sep 1, 2024 Replies 5 Views 1K HTML/CSS [CSS] Why do my containers shrink at screen widths <347px? Sep 1, 2024 Replies 5 Views 1K Python finchessboardcorners function doesn't work properly on my images Aug 20, 2024 Replies 2 Views 2K Python Python Socket library to create a server and client scripts Jul 27, 2024 Replies 9 Views 3K Safe, free and unlimited xls to xlsx converter? Jul 24, 2024 Replies 8 Views 2K 5 GHz PC WiFi connection Cybersecurity question Jul 13, 2024 Replies 3 Views 2K Python Help with some optimization code for Block Matrices Jul 11, 2024 Replies 1 Views 2K Is an API Always Necessary for Server-Client Communication?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.002333",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:01:58.002333",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.002333",
+    "decision_type": "FOLLOW_SYMBOLIC"
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826145017_8090",
+    "text": "Then after calling eval_sum_infix, we will have evaluated \"1+2\", leaving \"+3\". We can call eval_sum_infix again, but then we should continue at pos=3... so using recursion? FallArk 127 0 Or maybe a while loop? the idea is that once it hit \";\" the program stops. I like Serena Homework Helper MHB 16,335 258 FallArk said: so using recursion? FallArk said: Or maybe a while loop? the idea is that once it hit \";\" the program stops. It seems you already have all the answers! :) FallArk 127 0 I like Serena said: It seems you already have all the answers! :) thanks! i will try them out and share it FallArk 127 0 I like Serena said: It seems you already have all the answers! :) I have one more question though, if the ultimate goal is to call the function \"eval_infix\" with some parameters like \"('2 * 3')\", how can i make it so that the functions within will work together? I like Serena Homework Helper MHB 16,335 258",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.017573",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:02:25.017573",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.017573",
+    "decision_type": "FOLLOW_SYMBOLIC"
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826145050_2972",
+    "text": "I like Serena Homework Helper MHB 16,335 258 FallArk said: I have one more question though, if the ultimate goal is to call the function \"eval_infix\" with some parameters like \"('2 * 3')\", how can i make it so that the functions within will work together? Well, from the comments, I'd say that we expect an input like \"1 + 2 * 3 * 4 + ( 5 + 6 + 7 ) * ( 8 + 9 ) \". First step splits it on spaces into a list, and appends [\";\"]. Then the result is evaluated as a sum of sub expressions. That means we should work from left to right, evaluate sub expressions, and sum the results together. When we run into a \"(\" token, we should evaluate the following part as a parenthesized expression, containing another sum-expression. And if we run into a \"*\" token, we should evaluate the corresponding part as a series of multiplications. FallArk 127 0 My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] !",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.050078",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:02:25.050078",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.050078",
+    "decision_type": "FOLLOW_SYMBOLIC"
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826147957_8201",
+    "text": "However, that paper describes no other possible alternative, and it claims it is required for physical realization, and in the conclusion it states that this was proved. pbuk said: I am not sure what you mean: the link you gave is to the publication in the Journal of the Royal Society following proofreading and refereeing. I am sorry, I was not aware that I can find in such publications what were the criticial objections, and how they were responded. However, I still do not see where exactly... pbuk said: it seems to relate to David Deutsch's \"Constructor Theory\" which seems to me to be a blend of quantum interpretation and other things I don't understand. I do not understand either, that is why I am asking these questions. I am not sure what she actually proved, why, and how.",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 0.0,
+    "symbolic_score": 3.0,
+    "confidence_score": 3.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.957899",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:02:27.957899",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.957899",
+    "decision_type": "FOLLOW_SYMBOLIC"
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826148017_5714",
+    "text": "For example, the consideration about how copier works: if it consumes the instance of replicator it was presented with during the process of copying, it has to produce two instances of the replicator in order to perform the task properly, otherwise, one is sufficient because, the input instance is preserved, ie, not consumed. Part of Marletto's genius is that after reading her work, I understand only that what I understood before reading it. Rather obscure arguments and ideas hidden behind the mathematical formalism that I haven't learned so far. Which is of course not her fault, and I still hope I will one day.",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 0.0,
+    "symbolic_score": 1.5,
+    "confidence_score": 1.5,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:28.017479",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:02:28.017479",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:28.017479",
+    "decision_type": "FOLLOW_SYMBOLIC"
+  },
+  {
+    "id": "FOLLOW_SYMBOLIC__1_1748826153298_8073",
+    "text": "Make the first array 2-dimensional with the 2nd dimension containing the element index-1 Sort the full 2-dimensional array based on the original data The 2nd-dimensional data, carrying the original index, will be in the position of <No.-of-smaller-values> Cheers, Tom EDIT: This will give you the ≤ function rather than <. Hope that's adequate. If not, a second pass over the sorted data to massage the duplicates is needed. DrDu Science Advisor 6,404 1,002 Dear Tom, if I understand correctly you are constructing the inverse permutation. It cannot coincide with the vector b I am looking for, as the vector b usually contains repeated entries, as in the example. Ibix Science Advisor Insights Author 13,111 15,409 Can you use a tree? Each node has a number and at most two children, one with a lower number and one with a higher number. Each node keeps track of how many higher children it has. You start with a root node containing 5.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 1.5,
+    "confidence_score": 1.5,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.298926",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_SYMBOLIC",
+        "timestamp": "2025-06-02T01:02:33.298926",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_SYMBOLIC",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.298926",
+    "decision_type": "FOLLOW_SYMBOLIC"
   }
 ]

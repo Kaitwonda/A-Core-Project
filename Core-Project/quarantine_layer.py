@@ -10,7 +10,7 @@ import re
 # Import your existing modules
 import user_memory as UM_UserMemory
 import symbol_memory as SM_SymbolMemory
-from processing_nodes import detect_content_type
+from content_utils import detect_content_type
 from emotion_handler import predict_emotions
 import parser as P_Parser
 
@@ -65,6 +65,13 @@ class UserMemoryQuarantine:
         """Save warfare detection events"""
         with open(self.warfare_log_path, 'w', encoding='utf-8') as f:
             json.dump(self.warfare_attempts, f, indent=2, ensure_ascii=False)
+    
+    def load_all_quarantined_memory(self) -> List[Dict]:
+        """
+        Load all quarantined items for tracing checks.
+        Returns list of quarantined memory records.
+        """
+        return self.quarantined_items
     
     def quarantine_user_input(self, 
                             text: str, 
@@ -471,5 +478,12 @@ if __name__ == "__main__":
     print(f"Stats: {json.dumps(stats, indent=2)}")
     assert stats['total_quarantined'] >= 3
     assert stats['warfare_percentage'] > 0
+    
+    # Test 7: Load all quarantined memory (NEW TEST)
+    print("\n7️⃣ Test: Load all quarantined memory")
+    all_quarantined = quarantine.load_all_quarantined_memory()
+    assert len(all_quarantined) >= 3
+    assert all(item.get('quarantined') == True for item in all_quarantined)
+    print(f"✅ Loaded {len(all_quarantined)} quarantined items")
     
     print("\n✅ All quarantine tests passed!")

@@ -1872,5 +1872,104 @@
         "Reclassified as FOLLOW_HYBRID": 577
       }
     }
+  },
+  {
+    "timestamp": "2025-06-02T01:03:43.554137",
+    "summary": {
+      "total_items": 2625,
+      "distribution": {
+        "logic": "2405 (91.6%)",
+        "symbolic": "56 (2.1%)",
+        "bridge": "164 (6.2%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.247619047619048,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 164,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 164,
+        "conflicted": 0,
+        "weak": 164,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "replies",
+            79
+          ],
+          [
+            "views",
+            79
+          ],
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            37
+          ],
+          [
+            "python",
+            31
+          ],
+          [
+            "number",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 164
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3305613305613306,
+      "symbolic_stability": 0.125,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 660,
+      "to_logic": 656,
+      "to_symbolic": 4,
+      "by_overlap": 660,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 577,
+      "from_logic": 573,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 577
+      }
+    }
   }
 ]

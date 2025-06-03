@@ -31,95 +31,487 @@
   ],
   "1": [
     {
-      "url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
-      "anchor": "Programming and Computer Science",
+      "url": "https://www.physicsforums.com/threads/getting-started-with-computers-and-programming.1000913/",
+      "anchor": "Getting Started With Computers and Programming",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
-    },
-    {
-      "url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
-      "anchor": "Computer Information System Program",
-      "priority_score_at_deferral": 2.0,
-      "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/can-the-shunting-yard-algorithm-handle-logic-processing.1067839/",
       "anchor": "Can the shunting-yard algorithm handle logic processing?",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/number-of-multiplications-in-the-fft-algorithm.1060665/",
+      "anchor": "Number of Multiplications in the FFT Algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/codelab-excercise-2-computer-programming.378743/",
+      "anchor": "Codelab excercise 2- computer programming",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/tags/algorithm/",
       "anchor": "Algorithm",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
       "anchor": "How do you handle algorithms (memorize vs. reference)?",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/a-brain-like-implementation-of-a-turing-machine.949656/",
       "anchor": "A brain-like implementation of a Turing machine",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
       "anchor": "Help with Python: Implementing Algorithm",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
       "anchor": "Von Neumann replicator vehicle model",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
-      "url": "https://www.physicsforums.com/threads/prime-number-detection-running-time-of-algorithm.985283/",
-      "anchor": "Prime Number Detection: Running Time of Algorithm",
+      "url": "https://www.physicsforums.com/threads/algorithm-engineer-in-eda-industry.1063126/",
+      "anchor": "Algorithm Engineer in EDA Industry",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
-      "url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
-      "anchor": "Permutation Counting Algorithm for Large Integers",
+      "url": "https://www.physicsforums.com/threads/an-algorithm-challenge-finding-the-five-fastest-horses-out-of-a-large-group.1053315/",
+      "anchor": "An Algorithm Challenge (finding the five fastest horses out of a large group)",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
     },
     {
-      "url": "https://www.physicsforums.com/threads/determining-efficiency-of-multiplication-algorithm.665486/",
-      "anchor": "Determining efficiency of multiplication algorithm",
+      "url": "https://www.physicsforums.com/threads/ingenious-algorithm-riddle-imposs-even-w-answer.1053118/",
+      "anchor": "Ingenious Algorithm Riddle: Imposs. Even w/Answer",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/questions-about-grovers-algorithm-for-quantum-searches.1052338/",
+      "anchor": "I Questions about Grover's algorithm for quantum searches",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/is-an-algorithm-for-a-proof-required-to-halt.1051777/",
+      "anchor": "I Is an algorithm for a proof required to halt?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/gauss-jordan-elimination-algorithm-steps.1051682/",
+      "anchor": "Gauss-Jordan Elimination algorithm steps",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithm-problem-involving-3-points-and-3-lines-in-the-x-y-plane.1050406/",
+      "anchor": "Algorithm problem involving 3 points and 3 lines in the x,y plane",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/smoothing-algorithm-for-real-world-data.1048895/",
+      "anchor": "I Smoothing algorithm for real-world data",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/use-the-euclidean-algorithm-to-find-integers-a-b-c.1045514/",
+      "anchor": "Use the Euclidean algorithm to find integers ## a, b, c ##",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/diffie-hellman-key-exchange-algorithm-x-y-value.1045220/",
+      "anchor": "Comp Sci Diffie Hellman Key Exchange Algorithm? (x,y value)",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/solve-ax-by-gcd-a-b-for-rsa-algorithm-cryptography.1045094/",
+      "anchor": "Comp Sci Solve ax+by=GCD(a,b) for RSA Algorithm Cryptography",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/shors-algorithm-on-a-google-sheet.1017057/",
+      "anchor": "B Shor's algorithm on a Google Sheet",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/art-algorithm-image-reconstruction.1015978/",
+      "anchor": "ART algorithm - Image Reconstruction",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/use-the-binary-exponentiation-algorithm-to-compute.1015967/",
+      "anchor": "Use the binary exponentiation algorithm to compute....",
+      "priority_score_at_deferral": 3.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/for-which-of-the-following-purposes-is-the-bankers-algorithm-used.1015704/",
+      "anchor": "Comp Sci For which of the following purposes is the Banker’s algorithm used?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/new-algorithm-for-real-time-voice-camouflage.1014461/",
+      "anchor": "New algorithm for real time voice camouflage",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/using-single-source-shortest-path-algorithm-to-find-the-longest-path.1014393/",
+      "anchor": "Comp Sci Using Single Source Shortest Path Algorithm to find the longest path",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/functional-dependency-solving-algorithm-for-minimal-cover.1013341/",
+      "anchor": "Comp Sci Functional Dependency Solving Algorithm for Minimal Cover",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/genetic-algorithm-knapsack-problem.1012455/",
+      "anchor": "Comp Sci Genetic algorithm knapsack problem",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/what-is-uniform-crossover-in-genetic-algorithm-crossover-operation.1012091/",
+      "anchor": "Comp Sci What is uniform crossover in genetic algorithm crossover operation?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/i-need-a-solved-numerical-example-on-genetic-algorithm-for-1-iteration.1012060/",
+      "anchor": "Comp Sci I need a solved numerical example on genetic algorithm for 1 iteration",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/confused-about-dfs-algorithm-in-action-not-an-issue-with-the-pseudocode.1011807/",
+      "anchor": "Comp Sci Confused about DFS algorithm in action (not an issue with the pseudocode)",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/how-to-create-a-fair-distribution-algorithm.1011026/",
+      "anchor": "I How to create a fair distribution algorithm?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithms-for-traveling-purchaser-problem-tpp.1010395/",
+      "anchor": "Algorithms for Traveling Purchaser Problem (TPP)",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/rsa-algorithm-to-encrypt-abcdefghij.1044225/",
+      "anchor": "MHB RSA algorithm to encrypt \"abcdefghij\"",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/want-to-use-probability-algorithm-for-my-web-app.1044213/",
+      "anchor": "MHB Want to use probability algorithm for my web app",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/notation-of-the-approximation-in-quantum-phase-estimation-algorithm.1009313/",
+      "anchor": "I Notation of the approximation in quantum phase estimation algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/hhl-quantum-algorithm-and-the-phase-estimation.1008825/",
+      "anchor": "A HHL quantum algorithm and the phase estimation",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithm-to-arrange-n-people-into-groups-of-k.1044136/",
+      "anchor": "MHB Algorithm to arrange N people into groups of K",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/question-about-grovers-algorithm.1006852/",
+      "anchor": "I Question about Grover's algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithm-for-converting-strings-find-the-best-option.1005937/",
+      "anchor": "Python Algorithm for Converting Strings: Find the Best Option",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/evaluate-the-complexity-of-this-graph-coloring-algorithm.1005315/",
+      "anchor": "Evaluate the complexity of this graph coloring algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/numerically-solving-time-independent-schrodinger-eqn-using-shooting-algorithm.1004372/",
+      "anchor": "I Numerically solving Time-independent Schrödinger eqn. using Shooting algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/crosstalk-algorithm-optical-system.1002907/",
+      "anchor": "Crosstalk Algorithm - Optical system",
+      "priority_score_at_deferral": 3.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithmic-model-for-primary-decay-chains.1002091/",
+      "anchor": "I Algorithmic model for primary decay chains",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/fast-reciprocal-square-root-algorithm.1001061/",
+      "anchor": "Fast reciprocal square root algorithm",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/mcmc-algorithm-understanding-some-paremeters.1000551/",
+      "anchor": "Python MCMC algorithm -- understanding some paremeters",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/gods-algorithm-as-undecidable.1000360/",
+      "anchor": "I God's algorithm as undecidable?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/whats-wrong-with-this-python-program-on-eulers-forward-algorithm.999651/",
+      "anchor": "Python What's wrong with this Python program on Euler's forward algorithm?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/det-of-triangular-like-matrix-getting-stuck-in-algorithmic-proof.998790/",
       "anchor": "Det of Triangular-like Matrix & getting stuck in Algorithmic Proof",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/trying-to-find-an-algorithm-for-the-number-mastermind-game.998591/",
+      "anchor": "Trying to find an algorithm for the Number Mastermind game",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/tags/algorithms/",
+      "anchor": "Algorithms",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/non-youtube-courses-and-paid-textbooks-to-learn-algorithms.1056467/",
+      "anchor": "Non youtube courses and paid textbooks to learn algorithms?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/what-should-i-be-most-familiar-w-for-c-data-structs-algorithms.933147/",
+      "anchor": "What should I be most familiar w/for C++ Data Structs & Algorithms",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
     },
     {
       "url": "https://www.physicsforums.com/threads/complexity-of-this-heap-algorithm.976741/",
       "anchor": "Complexity of this heap algorithm",
       "priority_score_at_deferral": 2.0,
       "original_discovery_phase": 1,
-      "original_discovery_hop_count": 3
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithm-running-time-discrepencies.637717/",
+      "anchor": "Algorithm running time discrepencies",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/possible-application-of-genetic-algorithms.713844/",
+      "anchor": "Possible application of Genetic Algorithms",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/tags/turing-machine/",
+      "anchor": "Turing machine",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/solving-recursive-sets-with-turing-machines.1032101/",
+      "anchor": "Solving Recursive Sets with Turing Machines",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/can-turing-machine-decidability-extend-to-complex-algorithm-outputs.1041611/",
+      "anchor": "Can Turing Machine Decidability Extend to Complex Algorithm Outputs?",
+      "priority_score_at_deferral": 4.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/can-turing-machines-understand-infinity.957060/",
+      "anchor": "Can Turing Machines Understand Infinity?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/algorithm-optimization-python.917274/",
+      "anchor": "Algorithm Optimization [Python]",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/what-is-the-nelder-mead-algorithm-and-how-can-it-be-implemented-in-pure-python.969648/",
+      "anchor": "What is the Nelder-Mead algorithm and how can it be implemented in pure Python?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/tags/von-neumann/",
+      "anchor": "Von neumann",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/stone-von-neumann-theorem-modern-analog.4426/",
+      "anchor": "Stone-von Neumann theorem & modern analog",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/what-is-the-fastest-algorithm-for-finding-large-prime-numbers.1000430/",
+      "anchor": "What is the fastest algorithm for finding large prime numbers?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/how-to-frame-a-genetic-algorithm-for-this-problem.958076/",
+      "anchor": "How to frame a genetic algorithm for this problem?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/solving-permutations-problems-finding-algorithms-optimizing-efficiency.104190/",
+      "anchor": "Solving Permutations Problems: Finding Algorithms & Optimizing Efficiency",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/what-is-the-time-complexity-of-this-vertex-cover-algorithm.1031589/",
+      "anchor": "What is the Time Complexity of this Vertex Cover Algorithm?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
+    },
+    {
+      "url": "https://www.physicsforums.com/threads/shors-algorithm-need-to-uncompute-auxiliary-qubits.932646/",
+      "anchor": "Shor's algorithm - need to uncompute auxiliary qubits?",
+      "priority_score_at_deferral": 2.0,
+      "original_discovery_phase": 1,
+      "original_discovery_hop_count": 4
     }
   ]
 }

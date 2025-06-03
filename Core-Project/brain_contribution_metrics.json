@@ -226,5 +226,24 @@
       }
     },
     "conflicts_count": 0
+  },
+  {
+    "timestamp": "2025-06-02T01:01:56.711907",
+    "duration_seconds": 39.112273,
+    "logic_win_rate": 0.086,
+    "symbol_win_rate": 0.004,
+    "hybrid_rate": 0.91,
+    "total_decisions": 1188,
+    "logic_wins": 102,
+    "symbol_wins": 5,
+    "hybrid_decisions": 1081,
+    "phase_breakdown": {
+      "1": {
+        "logic": 102,
+        "symbol": 5,
+        "hybrid": 1081
+      }
+    },
+    "conflicts_count": 3
   }
 ]

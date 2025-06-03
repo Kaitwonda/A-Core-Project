@@ -1,4 +1,4 @@
-# visualization_prep.py - Frontend Visualization Preparation Layer
+# visualization_prep.py - Frontend Visualization Preparation Layer with Quarantine Tracing
 
 import json
 import re
@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 import hashlib
 
 # Import your existing modules
-from processing_nodes import detect_content_type, evaluate_link_with_confidence_gates
+from link_evaluator import evaluate_link_with_confidence_gates
 from emotion_handler import predict_emotions
 import parser as P_Parser
 import symbol_memory as SM_SymbolMemory
@@ -19,6 +19,7 @@ class VisualizationPrep:
     """
     Prepares text and processing results for frontend visualization.
     Segments text, assigns classifications, and provides hover metadata.
+    Now includes quarantine contamination tracing.
     """
     
     def __init__(self, data_dir="data"):
@@ -38,6 +39,57 @@ class VisualizationPrep:
         # Classification confidence thresholds (from your code)
         self.logic_threshold = 0.8
         self.symbolic_threshold = 0.8
+        
+        # Cache for quarantine text hashes for faster lookup
+        self._quarantine_hash_cache = set()
+        self._update_quarantine_cache()
+    
+    def _update_quarantine_cache(self):
+        """Update the hash cache for faster contamination checks"""
+        quarantine_memory = self.quarantine.load_all_quarantined_memory()
+        self._quarantine_hash_cache = {
+            hashlib.md5(record['text'].encode()).hexdigest()
+            for record in quarantine_memory
+            if record.get('text')
+        }
+    
+    def _check_quarantine_trace_risk(self, segment_text: str) -> Tuple[bool, Optional[str]]:
+        """
+        Checks whether the segment has overlaps with quarantined memory (risk of contamination).
+        Returns (has_risk, match_type) where match_type indicates the type of match found.
+        """
+        quarantine_memory = self.quarantine.load_all_quarantined_memory()
+        
+        # Convert segment to lowercase for comparison
+        segment_lower = segment_text.lower()
+        segment_words = set(segment_lower.split())
+        
+        for record in quarantine_memory:
+            if not record.get("text"):
+                continue
+                
+            quarantined_text = record["text"]
+            quarantined_lower = quarantined_text.lower()
+            
+            # Check 1: Exact substring match
+            if quarantined_lower in segment_lower or segment_lower in quarantined_lower:
+                return True, "substring_match"
+            
+            # Check 2: High word overlap (>60% of words match)
+            if len(segment_words) > 3:  # Only check overlap for segments with enough words
+                quarantined_words = set(quarantined_lower.split())
+                overlap = segment_words.intersection(quarantined_words)
+                
+                if len(overlap) / len(segment_words) > 0.6:
+                    return True, "high_word_overlap"
+            
+            # Check 3: Check for quarantined symbols appearing in segment
+            quarantined_symbols = record.get("matched_symbols", [])
+            for symbol in quarantined_symbols:
+                if symbol in segment_text:
+                    return True, "quarantined_symbol"
+        
+        return False, None
         
     def prepare_text_for_display(self, 
                                 text: str, 
@@ -144,6 +196,7 @@ class VisualizationPrep:
         """
         Analyze individual segment for visualization.
         Uses your existing classification and scoring functions.
+        Now includes quarantine contamination detection.
         """
         # Get content type using your function
         content_type = detect_content_type(
@@ -203,6 +256,25 @@ class VisualizationPrep:
             include_emotions,
             include_symbols
         )
+        
+        # Contamination trace detection
+        has_contamination_risk, contamination_type = self._check_quarantine_trace_risk(segment_text)
+        if has_contamination_risk:
+            segment_data['quarantine_trace'] = True
+            segment_data['contamination_type'] = contamination_type
+            segment_data['css_class'] += ' trace-risk'
+            segment_data['emoji_hint'] = '⚠️'  # Override emoji with warning
+            
+            # Add contamination warning to hover data
+            contamination_messages = {
+                'substring_match': "Direct overlap with quarantined user memory detected",
+                'high_word_overlap': "High similarity to quarantined content",
+                'quarantined_symbol': "Contains symbols from quarantined input"
+            }
+            segment_data['hover_data']['contamination_trace'] = contamination_messages.get(
+                contamination_type, 
+                "Possible symbolic overlap with quarantined user memory"
+            )
         
         return segment_data
     
@@ -379,6 +451,10 @@ class VisualizationPrep:
         
         for segment in viz_output['segments']:
             # Build segment HTML
+            contamination_warning = ''
+            if segment.get('quarantine_trace') and segment['hover_data'].get('contamination_trace'):
+                contamination_warning = f'<div style="color: red; margin-top: 4px;">⚠️ {segment["hover_data"]["contamination_trace"]}</div>'
+            
             segment_html = f'''
             <span class="{segment['css_class']}" 
                   style="color: {segment['color']}; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: {segment['color']}40;"
@@ -392,6 +468,7 @@ class VisualizationPrep:
                         {segment['hover_data']['classification_reason']}<br>
                         {segment['hover_data']['confidence_explanation']}<br>
                         <small>{segment['hover_data']['scores_breakdown']}</small>
+                        {contamination_warning}
                     </span>
                 </span>
             </span>
@@ -418,6 +495,10 @@ class VisualizationPrep:
         .quarantined { 
             opacity: 0.6; 
             text-decoration-style: dotted !important;
+        }
+        .trace-risk { 
+            border-bottom: 2px dashed red !important;
+            background-color: rgba(255, 0, 0, 0.05);
         }
         .emoji-tooltip {
             cursor: help;
@@ -467,7 +548,12 @@ class VisualizationPrep:
                         'scores': seg['hover_data']['scores_breakdown'],
                         'emotions': seg['hover_data'].get('emotions', []),
                         'symbols': seg['hover_data'].get('symbols', [])
-                    }
+                    },
+                    'contamination': {
+                        'hasRisk': seg.get('quarantine_trace', False),
+                        'type': seg.get('contamination_type'),
+                        'warning': seg['hover_data'].get('contamination_trace')
+                    } if seg.get('quarantine_trace') else None
                 }
                 for i, seg in enumerate(viz_output['segments'])
             ],
@@ -492,7 +578,11 @@ def visualize_processing_result(text: str, processing_result: Dict) -> Dict:
 
 # Unit tests
 if __name__ == "__main__":
-    print("🧪 Testing Visualization Prep...")
+    print("🧪 Testing Visualization Prep with Quarantine Tracing...")
+    
+    # First, we need to add the load_all_quarantined_memory method to quarantine_layer
+    # For testing, we'll mock it
+    from unittest.mock import patch
     
     # Test 1: Logic-heavy text
     print("\n1️⃣ Test: Logic-heavy text visualization")
@@ -547,7 +637,8 @@ if __name__ == "__main__":
     html = viz_prep.generate_html_preview(viz_output)
     assert 'logic-text' in html
     assert '🧮' in html
-    print("✅ HTML preview generated")
+    assert 'trace-risk' in html  # Check for new CSS class
+    print("✅ HTML preview generated with contamination tracing CSS")
     
     # Test 5: React JSON format
     print("\n5️⃣ Test: React JSON generation")
@@ -555,11 +646,44 @@ if __name__ == "__main__":
     react_data = json.loads(react_json)
     assert 'segments' in react_data
     assert 'metadata' in react_data
-    print("✅ React JSON format generated")
+    # Check for contamination field
+    assert all('contamination' in seg for seg in react_data['segments'])
+    print("✅ React JSON format generated with contamination data")
+    
+    # Test 6: Contamination detection (mocked)
+    print("\n6️⃣ Test: Contamination detection")
+    # Mock quarantine data
+    mock_quarantine_data = [
+        {
+            'text': 'secret truth they don\'t want',
+            'matched_symbols': ['🔥'],
+            'user_id': 'test_user'
+        }
+    ]
+    
+    with patch.object(viz_prep.quarantine, 'load_all_quarantined_memory', return_value=mock_quarantine_data):
+        contaminated_text = "The algorithm reveals the secret truth they don't want you to see."
+        contaminated_result = {
+            'decision_type': 'FOLLOW_HYBRID',
+            'logic_score': 5.0,
+            'symbolic_score': 4.0,
+            'confidence': 0.7,
+            'source_type': 'test'
+        }
+        
+        viz_output_contaminated = viz_prep.prepare_text_for_display(contaminated_text, contaminated_result)
+        
+        # Check if contamination was detected
+        contaminated_segments = [seg for seg in viz_output_contaminated['segments'] if seg.get('quarantine_trace')]
+        assert len(contaminated_segments) > 0
+        print(f"✅ Detected {len(contaminated_segments)} contaminated segments")
+        
+        for seg in contaminated_segments:
+            print(f"  Contaminated: '{seg['text'][:30]}...' - Type: {seg.get('contamination_type')}")
     
     # Save example output for inspection
     with open("data/test_viz/example_visualization.html", 'w') as f:
         f.write(html)
     print("\n✅ Example HTML saved to data/test_viz/example_visualization.html")
     
-    print("\n✅ All visualization tests passed!")
+    print("\n✅ All visualization tests with quarantine tracing passed!")

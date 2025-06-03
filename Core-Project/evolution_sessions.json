@@ -2946,5 +2946,185 @@
         }
       }
     }
+  },
+  {
+    "timestamp": "2025-06-02T01:03:43.563137",
+    "initial_stats": {
+      "timestamp": "2025-06-02T01:02:36.042265",
+      "distribution": {
+        "logic": {
+          "count": 2322,
+          "percentage": 88.45714285714286,
+          "avg_score": 2.994832041343669,
+          "avg_age_days": 5.702842377260982,
+          "stability": 0.3423772609819121
+        },
+        "symbolic": {
+          "count": 56,
+          "percentage": 2.1333333333333333,
+          "avg_score": 2.6160714285714284,
+          "avg_age_days": 5.357142857142857,
+          "stability": 0.125
+        },
+        "bridge": {
+          "count": 247,
+          "percentage": 9.40952380952381,
+          "avg_logic_score": 0.7611336032388664,
+          "avg_symbolic_score": 0.2793522267206478,
+          "avg_age_days": 3.668016194331984,
+          "stability": 0.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 2625,
+      "health_indicators": {
+        "status": "healthy",
+        "bridge_percentage": 9.40952380952381,
+        "issues": [],
+        "recommendations": []
+      }
+    },
+    "final_stats": {
+      "timestamp": "2025-06-02T01:03:43.546140",
+      "distribution": {
+        "logic": {
+          "count": 2405,
+          "percentage": 91.61904761904762,
+          "avg_score": 2.9696465696465695,
+          "avg_age_days": 4.076507276507276,
+          "stability": 0.3305613305613306
+        },
+        "symbolic": {
+          "count": 56,
+          "percentage": 2.1333333333333333,
+          "avg_score": 2.6160714285714284,
+          "avg_age_days": 4.928571428571429,
+          "stability": 0.125
+        },
+        "bridge": {
+          "count": 164,
+          "percentage": 6.247619047619048,
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "avg_age_days": 5.524390243902439,
+          "stability": 0.0,
+          "volatility": 0.0
+        }
+      },
+      "total_items": 2625,
+      "health_indicators": {
+        "status": "healthy",
+        "bridge_percentage": 6.247619047619048,
+        "issues": [],
+        "recommendations": []
+      }
+    },
+    "reversed": 577,
+    "migrated": 660,
+    "threshold": 0.3,
+    "weights": {
+      "static": 0.9,
+      "dynamic": 0.1,
+      "last_updated": "2025-05-26T00:18:55.308689"
+    },
+    "report": {
+      "timestamp": "2025-06-02T01:03:43.554137",
+      "summary": {
+        "total_items": 2625,
+        "distribution": {
+          "logic": "2405 (91.6%)",
+          "symbolic": "56 (2.1%)",
+          "bridge": "164 (6.2%)"
+        }
+      },
+      "health": {
+        "status": "healthy",
+        "bridge_percentage": 6.247619047619048,
+        "issues": [],
+        "recommendations": []
+      },
+      "bridge_analysis": {
+        "total": 164,
+        "patterns": {
+          "volatile": 0,
+          "balanced": 164,
+          "conflicted": 0,
+          "weak": 164,
+          "stuck": 0
+        },
+        "insights": [],
+        "keyword_analysis": {
+          "top_keywords": [
+            [
+              "replies",
+              79
+            ],
+            [
+              "views",
+              79
+            ],
+            [
+              "{\\displaystyle",
+              48
+            ],
+            [
+              "learning",
+              43
+            ],
+            [
+              "circuit",
+              43
+            ],
+            [
+              "these",
+              41
+            ],
+            [
+              "revision",
+              40
+            ],
+            [
+              "which",
+              37
+            ],
+            [
+              "python",
+              31
+            ],
+            [
+              "number",
+              30
+            ]
+          ]
+        },
+        "score_distribution": {
+          "avg_logic_score": 0.0,
+          "avg_symbolic_score": 0.0,
+          "high_both": 0,
+          "low_both": 164
+        }
+      },
+      "stability_metrics": {
+        "logic_stability": 0.3305613305613306,
+        "symbolic_stability": 0.125,
+        "bridge_stability": 0.0,
+        "bridge_volatility": 0.0
+      },
+      "migrations": {
+        "total_migrated": 660,
+        "to_logic": 656,
+        "to_symbolic": 4,
+        "by_overlap": 660,
+        "by_traditional": 0
+      },
+      "audit": {
+        "total_reversed": 577,
+        "from_logic": 573,
+        "from_symbolic": 4,
+        "reasons": {
+          "Reclassified as FOLLOW_HYBRID": 577
+        }
+      }
+    }
   }
 ]

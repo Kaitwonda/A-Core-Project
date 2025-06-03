@@ -3773,5 +3773,2405 @@
     "history_length": 1,
     "stored_at": "2025-05-26T20:01:04.533096",
     "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826117879_9905",
+    "text": "Programming Recipes and Algos Java Kotlin --> Plotting Two Curves on the Same Plot Mar 15, 2025 Filters Show only: Loading… Sticky Getting Started With Computers and Programming Apr 18, 2021 Replies 13 Views 6K Sticky C/C++ Guide to C++ Programming For Beginners Apr 14, 2014 5 Replies 169 Views 235K Python Question about learning programming Thursday, 6:21 PM Replies 18 Views 3K Touch-typing for programmers Wednesday, 10:02 PM 2 Replies 42 Views 1K Python Complaining About Python May 18, 2025 Replies 23 Views 786 C# Realistic Physics in Game Development: Challenges and Thoughts? May 12, 2025 Replies 6 Views 773 Fortran Reading files in pre-f77 - handling end of file May 3, 2025 Replies 8 Views 818 Hackathon ideas? Apr 11, 2025 Replies 14 Views 2K Trying To Debug A Python File Apr 11, 2025 Replies 11 Views 937 Python Partial pivoting in getting the reduced row echelon form of a matrix Apr 7, 2025 Replies 2 Views 501 Trying To Run A Python File",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:57.879939",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:57.880939",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:57.880939",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826117905_3925",
+    "text": "[Solved] Apr 5, 2025 Replies 2 Views 387 Python Simple code example of transforming matrix into upper triangular form Mar 31, 2025 Replies 3 Views 667 My ChatGPT Experience So Far Mar 19, 2025 Replies 7 Views 1K Trying to install software on a new PC to run Python code I wrote in 2021 Mar 4, 2025 Replies 3 Views 1K Python relativity game in python Mar 2, 2025 Replies 4 Views 585 COBOL and MUSKateers Feb 23, 2025 Replies 17 Views 1K Insights A Possible AI Modern Video Codec Feb 19, 2025 Replies 1 Views 5K Help resetting some sort of style template in Joomla (3.10) Feb 18, 2025 Replies 5 Views 583 Design of interrupt handling hardware circuit for a real time scenario Feb 18, 2025",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:57.905457",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:57.905457",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:57.905457",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826117935_9200",
+    "text": "Replies 19 Views 1K JavaScript Use JS to get at blob-ified image listed in Chrome DevTools Feb 18, 2025 Replies 1 Views 511 Recommend architecture/protocol to sync data between MCUs Feb 17, 2025 Replies 12 Views 1K Java A question about the Eclipse IDE Feb 13, 2025 Replies 5 Views 2K Latest Notable AI accomplishments Feb 4, 2025 2 Replies 68 Views 16K [SOLVED] Python - Issues Taking an Input as an Integer (or Converting It) Jan 22, 2025 Replies 1 Views 900 Can the shunting-yard algorithm handle logic processing? Jan 21, 2025 Replies 2 Views 2K Caching: Actual role of byte offset field in the cache address? Dec 30, 2024 Replies 2 Views 883 CSS: How do I control the amount of space before/after lines of text? Dec 27, 2024 Replies 10 Views 930 Taps for simple IIR Filter in GNU Radio Dec 26, 2024 Replies 1 Views 1K Python Can Fortran 77 Code Be Used to Debug Python Code for Solving ODEs Using Radau5?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:57.935482",
+    "symbols_found_in_chunk": 3,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:57.935482",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:57.935482",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826117979_3784",
+    "text": "Dec 20, 2024 2 Replies 64 Views 8K Is there any third-party software that can check this on a gpu? Dec 13, 2024 Replies 2 Views 884 Python Applying Accelerated Raymarching to Reduce Rendering Time Dec 13, 2024 Replies 0 Views 705 How Can Computer Science Help a Content Creator’s Career? Nov 13, 2024 Replies 2 Views 969 Industry Embedded Software Development Environments Oct 25, 2024 Replies 4 Views 1K Trying to run a big python job with AWS (EC2), is there a better way? Oct 20, 2024 Replies 7 Views 1K How do programs draw function graphs? Oct 18, 2024 Replies 14 Views 1K Unsolvable python code bug? (finding the difference between two input strings) Sep 24, 2024 Replies 2 Views 2K HTML/CSS Container shrinks at certain screen widths (CSS) Sep 16, 2024 Replies 5 Views 2K User-Defined Functions in Sql Server SSMS Sep 10, 2024 Replies 7 Views 2K Python Help solving a geometrical matching issue with Graph Neural Networks Sep 6, 2024 Replies 1 Views 2K Python",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:57.979829",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:57.979829",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:57.979829",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118029_1265",
+    "text": "Jul 8, 2024 Replies 29 Views 4K I did this POST message configuration damage to my wifi internet, help Jul 4, 2024 Replies 1 Views 1K Number of Multiplications in the FFT Algorithm Jul 1, 2024 Replies 10 Views 3K Newbie question about deep learning Jun 30, 2024 Replies 1 Views 1K Python Who can find the largest prime number with their own programmed code? Jun 24, 2024 Replies 28 Views 3K How Can a Math Major Start Learning Computer Science? Jun 22, 2024 Replies 6 Views 2K How Can We Efficiently Parallelize the N-Queens Problem? Jun 11, 2024 Replies 11 Views 3K How to test locally hosted websites on mobile? Jun 5, 2024 Replies 8 Views 2K Why do emails from my contact form bounce? May 22, 2024 Replies 10 Views 2K C/C++ Anyone with experience linking FFTW for C++ May 18, 2024 Replies 3 Views 2K How to analyse a sequence of vehicle states? May 16, 2024",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.029500",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.029500",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.029500",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118074_8078",
+    "text": "May 16, 2024 Replies 7 Views 2K Python Most efficient way to randomly choose a word from a file with a list of words May 10, 2024 2 Replies 35 Views 5K C/C++ Parallel processing for loops and pointer defined outside the loop May 9, 2024 Replies 14 Views 2K JavaScript Links from navbar made with React don't work May 6, 2024 Replies 2 Views 2K Fortran Passing variables in FORTRAN May 2, 2024 Replies 25 Views 3K Classifiers, threshold, and ROC curve Apr 30, 2024 Replies 5 Views 2K My Website For Creating Interactive Visuals Linked To Equations Apr 19, 2024 Replies 4 Views 2K JavaScript Error logging in: onLoginSuccess is not a function Apr 18, 2024 Replies 8 Views 2K Python Building a homemade Long Short Term Memory with FSMs Apr 7, 2024 Replies 2 Views 2K Git, staging and committing files Mar 31, 2024 Replies 20 Views 3K HTML/CSS Is it possible to use js variables in html while using Puppeteer? Mar 27, 2024 Replies 5 Views 2K How do I make Browserify work with Puppeteer?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.074722",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.074722",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.074722",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118106_3570",
+    "text": "Mar 27, 2024 Replies 5 Views 2K How do I make Browserify work with Puppeteer? Mar 25, 2024 Replies 1 Views 2K Python Query runs fine in MySQL, but returns empty list in Python Mar 12, 2024 Replies 7 Views 3K Python Python scipy.optimize.minimize: ‘trust-constr’ and Hessian output Mar 12, 2024 Replies 5 Views 2K How to install Cheerio in Visual Studio Code v 1.87.1 Mar 9, 2024 Replies 2 Views 2K C/C++ Cpp in visual studio: cmake and being able to compile Mar 9, 2024 Replies 0 Views 2K F(x) row isn't shown in origin software Mar 3, 2024 Replies 3 Views 2K Iterators and generators and the data they generate Mar 1, 2024 Replies 1 Views 2K JavaScript How do I run an exe file on an Apple iPad? Feb 27, 2024 Replies 6 Views 4K Python Best way to fix \"externally managed environment\" error? Feb 26, 2024 Replies 1 Views 6K My app has a generic Android icon when I download it from Google Play Feb 25, 2024 Replies 10 Views 5K [Godot] Can I directly access files saved on Android to user:// ?",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.106141",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.106141",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.106141",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118121_7821",
+    "text": "Feb 21, 2024 Replies 3 Views 2K Python Docker containers in Windows \"look\" like VMs... Feb 15, 2024 Replies 4 Views 2K Python Stop current Python REPL command, but keep REPL session open? Feb 12, 2024 Replies 1 Views 2K Why do many applications come with their own terminal instead of using the native shell? Feb 11, 2024 Replies 3 Views 2K Docker and Containers:",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.121141",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.121141",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.121141",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118150_9159",
+    "text": "Feb 11, 2024 Replies 3 Views 2K Docker and Containers: Understanding the Basics and Common Doubts Explained Feb 11, 2024 Replies 6 Views 2K Bash shell via Git Bash or WSL in Windows Feb 8, 2024 Replies 1 Views 3K Python How to store a large data-set in a \"grid\" in Python/NumPy Feb 6, 2024 Replies 14 Views 3K Java When an Athlete Throws His Javalin A Meter Too Far Feb 5, 2024 Replies 2 Views 2K C/C++ Interpolation of a rapidly oscillating function Feb 5, 2024 Replies 3 Views 2K Windows OS: Administrator status vs regular user Feb 4, 2024 Replies 5 Views 2K Confusion On Frontend vs. Backend for Web Developement Feb 3, 2024 Replies 13 Views 3K Can globals in Godot randomly fail to update? Feb 1, 2024 Replies 4 Views 2K Problems installing the TMDlib package Jan 31, 2024 Replies 1 Views 2K DeepMind AlphaGeometry: Is AGI just around the corner? Jan 31, 2024 Replies 9 Views 2K C/C++",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.150801",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.150801",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.150801",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118181_7476",
+    "text": "Jan 31, 2024 Replies 9 Views 2K C/C++ Why overload prototype statement works in .h file but not in main file Jan 29, 2024 Replies 2 Views 2K Big Breakthroughs in Computer Science in 2023 Jan 28, 2024 Replies 1 Views 2K HTTP response without content-length doesn't work Jan 22, 2024 Replies 1 Views 2K Mathematica doesn't recognize USB mic (Raspberry Pi / Linux) Jan 19, 2024 Replies 4 Views 2K Automatically adjust font size in Godot to fit text in a label? Jan 14, 2024 Replies 4 Views 5K Unison - A new approach to Distributed computing, Storing Code, etc. Jan 12, 2024 Replies 7 Views 3K Download software at HDD or SSD Jan 6, 2024 Replies 9 Views 2K How to open a JSON file in Godot that contains 2 arrays? Jan 2, 2024 Replies 1 Views 2K HTML/CSS Why is the HTML audio tag inactive on my Norway website? Dec 29, 2023 Replies 14 Views 3K How do I connect a button pressed signal with code in Godot 4? Dec 28, 2023 Replies 1 Views 4K Python",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.181803",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.181803",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.181803",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826118277_2798",
+    "text": "Started by WWGD Mar 26, 2025 Replies: 40 Computing and Technology Antonine Plague - small pox + measles, or hemorrhagic virus/bacterium? Started by Astronuc Mar 30, 2025 Replies: 8 Biology and Medical Understanding Legendre differential equation Started by chwala Apr 13, 2025 Replies: 2 Differential Equations How is it that law of sines does not work in this exercise? Started by mcastillo356 Mar 22, 2025 Replies: 70 General Math Recent Insights F Insights Fermat's Last Theorem Started by fresh_42 May 21, 2025 Replies: 15 General Math F Insights Why Vector Spaces Explain The World: A Historical Perspective Started by fresh_42 Mar 13, 2025 Replies: 0",
+    "source_url": "https://www.physicsforums.com/forums/programming-and-computer-science.165/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:01:58.277103",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:01:58.277103",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:01:58.277103",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120417_5622",
+    "text": ";) Give mesuggestions. If thers's anything wrong then write it to me. There's an image attachment. And, I think I make a lots of mistakes there. I just don't know how to put the right code on right position. Please, tell me the right line of this code. The function,method and arguments. Just tell me . Thank you, so much. And, I also has paste my code here. Before that, here's the question : To solve a programming problem by creating a structure which stores information of Computers and to manipulate the structure by using arrays and functions. A software company has requested you to implement a Computer Information System that will keep up to a maximum of 50 Computer data. The computer’s information to be kept is: •\tComputerID – int •\tComputerName – 50 characters •\tProcessorSpeed – integer •\tRAM - Integer •\tOperatingSystem – 50 characters •\tPrice - float You would need to create a Computer structure and an array called Computers.",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 4.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 3.786,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.417170",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.417170",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.417170",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120443_6747",
+    "text": "You would need to create a Computer structure and an array called Computers. You are requested to test the Computer Information System developed by performing the tasks b) to e), and display its output. a)Declare the Computer structure and the Computers array, using the    information given above. b)Insert 5 new computers using a sequential ComputerID c)Search for a particular computer by ComputerID d)Search for a particular computer by ComputerName e)Display a list of all computers\tLast but not least , this is my program. Not that good right? View attachment 3537 This is my code ... int SequentialSearch(int list[], int ); /*Computer Information System Programme*/ #include <stdio.h> #include <string.h> #include<windows.h> #include <stdlib.h> #define N 50 #define TARGET 5 /* run this program using the console pauser or add your own getch, system(\"pause\") or input loop */ /*",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.443903",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.443903",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.443903",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120454_9405",
+    "text": "Name of constructed struct that must fulfill the naming rule of a variable.*/ struct Computers { /* DEclaration of local variables */ int   i,j; char  ComputerSpecifications [50]; int   ComputerID; char  ComputerName",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.454913",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.455907",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.455907",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120482_4741",
+    "text": "[50]; int   ComputerID; char  ComputerName [50]; int   ProcessorSpeed; int   RAM; char  OperatingSystem [50]; float Price; }; /* function declaration */ void printComputer( struct Computers computer ); int main(int argc, char *argv[]) { /*To display or print some brief details of programmer of this program*/ printf(\"////////////////////////////////////////////////////////////////////////////////\\n\"); printf(\"\\tProgrammer     : Your Name.\\n\"); printf(\"\\tQuestion No    : Question 1.\\n\\n\"); printf(\"\\tTHIS PROGRAM STORES FIVE NEW COMPUTER INFORMATION SYSTEM.\\n\"); printf(\"\\tIT WILL KEEP UP TO A MAXIMUM 50 COMPUTER DATA.\\n\"); printf(\"////////////////////////////////////////////////////////////////////////////////\\n\"); printf(\"\\tBelow are the specifications of five new computers.\\n\\n\"); struct Computers Computer1;        /* Declare Computer1 of type Computer */ struct Computers Computer2;        /* Declare Computer2 of type Computer */ struct Computers Computer3;        /*",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.482910",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.482910",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.482910",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120591_7019",
+    "text": "Price); /* Declaration of local variables */ int i, data [12]; int ComputerID, found; /*Enter data into an array of size 50*/ for (i = 0; i < TARGET ; i++) { printf(\"Enter computer data %d:\", (i+1)); scanf (\"\\n%d\", &data ); } /* Search operation */ printf(\"What computer do you want to search? : \"); scanf(\"%d\", &ComputerID); found = SequentialSearch (data,ComputerID); if (found != -1 ) printf(\"Found computer at the %d\\n \", ComputerID, found); else printf(\"Data not found\"); } /*Function to search list */ int SequentialSearch (int list",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.591261",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.591261",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.591261",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120622_5752",
+    "text": "[], int SearchData) { int location = -1; int indx; for (indx = 0; indx <= TARGET; indx++){ if (SearchData == list[indx]) location = indx; } return location; system(\"PAUSE\"); return 0; } Attachments Question 1.PNG 13.1 KB\n\t\t\t\t\t\n\t\t\t\t\t· Views: 128 Last edited: Nov 14, 2014 Technology news on Phys.org Research team improves fuel cell durability with fatigue-resistant membranes Self-extinguishing batteries could reduce the risk of deadly and costly battery fires Chemists decipher reaction process that could improve lithium-sulfur batteries I like Serena Homework Helper MHB 16,335 258 Henry R said: Good day everyone. I have some problems here. I need help. This code is my attempt to build a computer program. But, I just found out that I am confuse with my own code. You guys, can check it by your own and please try to fix it. ;) Give mesuggestions. If thers's anything wrong then write it to me. There's an image attachment. And, I think I make a lots of mistakes there.",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.622268",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.622268",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.622268",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120651_5370",
+    "text": "There's an image attachment. And, I think I make a lots of mistakes there. I just don't know how to put the right code on right position. Please, tell me the right line of this code. The function,method and arguments. Just tell me . Thank you, so much. And, I also has paste my code here. Before that, here's the question : To solve a programming problem by creating a structure which stores information of Computers and to manipulate the structure by using arrays and functions. A software company has requested you to implement a Computer Information System that will keep up to a maximum of 50 Computer data. The computer’s information to be kept is: •\tComputerID – int •\tComputerName – 50 characters •\tProcessorSpeed – integer •\tRAM - Integer •\tOperatingSystem – 50 characters •\tPrice - float You would need to create a Computer structure and an array called Computers. You are requested to test the Computer Information System developed by performing the tasks b) to e), and display its output.",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 4.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 3.786,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.651889",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.652889",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.652889",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120707_8883",
+    "text": "[50]; int   ComputerID; char  ComputerName [50]; int   ProcessorSpeed; int   RAM; char  OperatingSystem [50]; float Price; }; /* function declaration */ void printComputer( struct Computers computer ); int main(int argc, char *argv[]) { /*To display or print some brief details of programmer of this program*/ printf(\"////////////////////////////////////////////////////////////////////////////////\\n\"); printf(\"\\tProgrammer     : Your Name.\\n\"); printf(\"\\tQuestion No    : Question 1.\\n\\n\"); printf(\"\\tTHIS PROGRAM STORES FIVE NEW COMPUTER INFORMATION SYSTEM.\\n\"); printf(\"\\tIT WILL KEEP UP TO A MAXIMUM 50 COMPUTER DATA.\\n\"); printf(\"////////////////////////////////////////////////////////////////////////////////\\n\"); printf(\"\\tBelow are the specifications of five new computers.\\n\\n\"); struct Computers Computer1;        /* Declare Computer1 of type Computer */ struct Computers Computer2;        /* Declare Computer2 of type Computer */ struct Computers Computer3;        /*",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.707004",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.707996",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.707996",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120851_2755",
+    "text": "So I suggest you change the name to [m]Computer[/m], which would satisfy the first part of the sentence. You still have to create an array called \"Computers\". How would an array be declared? (Wondering) Furthermore, you have a function: Code: int SequentialSearch (int list [], int SearchData) This function is supposed to search in an array for specific data. However, for this problem your array (named \"list\") does not contain integers, but [m]Computer[/m]'s, so perhaps you can change the type [m]int[/m] to [m]Computer[/m] and adjust the function to search for a \"ComputerId\" in that array? (Wondering) Henry R 25 0 I like Serena said: Hi Henry R! Your problem statement says: \"You would need to create a Computer structure and an array called Computers.\" Currently you have a structure named [m]Computers[/m] that actually contains the information about 1 computer. So I suggest you change the name to [m]Computer[/m], which would satisfy the first part of the sentence.",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.851161",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.851161",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.851161",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120882_6374",
+    "text": "You still have to create an array called \"Computers\". How would an array be declared? (Wondering) Furthermore, you have a function: Code: int SequentialSearch (int list [], int SearchData) This function is supposed to search in an array for specific data. However, for this problem your array (named \"list\") does not contain integers, but [m]Computer[/m]'s, so perhaps you can change the type [m]int[/m] to [m]Computer[/m] and adjust the function to search for a \"ComputerId\" in that array? (Wondering) Thank you... I just try my best. Henry R 25 0 I like Serena said: Hi Henry R! Your problem statement says: \"You would need to create a Computer structure and an array called Computers.\" Currently you have a structure named [m]Computers[/m] that actually contains the information about 1 computer. So I suggest you change the name to [m]Computer[/m], which would satisfy the first part of the sentence. You still have to create an array called \"Computers\". How would an array be declared?",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.882172",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.882172",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.882172",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120914_2120",
+    "text": "You still have to create an array called \"Computers\". How would an array be declared? (Wondering) Furthermore, you have a function: Code: int SequentialSearch (int list [], int SearchData) This function is supposed to search in an array for specific data. However, for this problem your array (named \"list\") does not contain integers, but [m]Computer[/m]'s, so perhaps you can change the type [m]int[/m] to [m]Computer[/m] and adjust the function to search for a \"ComputerId\" in that array? (Wondering) Can you give website links that I can refer to? Just that. Thanks for helping. I've been searching for good examples. But, I got none of them. I like Serena Homework Helper MHB 16,335 258 Henry R said: Can you give website links that I can refer to? Just that. Thanks for helping. I've been searching for good examples. But, I got none of them. What kind of website link are you looking for? Henry R 25 0 I like Serena said: What kind of website link are you looking for?",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.914289",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.914289",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.914289",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826120942_5549",
+    "text": "Henry R 25 0 I like Serena said: What kind of website link are you looking for? Website of C programming language that stores computer data records. Please,please, please... There's a lot of website but, you know I couldn't find them. Similar threads [Programming - C] character generator for a game May 29, 2014 Replies 2 Views 3K C Program Help: Count & Sort Word Occurrences in File Jul 26, 2010 Replies 5 Views 2K Codelab excercise 2- computer programming Feb 16, 2010 Replies 1 Views 12K Share: Bluesky LinkedIn Share Forums Other Sciences Programming and Computer Science Hot Threads Insights A Possible AI Modern Video Codec Started by bhobba Jan 25, 2025 Replies: 1 Programming and Computer Science Hackathon ideas? Started by geekynerd Mar 22, 2025 Replies: 14 Programming and Computer Science S Can the shunting-yard algorithm handle logic processing?",
+    "source_url": "https://www.physicsforums.com/threads/computer-information-system-program.1029809/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:00.942924",
+    "symbols_found_in_chunk": 3,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:00.943554",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:00.943554",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826121301_9478",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/codelab-excercise-2-computer-programming.378743/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:01.301146",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:01.301146",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:01.301146",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826122172_1804",
+    "text": "Chemistry Biology and Medical Earth Sciences Computer Science Computing and Technology DIY Projects Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative browser . Forums Other Sciences Programming and Computer Science Can the shunting-yard algorithm handle logic processing? Thread starter synch Start date Jan 1, 2025 Tags Algorithm Logic Processing synch 82 11 Looking at logic processing with 1 meaning true and 0 meaning false..an \"OR\" could be implemented using an addition operation , an \"AND\" using multiplication, and so on. I am wondering if the shunting yard algorithm would handle the sequences of logic based operations ?",
+    "source_url": "https://www.physicsforums.com/threads/can-the-shunting-yard-algorithm-handle-logic-processing.1067839/",
+    "logic_score": 6.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 5.572000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:02.172944",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:02.172944",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:02.172944",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826122209_9435",
+    "text": "I am wondering if the shunting yard algorithm would handle the sequences of logic based operations ? The precedence of the operators would have to be set appropriately of course.. Technology news on Phys.org Research team improves fuel cell durability with fatigue-resistant membranes Self-extinguishing batteries could reduce the risk of deadly and costly battery fires Chemists decipher reaction process that could improve lithium-sulfur batteries Baluncore Science Advisor 16,234 9,911 The boolean operators are just like the arithmetic operators. No distinction need be made between boolean or arithmetic operators. They can all be processed in a stack based processor, and have been for the last 70 years. .Scott Science Advisor Homework Helper 3,646 1,747 synch said: Looking at logic processing with 1 meaning true and 0 meaning false..an \"OR\" could be implemented using an addition operation , an \"AND\" using multiplication, and so on.",
+    "source_url": "https://www.physicsforums.com/threads/can-the-shunting-yard-algorithm-handle-logic-processing.1067839/",
+    "logic_score": 4.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 3.786,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:02.209965",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:02.209965",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:02.209965",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826122288_4216",
+    "text": "Since the compiler will be looking for optimization opportunities and to make best use of the computers registers, it may not use \"shunting yard\". Similar threads Design of interrupt handling hardware circuit for a real time scenario Feb 18, 2025 Replies 19 Views 1K How do you handle algorithms (memorize vs. reference)? Mar 10, 2017 Replies 13 Views 3K Python Simple code example of transforming matrix into upper triangular form Mar 31, 2025 Replies 3 Views 667 Is Alan Turing given too much credit when it comes to computers? Aug 9, 2022 Replies 29 Views 4K Logic question (handling inequalities in a BASIC compiler) Apr 18, 2016 Replies 11 Views 2K A brain-like implementation of a Turing machine Jun 19, 2018 Replies 2 Views 2K Python Help with Python: Implementing Algorithm Sep 1, 2016 Replies 31 Views 7K Von Neumann replicator vehicle model Oct 17, 2023",
+    "source_url": "https://www.physicsforums.com/threads/can-the-shunting-yard-algorithm-handle-logic-processing.1067839/",
+    "logic_score": 9.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 8.144,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:02.288626",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:02.288626",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:02.288626",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826125325_7322",
+    "text": "Latest activity Register Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative browser . Forums Tags Algorithm Definition and 651 Threads Comp Sci Which number was used as a pivot? Okay i know the answer as indicated on ms ... i just want to check if there is a general rule for finding the number used as the  pivot? chwala Thread Mar 10, 2025 Algorithm Pivot Sorting Replies: 8 Forum: Engineering and Comp Sci Homework Help S Can the shunting-yard algorithm handle logic processing? Looking at logic processing with 1 meaning true and 0 meaning false..an \"OR\" could be implemented using an addition operation , an \"AND\" using multiplication, and so on.",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 3.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 2.8930000000000002,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:05.325751",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:05.325751",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:05.325751",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826125575_1097",
+    "text": "As a Bedouin schiek you own twenty-five horses. You want to find the three fastest. You have no clock or other device that measures time. Your racing field is wide enough that five horses can race unimpeded, so you can race five at a time and see how they place. You don't want to abuse your... Hornbein Thread Jun 17, 2023 Algorithm Challenge Replies: 65 Forum: Programming and Computer Science H Ingenious Algorithm Riddle: Imposs. Even w/Answer Hardly anyone would think of this solution. I even wonder how anyone would come up with the question. And it is even more amazing that the questioner and solver were not the same person. Hornbein Thread Jun 11, 2023 Algorithm question solution Replies: 13 Forum: Programming and Computer Science L I Questions about Grover's algorithm for quantum searches Hi! I have studied Grover's algorithm for quantum search",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:05.575328",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:05.575328",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:05.575328",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826125701_2605",
+    "text": "I Smoothing algorithm for real-world data Hi 🙂\nI'd appreciate your help. I have a bunch of livestock with an ear sensor on each, that sends me data about how much heat is going out of the ear. I wanna take this data from each livestock and smooth it. My question is, how to know which smoothing algorithm I should use to get an... darren0123 Thread Jan 9, 2023 Algorithm Data Replies: 12 Forum: Linear and Abstract Algebra M Use the Euclidean algorithm to find integers ## a, b, c ## Let ## a, b, c ## and ## d ## be integers such that ## 225a+360b+432c+480d=3 ##. Then ## 75a+120b+144c+160d=1 ##. Applying the Euclidean algorithm produces: \n## gcd(75, 120)=15, gcd(120, 144)=24 ## and ## gcd(144, 160)=16 ##. Now we see that ## 15x+24y+16z=1 ##. By Euclidean algorithm, we have... Math100 Thread Sep 11, 2022 Algorithm Euclidean Integers Replies: 5 Forum: Precalculus Mathematics Homework Help Comp Sci Diffie Hellman Key Exchange Algorithm? (x,y value)",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:05.701452",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:05.701452",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:05.701452",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826125783_4424",
+    "text": "2 Forum: Engineering and Comp Sci Homework Help B Shor's algorithm on a Google Sheet Here is a spreadsheet that demonstrates how Shor's algorithm works. The user first enters a number 'N' that has only two prime factors. Then, the user enters a random integer 'x'. Shor's algorithm does the rest in the factorization of N. A different value for 'x' must be tried if the factoring... Bob Walance Thread Jul 22, 2022 Algorithm Google Replies: 13 Forum: Quantum Physics N ART algorithm - Image Reconstruction My answer:\nThe ART algorithm is a row-action algorithm. I tried to draw it, but I am not sure whether it will answer the question nao113 Thread Jun 10, 2022 Algorithm Art Image Replies: 1 Forum: Engineering and Comp Sci Homework Help M Use the binary exponentiation algorithm to compute.... First, consider ## 19^{53}\\pmod {503} ##. Then ## 53=(110101)_{2}=2^{5}+2^{4}+2^{2}+1=32+16+4+1 ##.",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:05.783739",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:05.783739",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:05.783739",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826125821_2616",
+    "text": "First, consider ## 19^{53}\\pmod {503} ##. Then ## 53=(110101)_{2}=2^{5}+2^{4}+2^{2}+1=32+16+4+1 ##. Note that \n\\begin{align*}\n19^{2}\\equiv 361\\pmod {503}\\\\\n19^{4}\\equiv 44\\pmod {503}\\\\\n19^{8}\\equiv 427\\pmod {503}\\\\\n19^{16}\\equiv 243\\pmod {503}\\\\\n19^{32}\\equiv 198\\pmod {503}.\\\\\n\\end{align*}\nThus... Math100 Thread Jun 9, 2022 Algorithm Binary Replies: 1 Forum: Precalculus Mathematics Homework Help A Comp Sci For which of the following purposes is the Banker’s algorithm used? I am new to the operating system and I want to know, Is it right Banker's Algorithm is mainly used to prevent deadlock? I picked this question from https://www.interviewbit.com/operating-system-mcq/ and I think it is also used for Solving deadlock, Can anyone know, Is this right? ankitdixit Thread May 31, 2022 Algorithm Doubt Operating system Replies:",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 5.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 4.572,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:05.821856",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:05.821856",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:05.821856",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126107_6018",
+    "text": "This tool works as follows:\n\n1) There are six questions that the user will be asked\n2) Based on the answer of first question, my server will decide which... aaronsmith4 Thread Nov 25, 2021 Algorithm App Probability Web Replies: 1 Forum: Set Theory, Logic, Probability, Statistics P I Notation of the approximation in quantum phase estimation algorithm I'am interested in the notation of the approximation in quantum phase estimation algorithm. In the literature there are different definitions, which I divide into two cases here. Both different in their definition of the ##\\delta##. In both cases I start with a quote of the source and show an... Peter_Newman Thread Nov 19, 2021 Algorithm Approximation Estimation Mathemathics Notation Phase Quantum Replies: 1 Forum: Quantum Physics M A HHL quantum algorithm and the phase estimation In HHL algorithm, does the controlled unitary (Hamiltonian simulation part of Quantum phase estimation) depend on Hermitian matrix coefficients and how?",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.107248",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.108240",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.108240",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126150_6525",
+    "text": "marka909 Thread Nov 6, 2021 Algorithm Estimation Phase Quantum Replies: 1 Forum: Quantum Physics P I Measurement of a qubit in the computational basis - Phase estimation Hello,\n\nI have a question about the measurement of a qubit in the computational basis. I would like to first state what I know so far and then ask my actual question at the end. What I know:\nLet's say we have a qubit in the general state of ##|\\psi\\rangle = \\alpha|0\\rangle + \\beta|1\\rangle##. Now... Peter_Newman Thread Oct 31, 2021 Algorithm Basis Computational Estimation Measuerment Measurement Phase Quantum state Qubit Replies: 3 Forum: Quantum Physics MHB Algorithm to arrange N people into groups of K Hi all!\n\nI've been trying to find a reasonable way to solve following problem:\n\nN people meet each others in groups of K people such that no one meets more than once. If I'm not mistaken, this requires two things:\n\nN must be divisible by K\nN - 1 must be divisible by K - 1. Let's assume these...",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 3.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 2.7860000000000005,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.150241",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.151242",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.151242",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126193_7200",
+    "text": "Let's assume these... Theia Thread Oct 1, 2021 Algorithm Groups Replies: 5 Forum: Programming and Computer Science M I Question about Grover's algorithm Hello! I am just getting started learning about quantum computing so I apologize if this questions is trivial, but I am a bit confused about the Grover's algorithm. As far as I understand (I read it from here), assuming there is just one solution, you start with N qubits, you put them in an... Malamala Thread Sep 6, 2021 Algorithm Replies: 1 Forum: Quantum Physics Python Algorithm for Converting Strings: Find the Best Option Let us suppose I have a string in this form,\n\nstring = 'CıCCkCnow CwCho CyCou CaCre but CwChat CaCm CıC' Now I won't to take each word between 'C' and convert it into an upper case letter. For example, the above string should turn into\n\nnew_string = 'I know Who You Are but What Am I'\n\nwhat kind... Arman777",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.193751",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.193751",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.193751",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126311_1682",
+    "text": "But I have yet to see a... Admiralibr123 Thread Apr 16, 2021 Algorithm Decay Model Nuclear Nuclear decay Replies: 1 Forum: High Energy, Nuclear, Particle Physics Fast reciprocal square root algorithm I ran into an interesting video on Youtube yesterday, about a fast way to compute the reciprocal of the square root of a number. I.e., to compute this function:\n##f(x)= \\frac 1 {\\sqrt x}##\nThe presenter is John Carmack. If you search for \"Fast Inverse Square Root — A Quake III Algorithm\" you'll... Mark44 Thread Mar 19, 2021 Algorithm Reciprocal Root Square Square root Replies: 30 Forum: Programming and Computer Science Python MCMC algorithm -- understanding some paremeters Recently I have shared a question about a program called SimpleMC and how to run it. Running a Github File on VS code for windows 10- File system problem ( | Physics Forums\n\nI am trying to understand an MCMC program. I manage to run it, but I am trying to understand the meaning of the some... Arman777",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 5.0,
+    "symbolic_score": 3.0,
+    "confidence_score": 4.786,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.311864",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.311864",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.311864",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126353_5533",
+    "text": "I manage to run it, but I am trying to understand the meaning of the some... Arman777 Thread Mar 6, 2021 Algorithm Replies: 4 Forum: Programming and Computer Science I God's algorithm as undecidable? I posted in the same sub-forum about complexity in mathematics and whether it is determinate. Seemingly, the consensus is that there's no definitive way in assessing a proofs complexity in a manner that is rigorous in regards to any other theorems or otherwise stated in a systematic way other... TimeSkip Thread Mar 1, 2021 Algorithm Replies: 3 Forum: Set Theory, Logic, Probability, Statistics Python What's wrong with this Python program on Euler's forward algorithm? Here is the function that I have written:\nimport numpy as np\n\ndef ode_euler_forward(odefun, y_initial, x_range, num_steps):\n    \"\"\"\n    Solves a system of non-stiff ODEs using Euler's forward algorithm. Parameters\n    ----------\n    odefun : callable(x, y1, y2, ...) The function...",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 5.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 4.679,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.353692",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.353692",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.353692",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826126395_5306",
+    "text": "Parameters\n    ----------\n    odefun : callable(x, y1, y2, ...) The function... Wrichik Basu Thread Feb 13, 2021 Algorithm Program Python Replies: 2 Forum: Programming and Computer Science C Det of Triangular-like Matrix & getting stuck in Algorithmic Proof Find determinant of following matrix:\n## A =  \\begin{pmatrix}\na_{1,1} & a_{1,2} & \\cdots & a_{1,n-1} & a_{1,n} \\\\\na_{2,1} & a_{2,2} & \\cdots & a_{2,n-1} & 0 \\\\\n\\vdots  & \\vdots  &   \\ddots & \\vdots & \\vdots  \\\\\na_{n,1} & 0 & \\cdots & 0 & 0 \n\\end{pmatrix} ##\n\nNote: I tried to solve this question... CGandC Thread Jan 22, 2021 Algorithm Determinant Induction Matrix Proof Stuck Replies: 8 Forum: Math Proof Training and Practice Trying to find an algorithm for the Number Mastermind game I am trying to write a code to guess the secret number. For example, if I have a secret number called 412.",
+    "source_url": "https://www.physicsforums.com/tags/algorithm/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:06.395202",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:06.396203",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:06.396203",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826127759_4539",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/questions-about-grovers-algorithm-for-quantum-searches.1052338/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:07.759762",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:07.759762",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:07.759762",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826127950_9743",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/is-an-algorithm-for-a-proof-required-to-halt.1051777/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:07.950045",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:07.950045",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:07.950045",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826128173_6001",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/gauss-jordan-elimination-algorithm-steps.1051682/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:08.173510",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:08.173510",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:08.173510",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826128435_8164",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/algorithm-problem-involving-3-points-and-3-lines-in-the-x-y-plane.1050406/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:08.435018",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:08.436030",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:08.436030",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826128716_9355",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/smoothing-algorithm-for-real-world-data.1048895/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:08.716011",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:08.717003",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:08.717003",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826128907_1090",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/use-the-euclidean-algorithm-to-find-integers-a-b-c.1045514/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:08.907118",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:08.907118",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:08.907118",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826129173_1066",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/diffie-hellman-key-exchange-algorithm-x-y-value.1045220/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:09.173555",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:09.173555",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:09.173555",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826129353_4943",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/solve-ax-by-gcd-a-b-for-rsa-algorithm-cryptography.1045094/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:09.353267",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:09.353267",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:09.353267",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826129633_1580",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/shors-algorithm-on-a-google-sheet.1017057/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:09.633683",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:09.633683",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:09.633683",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826129861_1019",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/art-algorithm-image-reconstruction.1015978/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:09.861797",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:09.861797",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:09.861797",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826130053_9173",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/use-the-binary-exponentiation-algorithm-to-compute.1015967/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:10.053344",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:10.053344",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:10.053344",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826130202_7917",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/for-which-of-the-following-purposes-is-the-bankers-algorithm-used.1015704/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:10.202448",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:10.202448",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:10.202448",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826130612_6446",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/using-single-source-shortest-path-algorithm-to-find-the-longest-path.1014393/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:10.612175",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:10.612175",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:10.612175",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826130840_2968",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/functional-dependency-solving-algorithm-for-minimal-cover.1013341/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:10.840840",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:10.840840",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:10.840840",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826131090_8276",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/genetic-algorithm-knapsack-problem.1012455/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:11.090073",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:11.090073",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:11.090073",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826131280_6571",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/what-is-uniform-crossover-in-genetic-algorithm-crossover-operation.1012091/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:11.280060",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:11.280060",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:11.280060",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826131455_3807",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/i-need-a-solved-numerical-example-on-genetic-algorithm-for-1-iteration.1012060/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:11.455042",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:11.456043",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:11.456043",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826131766_7933",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/confused-about-dfs-algorithm-in-action-not-an-issue-with-the-pseudocode.1011807/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:11.766064",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:11.766064",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:11.766064",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826131993_6143",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/how-to-create-a-fair-distribution-algorithm.1011026/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:11.993071",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:11.993071",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:11.993071",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826132803_8737",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/want-to-use-probability-algorithm-for-my-web-app.1044213/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:12.803554",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:12.803554",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:12.803554",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826132989_4748",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/notation-of-the-approximation-in-quantum-phase-estimation-algorithm.1009313/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:12.989590",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:12.990591",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:12.990591",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826133204_7959",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/hhl-quantum-algorithm-and-the-phase-estimation.1008825/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:13.204984",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:13.204984",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:13.205992",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826133704_5231",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/question-about-grovers-algorithm.1006852/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:13.704284",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:13.704284",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:13.704284",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826134310_4462",
+    "text": "Intro Physics Homework Help Advanced Physics Homework Help Precalculus Homework Help Calculus Homework Help Bio/Chem Homework Help Engineering Homework Help Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative ",
+    "source_url": "https://www.physicsforums.com/threads/evaluate-the-complexity-of-this-graph-coloring-algorithm.1005315/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:14.310667",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:14.310667",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:14.310667",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826134603_6667",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/numerically-solving-time-independent-schrodinger-eqn-using-shooting-algorithm.1004372/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:14.603342",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:14.604342",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:14.604342",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826135089_3638",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/algorithmic-model-for-primary-decay-chains.1002091/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:15.089884",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:15.089884",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:15.089884",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826135814_6781",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/gods-algorithm-as-undecidable.1000360/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:15.814415",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:15.815417",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:15.815417",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138360_7159",
+    "text": "In the algorithms chapter, they covered 4 \"basic\" algorithms. Linear Search, Binary Search, Bubble Sort, and Selection Sort. My question is, how do you approach these? Not just from a professional standpoint, but academic, as well. Is it useful to memorize the pseudocode to be able to implement it quicker? Or do you tend to just reference it as you need it? Next semester I start an introductory to data structures course, and then the following semester there's a data structures and algorithm course that's mandatory. So with that in mind, how should I treat these? I'm sure some of them come more obvious as you program more, and some of them are fairly obvious how to code (like linear search). But when it comes to Binary Search and Selection sort, it doesn't come easy for me, and often I resort to looking up the pseudocode.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 5.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 4.572,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.360546",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.360546",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.360546",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138498_4470",
+    "text": "Two points -- 1. do not rewrite a functioning library routine. If it works leave it alone. Unless misguided managers tell you otherwise. 2. good algorithms contribute at least 80% of the speed of  processing, minor tweaks do very little. Cool tweaks. You know, cool code, like an integer xor swap. Don't do it except for playtime. Somebody else will eventually have to work on your production code. That person will build voodoo dolls in your image and abuse them if you do pointless stuff like that. Compilers are VERY smart. Unnecessarily intricate code defeats them. If you want standard  bit twiddling diddles that most people kind of accept (in C anyway)  go to: https://graphics.stanford.edu/~seander/bithacks.html rcgldr Homework Helper 8,915 671 MinusTheBear said: In the algorithms chapter, they covered 4 \"basic\" algorithms. Linear Search, Binary Search, Bubble Sort, and Selection Sort. My question is, how do you approach these? I doubt you'd have trouble implementing a linear search.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.498851",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.498851",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.498851",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138543_7161",
+    "text": "My question is, how do you approach these? I doubt you'd have trouble implementing a linear search. There isn't much practical use for bubble sort or selection sort. Most \"real world\" sorts are variations of quicksort or merge sort. For some unknown to me reason, top down merge sort is taught much more often than bottom up merge sort, although most \"real world\" merge sorts are variations of bottom up merge sort. A lot of algorithms are complex enough that most programmers use documentation, pseudo code, or actual code instead of trying to code based on memorization for those algorithms. In some cases, programmers will work with specific algorithms long enough that they will memorize them to the point they can recognize errors in code just by looking at the code, but that's not the norm. Even if a programmer knows an algorithm well enough to write code from scratch, if it's not for a learning experience, it's somewhat a waste of time to not take advantage of existing code or example.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.543482",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.543482",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.543482",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138671_7927",
+    "text": "There is an old joke that only one makefile has ever been written. Everyone else copies and erases. Ostrados 65 9 Memorizing the pseudocode will not work you will forget it in no time. Try to understand the algorithm instead and then recreate the code yourself, do this practice with each algorithm and you will become very good at programming. I am the type who likes to reinvent the wheel in programming (which is a disadvantage sometimes because it slows me down but It made coding super easy to me) QuantumQuest Science Advisor Insights Author Gold Member 927 484 MinusTheBear said: Hey everyone, I'm in my second semester of programming which covers an introduction to C++ (the prior course was Python). We just covered classes and arrays, and are moving onto intro. to algorithms and pointers (we're currently mid-semester). In the algorithms chapter, they covered 4 \"basic\" algorithms. Linear Search, Binary Search, Bubble Sort, and Selection Sort. My question is, how do you approach these?",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 5.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 4.572,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.671423",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.672423",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.672423",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138713_9555",
+    "text": "My question is, how do you approach these? Not just from a professional standpoint, but academic, as well. Is it useful to memorize the pseudocode to be able to implement it quicker? Or do you tend to just reference it as you need it? Next semester I start an introductory to data structures course, and then the following semester there's a data structures and algorithm course that's mandatory. So with that in mind, how should I treat these? I'm sure some of them come more obvious as you program more, and some of them are fairly obvious how to code (like linear search). But when it comes to Binary Search and Selection sort, it doesn't come easy for me, and often I resort to looking up the pseudocode. I can usually sit down with pen and paper and write pseudocode for it, but I'll normally be missing a variable or something relatively minor that becomes obvious when coding it. However, this is less efficient to me than just looking it up to begin with.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 6.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 5.465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.713905",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.713905",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.713905",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138755_5768",
+    "text": "However, this is less efficient to me than just looking it up to begin with. How do you handle algorithms yourself? As has already been mentioned, linear search, bubble sort and selection sort algorithms are used mainly for educational purposes but this is good for the proper education in CS, as they are introduced early enough and give some context. There is no important professional standpoint about these. Binary search is a different story though, as learning it, serves many purposes and you will encounter it or something based on it many times, if you follow a career in programming. Now, about whether it is useful to memorize the pseudocode or not, it reminds me of similar concerns I had many years ago. As you'll progress into more advanced programming concepts and develop complex programs, you'll see that everything you tried to memorize simply faded out. So, there's no point to memorize pseudocode or code.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.755668",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.755668",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.755668",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138959_1792",
+    "text": "Now what I want to say is that using code has consequences and by understanding the code like sorting algorithms you open your mind in such a way that you start to see the usefulness and the limitations. This is a much appreciated skill and should be honed carefully. Understanding is the key. Being a programmer for more than 35 years I do remember the first steps which was on a VIC20 and C64. I got to understand multiplications and divisions up close and personal to improve 3D projections and matrix calculations. I analyzed the code step by step to see what could be improved or done in less steps. This also made it easier to remember algorithms later on. Remembering the exact implementation of a bubblesort comes with time. Just like playing the guitar or piano, it is practice and more practice. Some would say a useless skill to remember algorithms, I say it is the first step to understanding. Hope this helps.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.5,
+    "confidence_score": 1.9465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.959064",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.960062",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.960062",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826138998_5578",
+    "text": "Hope this helps. phinds Science Advisor Insights Author Gold Member 2024 Award 19,274 15,223 Michael27 said: Nice to hear that people are still interested in programming ? \"Still\" interested in programming? That just strikes me as a very odd comment since computer programming is one of the largest occupation groups in the country today AND is done by a great many people who have other job titles (scientists for example). Michael27 24 3 phinds said: ? \"Still\" interested in programming? That just strikes me as a very odd comment since computer programming is one of the largest occupation groups in the country today AND is done by a great many people who have other job titles (scientists for example). I was being coy :) Jarvis323 1,247 987 In practice, the only important thing is knowing which ones are the most useful in different use cases, and the fundamental ideas they are based on.",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.5,
+    "confidence_score": 1.9465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:18.998168",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:18.998168",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:18.998168",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826139023_1588",
+    "text": "You should pay close attention when reading your book, or in your lecture, but for practical purposes not worry about having them all memorized. Having said that, there is an overriding reason to memorize them. When you interview for a job you will be grilled and tested on these issues, potentially intensely, and in many cases only the people who have had the foresight to memorize some potentially obscure algorithm/data structure will be competitive. Also you should begin practicing the types of coding challenges that are best solved through creative/clever use of data structures and algorithms (this is actually good for you in general). Last edited: Mar 10, 2017 Similar threads Python Question about learning programming Thursday, 6:21 PM Replies 18 Views 3K Non youtube courses and paid textbooks to learn algorithms? Dec 24, 2023 Replies 8 Views 3K C/C++",
+    "source_url": "https://www.physicsforums.com/threads/how-do-you-handle-algorithms-memorize-vs-reference.906678/",
+    "logic_score": 6.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 5.465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:19.023888",
+    "symbols_found_in_chunk": 2,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:19.023888",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:19.023888",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826143334_6390",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/can-turing-machine-decidability-extend-to-complex-algorithm-outputs.1041611/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:23.334283",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:23.335786",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:23.335786",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826143544_1362",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/can-turing-machines-understand-infinity.957060/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:23.544388",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:23.544388",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:23.544388",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826144952_7037",
+    "text": "Could someone explain this and help me? Technology news on Phys.org Research team improves fuel cell durability with fatigue-resistant membranes Self-extinguishing batteries could reduce the risk of deadly and costly battery fires Chemists decipher reaction process that could improve lithium-sulfur batteries FallArk 127 0 I tried to make one of the functions work by doing this: Code: def eval_infix_sum(expr,pos): if expr[pos+1] == '+' :\n        ans = expr[pos] + expr[pos+2]\n    elif expr[pos+1] == '-' :\n        ans = expr[pos] - expr[pos+2]\n    pos = pos + 1\n    return ans,pos My intention is trying to let the program move forward through the data and figure out what to do, but since the input in this case is always a list, addition will just display \"2 + 3\" as \"23\", is there any work around? FallArk 127 0 Update: I figured out how to make the output an integer.",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:24.952899",
+    "symbols_found_in_chunk": 3,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:24.952899",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:24.952899",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826144986_4130",
+    "text": "FallArk 127 0 Update: I figured out how to make the output an integer. By doing this: Code: def eval_infix_sum(expr,pos):\n    if expr[pos+1] == '+' :\n        ans = int(expr[pos]) + int(expr[pos+2])\n    elif expr[pos+1] == '-' :\n        ans = int(expr[pos]) - int(expr[pos+2])\n    pos = pos + 1\n    return ans,pos But I am still confused about how the \"pos\" will correspond with the other functions. I know after finishing the code, the function \"eval_infix\" should be able to call the related functions and get the output, but I don't really understand it clearly I like Serena Homework Helper MHB 16,335 258 Hey FallArk! ;) Suppose we want to evalute [1,\"+\",2,\"+\",3]. Then after calling eval_sum_infix, we will have evaluated \"1+2\", leaving \"+3\". We can call eval_sum_infix again, but then we should continue at pos=3... FallArk 127 0 I like Serena said: Hey FallArk! ;) Suppose we want to evalute [1,\"+\",2,\"+\",3]. Then after calling eval_sum_infix, we will have evaluated \"1+2\", leaving \"+3\".",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:24.986890",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:24.986890",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:24.986890",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145080_8989",
+    "text": "FallArk 127 0 My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] ! = ';':\n        if expr[pos+1] == '+' :\n            ans = int(expr[pos]) + int(expr[pos+2])\n        elif expr[pos+1] == '-' :\n            ans = int(expr[pos]) - int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos\ndef eval_infix_product(expr,pos): while expr[pos] != ';':\n        if expr[pos+1] == '*' :\n            ans = int(expr[pos]) * int(expr[pos+2])\n        elif expr[pos+1] == '/' :\n            ans = int(expr[pos]) / int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos Inputs like : Code: [\"1\",\"+\",\"2\",\"-3\",\";\"],0 works out just fine. Thanks for the comments, so inside the \"eval_infix_factor\" function, I should do something so that the \"(\" token can be dealt with then? I like Serena Homework Helper MHB 16,335 258 FallArk said: My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] !",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.080306",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.080306",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.080306",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145113_1191",
+    "text": "FallArk said: My code so far: Code: def eval_infix_sum(expr,pos):\n    while expr[pos] ! = ';':\n        if expr[pos+1] == '+' :\n            ans = int(expr[pos]) + int(expr[pos+2])\n        elif expr[pos+1] == '-' :\n            ans = int(expr[pos]) - int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos\ndef eval_infix_product(expr,pos): while expr[pos] != ';':\n        if expr[pos+1] == '*' :\n            ans = int(expr[pos]) * int(expr[pos+2])\n        elif expr[pos+1] == '/' :\n            ans = int(expr[pos]) / int(expr[pos+2])\n        pos = pos + 1\n    return ans,pos Inputs like : Code: [\"1\",\"+\",\"2\",\"-3\",\";\"],0 works out just fine. Thanks for the comments, so inside the \"eval_infix_factor\" function, I should do something so that the \"(\" token can be dealt with then? What we have is sum-expressions that consist of multiplicative-expressions that consist of either constants or parenthesized expressions. In pseudo code it's something like this. (\"rhs\" is short for right hand side .)",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.113836",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.113836",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.113836",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145142_9311",
+    "text": "In pseudo code it's something like this. (\"rhs\" is short for right hand side .) Code: def sum_expr\n    result = mul_expr\n    while next token == \"+\"\n        rhs = mul_expr\n        result += rhs\n    return result\n\ndef mul_expr\n    result = factor_expr\n    while next token == \"*\"\n        rhs =factor_expr\n        result *= rhs\n    return result\n\ndef factor_expr\n    if next token == \"(\"\n        result = sum_expr\n        skip following \")\"\n    else\n        result = constant\n    return result All the parameters, and tracking of the position still have to be added. FallArk 127 0 duh, I just realized that if input like \" '2 + 3' \" is entered, the function \"eval_infix\" will split it up into a list with semicolon and then call function \"eval_infix_list\" which will call \"eval_infix_sum\". :D I will talk to my instructor today and also ask him about it again. Thank you!",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.142052",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.142052",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.142052",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826145165_2712",
+    "text": "We should return an answer in the case of a parenthesized expression as well. I like Serena Homework Helper MHB 16,335 258 Just as an interesting reference, an extraction/simplification of an expression in the C/C++ programming language gives us the following syntax. See for instance here . The standardized format of this syntax is called Backus-Naur Form . Code: <additive-expression> ::= <multiplicative-expression>\n                        | <additive-expression> + <multiplicative-expression>\n                        | <additive-expression> - <multiplicative-expression>\n\n<multiplicative-expression> ::= <unary-expression>\n                              | <multiplicative-expression> * <unary-expression>\n                              | <multiplicative-expression> /",
+    "source_url": "https://www.physicsforums.com/threads/help-with-python-implementing-algorithm.1035553/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:25.165054",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:25.165054",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:25.165054",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826147869_5447",
+    "text": "This is not the main result presented in her text, maybe it is not present at all if I misrepresented something, but I hope I did not. Questions: How sound and rigorous is her proof? Would you be able to prove the same without looking at her proof? Can you point to the relevant source that contains already performed and published proofreading of that text? Last edited: Oct 7, 2023 Technology news on Phys.org Research team improves fuel cell durability with fatigue-resistant membranes Self-extinguishing batteries could reduce the risk of deadly and costly battery fires Chemists decipher reaction process that could improve lithium-sulfur batteries tade 720 26",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.5,
+    "confidence_score": 1.1605,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.869833",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:27.869833",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.869833",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826147893_9960",
+    "text": "do you have a link to Marletto's proof HrvojeDjurdjevic 23 4 Here you are https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1226#d3e2524 tade 720 26 HrvojeDjurdjevic said: Here you are https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1226#d3e2524 thanks, and which part of it describes her proof that the second model is the only possible accurate way pbuk Science Advisor Homework Helper Gold Member 4,947 3,191 HrvojeDjurdjevic said: How sound and rigorous is her proof? It seems tautological to me: \"we define a replicator as something that replicates, therefore in order for something to replicate itself it must contain a replicator\". HrvojeDjurdjevic said: Would you be able to prove the same without looking at her proof? Yes, unless I am wrong in believing it to be vacuously true. HrvojeDjurdjevic said: Can you point to the relevant source that contains already performed and published proofreading of that text?",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.893860",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:27.893860",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.893860",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826147921_2182",
+    "text": "I am not sure what you mean: the link you gave is to the publication in the Journal of the Royal Society following proofreading and refereeing. I am not sure this has much to do with programming or computer science: it seems to relate to David Deutsch's \"Constructor Theory\" which seems to me to be a blend of quantum interpretation and other things I don't understand. berkeman Admin 68,866 23,349 Thread paused for Moderation... berkeman Admin 68,866 23,349 Thread is reopened provisionally. Let's be careful not to veer into the philosophical aspects of this work. Thanks. HrvojeDjurdjevic 23 4 pbuk said: Yes, unless I am wrong in believing it to be vacuously true. I do not know if it is vacuous, but it certainly is not very explanatory to prove that something is possible, something that we already know it exists, for more than 50 years. Basically, the discovery in molecular biology was a proof that Von Neumann's second model was realistic.",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 4.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 3.786,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.921002",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:27.921504",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.921504",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826147984_9366",
+    "text": "I am not sure what she actually proved, why, and how. To me, if replicator-vehicle is the only possible physical realization of self-reproducing automaton, that means that universal scanner is either impossible, or it is for some reason impossible to present it with a reference to an object it is part of, or whatever else is a case, which requires a replicator to be physically instantiated prior each process of self-reproduction. These of course were not Marletto's considerations when she wrote that paper, but we are not constrained only to analysis of her paper, in our discussion. Are we? HrvojeDjurdjevic 23 4 And of course, I am not questioning if it is really so, that the replicator-vehicle is the only possible physical implementation of accurate self-reproducing automaton, I just ask if this was proved rigorously, in your opinion. HrvojeDjurdjevic 23 4 Part of Von Neumann's genius is that I understand perfectly every sentence of his paper.",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 1.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:27.984900",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:27.984900",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:27.984900",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826148042_2388",
+    "text": "Obvious analogy in computer science would be some rules that prevent direct copying of objects by using copiers of primitive types, because the object structure is not known in advance, but if objects are serialized in some standard way, packaged together with their description, then the deserializer does not need any additional information to deserialize the object, and such data can be copied using raw methods. pbuk Science Advisor Homework Helper Gold Member 4,947 3,191 HrvojeDjurdjevic said: [*]universal builder of objects is ...required for self-reproduction This is clearly not true: my cells (and therefore I) cannot synthesise amino acids yet they manage to reproduce (as have I). HrvojeDjurdjevic said: I may be missing some chapters of math and quantum physics to follow the exact logic of the proof, I don't see any maths or physics of any kind in Marletto's paper, just hand waving.",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:28.042557",
+    "symbols_found_in_chunk": 3,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:28.043141",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:28.043141",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826148071_4856",
+    "text": "Hence, that would explain why both universal scanner and universal copier of objects are impossible. Not any kind of rigorous proof, or original for that matter (and I will inestigate both claims wherever circumstances allow me, I have a feeling it will not be here), but, still a worthy analogy. Frabjous Gold Member 1,894 2,339 You misunderstand actual scientific debate. It occurs via papers. HrvojeDjurdjevic 23 4 I will try my best to write a good one. berkeman Admin 68,866 23,349 HrvojeDjurdjevic said: I will try my best to write a good one. Great. We will await that publication (in a peer-reviewed journal); at that time we can reopen this thread. Thread is closed for now. Similar threads I Modern Assesment of Grete Hermann's Philosophy on Quantum Mechanics May 26, 2020 Replies 2 Views 2K I The standard model from loop quantum gravity via spinors octonions Oct 8, 2024 Replies 26 Views 4K Stone-von Neumann theorem & modern analog Aug 29, 2003",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 2.0,
+    "symbolic_score": 1.5,
+    "confidence_score": 1.9465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:28.071143",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:28.071143",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:28.071143",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826148110_6730",
+    "text": "Replies 21 Views 8K I A Bold New Take on Quantum Theory Mar 29, 2024 Replies 25 Views 4K A Twistors and celestial holography Mar 22, 2023 Replies 14 Views 5K Can an AI write a credible novel with Wikipedia and YouTube? Dec 6, 2014 Replies 3 Views 2K Requesting suggestions for languages, libraries, and architectures for parallel (and sometimes non parallel) numerical and scientific computations Aug 25, 2022 Replies 8 Views 3K Focus all of your ire on me, if you would May 21, 2023 Replies 4 Views 2K Model Pulley: Understanding System Physics May 18, 2015 Replies 27 Views 10K Programs How good is this applied math program? Mar 12, 2017 Replies 13 Views 3K Share: Bluesky LinkedIn Share Forums Other Sciences Programming and Computer Science Hot Threads Insights A Possible AI Modern Video Codec Started by bhobba Jan 25, 2025 Replies: 1 Programming and Computer Science Hackathon ideas?",
+    "source_url": "https://www.physicsforums.com/threads/von-neumann-replicator-vehicle-model.1056248/",
+    "logic_score": 4.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 3.6790000000000003,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:28.110154",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:28.110154",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:28.110154",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826148797_7607",
+    "text": "General Math Calculus Differential Equations Topology and Analysis Linear and Abstract Algebra Differential Geometry Set Theory, Logic, Probability, Statistics MATLAB, Maple, Mathematica, LaTeX Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You ",
+    "source_url": "https://www.physicsforums.com/threads/stone-von-neumann-theorem-modern-analog.4426/",
+    "logic_score": 1.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.893,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:28.797637",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:28.797637",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:28.797637",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826150381_2054",
+    "text": "Chemistry Biology and Medical Earth Sciences Computer Science Computing and Technology DIY Projects Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display this or other websites correctly. You should upgrade or use an alternative browser . Forums Other Sciences Programming and Computer Science Prime Number Detection: Running Time of Algorithm Thread starter zak100 Start date Mar 8, 2020 Tags Algorithm Detection Prime Running Time zak100 462 11 TL;DR Summary From the internet, I found that the running time of algorithm to find prime number is O(sqrt(N)). I have 3 questions: Can we say that the running time is O(log^2N) for detection of Prime number? For large values of N, can we say that its a pseudo-polynomial algorithm? Is this true for Sorting algorithms also? Zulfi.",
+    "source_url": "https://www.physicsforums.com/threads/prime-number-detection-running-time-of-algorithm.985283/",
+    "logic_score": 6.0,
+    "symbolic_score": 1.0,
+    "confidence_score": 5.465000000000001,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:30.382791",
+    "symbols_found_in_chunk": 1,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:30.382791",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:30.382791",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153330_1254",
+    "text": "Each node keeps track of how many higher children it has. You start with a root node containing 5. Then you add 2 as the \"lower child\" of 5, then 3 as the \"higher child\" of 2 (because it's lower than 5, but 5 already has a lower child but 2 doesn't have a higher child), then 1 as the \"lower child\" of 2 (5 already has a lower child but 2 doesn't), then 4 as the \"higher child\" of 3 (5 has a lower child, 2 has a higher child, but 3 doesn't). If you keep track of how many child nodes have been added on the higher subtree of each one, I think you can work out how many higher numbers you've already seen without having to check every one, which ought to be better than ##O(n^2)##. Last edited: Oct 12, 2019 Ibix Science Advisor Insights Author 13,111 15,409 Python: class TreeNode:\n    def __init__(self,v):\n        self.v=v # A number from the original list\n        self.nGreater=0 # The number of higher numbers we've seen.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.330246",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.331246",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.331246",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153348_4067",
+    "text": "The number of higher numbers we've seen. self.lowerChild=None\n        self.greaterChild=None\n    def addNode(self,newV):\n        if newV<self.v:\n            if self.lowerChild is None:\n                # New number is lower than this node and we have not seen any such numbers before. Return 1 (this node) plus how many greater-than-this-node children\n                self.lowerChild=TreeNode(newV)\n                return 1+self.nGreater\n            else:\n                # New number is lower than this node.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.348133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.348133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.348133",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153368_8636",
+    "text": "New number is lower than this node. Return 1 (this node) plus how many greater-than-this-node children plus anything between the new node and this node\n                return 1+self.nGreater+self.lowerChild.addNode(newV)\n        else:\n            self.nGreater+=1\n            if self.greaterChild is None:\n                # Greater than this node and we haven't seen such a number before - return that there are no larger numbers below this node\n                self.greaterChild=TreeNode(newV)\n                return 0\n            else:\n                # Greater than this node - return how many greater-than-the-new-node values are found in the subtree\n                return self.greaterChild.addNode(newV)",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.368133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.368133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.368133",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826153396_3470",
+    "text": "def printTree(self):\n        chstr=\"\"\n        if self.lowerChild is None:\n            chstr+=\"-\"\n        else:\n            chstr+=str(self.lowerChild.v)\n        if self.greaterChild is None:\n            chstr+=\" -\"\n        else:\n            chstr+=\" \"+str(self.greaterChild.v)\n        print \"Node:\",self.v,\" Children:\",chstr\n        if self.lowerChild is not None:\n            self.lowerChild.printTree()\n        if self.greaterChild is not None:\n            self.greaterChild.printTree()\n\na=[5,2,3,1,4]\nrootNode=TreeNode(a[0])\nb=[0]\nfor a_i in a[1:]:\n    b.append(rootNode.addNode(a_i))\nprint b\nrootNode.printTree() This has not been extensively tested, and was put together in half an hour on a tiny phone. No guarantees it's right! Last edited: Oct 13, 2019 DrDu Science Advisor 6,404 1,002 Thank you Ibix! In the meanwhile, I figured out how to do this using mergesort: 1. Initialize the vector b to n times 0.",
+    "source_url": "https://www.physicsforums.com/threads/permutation-counting-algorithm-for-large-integers.978830/",
+    "logic_score": 0.0,
+    "symbolic_score": 0.0,
+    "confidence_score": 0.0,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:33.396133",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:33.396133",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:33.396133",
+    "decision_type": "FOLLOW_HYBRID"
+  },
+  {
+    "id": "FOLLOW_HYBRID__1_1748826154313_9395",
+    "text": "Classical Physics Quantum Physics Quantum Interpretations Special and General Relativity Atomic and Condensed Matter Nuclear and Particle Physics Beyond the Standard Model Cosmology Astronomy and Astrophysics Other Physics Topics Menu Log in Register Navigation More options Style variation System Light Dark Contact us Close Menu JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding. You are using an out of date browser. It  may not display th",
+    "source_url": "https://www.physicsforums.com/threads/shors-algorithm-need-to-uncompute-auxiliary-qubits.932646/",
+    "logic_score": 1.0,
+    "symbolic_score": 2.0,
+    "confidence_score": 1.107,
+    "processing_phase": 1,
+    "timestamp": "2025-06-02T01:02:34.313706",
+    "symbols_found_in_chunk": 0,
+    "decision_history": [
+      {
+        "decision": "FOLLOW_HYBRID",
+        "timestamp": "2025-06-02T01:02:34.313706",
+        "weights": {
+          "static": 0.893,
+          "dynamic": 0.107
+        }
+      }
+    ],
+    "last_decision": "FOLLOW_HYBRID",
+    "history_length": 1,
+    "stored_at": "2025-06-02T01:02:34.313706",
+    "decision_type": "FOLLOW_HYBRID"
   }
 ]
