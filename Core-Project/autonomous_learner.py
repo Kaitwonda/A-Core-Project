@@ -22,25 +22,29 @@ from memory_optimizer import load_adaptive_config, ADAPTIVE_CONFIG_PATH
 
 # --- Configuration ---
 PHASE_URL_SOURCES = {
-    "logical": [
-        "https://en.wikipedia.org/wiki/Logic",
-        "https://en.wikipedia.org/wiki/Mathematical_logic",
-        "https://en.wikipedia.org/wiki/Propositional_calculus",
-        "https://plato.stanford.edu/entries/logic-classical/",
-        "https://oli.cmu.edu/courses/logic-proofs/",
-        "https://scholarworks.smith.edu/textbooks/1/",
-        "https://ies.ed.gov/rel-northeast-islands/2025/01/tool-4",
-        "https://www.cdc.gov/library/research-guides/logic-models.html"
+    1: [  # Phase 1: Computational Identity
+        "https://en.wikipedia.org/wiki/List_of_mathematical_functions",
+        "https://en.wikipedia.org/wiki/List_of_mathematical_proofs",
+        "https://en.wikipedia.org/wiki/List_of_misnamed_theorems",
+        "https://en.wikipedia.org/wiki/List_of_alternative_set_theories",
+        "https://en.wikipedia.org/wiki/List_of_conjectures_by_Paul_Erd%C5%91s",
+        "https://en.wikipedia.org/wiki/Category:Theorems_in_mathematical_analysis"    
     ],
-    "symbolic": [
-        "https://en.wikipedia.org/wiki/Symbolic_logic",
-        "https://philosophy.lander.edu/logic/symbolic.html",
-        "https://logic.stanford.edu/intrologic/miscellaneous/symbolic.html",
-        "https://www.ccsf.edu/node/164316"
-    ],
-    "hybrid": [
-        "https://en.wikipedia.org/wiki/Hybrid_logic",
-        "https://plato.stanford.edu/entries/logic-hybrid/"
+    2: [  # Phase 2: Symbolic Understanding
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(H)",
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(K)",
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(L)",
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(N)",
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(U–V)",
+        "https://en.wikipedia.org/wiki/List_of_minerals_recognized_by_the_International_Mineralogical_Association_(Y–Z)"
+    ],    
+    3: [  # Phase 3: Hybrid/Bridge
+        "https://en.wikipedia.org/wiki/Emotional_intelligence",
+        "https://en.wikipedia.org/wiki/Emotional_self-regulation",
+        "https://en.wikipedia.org/wiki/Emotion_in_animals",
+        "https://en.wikipedia.org/wiki/Category:Emotions",
+        "https://en.wikipedia.org/wiki/Category:Emotion",
+        "https://en.wikipedia.org/wiki/Emotion" 
     ]
 }
 
@@ -621,11 +625,19 @@ def process_chunk_to_tripartite(tripartite_memory, chunk_text, source_url, curre
         'stored_item_id': stored_item.get('id')
     }
 
-def autonomous_learning_cycle(focus_only_on_phase_1=True):
+def autonomous_learning_cycle(focus_only_on_phase_1=True, target_urls_to_process=500):
+    """
+    Main autonomous learning cycle.
+    
+    Args:
+        focus_only_on_phase_1: If True, only process phase 1
+        target_urls_to_process: Target number of URLs to process (default: 500)
+    """
     global deferred_urls_by_phase
     global visited_urls_globally
 
     print(f"[{time.strftime('%H:%M:%S')}] DEBUG: Starting autonomous_learning_cycle", flush=True)
+    print(f"🎯 Target: Process {target_urls_to_process} URLs")
     
     # Load adaptive weights at the start of the cycle
     load_adaptive_weights()
@@ -720,11 +732,10 @@ def autonomous_learning_cycle(focus_only_on_phase_1=True):
         priority_queue_this_phase.sort(key=lambda x: x[0], reverse=True)
 
         urls_processed_in_session_count = 0
-        if focus_only_on_phase_1 and current_phase_processing_num == 1:
-            phase1_specific_directives = curriculum_manager.get_processing_directives(1)
-            max_urls_for_session = phase1_specific_directives.get("max_urls_to_process_per_phase_session", 5)
-        else:
-            max_urls_for_session = current_phase_directives.get("max_urls_to_process_per_phase_session", 2)
+        
+        # CHANGED: Use target_urls_to_process instead of hardcoded limits
+        max_urls_for_session = target_urls_to_process
+        print(f"📋 Phase {current_phase_processing_num} will process up to {max_urls_for_session} URLs")
 
         session_hot_keywords = Counter()
         MAX_HOT_KEYWORDS = current_phase_directives.get("max_session_hot_keywords", 20)
@@ -1038,13 +1049,15 @@ def autonomous_learning_cycle(focus_only_on_phase_1=True):
 if __name__ == "__main__":
    # Determine focus mode (e.g., from command-line arg, config, or hardcode for testing)
    phase_1_only_focus = True
-   print(f"Starting autonomous learning process... Phase 1 Focus: {phase_1_only_focus}")
+   target_urls = 500  # CHANGED: Set target URLs to 500
+   print(f"Starting autonomous learning process... Phase 1 Focus: {phase_1_only_focus}, Target URLs: {target_urls}")
    
    # Temporary curriculum manager instance for saving metrics in case of error before full init
    temp_cm_for_error_handling = None
    try:
        temp_cm_for_error_handling = CurriculumManager()
-       autonomous_learning_cycle(focus_only_on_phase_1=phase_1_only_focus)
+       # CHANGED: Pass target_urls_to_process parameter
+       autonomous_learning_cycle(focus_only_on_phase_1=phase_1_only_focus, target_urls_to_process=target_urls)
    except KeyboardInterrupt:
        print("\n🛑 Autonomous learning interrupted by user.")
        if hasattr(brain_metrics, 'save_session_metrics'):
