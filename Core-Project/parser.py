@@ -15,6 +15,16 @@ except OSError:
     print("[ERROR] spaCy model 'en_core_web_sm' not found for parser.py. Please run: python -m spacy download en_core_web_sm")
     print("         Keyword extraction and advanced parsing will be limited.")
 
+# Emoji pattern for detection across the system
+EMOJI_PATTERN = re.compile(
+    "[\U0001F600-\U0001F64F"  # emoticons
+    "\U0001F300-\U0001F5FF"   # symbols & pictographs
+    "\U0001F680-\U0001F6FF"   # transport & map symbols
+    "\U0001F1E0-\U0001F1FF"   # flags
+    "\U00002702-\U000027B0"
+    "\U000024C2-\U0001F251]+"
+)
+
 SEED_PATH = Path("data/seed_symbols.json")
 EMOTION_MAP_PATH = Path("data/symbol_emotion_map.json")
 EMOTION_MAP_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -588,3 +598,5 @@ if __name__ == '__main__':
     assert is_zone_output({'some': 'dict'}) == False
     
     print("\n✅ All parser tests with AlphaWall integration passed!")
+
+__all__ = ['EMOJI_PATTERN']

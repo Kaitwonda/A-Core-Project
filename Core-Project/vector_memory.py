@@ -40,6 +40,49 @@ def _save_memory(memory_data: List[Dict[str, Any]]):
     with open(memory_file, "w", encoding="utf-8") as f:
         json.dump(memory_data, f, indent=2, ensure_ascii=False)
 
+def load_vectors(path: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """
+    Load all stored vector memory.
+    Public interface for loading vectors.
+    
+    Args:
+        path: Optional path to load from. If None, uses default memory_file.
+        
+    Returns:
+        List of vector entries
+    """
+    if path is not None:
+        # Load from specific path
+        if path.exists() and path.stat().st_size > 0:
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except json.JSONDecodeError:
+                print(f"[VECTOR-WARNING] File {path} corrupted, returning empty list.")
+                return []
+        return []
+    else:
+        # Use the existing internal function for default path
+        return _load_memory()
+
+def save_vectors(vectors: List[Dict[str, Any]], path: Optional[Path] = None):
+    """
+    Save all vector memory to disk.
+    Public interface for saving vectors.
+    
+    Args:
+        vectors: List of vector entries to save
+        path: Optional path to save to. If None, uses default memory_file.
+    """
+    if path is not None:
+        # Save to specific path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(vectors, f, indent=2, ensure_ascii=False)
+    else:
+        # Use the existing internal function for default path
+        _save_memory(vectors)
+
 def store_vector(text: str, 
                  source_url: Optional[str] = None,
                  source_type: str = "unknown",

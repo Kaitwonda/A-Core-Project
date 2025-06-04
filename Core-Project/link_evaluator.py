@@ -11,6 +11,7 @@ from alphawall import AlphaWall
 from quarantine_layer import UserMemoryQuarantine
 from weight_evolution import WeightEvolver
 from bridge_adapter import AlphaWallBridge
+from link_utils import evaluate_link_with_confidence_gates
 
 
 class EnhancedLinkEvaluator:

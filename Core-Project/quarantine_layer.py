@@ -12,6 +12,50 @@ from vector_engine import encode_with_minilm
 from alphawall import AlphaWall
 
 
+def should_quarantine_input(source_type: str, source_url: Optional[str] = None) -> bool:
+    """
+    Determine if input should be quarantined based on source type and URL.
+    
+    Args:
+        source_type: Type of source (e.g., 'user_direct_input', 'web_scrape', etc.)
+        source_url: Optional URL or identifier of the source
+        
+    Returns:
+        bool: True if the input should be quarantined
+    """
+    # High-risk source types that should always be quarantined
+    high_risk_sources = {
+        'user_direct_input',  # Direct user messages
+        'social_media',       # Social media content
+        'untrusted_api',      # Untrusted external APIs
+        'anonymous_upload',   # Anonymous file uploads
+    }
+    
+    # Suspicious URL patterns
+    suspicious_patterns = [
+        'malicious',
+        'hack',
+        'exploit',
+        'injection',
+        'xss',
+        'sqli'
+    ]
+    
+    # Check if source type is high risk
+    if source_type in high_risk_sources:
+        return True
+        
+    # Check URL for suspicious patterns
+    if source_url:
+        url_lower = source_url.lower()
+        for pattern in suspicious_patterns:
+            if pattern in url_lower:
+                return True
+                
+    # Default: don't quarantine
+    return False
+
+
 class UserMemoryQuarantine:
     """
     Quarantine system that works with AlphaWall zone outputs.
@@ -48,6 +92,30 @@ class UserMemoryQuarantine:
             if not file_path.exists():
                 with open(file_path, 'w') as f:
                     json.dump([] if 'log' in str(file_path) else {}, f)
+    
+    def quarantine_user_input(self, text: str, user_id: str, source_url: Optional[str] = None, current_phase: int = 0) -> Dict:
+        """
+        Quarantine user input directly (for vector_memory integration).
+        This is used when source-based quarantine is triggered.
+        
+        Args:
+            text: The user input text
+            user_id: User identifier
+            source_url: Source URL if applicable
+            current_phase: Current learning phase
+            
+        Returns:
+            Dict with quarantine result
+        """
+        # First process through AlphaWall to get semantic analysis
+        zone_output = self.alphawall.process_input(text, {'user_id': user_id, 'source_url': source_url})
+        
+        # Use the zone-based quarantine method
+        return self.quarantine(
+            zone_output['zone_id'],
+            reason="source_type_quarantine",
+            severity="medium"
+        )
                     
     def quarantine(self, zone_id: str, reason: str = "automatic", severity: str = "medium") -> Dict:
         """
@@ -412,6 +480,14 @@ if __name__ == "__main__":
     
     print("🧪 Testing Quarantine Layer Integration...")
     
+    # Test the new should_quarantine_input function
+    print("\n0️⃣ Test: should_quarantine_input function")
+    assert should_quarantine_input('user_direct_input') == True
+    assert should_quarantine_input('web_scrape', 'http://malicious.com') == True
+    assert should_quarantine_input('test') == False
+    assert should_quarantine_input('web_scrape', 'http://wikipedia.org') == False
+    print("✅ should_quarantine_input works correctly")
+    
     with tempfile.TemporaryDirectory() as tmpdir:
         # Initialize systems
         alphawall = AlphaWall(data_dir=tmpdir)
@@ -495,5 +571,16 @@ if __name__ == "__main__":
         assert active[0]['severity'] == 'high'
         
         print(f"✅ Active quarantines: {len(active)}")
+        
+        # Test 7: quarantine_user_input method
+        print("\n7️⃣ Test: Direct user input quarantine")
+        
+        result = quarantine.quarantine_user_input(
+            text="This is a test input",
+            user_id="test_user",
+            source_url="http://test.com"
+        )
+        assert result['success'] == True
+        print("✅ quarantine_user_input method works")
         
     print("\n✅ All quarantine integration tests passed!")

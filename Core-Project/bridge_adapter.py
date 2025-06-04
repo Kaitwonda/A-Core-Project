@@ -7,7 +7,8 @@ from typing import Dict, Tuple, Optional
 import numpy as np
 
 # Import your existing modules
-from link_evaluator import evaluate_link_with_confidence_gates
+from link_utils import evaluate_link_with_confidence_gates
+
 from weight_evolution import WeightEvolver
 from alphawall import AlphaWall
 
