@@ -117,5 +117,107 @@
       }
     ],
     "usage_count": 1
+  },
+  "💻⟳⟳⟳": {
+    "name": "Computer Cycle Cycle Cycle",
+    "based_on": "💻⟳⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle'. Often involves: amusement, neutral.",
+    "keywords": [
+      "computer",
+      "computation",
+      "cpu",
+      "binary",
+      "code",
+      "algorithm",
+      "system",
+      "architecture",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Computer Cycle Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:48:13.124641",
+    "updated_at": "2025-05-24T03:48:13.124641",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 1.38,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle'. Often involves: amusement, neutral.",
+        "timestamp": "2025-05-24T03:48:13.124641",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 1
+  },
+  "♦⟳⟳": {
+    "name": "Contrast Situationist Cycle Cycle",
+    "based_on": "♦⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Contrast Situationist Cycle'. Often involves: amusement, admiration, neutral.",
+    "keywords": [
+      "perspective",
+      "contrast",
+      "situationist",
+      "view",
+      "emotion",
+      "cycle",
+      "recursion",
+      "complex emotion",
+      "cycle",
+      "recursion",
+      "complex emotion"
+    ],
+    "core_meanings": [
+      "recurring Contrast Situationist Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:50:13.592549",
+    "updated_at": "2025-05-24T03:50:13.592549",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.72,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Contrast Situationist Cycle'. Often involves: amusement, admiration, neutral.",
+        "timestamp": "2025-05-24T03:50:13.593548",
+        "source_phase": 2
+      }
+    ],
+    "usage_count": 1
+  },
+  "🕊️": {
+    "name": "Acceptance",
+    "keywords": [
+      "release",
+      "surrender",
+      "let go"
+    ],
+    "resonance_weight": 0.3,
+    "origin": "system_seed",
+    "created_at": "2025-05-24T20:05:53",
+    "learning_phase": 1,
+    "vector_examples": [],
+    "usage_count": 0
   }
 }

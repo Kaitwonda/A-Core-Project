@@ -1,0 +1,10 @@
+{
+  "anonymous": {
+    "user_id": "anonymous",
+    "first_seen": "2025-06-04T01:18:48.852312",
+    "total_interactions": 47,
+    "threat_detections": 11,
+    "risk_level": "medium",
+    "last_updated": "2025-06-04T12:10:30.836846"
+  }
+}

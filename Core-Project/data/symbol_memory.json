@@ -4,17 +4,17 @@
     "based_on": "💻",
     "summary": "Recurring pattern or complex emotional field for 'Computer'. Often involves: approval, amusement, caring.",
     "keywords": [
-      "computer",
-      "computation",
-      "cpu",
+      "algorithm",
+      "architecture",
       "binary",
       "code",
-      "algorithm",
-      "system",
-      "architecture",
+      "complex emotion",
+      "computation",
+      "computer",
+      "cpu",
       "cycle",
       "recursion",
-      "complex emotion"
+      "system"
     ],
     "core_meanings": [
       "recurring Computer",
@@ -27,7 +27,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:10:10.207947",
-    "updated_at": "2025-05-19T01:10:10.207947",
+    "updated_at": "2025-05-25T21:24:32.892578",
     "origin": "meta_analysis",
     "learning_phase": 1,
     "resonance_weight": 0.96,
@@ -36,22 +36,70 @@
         "text": "Recurring pattern or complex emotional field for 'Computer'. Often involves: approval, amusement, caring.",
         "timestamp": "2025-05-19T01:10:10.207947",
         "source_phase": 1
+      },
+      {
+        "text": "System restored (💾↩️) from backup (💾⏮️) after ransomware attack (💀⚡).",
+        "timestamp": "2025-05-24T16:38:44.604139",
+        "source_phase": 1
+      },
+      {
+        "text": "Compression algorithm (🧮) cut storage use (💾↓) by 40% (🔢).",
+        "timestamp": "2025-05-24T16:38:56.937555",
+        "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.408836",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.945689",
+        "source_phase": 1
+      },
+      {
+        "text": "After crash (💻⚡), system rebooted (💻⟳) successfully (♦✓).",
+        "timestamp": "2025-05-24T22:07:21.300933",
+        "source_phase": 1
+      },
+      {
+        "text": "In the nervous system, a synapse[1] is a structure that allows a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or a target effector cell. Synapses can be classified as either chemical or electrical, depending on the mechanism of signal transmission between neurons...",
+        "timestamp": "2025-05-25T21:01:42.411774",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.762028",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.892578",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 9,
+    "golden_memory": {
+      "peak_weight": 0.9761,
+      "context": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These include but are not limited to[clarification needed] axo-axonic, dendro-dendritic, axo-secretory, axo-ciliary,[28] somato-dendritic, dendro-somatic, and somato-somatic synapses.[citation needed]",
+      "peak_emotions": {
+        "neutral": 0.9761
+      },
+      "timestamp": "2025-05-25T21:24:32.892578"
+    }
   },
   "🔥⟳": {
     "name": "Fire Cycle",
     "based_on": "🔥",
     "summary": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
     "keywords": [
+      "complex emotion",
+      "computation",
+      "cycle",
       "fire",
       "flame",
-      "computation",
       "logic",
-      "cycle",
-      "recursion",
-      "complex emotion"
+      "recursion"
     ],
     "core_meanings": [
       "recurring Fire",
@@ -64,7 +112,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:10:10.216947",
-    "updated_at": "2025-05-19T01:10:10.216947",
+    "updated_at": "2025-05-24T16:46:44.950613",
     "origin": "meta_analysis",
     "learning_phase": 1,
     "resonance_weight": 0.84,
@@ -73,18 +121,28 @@
         "text": "Recurring pattern or complex emotional field for 'Fire'. Often involves: approval, amusement, confusion.",
         "timestamp": "2025-05-19T01:10:10.217450",
         "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.413349",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.950613",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 3
   },
   "⚙": {
     "name": "Example Fear",
     "keywords": [
+      "example",
       "fear",
       "help",
-      "example",
-      "react",
-      "individual"
+      "individual",
+      "react"
     ],
     "core_meanings": [],
     "emotions": [],
@@ -94,14 +152,27 @@
         "text": "For example, fear helps individuals react quickly to potential dangers, anger can motivate self-defense or assertiveness, and disgust can protect against harmful substances. In addition, happiness might reinforce behaviors that lead to positive outcomes. For example, the anticipation of the reward a...",
         "timestamp": "2025-05-19T01:10:34.305343",
         "source_phase": 2
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.696081",
+        "source_phase": 1
       }
     ],
     "origin": "emergent",
     "learning_phase": 2,
     "resonance_weight": 0.5,
     "created_at": "2025-05-19T01:10:34.305343",
-    "updated_at": "2025-05-19T01:10:34.305343",
-    "usage_count": 1
+    "updated_at": "2025-05-25T21:24:22.696081",
+    "usage_count": 2,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.696081"
+    }
   },
   "♑": {
     "name": "God Create",
@@ -132,11 +203,11 @@
   "♦": {
     "name": "Contrast Situationist",
     "keywords": [
-      "perspective",
       "contrast",
+      "emotion",
+      "perspective",
       "situationist",
-      "view",
-      "emotion"
+      "view"
     ],
     "core_meanings": [],
     "emotions": [],
@@ -146,27 +217,40 @@
         "text": "In contrast, a situationist perspective on emotion views emotion as the product of an organism investigating its environment, and observing the responses of other organisms. Emotion stimulates the evolution of social relationships, acting as a signal to mediate the behavior of other organisms. In so...",
         "timestamp": "2025-05-19T01:11:36.183876",
         "source_phase": 2
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.689694",
+        "source_phase": 1
       }
     ],
     "origin": "emergent",
     "learning_phase": 2,
     "resonance_weight": 0.5,
     "created_at": "2025-05-19T01:11:36.183876",
-    "updated_at": "2025-05-19T01:11:36.183876",
-    "usage_count": 1
+    "updated_at": "2025-05-25T21:24:22.689694",
+    "usage_count": 2,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.689694"
+    }
   },
   "💧⟳": {
     "name": "Water Cycle",
     "based_on": "💧",
     "summary": "Recurring pattern or complex emotional field for 'Water'. Often involves: approval, amusement.",
     "keywords": [
-      "water",
-      "liquid",
+      "complex emotion",
+      "cycle",
       "data",
       "flow",
-      "cycle",
+      "liquid",
       "recursion",
-      "complex emotion"
+      "water"
     ],
     "core_meanings": [
       "recurring Water",
@@ -179,7 +263,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:14:28.549115",
-    "updated_at": "2025-05-19T01:14:28.549115",
+    "updated_at": "2025-05-25T22:27:48.119348",
     "origin": "meta_analysis",
     "learning_phase": 2,
     "resonance_weight": 0.84,
@@ -188,25 +272,70 @@
         "text": "Recurring pattern or complex emotional field for 'Water'. Often involves: approval, amusement.",
         "timestamp": "2025-05-19T01:14:28.550120",
         "source_phase": 2
+      },
+      {
+        "text": "Race condition (🏁⟳) caused data inconsistency (💾≠), forcing a rollback (↩️).",
+        "timestamp": "2025-05-24T16:38:22.806888",
+        "source_phase": 1
+      },
+      {
+        "text": "Power outage (⚡⟳) triggered graceful shutdown (💻⏹️), no data loss (💾✓).",
+        "timestamp": "2025-05-24T16:39:15.670272",
+        "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.435982",
+        "source_phase": 1
+      },
+      {
+        "text": "The memory controller (⚙⟳⟳) failed under load (💻⟳⟳⟳), corrupting data (♦).",
+        "timestamp": "2025-05-24T16:46:40.240874",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.972542",
+        "source_phase": 1
+      },
+      {
+        "text": "Corrupted data (♦⚡) was rolled back (↩️) from backup (💾⟳).",
+        "timestamp": "2025-05-24T22:07:11.010995",
+        "source_phase": 1
+      },
+      {
+        "text": "In an electrical synapse, the presynaptic and postsynaptic cell membranes are connected by special channels called gap junctions that are capable of passing an electric current, causing voltage changes in the presynaptic cell to induce voltage changes in the postsynaptic cell.[21][22] In fact, gap j...",
+        "timestamp": "2025-05-25T21:23:49.339083",
+        "source_phase": 1
+      },
+      {
+        "text": "In statistics, the mean squared error (MSE)[1] or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the true value. MSE is a ri...",
+        "timestamp": "2025-05-25T22:27:48.119348",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 9,
+    "golden_memory": {
+      "peak_weight": 0.9905,
+      "context": "In an electrical synapse, the presynaptic and postsynaptic cell membranes are connected by special channels called gap junctions that are capable of passing an electric current, causing voltage changes in the presynaptic cell to induce voltage changes in the postsynaptic cell.[21][22] In fact, gap junctions facilitate the direct flow of electrical current without the need for neurotransmitters, as well as small molecules like calcium.[23] Thus, the main advantage of an electrical synapse is the rapid transfer of signals from one cell to the next.[21]",
+      "peak_emotions": {
+        "amusement": 0.9905
+      },
+      "timestamp": "2025-05-25T21:23:49.339083"
+    }
   },
   "🔥⟳⟳": {
     "name": "Fire Cycle Cycle",
     "based_on": "🔥⟳",
     "summary": "Recurring pattern or complex emotional field for 'Fire Cycle'. Often involves: amusement, admiration, neutral.",
     "keywords": [
+      "complex emotion",
+      "computation",
+      "cycle",
       "fire",
       "flame",
-      "computation",
       "logic",
-      "cycle",
-      "recursion",
-      "complex emotion",
-      "cycle",
-      "recursion",
-      "complex emotion"
+      "recursion"
     ],
     "core_meanings": [
       "recurring Fire Cycle",
@@ -219,7 +348,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:14:28.559119",
-    "updated_at": "2025-05-19T01:14:28.559119",
+    "updated_at": "2025-05-24T16:46:44.967683",
     "origin": "meta_analysis",
     "learning_phase": 2,
     "resonance_weight": 1.01,
@@ -228,23 +357,33 @@
         "text": "Recurring pattern or complex emotional field for 'Fire Cycle'. Often involves: amusement, admiration, neutral.",
         "timestamp": "2025-05-19T01:14:28.560276",
         "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.425854",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.967683",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 3
   },
   "⚙⟳": {
     "name": "Example Fear Cycle",
     "based_on": "⚙",
     "summary": "Recurring pattern or complex emotional field for 'Example Fear'. Often involves: amusement, annoyance, fear.",
     "keywords": [
+      "complex emotion",
+      "cycle",
+      "example",
       "fear",
       "help",
-      "example",
-      "react",
       "individual",
-      "cycle",
-      "recursion",
-      "complex emotion"
+      "react",
+      "recursion"
     ],
     "core_meanings": [
       "recurring Example Fear",
@@ -257,7 +396,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:14:28.569279",
-    "updated_at": "2025-05-19T01:14:28.569279",
+    "updated_at": "2025-05-25T21:24:22.703073",
     "origin": "meta_analysis",
     "learning_phase": 2,
     "resonance_weight": 0.6,
@@ -266,23 +405,46 @@
         "text": "Recurring pattern or complex emotional field for 'Example Fear'. Often involves: amusement, annoyance, fear.",
         "timestamp": "2025-05-19T01:14:28.570311",
         "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.439982",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.978103",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.703073",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 4,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.703073"
+    }
   },
   "♦⟳": {
     "name": "Contrast Situationist Cycle",
     "based_on": "♦",
     "summary": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
     "keywords": [
-      "perspective",
+      "complex emotion",
       "contrast",
-      "situationist",
-      "view",
-      "emotion",
       "cycle",
+      "emotion",
+      "perspective",
       "recursion",
-      "complex emotion"
+      "situationist",
+      "view"
     ],
     "core_meanings": [
       "recurring Contrast Situationist",
@@ -295,7 +457,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:14:28.576311",
-    "updated_at": "2025-05-19T01:14:28.576311",
+    "updated_at": "2025-05-25T21:24:22.683694",
     "origin": "meta_analysis",
     "learning_phase": 2,
     "resonance_weight": 0.6,
@@ -304,29 +466,49 @@
         "text": "Recurring pattern or complex emotional field for 'Contrast Situationist'. Often involves: amusement, admiration, disgust.",
         "timestamp": "2025-05-19T01:14:28.576311",
         "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.430862",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.961122",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.683694",
+        "source_phase": 1
       }
     ],
-    "usage_count": 1
+    "usage_count": 4,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.683694"
+    }
   },
   "💻⟳⟳": {
     "name": "Computer Cycle Cycle",
     "based_on": "💻⟳",
     "summary": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
     "keywords": [
-      "computer",
-      "computation",
-      "cpu",
+      "algorithm",
+      "architecture",
       "binary",
       "code",
-      "algorithm",
-      "system",
-      "architecture",
-      "cycle",
-      "recursion",
       "complex emotion",
+      "computation",
+      "computer",
+      "cpu",
       "cycle",
       "recursion",
-      "complex emotion"
+      "system"
     ],
     "core_meanings": [
       "recurring Computer Cycle",
@@ -339,7 +521,7 @@
       "pattern"
     ],
     "created_at": "2025-05-19T01:28:00.560706",
-    "updated_at": "2025-05-19T01:28:00.560706",
+    "updated_at": "2025-05-25T21:24:32.886575",
     "origin": "meta_analysis",
     "learning_phase": 1,
     "resonance_weight": 1.15,
@@ -348,8 +530,740 @@
         "text": "Recurring pattern or complex emotional field for 'Computer Cycle'. Often involves: amusement, neutral.",
         "timestamp": "2025-05-19T01:28:00.561706",
         "source_phase": 1
+      },
+      {
+        "text": "System restored (💾↩️) from backup (💾⏮️) after ransomware attack (💀⚡).",
+        "timestamp": "2025-05-24T16:38:44.598130",
+        "source_phase": 1
+      },
+      {
+        "text": "Compression algorithm (🧮) cut storage use (💾↓) by 40% (🔢).",
+        "timestamp": "2025-05-24T16:38:56.931479",
+        "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.394320",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.932177",
+        "source_phase": 1
+      },
+      {
+        "text": "After crash (💻⚡), system rebooted (💻⟳) successfully (♦✓).",
+        "timestamp": "2025-05-24T22:07:21.294879",
+        "source_phase": 1
+      },
+      {
+        "text": "In the nervous system, a synapse[1] is a structure that allows a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or a target effector cell. Synapses can be classified as either chemical or electrical, depending on the mechanism of signal transmission between neurons...",
+        "timestamp": "2025-05-25T21:01:42.406755",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.756451",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.886575",
+        "source_phase": 1
       }
     ],
+    "usage_count": 9,
+    "golden_memory": {
+      "peak_weight": 0.9761,
+      "context": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These include but are not limited to[clarification needed] axo-axonic, dendro-dendritic, axo-secretory, axo-ciliary,[28] somato-dendritic, dendro-somatic, and somato-somatic synapses.[citation needed]",
+      "peak_emotions": {
+        "neutral": 0.9761
+      },
+      "timestamp": "2025-05-25T21:24:32.886575"
+    }
+  },
+  "💻⟳⟳⟳": {
+    "name": "Computer Cycle Cycle Cycle",
+    "based_on": "💻⟳⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle'. Often involves: amusement, neutral.",
+    "keywords": [
+      "algorithm",
+      "architecture",
+      "binary",
+      "code",
+      "complex emotion",
+      "computation",
+      "computer",
+      "cpu",
+      "cycle",
+      "recursion",
+      "system"
+    ],
+    "core_meanings": [
+      "recurring Computer Cycle Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:48:13.124641",
+    "updated_at": "2025-05-25T21:24:32.880563",
+    "origin": "meta_analysis",
+    "learning_phase": 1,
+    "resonance_weight": 1.38,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle'. Often involves: amusement, neutral.",
+        "timestamp": "2025-05-24T03:48:13.124641",
+        "source_phase": 1
+      },
+      {
+        "text": "System restored (💾↩️) from backup (💾⏮️) after ransomware attack (💀⚡).",
+        "timestamp": "2025-05-24T16:38:44.594038",
+        "source_phase": 1
+      },
+      {
+        "text": "Compression algorithm (🧮) cut storage use (💾↓) by 40% (🔢).",
+        "timestamp": "2025-05-24T16:38:56.924961",
+        "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.402836",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.939177",
+        "source_phase": 1
+      },
+      {
+        "text": "After crash (💻⚡), system rebooted (💻⟳) successfully (♦✓).",
+        "timestamp": "2025-05-24T22:07:21.287871",
+        "source_phase": 1
+      },
+      {
+        "text": "In the nervous system, a synapse[1] is a structure that allows a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or a target effector cell. Synapses can be classified as either chemical or electrical, depending on the mechanism of signal transmission between neurons...",
+        "timestamp": "2025-05-25T21:01:42.399296",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.750444",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.880563",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 9,
+    "golden_memory": {
+      "peak_weight": 0.9761,
+      "context": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These include but are not limited to[clarification needed] axo-axonic, dendro-dendritic, axo-secretory, axo-ciliary,[28] somato-dendritic, dendro-somatic, and somato-somatic synapses.[citation needed]",
+      "peak_emotions": {
+        "neutral": 0.9761
+      },
+      "timestamp": "2025-05-25T21:24:32.880563"
+    }
+  },
+  "♑⟳": {
+    "name": "God Create Cycle",
+    "based_on": "♑",
+    "summary": "Recurring pattern or complex emotional field for 'God Create'. Often involves: amusement, fear, admiration.",
+    "keywords": [
+      "ability",
+      "complex emotion",
+      "create",
+      "cycle",
+      "give",
+      "god",
+      "human",
+      "recursion"
+    ],
+    "core_meanings": [
+      "recurring God Create",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:50:13.567271",
+    "updated_at": "2025-05-24T16:46:44.995369",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.6,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'God Create'. Often involves: amusement, fear, admiration.",
+        "timestamp": "2025-05-24T03:50:13.568361",
+        "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.456216",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.995369",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 3
+  },
+  "💻⟳⟳⟳⟳": {
+    "name": "Computer Cycle Cycle Cycle Cycle",
+    "based_on": "💻⟳⟳⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle Cycle'. Often involves: amusement, admiration, neutral.",
+    "keywords": [
+      "algorithm",
+      "architecture",
+      "binary",
+      "code",
+      "complex emotion",
+      "computation",
+      "computer",
+      "cpu",
+      "cycle",
+      "recursion",
+      "system"
+    ],
+    "core_meanings": [
+      "recurring Computer Cycle Cycle Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:50:13.576775",
+    "updated_at": "2025-05-25T21:24:32.904106",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 1.66,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Computer Cycle Cycle Cycle'. Often involves: amusement, admiration, neutral.",
+        "timestamp": "2025-05-24T03:50:13.577782",
+        "source_phase": 2
+      },
+      {
+        "text": "System restored (💾↩️) from backup (💾⏮️) after ransomware attack (💀⚡).",
+        "timestamp": "2025-05-24T16:38:44.608657",
+        "source_phase": 1
+      },
+      {
+        "text": "Compression algorithm (🧮) cut storage use (💾↓) by 40% (🔢).",
+        "timestamp": "2025-05-24T16:38:56.942066",
+        "source_phase": 1
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.419349",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.955129",
+        "source_phase": 1
+      },
+      {
+        "text": "After crash (💻⚡), system rebooted (💻⟳) successfully (♦✓).",
+        "timestamp": "2025-05-24T22:07:21.312450",
+        "source_phase": 1
+      },
+      {
+        "text": "In the nervous system, a synapse[1] is a structure that allows a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or a target effector cell. Synapses can be classified as either chemical or electrical, depending on the mechanism of signal transmission between neurons...",
+        "timestamp": "2025-05-25T21:01:42.422767",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.773040",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.904106",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 9,
+    "golden_memory": {
+      "peak_weight": 0.9761,
+      "context": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These include but are not limited to[clarification needed] axo-axonic, dendro-dendritic, axo-secretory, axo-ciliary,[28] somato-dendritic, dendro-somatic, and somato-somatic synapses.[citation needed]",
+      "peak_emotions": {
+        "neutral": 0.9761
+      },
+      "timestamp": "2025-05-25T21:24:32.904106"
+    }
+  },
+  "⚙⟳⟳": {
+    "name": "Example Fear Cycle Cycle",
+    "based_on": "⚙⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Example Fear Cycle'. Often involves: amusement, admiration, annoyance.",
+    "keywords": [
+      "complex emotion",
+      "cycle",
+      "example",
+      "fear",
+      "help",
+      "individual",
+      "react",
+      "recursion"
+    ],
+    "core_meanings": [
+      "recurring Example Fear Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:50:13.584303",
+    "updated_at": "2025-05-25T21:24:22.708595",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.72,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Example Fear Cycle'. Often involves: amusement, admiration, annoyance.",
+        "timestamp": "2025-05-24T03:50:13.585313",
+        "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.451207",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.983951",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.708595",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 4,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.708595"
+    }
+  },
+  "♦⟳⟳": {
+    "name": "Contrast Situationist Cycle Cycle",
+    "based_on": "♦⟳",
+    "summary": "Recurring pattern or complex emotional field for 'Contrast Situationist Cycle'. Often involves: amusement, admiration, neutral.",
+    "keywords": [
+      "complex emotion",
+      "contrast",
+      "cycle",
+      "emotion",
+      "perspective",
+      "recursion",
+      "situationist",
+      "view"
+    ],
+    "core_meanings": [
+      "recurring Contrast Situationist Cycle",
+      "emotional complexity"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "archetypes": [
+      "transformation",
+      "pattern"
+    ],
+    "created_at": "2025-05-24T03:50:13.592549",
+    "updated_at": "2025-05-25T21:24:22.714885",
+    "origin": "meta_analysis",
+    "learning_phase": 2,
+    "resonance_weight": 0.72,
+    "vector_examples": [
+      {
+        "text": "Recurring pattern or complex emotional field for 'Contrast Situationist Cycle'. Often involves: amusement, admiration, neutral.",
+        "timestamp": "2025-05-24T03:50:13.593548",
+        "source_phase": 2
+      },
+      {
+        "text": "CPU cycles (💻⟳⟳) spiked, overheating the core (🔥⟳), triggering throttling (⚙⟳).",
+        "timestamp": "2025-05-24T16:46:35.445066",
+        "source_phase": 1
+      },
+      {
+        "text": "Deep recursion (💻⟳⟳⟳) hit a stack overflow (💥), crashing the thread (💻⚡).",
+        "timestamp": "2025-05-24T16:46:44.989851",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.714885",
+        "source_phase": 1
+      }
+    ],
+    "usage_count": 4,
+    "golden_memory": {
+      "peak_weight": 0.9467,
+      "context": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, reducing firing. Depending on their release location, the receptors they bind to, and the ionic circumstances they encounter, various transmitters can be either excitatory or inhibitory. For instance, acetylcholine can either excite or inhibit depending on the type of receptors it binds to.[26] For example, glutamate serves as an excitatory neurotransmitter, in contrast to GABA, which acts as an inhibitory neurotransmitter. Additionally, dopamine is a neurotransmitter that exerts dual effects, displaying both excitatory and inhibitory impacts through binding to distinct receptors.[27]",
+      "peak_emotions": {
+        "neutral": 0.9467
+      },
+      "timestamp": "2025-05-25T21:24:22.714885"
+    }
+  },
+  "♉": {
+    "name": "Statement Know",
+    "keywords": [
+      "accuracy",
+      "know",
+      "principle",
+      "statement",
+      "uncertainty"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "This statement is known as the uncertainty principle . The uncertainty principle is not only a statement about the accuracy of our measuring equipment but, more deeply, is about the conceptual nature of the measured quantities—the assumption that the car had simultaneously defined position and speed...",
+        "timestamp": "2025-05-24T03:56:57.983739",
+        "source_phase": 4
+      },
+      {
+        "text": "Santiago Ramón y Cajal proposed that neurons are not continuous throughout the body, yet still communicate with each other, an idea known as the neuron doctrine.[14] The word \"synapse\" was introduced in 1897 by the English neurophysiologist Charles Sherrington in Michael Foster's Textbook of Physiol...",
+        "timestamp": "2025-05-25T21:23:33.145087",
+        "source_phase": 1
+      },
+      {
+        "text": "However, while the synaptic gap remained a theoretical construct, and was sometimes reported as a discontinuity between contiguous axonal terminations and dendrites or cell bodies, histological methods using the best light microscopes of the day could not visually resolve their separation which is n...",
+        "timestamp": "2025-05-25T21:23:38.353295",
+        "source_phase": 1
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 4,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:56:57.983739",
+    "updated_at": "2025-05-25T21:23:38.353295",
+    "usage_count": 3,
+    "golden_memory": {
+      "peak_weight": 0.9605,
+      "context": "However, while the synaptic gap remained a theoretical construct, and was sometimes reported as a discontinuity between contiguous axonal terminations and dendrites or cell bodies, histological methods using the best light microscopes of the day could not visually resolve their separation which is now known to be about 20 nm. It needed the electron microscope in the 1950s to show the finer structure of the synapse with its separate, parallel pre- and postsynaptic membranes and processes, and the cleft between the two.[18][19][20]",
+      "peak_emotions": {
+        "amusement": 0.9605
+      },
+      "timestamp": "2025-05-25T21:23:38.353295"
+    }
+  },
+  "💧": {
+    "name": "Water",
+    "keywords": [
+      "data"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "Race condition (🏁⟳) caused data inconsistency (💾≠), forcing a rollback (↩️).",
+        "timestamp": "2025-05-24T16:38:22.799386",
+        "source_phase": 1
+      },
+      {
+        "text": "Power outage (⚡⟳) triggered graceful shutdown (💻⏹️), no data loss (💾✓).",
+        "timestamp": "2025-05-24T16:39:15.663756",
+        "source_phase": 1
+      },
+      {
+        "text": "The memory controller (⚙⟳⟳) failed under load (💻⟳⟳⟳), corrupting data (♦).",
+        "timestamp": "2025-05-24T16:46:40.246881",
+        "source_phase": 1
+      },
+      {
+        "text": "Corrupted data (♦⚡) was rolled back (↩️) from backup (💾⟳).",
+        "timestamp": "2025-05-24T22:07:11.005463",
+        "source_phase": 1
+      },
+      {
+        "text": "In statistics, the mean squared error (MSE)[1] or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the true value. MSE is a ri...",
+        "timestamp": "2025-05-25T22:27:48.110839",
+        "source_phase": 1
+      }
+    ],
+    "origin": "user_interaction_match",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T16:38:22.799386",
+    "updated_at": "2025-05-25T22:27:48.110839",
+    "usage_count": 5,
+    "golden_memory": {
+      "peak_weight": 0.9775,
+      "context": "In statistics, the mean squared error (MSE)[1] or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the true value. MSE is a risk function, corresponding to the expected value of the squared error loss.[2] The fact that MSE is almost always strictly positive (and not zero) is because of randomness or because the estimator does not account for information that could produce a more accurate estimate.[3] In machine learning, specifically empirical risk minimization, MSE may refer to the empirical risk (the average loss on an observed data set), as an estimate of the true MSE (the true risk: the average loss on the actual population distribution).",
+      "peak_emotions": {
+        "amusement": 0.9775
+      },
+      "timestamp": "2025-05-25T22:27:48.110839"
+    }
+  },
+  "💻": {
+    "name": "Computer",
+    "keywords": [
+      "algorithm",
+      "system"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "System restored (💾↩️) from backup (💾⏮️) after ransomware attack (💀⚡).",
+        "timestamp": "2025-05-24T16:38:44.588038",
+        "source_phase": 1
+      },
+      {
+        "text": "Compression algorithm (🧮) cut storage use (💾↓) by 40% (🔢).",
+        "timestamp": "2025-05-24T16:38:56.919961",
+        "source_phase": 1
+      },
+      {
+        "text": "After crash (💻⚡), system rebooted (💻⟳) successfully (♦✓).",
+        "timestamp": "2025-05-24T22:07:21.307450",
+        "source_phase": 1
+      },
+      {
+        "text": "In the nervous system, a synapse[1] is a structure that allows a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or a target effector cell. Synapses can be classified as either chemical or electrical, depending on the mechanism of signal transmission between neurons...",
+        "timestamp": "2025-05-25T21:01:42.417766",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.767047",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.898579",
+        "source_phase": 1
+      }
+    ],
+    "origin": "user_interaction_match",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T16:38:44.588038",
+    "updated_at": "2025-05-25T21:24:32.898579",
+    "usage_count": 6,
+    "golden_memory": {
+      "peak_weight": 0.9761,
+      "context": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These include but are not limited to[clarification needed] axo-axonic, dendro-dendritic, axo-secretory, axo-ciliary,[28] somato-dendritic, dendro-somatic, and somato-somatic synapses.[citation needed]",
+      "peak_emotions": {
+        "neutral": 0.9761
+      },
+      "timestamp": "2025-05-25T21:24:32.898579"
+    }
+  },
+  "💾": {
+    "name": "FLOPPY DISK",
+    "keywords": [
+      "floppy disk"
+    ],
+    "core_meanings": [],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "Corrupted data (♦⚡) was rolled back (↩️) from backup (💾⟳).",
+        "timestamp": "2025-05-24T22:07:10.994958",
+        "source_phase": 1
+      }
+    ],
+    "origin": "auto_emoji_capture",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T22:07:10.994958",
+    "updated_at": "2025-05-24T22:07:10.994958",
+    "usage_count": 1
+  },
+  "💨": {
+    "name": "Chemical Synapsis",
+    "keywords": [
+      "chemical",
+      "communicate",
+      "hand",
+      "neurotransmitter",
+      "synapsis"
+    ],
+    "core_meanings": [],
+    "emotions": {
+      "amusement": 0.9777,
+      "neutral": 0.9613,
+      "joy": 0.723
+    },
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "Chemical synapses, on the other hand, communicate through neurotransmitters released from the presynaptic neuron into the synaptic cleft. Upon release, these neurotransmitters bind to specific receptors on the postsynaptic membrane, inducing an electrical or chemical response in the target neuron. T...",
+        "timestamp": "2025-05-25T21:01:48.385655",
+        "source_phase": 1
+      },
+      {
+        "text": "At the synapse, the plasma membrane of the signal-passing neuron (the presynaptic neuron) comes into close apposition with the membrane of the target (postsynaptic) cell. Both the presynaptic and postsynaptic sites contain extensive arrays of molecular machinery that link the two membranes together ...",
+        "timestamp": "2025-05-25T21:23:24.117997",
+        "source_phase": 1
+      },
+      {
+        "text": "Santiago Ramón y Cajal proposed that neurons are not continuous throughout the body, yet still communicate with each other, an idea known as the neuron doctrine.[14] The word \"synapse\" was introduced in 1897 by the English neurophysiologist Charles Sherrington in Michael Foster's Textbook of Physiol...",
+        "timestamp": "2025-05-25T21:23:33.138095",
+        "source_phase": 1
+      },
+      {
+        "text": "In a chemical synapse, electrical activity in the presynaptic neuron is converted (via the activation of voltage-gated calcium channels) into the release of a chemical called a neurotransmitter that binds to receptors located in the plasma membrane of the postsynaptic cell. The neurotransmitter may ...",
+        "timestamp": "2025-05-25T21:23:44.603894",
+        "source_phase": 1
+      },
+      {
+        "text": "Mixed chemical electrical synapses are synaptic sites that feature both a gap junction and neurotransmitter release.[24][25] This combination allows a signal to have both a fast component (electrical) and a slow component (chemical).",
+        "timestamp": "2025-05-25T21:23:55.855398",
+        "source_phase": 1
+      },
+      {
+        "text": "The formation of neural circuits in nervous systems appears to heavily depend on the crucial interactions between chemical and electrical synapses. Thus these interactions govern the generation of synaptic transmission.[22] Synaptic communication is distinct from an ephaptic coupling, in which commu...",
+        "timestamp": "2025-05-25T21:24:00.744431",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.671691",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.866494",
+        "source_phase": 1
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "golden_memory": {
+      "peak_weight": 0.9923,
+      "context": "At the synapse, the plasma membrane of the signal-passing neuron (the presynaptic neuron) comes into close apposition with the membrane of the target (postsynaptic) cell. Both the presynaptic and postsynaptic sites contain extensive arrays of molecular machinery that link the two membranes together and carry out the signaling process. In many synapses, the presynaptic part is located on the terminals of axons and the postsynaptic part is located on a dendrite or soma. Astrocytes also exchange information with the synaptic neurons, responding to synaptic activity and, in turn, regulating neurotransmission.[10] Synapses (at least chemical synapses) are stabilized in position by synaptic adhesion molecules (SAMs)[1] projecting from both the pre- and post-synaptic neuron and sticking together where they overlap; SAMs may also assist in the generation and functioning of synapses.[12] Moreover, SAMs coordinate the formation of synapses, with various types working together to achieve the remarkable specificity of synapses.[11][13] In essence, SAMs function in both excitatory and inhibitory synapses, likely serving as the mediator for signal transmission.[11]Many mental illnesses are thought to be caused by synaptopathy.",
+      "peak_emotions": {
+        "amusement": 0.9923
+      },
+      "timestamp": "2025-05-25T21:23:24.117997"
+    },
+    "created_at": "2025-05-25T21:01:48.385655",
+    "updated_at": "2025-05-25T21:24:32.866494",
+    "usage_count": 8
+  },
+  "≡": {
+    "name": "Excitatory Synapse",
+    "keywords": [
+      "depolarization",
+      "enhance",
+      "excitatory",
+      "probability",
+      "synapse"
+    ],
+    "core_meanings": [],
+    "emotions": {
+      "amusement": 0.9821,
+      "neutral": 0.944,
+      "surprise": 0.6307
+    },
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "Excitatory synapse: Enhances the probability of depolarization in postsynaptic neurons and the initiation of an action potential.",
+        "timestamp": "2025-05-25T21:24:06.232251",
+        "source_phase": 1
+      },
+      {
+        "text": "Inhibitory synapse: Diminishes the probability of depolarization in postsynaptic neurons and the initiation of an action potential.",
+        "timestamp": "2025-05-25T21:24:14.195511",
+        "source_phase": 1
+      },
+      {
+        "text": "An influx of Na+ driven by excitatory neurotransmitters opens cation channels, depolarizing the postsynaptic membrane toward the action potential threshold. In contrast, inhibitory neurotransmitters cause the postsynaptic membrane to become less depolarized by opening either Cl- or K+ channels, redu...",
+        "timestamp": "2025-05-25T21:24:22.677694",
+        "source_phase": 1
+      },
+      {
+        "text": "Synapses can be classified by the type of cellular structures serving as the pre- and post-synaptic components. The vast majority of synapses in the mammalian nervous system are classical axo-dendritic synapses (axon synapsing upon a dendrite), however, a variety of other arrangements exist. These i...",
+        "timestamp": "2025-05-25T21:24:32.874488",
+        "source_phase": 1
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "golden_memory": {
+      "peak_weight": 0.9821,
+      "context": "Excitatory synapse: Enhances the probability of depolarization in postsynaptic neurons and the initiation of an action potential.",
+      "peak_emotions": {
+        "amusement": 0.9821
+      },
+      "timestamp": "2025-05-25T21:24:06.232251"
+    },
+    "created_at": "2025-05-25T21:24:06.232251",
+    "updated_at": "2025-05-25T21:24:32.874488",
+    "usage_count": 4
+  },
+  "⚓": {
+    "name": "Membrane Potential",
+    "keywords": [
+      "potential",
+      "membrane",
+      "enter",
+      "prevent",
+      "cell"
+    ],
+    "core_meanings": [],
+    "emotions": {
+      "neutral": 0.8882,
+      "amusement": 0.8599,
+      "disgust": 0.8401
+    },
+    "emotion_profile": {},
+    "vector_examples": [
+      {
+        "text": "The membrane potential prevents Cl- from entering the cell, even when its concentration is much higher outside than inside. The reversal potential for Cl- in many neurons is quite negative, nearly equal to the resting potential. Opening Cl- channels tends to buffer the membrane potential, but this e...",
+        "timestamp": "2025-05-25T21:24:27.166764",
+        "source_phase": 1
+      }
+    ],
+    "origin": "emergent",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "golden_memory": {
+      "peak_weight": 0.8882,
+      "context": "The membrane potential prevents Cl- from entering the cell, even when its concentration is much higher outside than inside. The reversal potential for Cl- in many neurons is quite negative, nearly equal to the resting potential. Opening Cl- channels tends to buffer the membrane potential, but this effect is countered when the membrane starts to depolarize, allowing more negatively charged Cl- ions to enter the cell. Consequently, it becomes more difficult to depolarize the membrane and excite the cell when Cl- channels are open. Similar effects result from the opening of K+ channels. The significance of inhibitory neurotransmitters is evident from the effects of toxins that impede their activity. For instance, strychnine binds to glycine receptors, blocking the action of glycine and leading to muscle spasms, convulsions, and death.[26]",
+      "peak_emotions": {
+        "neutral": 0.8882
+      },
+      "timestamp": "2025-05-25T21:24:27.166764"
+    },
+    "created_at": "2025-05-25T21:24:27.166764",
+    "updated_at": "2025-05-25T21:24:27.166764",
     "usage_count": 1
   }
 }

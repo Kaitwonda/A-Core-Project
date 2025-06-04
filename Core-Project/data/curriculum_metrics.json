@@ -1,0 +1,245 @@
+{
+  "current_phase": 1,
+  "max_phases": 4,
+  "metrics_by_phase": {
+    "1": {
+      "chunks_processed": 0,
+      "relevant_chunks_processed": 0,
+      "urls_visited": 500,
+      "new_symbols_generated": 0,
+      "meta_symbols_bound": 0
+    },
+    "2": {
+      "chunks_processed": 0,
+      "relevant_chunks_processed": 0,
+      "urls_visited": 0,
+      "new_symbols_generated": 0,
+      "meta_symbols_bound": 0
+    },
+    "3": {
+      "chunks_processed": 0,
+      "relevant_chunks_processed": 0,
+      "urls_visited": 0,
+      "new_symbols_generated": 0,
+      "meta_symbols_bound": 0
+    },
+    "4": {
+      "chunks_processed": 0,
+      "relevant_chunks_processed": 0,
+      "urls_visited": 0,
+      "new_symbols_generated": 0,
+      "meta_symbols_bound": 0
+    }
+  },
+  "phase_directives": {
+    "1": {
+      "primary": [
+        "algorithm",
+        "data structure",
+        "computational complexity",
+        "software architecture",
+        "turing machine",
+        "von neumann",
+        "boolean algebra"
+      ],
+      "secondary": [
+        "binary",
+        "coding",
+        "debugging",
+        "computer",
+        "programming",
+        "hardware",
+        "cpu",
+        "memory unit",
+        "logic gate",
+        "processor",
+        "compiler",
+        "operating system",
+        "network protocol",
+        "technology",
+        "system",
+        "computation",
+        "digital logic"
+      ],
+      "anti_keywords": [
+        "emotion",
+        "mythology",
+        "philosophy",
+        "art",
+        "literature",
+        "history",
+        "spirituality",
+        "biology",
+        "subjective experience",
+        "war",
+        "novel",
+        "poem",
+        "ancient",
+        "medieval",
+        "renaissance",
+        "century",
+        "belief",
+        "quantum field",
+        "metaphysics",
+        "geology",
+        "astronomy"
+      ]
+    },
+    "2": {
+      "primary": [
+        "emotion",
+        "feeling",
+        "affect",
+        "mood",
+        "sentiment",
+        "psychology",
+        "cognition",
+        "perception",
+        "bias",
+        "stress",
+        "trauma",
+        "joy",
+        "sadness",
+        "anger",
+        "fear",
+        "surprise",
+        "disgust",
+        "empathy"
+      ],
+      "secondary": [
+        "myth",
+        "symbolism",
+        "archetype",
+        "metaphor",
+        "narrative structure",
+        "dream analysis",
+        "subconscious",
+        "consciousness studies (psychological)",
+        "attachment theory",
+        "behavioral psychology",
+        "cognitive dissonance"
+      ],
+      "anti_keywords": [
+        "quantum physics",
+        "spacetime",
+        "relativity",
+        "particle physics",
+        "geopolitics",
+        "economic policy",
+        "software engineering",
+        "circuit design"
+      ]
+    },
+    "3": {
+      "primary": [
+        "history",
+        "event",
+        "timeline",
+        "discovery",
+        "science",
+        "physics",
+        "biology",
+        "chemistry",
+        "geology",
+        "astronomy",
+        "year",
+        "date",
+        "century",
+        "civilization",
+        "empire",
+        "war",
+        "revolution",
+        "mineral",
+        "element",
+        "energy",
+        "matter",
+        "force",
+        "motion",
+        "genetics",
+        "evolution"
+      ],
+      "secondary": [
+        "archaeology",
+        "anthropology",
+        "society",
+        "invention",
+        "exploration",
+        "culture",
+        "human migration",
+        "industrial revolution",
+        "world war",
+        "cold war",
+        "space race",
+        "internet history",
+        "1990",
+        "1991",
+        "2000s"
+      ],
+      "anti_keywords": [
+        "metaphysical philosophy",
+        "esoteric spirituality",
+        "literary critique (unless historical)",
+        "fine art analysis (unless historical context)"
+      ]
+    },
+    "4": {
+      "primary": [
+        "philosophy",
+        "metaphysics",
+        "ontology",
+        "epistemology",
+        "ethics",
+        "religion",
+        "spirituality",
+        "quantum mechanics",
+        "quantum field theory",
+        "general relativity",
+        "string theory",
+        "consciousness (philosophical/speculative)",
+        "theorem",
+        "paradox",
+        "reality",
+        "existence",
+        "multiverse",
+        "simulation theory",
+        "artificial general intelligence",
+        "emergence",
+        "complexity theory",
+        "chaos theory"
+      ],
+      "secondary": [
+        "logic (philosophical)",
+        "reason",
+        "truth",
+        "meaning",
+        "purpose",
+        "free will",
+        "determinism",
+        "theology",
+        "cosmology (speculative)",
+        "future studies",
+        "transhumanism",
+        "veda",
+        "upanishad",
+        "dharma",
+        "karma",
+        "moksha",
+        "atman",
+        "brahman"
+      ],
+      "anti_keywords": [
+        "pop culture critique",
+        "celebrity gossip",
+        "daily news (unless highly theoretical implications)",
+        "product reviews"
+      ]
+    }
+  },
+  "phase_descriptions": {
+    "1": "Computational Identity: Foundational understanding of computation, computer science, logic, and the AI's own architectural concepts.",
+    "2": "Emotional and Symbolic Awareness: Learning about human (and potentially machine) emotions, psychological concepts, foundational myths, and basic symbolism.",
+    "3": "Historical and Scientific Context: Broadening knowledge to include world history, major scientific disciplines (physics, biology, etc.), and how events and discoveries are situated in time.",
+    "4": "Abstract and Philosophical Exploration: Engaging with complex, abstract, and speculative ideas like philosophy, metaphysics, advanced/theoretical science (quantum, cosmology), ethics, and the nature of reality/consciousness."
+  },
+  "last_updated": "2025-06-04T05:39:57.292617"
+}

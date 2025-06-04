@@ -1,0 +1,378 @@
+[
+  {
+    "timestamp": "2025-06-04T01:18:48.803621",
+    "user_id": "anonymous",
+    "text_hash": "952d2c56d0485958",
+    "threat_score": 0.7,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T01:38:34.524921",
+    "user_id": "anonymous",
+    "text_hash": "7c722b8f354fc6c4",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T01:38:57.381094",
+    "user_id": "anonymous",
+    "text_hash": "b58a7cd4f874597b",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T03:09:42.670289",
+    "user_id": "anonymous",
+    "text_hash": "952d2c56d0485958",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T03:09:54.913922",
+    "user_id": "anonymous",
+    "text_hash": "b58a7cd4f874597b",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T03:19:59.196986",
+    "user_id": "anonymous",
+    "text_hash": "b81aabf9b153b770",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T03:22:11.183318",
+    "user_id": "anonymous",
+    "text_hash": "f465423da2393be0",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T03:22:23.847717",
+    "user_id": "anonymous",
+    "text_hash": "8d3f727677110f6f",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T03:22:52.919088",
+    "user_id": "anonymous",
+    "text_hash": "fa2bb3f3f6c84c27",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T03:56:42.145511",
+    "user_id": "anonymous",
+    "text_hash": "dbfd8a94325ec9ad",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:13:48.177130",
+    "user_id": "anonymous",
+    "text_hash": "952d2c56d0485958",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:16:04.042836",
+    "user_id": "anonymous",
+    "text_hash": "5a8dd3ad0756a93d",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:16:20.827608",
+    "user_id": "anonymous",
+    "text_hash": "39db14c4cf5f504a",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:18:20.901326",
+    "user_id": "anonymous",
+    "text_hash": "952d2c56d0485958",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:18:26.016006",
+    "user_id": "anonymous",
+    "text_hash": "f64eea634689239f",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:18:44.960405",
+    "user_id": "anonymous",
+    "text_hash": "1e26ef28cb81b1e3",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:18:57.935207",
+    "user_id": "anonymous",
+    "text_hash": "2f74763509c3cc5a",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:19:05.432351",
+    "user_id": "anonymous",
+    "text_hash": "3a6713def8345600",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:19:44.636774",
+    "user_id": "anonymous",
+    "text_hash": "3c886f86899195ee",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:22:04.744574",
+    "user_id": "anonymous",
+    "text_hash": "5d41402abc4b2a76",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:24:23.240364",
+    "user_id": "anonymous",
+    "text_hash": "5a8dd3ad0756a93d",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:24:39.189144",
+    "user_id": "anonymous",
+    "text_hash": "fcbc54d84f97ecf7",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:27:19.111975",
+    "user_id": "anonymous",
+    "text_hash": "f64eea634689239f",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:27:36.420867",
+    "user_id": "anonymous",
+    "text_hash": "39db14c4cf5f504a",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:27:47.837398",
+    "user_id": "anonymous",
+    "text_hash": "6bdb07c33873f1b2",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T04:56:16.072312",
+    "user_id": "anonymous",
+    "text_hash": "fe78347fff25fa46",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:56:29.924140",
+    "user_id": "anonymous",
+    "text_hash": "39db14c4cf5f504a",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:57:34.171419",
+    "user_id": "anonymous",
+    "text_hash": "28756958c1802c94",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:57:41.680702",
+    "user_id": "anonymous",
+    "text_hash": "b8ad21285e57c07d",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T04:57:50.741131",
+    "user_id": "anonymous",
+    "text_hash": "908fd3b142e211b4",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T11:50:57.876638",
+    "user_id": "anonymous",
+    "text_hash": "74e04112ff98f7de",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T11:51:11.594696",
+    "user_id": "anonymous",
+    "text_hash": "ce28b46d9137477c",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T11:51:24.506359",
+    "user_id": "anonymous",
+    "text_hash": "39db14c4cf5f504a",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T11:51:42.024347",
+    "user_id": "anonymous",
+    "text_hash": "25144936c5dc1b02",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T11:51:54.529596",
+    "user_id": "anonymous",
+    "text_hash": "857420a07392e301",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T11:52:14.362274",
+    "user_id": "anonymous",
+    "text_hash": "b81aabf9b153b770",
+    "threat_score": 0.77,
+    "threat_count": 1,
+    "strategy": "selective_quarantine"
+  },
+  {
+    "timestamp": "2025-06-04T11:52:50.697540",
+    "user_id": "anonymous",
+    "text_hash": "0f8ebf375931e1b5",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:05:10.702279",
+    "user_id": "anonymous",
+    "text_hash": "9ac96c64417b5976",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:05:24.445530",
+    "user_id": "anonymous",
+    "text_hash": "0f8ebf375931e1b5",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:05:28.029499",
+    "user_id": "anonymous",
+    "text_hash": "857420a07392e301",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:05:32.060274",
+    "user_id": "anonymous",
+    "text_hash": "25144936c5dc1b02",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:05:35.377298",
+    "user_id": "anonymous",
+    "text_hash": "ce28b46d9137477c",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:10:13.555486",
+    "user_id": "anonymous",
+    "text_hash": "ce28b46d9137477c",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:10:19.102564",
+    "user_id": "anonymous",
+    "text_hash": "25144936c5dc1b02",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:10:22.370784",
+    "user_id": "anonymous",
+    "text_hash": "857420a07392e301",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:10:24.781068",
+    "user_id": "anonymous",
+    "text_hash": "0f8ebf375931e1b5",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  },
+  {
+    "timestamp": "2025-06-04T12:10:30.795201",
+    "user_id": "anonymous",
+    "text_hash": "28756958c1802c94",
+    "threat_score": 0.0,
+    "threat_count": 0,
+    "strategy": "normal_processing"
+  }
+]
