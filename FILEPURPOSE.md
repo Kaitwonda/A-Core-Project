@@ -1,616 +1,685 @@
-Comprehensive Documentation of the Tripartite AI Memory System
-Overview
-This is a sophisticated AI memory and learning system that implements a tripartite (three-part) memory architecture with Logic, Symbolic, and Bridge components. The system includes advanced security features, visualization capabilities, and autonomous learning functionality.
-Core Memory Architecture
-1. memory_architecture.py - Tripartite Memory Foundation
+1. adaptive_alphawall.py
+
+AdaptiveAlphaWall (class)
+
+__init__
+_load_thresholds
+_save_thresholds
+_load_feedback
+_save_feedback
+_load_calibration
+_detect_emotional_state
+_calculate_context_score
+_detect_intent
+record_feedback
+_adapt_thresholds
+learn_pattern
+add_false_positive
+get_adaptation_stats
+
+
+upgrade_to_adaptive_alphawall
+create_feedback_handler
+
+2. adaptive_migration.py
+
+evaluate_link_with_confidence_gates
+AdaptiveThresholds (class)
+
+__init__
+_load_age
+_save_age
+bump
+get_migration_threshold
+
+
+MigrationEngine (class)
+
+__init__
+should_migrate
+find_similar_items
+should_migrate_by_overlap
+migrate_from_bridge
+get_migration_summary
+
+
+
+3. adaptive_quarantine_layer.py
+
+AdaptiveQuarantine (class)
+
+__init__
+_load_adaptive_config
+_save_adaptive_config
+_load_feedback
+_save_feedback
+_calculate_vagueness_score
+_detect_true_recursion
+_extract_text_pattern
+_are_varied_questions
+should_quarantine_with_learning
+_update_decision_context
+record_feedback
+_save_to_log
+_learn_from_false_positive
+get_adaptive_stats
+reset_session_context
+
+
+adaptive_quarantine_check
+
+4. alphawall.py
+
+AlphaWall (class)
+
+__init__
+_init_vault
+_generate_memory_id
+_store_in_vault
+_detect_emotional_state
+_detect_intent
+_detect_context_type
+_assess_risk_flags
+_generate_embedding_similarity
+process_input
+_suggest_routing
+_calculate_routing_confidence
+_save_zone_output
+get_zone_output_by_id
+clear_recursion_window
+get_vault_stats
 
-TripartiteMemory class: Core memory system with three separate storage areas
 
-Logic Memory: Stores factual, computational, algorithmic content
-Symbolic Memory: Stores emotional, metaphorical, symbolic content
-Bridge Memory: Stores ambiguous/hybrid content requiring both types of processing
+create_alphawall_handler
 
+5. alphawall_bridge_adapter.py
 
-Key methods:
+AlphaWallBridgeAdapter (class)
 
-store(item, decision_type): Routes items to appropriate memory based on decision
-migrate_item(): Moves items between memories based on re-evaluation
-get_counts(): Returns distribution statistics
-save_all()/load_all(): Persistence functionality
+__init__
+_load_tag_mappings
+process_user_input
+_tags_to_parser_config
+_generate_synthetic_input
+_parse_with_alphawall_context
+_calculate_logic_score_from_tags
+_calculate_symbolic_score_from_tags
+_evaluate_with_tags
+_determine_response_strategy
+_record_decision
+get_routing_stats
+_get_top_n
 
 
-Implements JSON-based storage with automatic file management
+create_alphawall_pipeline
+integrate_with_existing_parser
 
-2. processing_nodes.py - Core Processing Components
+6. autonomous_learner.py
 
-LogicNode: Handles factual/computational content
+load_adaptive_weights
+store_to_tripartite_memory
+evaluate_link_with_confidence_gates
+initialize_data_files_if_needed
+load_deferred_urls
+save_deferred_urls
+save_curriculum_metrics
+score_text_against_keywords
+score_text_for_symbolic_relevance
+log_link_decision
+evaluate_link_action
+process_chunk_to_tripartite
+autonomous_learning_cycle
 
-store_memory(): Stores with metadata (phase, confidence, source trust)
-retrieve_memories(): Retrieves similar content with phase/confidence filtering
+7. brain_metrics.py
 
+BrainMetrics (class)
 
-SymbolicNode: Handles emotional/symbolic content
+__init__
+_write_json
+_read_json
+log_decision
+save_session_metrics
+generate_report
+get_adaptive_weights
+analyze_conflicts
 
-process_input_for_symbols(): Extracts and weights symbols based on emotions
-evaluate_chunk_symbolically(): Scores text for symbolic content
-run_meta_symbol_analysis(): Creates meta-symbols from recurring patterns
 
+display_metrics_summary
 
-CurriculumManager: Manages 4-phase learning curriculum
+8. bridge_adapter.py
 
-Phase 1: Computational Identity (algorithms, data structures)
-Phase 2: Emotional/Symbolic Awareness
-Phase 3: Historical/Scientific Context
-Phase 4: Abstract/Philosophical Exploration
+AlphaWallBridge (class)
 
+__init__
+_load_tag_weights
+_calculate_tag_adjustments
+process_with_alphawall
+_save_decision
+learn_from_feedback
+get_decision_pattern_analysis
 
-DynamicBridge: Routes content between nodes
 
-route_chunk_for_processing(): Main routing logic with security checks
-determine_target_storage_phase(): Decides which learning phase content belongs to
-Integrates quarantine and warfare detection
+create_alphawall_aware_bridge
 
+9. cluster_namer.py
 
+generate_cluster_id
+pick_cluster_name
+generate_cluster_name
+load_symbols
+extract_texts
+cluster_symbols
+summarize_cluster
+assign_cluster_names
 
-3. decision_history.py - History-Aware Memory
+10. clustering.py
 
-HistoryAwareMemory: Extends TripartiteMemory with decision tracking
+cluster_memory
 
-Tracks routing history for each item
-Implements stability analysis (flip-flop detection)
-Enables reverse migration for misclassified items
+11. content_utils.py
 
+detect_content_type
 
-Key features:
+12. decision_history.py
 
-Decision history preservation
-Weight tracking over time
-Item stability metrics
+HistoryAwareMemory (class)
 
+__init__
+store
+_get_current_weights
+get_item_stability
+get_items_by_stability
 
 
-Security & Safety Systems
-4. alphawall.py - Cognitive Firewall
+NoOpLock (class)
 
-AlphaWall: First-line defense analyzing input semantics
-Processes input into "zones" with metadata:
+acquire
+release
+__enter__
+__exit__
 
-Emotional state detection
-Intent classification
-Context analysis
-Risk assessment
 
 
-Outputs routing hints without exposing raw user data
-Key methods:
+13. download_models.py
+(No functions - just model downloading script)
+14. emotion_handler.py
 
-process_input(): Main analysis function
-_detect_emotional_state(): Emotion classification
-_detect_intent(): Intent analysis
-_assess_risks(): Security risk evaluation
+predict_emotions
 
+15. graph_visualizer.py
+(No functions - just visualization script)
+16. inspect_vectors.py
 
+inspect_memory
 
-5. quarantine_layer.py - User Memory Quarantine
+17. linguistic_warfare.py
 
-UserMemoryQuarantine: Isolates problematic content
-Works with AlphaWall zone outputs (never raw user data)
-Features:
+LinguisticWarfareDetector (class)
 
-Pattern-based contamination detection
-Quarantine expiry management
-Contamination vector analysis
-Risk propagation tracking
+__init__
+_load_attack_patterns
+analyze_text_for_warfare
+_detect_pattern_threats
+_analyze_structure
+_analyze_semantics
+_analyze_temporal_patterns
+_check_recursive_depth
+_detect_contradictions
+_get_user_risk_profile
+_calculate_threat_score
+_determine_defense_strategy
+_generate_defense_explanation
+_log_defense_action
+_update_user_profile
+_save_attack_patterns
+_save_defense_log
+_save_user_profiles
+_load_defense_log
+_load_user_profiles
+get_defense_statistics
+learn_from_attack
 
 
-should_quarantine_input(): Determines if source requires quarantine
+check_for_warfare
 
-6. linguistic_warfare.py - Manipulation Detection
+18. link_evaluator.py
 
-LinguisticWarfareDetector: Identifies adversarial inputs
-Detects various attack patterns:
+EnhancedLinkEvaluator (class)
 
-Prompt injection attempts
-Emotional manipulation
-Gaslighting patterns
-Authority exploitation
-Repetition attacks
+__init__
+evaluate_with_full_pipeline
+_determine_severity
+_apply_contamination_adjustments
+_make_final_decision
+_save_decision
+provide_feedback
+_update_weight_evolution
+get_system_health
 
 
-Provides defense strategies and threat scoring
+evaluate_link_with_confidence_gates
+evaluate_with_alphawall
 
-7. visualization_prep.py - Frontend Visualization
+19. link_utils.py
 
-VisualizationPrep: Prepares text for visual display
-Segments text and assigns visual properties:
+evaluate_link_with_confidence_gates
 
-Color coding by classification
-Confidence indicators
-Risk overlays
-Hover tooltips with metadata
+20. main.py
 
+is_url
+generate_response
+main
 
-Supports multiple output formats (HTML, React/JSON)
-Integrates all system components for rich visualization
+21. memory_analytics.py
 
-Memory Components
-8. vector_memory.py - Vector Storage with Security
+MemoryAnalyzer (class)
 
-Stores text as embeddings with quarantine integration
-store_vector(): Checks quarantine/warfare before storage
-retrieve_similar_vectors(): Similarity search with filtering
-Tracks quarantine status and prevents contamination spread
+__init__
+get_memory_stats
+_calculate_avg_score
+_calculate_avg_age
+_calculate_stability
+_calculate_volatility
+_calculate_health_indicators
+analyze_bridge_patterns
+generate_evolution_report
+_save_report
+print_report
 
-9. symbol_memory.py - Symbol Knowledge Base
 
-Manages symbolic entities (emojis, concepts)
-Tracks symbol evolution and usage patterns
-Golden memory: Peak emotional states
-Quarantine-aware symbol creation
 
-10. user_memory.py - Symbol Occurrence Tracking
+22. memory_architecture.py
 
-Logs when/where symbols appear in context
-Tracks emotional associations
-Used for meta-symbol generation
+TripartiteMemory (class)
 
-Learning & Evolution
-11. autonomous_learner.py - Web Crawling Engine
+__init__
+_load_all
+_load_safe
+store
+save_all
+_save_safe
+get_counts
+clear_all
 
-Implements autonomous web-based learning
-URL scoring based on current curriculum phase
-Content chunking and processing pipeline
-Session management with progress tracking
 
-12. link_evaluator.py - Enhanced Routing Logic
 
-EnhancedLinkEvaluator: Sophisticated routing decisions
-Integrates multiple signals:
+23. memory_evolution_engine.py
 
-AlphaWall zone analysis
-Weight adjustments
-System health monitoring
-User history
+MemoryEvolutionEngine (class)
 
+__init__
+run_evolution_cycle
+_print_distribution
+_get_performance_stats
+_log_session
+add_test_data
 
-Adaptive scaling based on content type
 
-13. bridge_adapter.py - AlphaWall Integration
+run_memory_evolution
 
-Bridges AlphaWall zones to routing decisions
-Maps zone tags to routing recommendations
-Handles special cases and exceptions
+24. memory_maintenance.py
 
-14. adaptive_migration.py - Memory Evolution
+score_text_against_phase1_keywords
+prune_phase1_symbolic_vectors
 
-MigrationEngine: Moves items between memories over time
-Uses confidence thresholds and win rates
-Batch processing with progress tracking
+25. memory_optimizer.py
 
-15. reverse_migration.py - Misclassification Correction
+load_adaptive_config
+save_adaptive_config
+recompute_adaptive_link_weights
+is_url
+extract_new_emojis
+perform_acceptance_resolution
+process_web_url_placeholder
+generate_response
+main
 
-ReverseMigrationAuditor: Fixes routing mistakes
-Detects chronically unstable items
-Prevents oscillation with migration counting
+26. parser.py
 
-16. weight_evolution.py - Progressive Specialization
+load_seed_symbols
+load_emotion_map
+extract_keywords
+chunk_content
+extract_symbolic_units
+parse_input
+parse_with_emotion
+is_zone_output
+parse_raw_text
 
-WeightEvolver: Evolves routing weights over time
-Implements momentum to prevent oscillation
-Target specialization based on memory distribution
+These modules create a comprehensive AI system with:
 
-Utility & Support
-17. parser.py - Text Analysis with AlphaWall Support
+Security layers (AlphaWall, Quarantine, Warfare Detection)
+Memory management (Tripartite architecture, Evolution, Migration)
+Content processing (Parser, Emotion handling, Symbol management)
+Analytics and monitoring (Brain metrics, Memory analytics, Visualization)
+Learning capabilities (Adaptive weights, Pattern recognition, Feedback loops)
 
-Updated to work with both raw text and AlphaWall zone outputs
-parse_input(): Main parsing function
-extract_keywords(): Keyword extraction
-parse_with_emotion(): Emotion-aware symbol weighting
+1. parser.py
 
-18. emotion_handler.py - Emotion Detection
+load_seed_symbols(file_path)
+load_emotion_map(file_path)
+extract_keywords(text_input, max_keywords=10)
+chunk_content(text, max_chunk_size=1000, overlap=100)
+extract_symbolic_units(input_data, current_lexicon)
+parse_input(input_data, current_lexicon=None)
+parse_with_emotion(input_data, detected_emotions_verified, current_lexicon)
+is_zone_output(input_data)
+parse_raw_text(text_input, current_lexicon=None)
 
-Multiple model ensemble (DistilBERT variants)
-Confidence-based verification
-Returns emotion-score tuples
+2. processing_nodes.py
 
-19. symbol_generator.py - Dynamic Symbol Creation
+_load_cooccurrence_log()
+_save_cooccurrence_log(cooccurrence_data)
+_update_symbol_cooccurrence(symbolic_node_output)
+evaluate_link_with_confidence_gates(logic_score, symbolic_score, logic_scale=10.0, sym_scale=5.0)
+detect_content_type(text_input, spacy_nlp_instance=None)
+initialize_processing_nodes()
 
-Creates new symbols from context
-Diverse symbol pool (emojis, Greek letters, shapes)
-Context-aware naming
+Classes and their methods:
+LogicNode:
 
-20. vector_engine.py - Embedding Generation
+__init__(self, vector_memory_path_str=None)
+store_memory(self, text_input, source_url=None, source_type="web_scrape", ...)
+retrieve_memories(self, query_text, current_phase_directives)
 
-Dual-model system (MiniLM + E5)
-Vector fusion based on similarity
-Fallback handling
+SymbolicNode:
 
-21. web_parser.py - Web Content Extraction
+__init__(self, seed_symbols_path_str, symbol_memory_path_str, ...)
+_ensure_data_files(self)
+_load_meta_symbols(self)
+_save_meta_symbols(self)
+_get_active_symbol_lexicon(self, current_phase_directives)
+evaluate_chunk_symbolically(self, chunk_text, current_phase_directives_for_lexicon)
+process_input_for_symbols(self, text_input, detected_emotions_output, ...)
+run_meta_symbol_analysis(self, max_phase_to_consider)
 
-Multiple extraction methods (Trafilatura, BeautifulSoup)
-Link extraction with anchor text
-Content chunking with overlap
+CurriculumManager:
 
-22. trail_log.py - Processing History
+__init__(self)
+get_current_phase(self)
+get_max_phases(self)
+get_phase_context_description(self, phase)
+get_processing_directives(self, phase)
+update_metrics(self, phase, chunks_processed_increment=0, ...)
+advance_phase_if_ready(self, current_completed_phase_num)
+get_all_metrics(self)
 
-Logs all processing steps
-Supports both legacy and new formats
-Includes content type heuristics
+DynamicBridge:
 
-23. content_utils.py - Content Classification
+__init__(self, logic_node, symbolic_node, curriculum_manager)
+_load_adaptive_weights(self)
+_detect_emotions(self, text_input)
+_score_text_for_phase(text_content, phase_directives) (static method)
+is_chunk_relevant_for_current_phase(self, text_chunk, ...)
+determine_target_storage_phase(self, text_chunk, current_processing_phase_num)
+route_chunk_for_processing(self, text_input, source_url, ...)
+generate_response_for_user(self, user_input_text, source_url=None)
+get_routing_statistics(self)
 
-detect_content_type(): Classifies as factual/symbolic/ambiguous
-Uses keyword matching and entity detection
+3. quarantine_layer.py
 
-Monitoring & Analytics
-24. tripartite_dashboard.py - Comprehensive Monitoring
+should_quarantine_input(source_type, source_url=None)
 
-Streamlit-based real-time dashboard
-Multiple views:
+UserMemoryQuarantine class:
 
-System Overview
-Symbol Network
-Bridge Analytics
-Memory Evolution
-Session Replay
-Real-time Monitor
+__init__(self, data_dir="data")
+_init_files(self)
+get_quarantine_statistics(self)
+quarantine(self, zone_id, reason="manual_quarantine", severity="medium")
+check_user_history(self, user_id)
+load_all_quarantined_memory(self)
+check_contamination_risk(self, zone_output)
+quarantine_user_input(self, text, user_id, source_url=None, ...)
 
+4. reverse_migration.py
+ReverseMigrationAuditor class:
 
-JSONL logging system
-Performance metrics tracking
+__init__(self, memory, confidence_threshold=0.3)
+audit_item(self, item, current_location)
+audit_logic_memory(self)
+audit_symbolic_memory(self)
+audit_all(self)
+get_audit_summary(self)
 
-25. system_analytics.py - System Analysis
+5. run_pipeline.py
 
-plot_node_activation_timeline(): Processing activity over time
-plot_symbol_popularity_timeline(): Symbol usage trends
-plot_curriculum_metrics(): Learning phase progress
+run_learning_pipeline(data_dir="data", learning_config=None, evolution_config=None, cycles=1)
+main()
 
-26. memory_optimizer.py - Optimization Pipeline
+6. symbol_chainer.py
 
-Coordinates migration and evolution
-Calculates win rates and confidence
-Manages optimization sessions
+load_memory()
+build_symbol_chains(min_similarity=0.4)
+print_symbol_chains()
 
-Interactive Systems
-27. talk_to_ai.py - Interactive Interface
+7. symbol_cluster.py
 
-Complete interactive AI system
-Integrates all components
-Response generation based on routing
-Command interface for testing
+cluster_vectors_and_plot(show_graph=True)
+dummy_generate_cluster_id(texts)
 
-28. run_pipeline.py - Learning Pipeline
+8. symbol_drift_plot.py
 
-Orchestrates learning and evolution cycles
-Configurable parameters
-Progress tracking
+show_symbol_drift(symbol_filter=None)
 
-Visualization Tools
-29. symbol_cluster.py - Symbol Clustering
+9. symbol_emotion_cluster.py
 
-K-means clustering of symbols
-TSNE visualization
-Cluster naming
+show_emotion_clusters()
 
-30. trail_graph.py - Trail Visualization
+10. symbol_emotion_updater.py
 
-NetworkX graph of processing trails
-Shows symbol and memory connections
+load_emotion_map(file_path=DEFAULT_MAP_PATH)
+save_emotion_map(emotion_map, file_path=DEFAULT_MAP_PATH)
+update_symbol_emotions(matched_symbols_weighted, verified_emotions, file_path=DEFAULT_MAP_PATH)
 
-31. symbol_drift_plot.py - Symbol Evolution
+11. symbol_generator.py
 
-Tracks emotional weight changes over time
-Time-series visualization
+generate_symbol_from_context(text, keywords, emotions_list_of_tuples)
+mock_extract_keywords(text_input) (in test section)
 
-32. symbol_emotion_cluster.py - Emotion Mapping
+12. symbol_memory.py
 
-Visualizes symbol-emotion relationships
-Clustering by emotional signature
+load_symbol_memory(file_path=SYMBOL_MEMORY_PATH)
+save_symbol_memory(memory, file_path=SYMBOL_MEMORY_PATH)
+_check_quarantine_status(origin, example_text=None, name=None, keywords=None)
+_sanitize_symbol_data(symbol_data)
+add_symbol(symbol_token, name, keywords, initial_emotions, example_text, ...)
+get_symbol_details(symbol_token, file_path=SYMBOL_MEMORY_PATH)
+update_symbol_emotional_profile(symbol_token, emotion_changes, file_path=SYMBOL_MEMORY_PATH)
+prune_duplicates(file_path=SYMBOL_MEMORY_PATH)
+get_emotion_profile(symbol_token, file_path=SYMBOL_MEMORY_PATH)
+get_golden_memory(symbol_token, file_path=SYMBOL_MEMORY_PATH)
+_get_symbol_color(emotions)
+_calculate_display_priority(resonance_weight, origin)
+_get_classification_hint(keywords, emotions)
+validate_symbol_token(symbol_token)
+get_symbols_for_visualization(limit=100, min_usage=0, exclude_quarantined=True, file_path=SYMBOL_MEMORY_PATH)
+quarantine_existing_symbol(symbol_token, reason="manual_quarantine", file_path=SYMBOL_MEMORY_PATH)
 
-Key Integration Points
+13. symbol_suggester.py
 
-Security Flow: Input → AlphaWall → Quarantine Check → Warfare Detection → Processing
-Processing Flow: DynamicBridge → LogicNode/SymbolicNode → Memory Storage
-Evolution Flow: Memory Optimizer → Migration Engine → Weight Evolver
-Visualization Flow: Processing Result → Visualization Prep → Frontend Display
+load_vectors()
+save_symbol(symbol_obj)
+suggest_symbols_from_vectors(min_cluster_size=3)
 
-Important Functions to Remember
+14. symbol_test.ipynb (Jupyter notebook functions)
 
-evaluate_link_with_confidence_gates(): Core routing decision logic
-should_quarantine_input(): Security check for input sources
-check_for_warfare(): Linguistic manipulation detection
-process_user_input(): Main entry point in talk_to_ai.py
-autonomous_learning_cycle(): Web learning orchestration
-run_memory_evolution(): Memory optimization pipeline
+describe_symbol(token)
+search_by_keyword(keyword)
+save_symbol_to_memory(token, context="", emotion="")
+show_memory()
+search_memory(query)
+symbol_frequency_report()
+emotion_cluster_report()
+trace_symbol(token)
+detect_emergent_loops(min_emotions=2, min_occurrences=3)
+bind_meta_symbol(original_token, new_token, name, summary)
 
-Configuration Files
+15. system_analytics.py
 
-adaptive_weights.json: Current routing weights
-symbol_memory.json: Symbol knowledge base
-vector_memory.json: Embedded text storage
-quarantine/: Quarantine system files
-trail_log.json: Processing history
-curriculum_metrics.json: Learning progress
+plot_node_activation_timeline(trail_log_path=TRAIL_LOG_PATH_SA)
+plot_symbol_popularity_timeline(occurrence_log_path=OCCURRENCE_LOG_PATH_SA, top_n_symbols=7)
+plot_curriculum_metrics(metrics_path=CURRICULUM_METRICS_PATH_SA)
 
-This system represents a sophisticated approach to AI memory management with strong safety features, adaptive learning, and comprehensive monitoring capabilities. I'll analyze these Core-Project files and create a comprehensive summary for future reference.
+Other Files (JSON data files):
 
-## Comprehensive Summary of the Tripartite AI Memory System (Part 2)
+symbol_memory.json - Contains symbol definitions and metadata
+symbolic_memory.json.backup - Backup of symbolic memory data
 
-### Core Memory Architecture Files
+Note: Some files reference imported modules that aren't fully shown in the documents (like emotion_handler, trail_log, user_memory, vector_engine, vector_memory, etc.), so their internal functions aren't listed here.
 
-#### **adaptive_migration.py** - Confidence-Based Migration System
-**Purpose**: Manages the movement of items from bridge memory to logic/symbolic memory based on confidence scores and stability.
+1. talk_to_ai.py
 
-**Key Components**:
-- `evaluate_link_with_confidence_gates()`: Determines routing decisions (FOLLOW_LOGIC, FOLLOW_SYMBOLIC, or FOLLOW_HYBRID) using confidence thresholds
-- `AdaptiveThresholds`: Manages time-varying migration thresholds that start at 0.9 and decrease to 0.3 over time
-- `MigrationEngine`: Handles the actual migration process with stability checks
-- **5-Overlap Rule**: If 5+ similar items in bridge have the same classification, they migrate together
+generate_response(user_input: str, processing_result: dict) -> str
+display_system_state(result: dict, processing_time: float)
+process_user_input(user_input: str) -> dict
+get_memory_stats_safe(node, node_type="unknown")
+get_tripartite_summary_safe()
+show_stats()
+show_memory_distribution()
+show_current_weights()
+run_test_scenarios()
+main()
+patched_detect_emotional_state(text) (patched function)
+
+2. trail_graph.py
+
+show_trail_graph()
+
+3. trail_log.py
+
+_load_log()
+_save_log(log_entries)
+log_dynamic_bridge_processing_step(log_id=None, text_input=None, source_url=None, current_phase=0, directives=None, is_highly_relevant_for_phase=False, target_storage_phase_for_chunk=None, is_shallow_content=False, content_type_heuristic="ambiguous", detected_emotions_output=None, logic_node_output=None, symbolic_node_output=None, generated_response_preview=None)
+log_trail(text, symbols, matches, file_path=TRAIL_LOG_FILE_PATH)
+add_emotions(entry_id, emotions, file_path=TRAIL_LOG_FILE_PATH)
 
-**Important Functions**:
-- `should_migrate()`: Checks score thresholds, decision history stability, and ping-ponging
-- `migrate_from_bridge()`: Main migration function that processes bridge items
-- `find_similar_items()`: Uses cosine similarity to find related items
-
-#### **alphawall.py** - The Cognitive Firewall (Zone Layer)
-**Purpose**: Acts as a security layer between user input and AI processing, preventing direct exposure to potentially harmful content.
-
-**Key Features**:
-- Creates "zones" with semantic tags instead of exposing raw user data
-- Stores user input in an isolated vault that the AI cannot directly access
-- Detects emotional states, intents, and context types
-- Identifies recursion patterns and potential manipulation
-
-**Key Methods**:
-- `process_input()`: Main processing that returns zone metadata, not user content
-- `_detect_emotional_state()`: Maps text to emotional categories
-- `_detect_intent()`: Identifies user intent (information_request, expressive, etc.)
-- `_assess_risk_flags()`: Evaluates potential threats
-
-**Output Structure**: Zone outputs contain tags (emotional_state, intent, context, risk), semantic profiles, and routing hints.
-
-#### **bridge_adapter.py** - AlphaWall-aware Bridge Decision System
-**Purpose**: Enhanced routing system that uses AlphaWall's semantic tags to make intelligent decisions about content routing.
-
-**Key Components**:
-- `AlphaWallBridge`: Dynamically adjusts Logic vs Symbolic weights based on zone analysis
-- Tag-based weight mappings for different emotional states, intents, and contexts
-- Learning system that updates weights based on decision outcomes
-
-**Important Functions**:
-- `process_with_alphawall()`: Main processing pipeline
-- `_calculate_tag_adjustments()`: Determines weight modifications based on tags
-- `learn_from_feedback()`: Updates tag weights based on success/failure
-
-#### **autonomous_learner.py** - Web Crawling and Learning Engine
-**Purpose**: Implements autonomous web-based learning with phase-specific content acquisition.
-
-**Key Features**:
-- Crawls web content based on curriculum phases
-- Uses adaptive weights for scoring content
-- Implements deferred URL processing for future phases
-- Integrates with tripartite memory for storage
-
-**Core Functions**:
-- `autonomous_learning_cycle()`: Main learning loop
-- `evaluate_link_action()`: Scores links using confidence gates
-- `process_chunk_to_tripartite()`: Processes and stores content chunks
-- `store_to_tripartite_memory()`: Stores items with decision history
-
-**Phase URL Sources**:
-- Phase 1 (Logical): Logic, mathematical logic, algorithms
-- Phase 2 (Symbolic): Symbolic logic, philosophy
-- Phase 3 (Hybrid): Hybrid logic systems
-
-#### **brain_metrics.py** - Performance Tracking and Analysis
-**Purpose**: Monitors brain (Logic vs Symbolic) decision patterns and performance.
-
-**Key Features**:
-- Tracks win rates for logic, symbolic, and hybrid decisions
-- Detects and logs conflicts between brains
-- Generates visual reports and analytics
-- Calculates recommended adaptive weights
-
-**Important Methods**:
-- `log_decision()`: Records each routing decision
-- `save_session_metrics()`: Persists session statistics
-- `get_adaptive_weights()`: Recommends weight adjustments
-- `analyze_conflicts()`: Studies brain disagreements
-
-### Security and Protection Systems
-
-#### **linguistic_warfare.py** - Advanced Manipulation Detection
-**Purpose**: Detects and defends against linguistic attacks, prompt injections, and manipulation attempts.
-
-**Attack Patterns Detected**:
-- Recursive loops and self-referential patterns
-- Meta-injection (attempting to override instructions)
-- Emotional flooding and manipulation
-- Symbol bombing
-- Gaslighting patterns
-- Authority hijacking
-- Memetic hazards
-
-**Key Functions**:
-- `analyze_text_for_warfare()`: Comprehensive threat analysis
-- `_detect_pattern_threats()`: Pattern matching for known attacks
-- `_determine_defense_strategy()`: Decides response based on threat level
-- `check_for_warfare()`: Quick integration function
-
-#### **quarantine_layer.py** - User Memory Quarantine
-**Purpose**: Isolates potentially harmful content and prevents contamination spread.
-
-**Key Features**:
-- Works with AlphaWall zone outputs (never raw user data)
-- Tracks contamination patterns and vectors
-- Implements expiry and decay mechanisms
-- Prevents similar content from bypassing quarantine
-
-**Important Methods**:
-- `quarantine()`: Adds items to quarantine with metadata
-- `check_contamination_risk()`: Evaluates if new input matches quarantined patterns
-- `should_quarantine_input()`: Main decision function
-
-### Processing and Analysis Tools
-
-#### **parser.py** - Modified for AlphaWall Integration
-**Purpose**: Extracts keywords and symbols from both raw text and AlphaWall zone outputs.
-
-**Key Updates**:
-- Now accepts zone outputs in addition to raw text
-- Maps zone tags to potential symbols
-- Enhanced emotion-aware parsing using zone metadata
-- Maintains backward compatibility
-
-**Core Functions**:
-- `parse_input()`: Main parsing function for both text and zones
-- `extract_keywords()`: Works with zone metadata or raw text
-- `parse_with_emotion()`: Emotion-weighted symbol extraction
-
-#### **visualization_prep.py** - Frontend Visualization Preparation
-**Purpose**: Prepares processed text for visual display with rich metadata.
-
-**Features**:
-- Segments text by classification (logic/symbolic/bridge)
-- Assigns colors and confidence indicators
-- Generates hover tooltips with metadata
-- Supports multiple output formats (HTML, React/JSON)
-
-**Key Methods**:
-- `prepare_text_for_display()`: Main visualization preparation
-- `segment_text()`: Breaks text into classified segments
-- `generate_html_output()`: Creates styled HTML
-- `generate_react_output()`: Creates React/JSON format
-
-### Memory Management and Evolution
-
-#### **memory_architecture.py** - Core Storage Layer
-**Purpose**: Implements the three-way memory system with atomic persistence.
-
-**Features**:
-- Thread-safe operations with locks
-- Atomic writes with backup recovery
-- Automatic backup creation and restoration
-
-**Memory Types**:
-- Logic Memory: Factual, computational content
-- Symbolic Memory: Emotional, metaphorical content
-- Bridge Memory: Ambiguous content requiring both types
-
-#### **decision_history.py** - History-Aware Memory
-**Purpose**: Extends TripartiteMemory with decision tracking for each item.
-
-**Key Features**:
-- Tracks routing history with timestamps and weights
-- Calculates item stability based on decision consistency
-- Enables reverse migration for misclassified items
-- Uses RLock for reentrant locking
-
-**Important Methods**:
-- `get_item_stability()`: Analyzes decision history patterns
-- `get_items_by_stability()`: Groups items by their stability level
-
-#### **memory_evolution_engine.py** - Complete Evolution Integration
-**Purpose**: Orchestrates the entire memory evolution system.
-
-**Evolution Cycle Steps**:
-1. Initial state analysis
-2. Reverse audit (catch misclassifications)
-3. Forward migration
-4. Weight evolution
-5. Analytics and reporting
-
-**Key Components**:
-- Integrates all memory subsystems
-- Manages evolution sessions
-- Generates comprehensive reports
-
-#### **memory_optimizer.py** - Main Interactive Interface
-**Purpose**: The primary user interface with all security and evolution features integrated.
-
-**Key Features**:
-- Quarantine and warfare protection
-- Adaptive weight management
-- Periodic maintenance tasks
-- Memory evolution triggers
-- Comprehensive diagnostics
-
-**Special Commands**:
-- 'evolve': Runs memory evolution cycle
-- 'stats': Shows security statistics
-- Periodic tasks every N inputs
-
-### Analytics and Monitoring
-
-#### **memory_analytics.py** - Deep Analytics System
-**Purpose**: Provides insights into memory distribution and health.
-
-**Key Metrics**:
-- Distribution percentages
-- Average scores and ages
-- Stability metrics
-- Bridge pattern analysis
-- Health indicators
-
-**Important Functions**:
-- `get_memory_stats()`: Comprehensive statistics
-- `analyze_bridge_patterns()`: Identifies volatile, balanced, conflicted items
-- `generate_evolution_report()`: Full system report
-
-#### **system_analytics.py** - Timeline and Visualization
-**Purpose**: Creates visual analytics for system behavior over time.
-
-**Visualization Types**:
-- Node activation timelines
-- Symbol popularity trends
-- Curriculum metrics
-- Phase progression
-
-### Utility and Support Files
-
-#### **content_utils.py** - Content Classification
-**Purpose**: Detects whether content is factual, symbolic, or ambiguous.
-
-**Classification Markers**:
-- Factual: Scientific terms, dates, statistics
-- Symbolic: Emotions, metaphors, symbols
-- Ambiguous: Mixed or unclear content
-
-#### **link_utils.py** - Shared Link Evaluation
-**Purpose**: Provides pure evaluation function without circular dependencies.
-
-**Main Function**:
-- `evaluate_link_with_confidence_gates()`: Core routing logic
-
-#### **weight_evolution.py** - Weight Adaptation System
-**Purpose**: Evolves routing weights based on performance.
-
-**Features**:
-- Momentum-based updates
-- Target specialization
-- Prevents oscillation
-
-### Important Integration Points
-
-1. **Security Flow**: Input → AlphaWall → Quarantine Check → Warfare Detection → Processing
-2. **Processing Flow**: DynamicBridge → LogicNode/SymbolicNode → Memory Storage
-3. **Evolution Flow**: Memory Optimizer → Migration Engine → Weight Evolver
-4. **Visualization Flow**: Processing Result → Visualization Prep → Frontend Display
-
-### Key System Behaviors
-
-1. **Adaptive Learning**: The system continuously adjusts its logic/symbolic balance based on performance
-2. **Multi-Layer Security**: AlphaWall prevents direct data exposure, quarantine isolates threats, warfare detector identifies attacks
-3. **Self-Correction**: Reverse migration fixes misclassifications, weight evolution improves routing
-4. **Phased Learning**: 4-phase curriculum guides knowledge acquisition
-5. **Memory Evolution**: Items migrate between memory types as understanding improves
-
-### Critical Safety Features
-
-1. **Never expose raw user data** - AlphaWall creates semantic zones instead
-2. **Quarantine contaminated content** - Prevents harmful patterns from spreading
-3. **Detect manipulation attempts** - Multiple attack pattern detections
-4. **Isolate user memories** - Vault system keeps user data separate
-5. **Gradual weight evolution** - Prevents drastic system changes
-
-This system represents a sophisticated approach to AI memory management that balances learning capability with robust safety measures, making it suitable for processing potentially adversarial or emotionally complex content while maintaining system integrity.
+4. tripartite_dashboard.py
+Classes:
+
+EventLogger:
+
+__init__(self, log_dir="logs", buffer_size=100)
+log_event(self, event_type: str, data: Dict[str, Any]) -> None
+_flush_buffer(self) -> None
+log_bridge_decision(self, url: str, logic_score: float, symbol_score: float, decision: str) -> None
+log_symbol_activation(self, symbol: str, emotion: str, resonance: float, context: str, origin_trace: Optional[Dict] = None) -> None
+log_memory_migration(self, item_id: str, from_node: str, to_node: str, reason: str, bridge_event_id: Optional[str] = None) -> None
+
+
+
+Functions:
+
+validate_schema(data: Any, expected_type: type, schema_name: str = "") -> bool
+safe_load_json(filename: str, expected_type: type = dict) -> Any
+compute_memory_metrics(symbol_memory: dict, logic_memory: list, bridge_memory: list) -> dict
+convert_to_jsonl(json_file: str, output_dir: str = "logs") -> Optional[Path]
+
+5. upgrade_old_vectors.py
+
+upgrade_vectors()
+
+6. user_memory.py
+
+load_user_memory(file_path=DEFAULT_USER_MEMORY_PATH)
+save_user_memory(entries, file_path=DEFAULT_USER_MEMORY_PATH)
+add_user_memory_entry(symbol, context_text, emotion_in_context, source_url=None, learning_phase=None, is_context_highly_relevant=None, file_path=DEFAULT_USER_MEMORY_PATH)
+
+7. vector_engine.py
+
+encode_with_minilm(text: str) -> np.ndarray
+encode_with_e5(text: str) -> np.ndarray
+fuse_vectors(text: str, threshold: float = 0.7)
+embed_text(text: str, model_choice: str = "minilm")
+
+8. vector_memory.py
+
+_load_memory() -> List[Dict[str, Any]]
+_save_memory(memory_data: List[Dict[str, Any]])
+load_vectors(path: Optional[Path] = None) -> List[Dict[str, Any]]
+save_vectors(vectors: List[Dict[str, Any]], path: Optional[Path] = None)
+store_vector(text: str, source_url: Optional[str] = None, source_type: str = "unknown", learning_phase: int = 0, exploration_depth: str = "shallow", confidence: float = 0.5, source_trust: str = "unknown", metadata: Optional[Dict] = None) -> Dict[str, Any]
+_store_quarantined_vector(text: str, entry_id: str, source_url: Optional[str], source_type: str, learning_phase: int, quarantine_result: Dict, warfare_analysis: Optional[Dict] = None) -> bool
+retrieve_similar_vectors(query_text: str, top_n: int = 5, max_phase_allowed: int = 999, min_confidence: float = 0.0, include_quarantined: bool = False, similarity_threshold: float = 0.0) -> List[Tuple[float, Dict]]
+get_memory_stats() -> Dict[str, Any]
+prepare_memory_for_visualization(entry_id: str) -> Optional[Dict]
+cleanup_quarantined_vectors(days_old: int = 30) -> Dict[str, int]
+get_quarantine_summary() -> Dict[str, Any]
+store(*args, **kwargs) (backward compatibility wrapper)
+retrieve(*args, **kwargs) (backward compatibility wrapper)
+
+9. visualization_prep.py
+Class: VisualizationPrep
+
+__init__(self, data_dir="data", enable_nlp: bool = True)
+_update_quarantine_cache(self)
+_check_quarantine_trace_risk(self, segment_text: str) -> Tuple[bool, Optional[str]]
+prepare_text_for_display(self, text: str, processing_result: Dict, include_emotions: bool = True, include_symbols: bool = True, include_entities: bool = True) -> Dict
+_segment_text(self, text: str) -> List[str]
+_create_base_segment(self, index: int, text: str) -> Dict
+_analyze_segment_enhanced(self, segment_data: Dict, segment_text: str, global_result: Dict, zone_analysis: Dict, bridge_decision: Dict, contamination_check: Dict, include_emotions: bool, include_symbols: bool, include_entities: bool) -> Dict
+_detect_content_type(self, text: str) -> str
+_calculate_logic_score(self, text: str) -> float
+_calculate_symbolic_score(self, text: str) -> float
+_add_bridge_info(self, segment: Dict, bridge_decision: Dict) -> Dict
+_add_zone_tags(self, segment: Dict, zone_analysis: Dict) -> Dict
+_add_recursion_info(self, segment: Dict, zone_analysis: Dict) -> Dict
+_add_contamination_info(self, segment: Dict, contamination: Dict) -> Dict
+_add_emotion_analysis(self, segment: Dict, text: str) -> Dict
+_add_entity_extraction(self, segment: Dict, text: str) -> Dict
+_add_symbol_analysis(self, segment: Dict, text: str) -> Dict
+_calculate_segment_confidence(self, segment: Dict) -> float
+_generate_viz_hints(self, segment: Dict) -> Dict
+_build_hover_data_enhanced(self, segment_text: str, segment_data: Dict, include_emotions: bool, include_symbols: bool) -> Dict
+_get_classification_reason(self, segment_data: Dict) -> str
+_get_confidence_explanation(self, segment_data: Dict) -> str
+_get_symbol_tooltip(self, symbol: str) -> str
+_generate_summary(self, segments: List[Dict], processing_result: Dict) -> Dict
+_empty_result(self) -> Dict
+_save_visualization(self, viz_output: Dict)
+generate_html_preview(self, viz_output: Dict) -> str
+_build_hover_html(self, segment: Dict) -> str
+_generate_enhanced_css(self) -> str
+generate_json_for_react(self, viz_output: Dict) -> str
+create_emotion_overlay(self, segments: List[Dict]) -> List[Dict]
+create_risk_overlay(self, segments: List[Dict]) -> List[Dict]
+_get_emotion_color(self, emotion: str) -> str
+export_for_frontend(self, viz_data: Dict, format: str = 'json') -> str
+
+Standalone functions:
+
+visualize_processing_result(text: str, processing_result: Dict) -> Dict
+detect_content_type(text: str, nlp=None) -> str
+
+10. web_parser.py
+
+fetch_raw_html(url, timeout=DEFAULT_TIMEOUT)
+extract_links_with_text_from_html(base_url, html_content)
+clean_html_to_text(html_content, use_trafilatura_on_string=False)
+fetch_shallow(url, max_chars=500, timeout=DEFAULT_TIMEOUT-5)
+fetch_and_clean_with_trafilatura(url, timeout_not_used=None)
+fallback_extract_text_with_bs4(url, timeout=DEFAULT_TIMEOUT)
+chunk_text(text, max_chunk_length=1000, overlap=100)
+
+11. weight_evolution.py
+Class: WeightEvolver
+
+__init__(self, data_dir="data")
+_load_weights(self)
+_save_weights(self)
+_load_momentum(self)
+_save_momentum(self)
+_load_history(self)
+_save_history(self)
+get_current_specialization(self)
+calculate_target_specialization(self, run_count, memory_stats=None)
+evolve_weights(self, run_count, memory_stats=None, performance_stats=None)
+get_evolution_summary(self)
+
+This represents a comprehensive AI system with components for:
+
+Memory management (vector storage, symbol memory, user memory)
+Text processing (parsing, chunking, visualization preparation)
+Decision routing (bridge decisions, weight evolution)
+Monitoring (dashboard, logging, trail tracking)
+Web interaction (parsing, link extraction)
+AI interaction (main talk_to_ai interface)
