@@ -60,7 +60,6 @@ After these, a **fifth process** begins:
 - **Academic Context Awareness**: "Math?" and "What is AI?" pass through safely
 - **False Positive Learning**: System learns when it wrongly quarantines educational content  
 - **Pattern Recognition**: Identifies true recursion vs. varied topic exploration
-- **Contextual Vagueness**: Single words aren't automatically quarantined if they're academic
 
 ### **📈 Migration Intelligence**
 
