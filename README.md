@@ -28,7 +28,7 @@ The system ingests in a **sequential phase order**, but maintains a **retrospect
 ```
 ┌────────────────────┐     ┌──────────────────┐     ┌────────────────────┐
 │     Logic Node     │ ◄──►│   Bridge Memory  │◄──► │   Symbolic Node    │
-│                    │     │                  │     │    Metaphor Parsing│
+│                    │     │                  │     │   Metaphor Parsing │
 │ - Facts            │     │ - Drift Tracking │     │ - Emotions         │
 │ - Definitions      │     │ - Conflict Tags  │     │ - Symbol Evolution │
 └────────────────────┘     └──────────────────┘     └────────────────────┘
