@@ -23,11 +23,11 @@ The system ingests in a **sequential phase order**, but maintains a **retrospect
 
 After these, a **fifth process** begins:
 
-* **Symbolic Diffusion** – Overlay of symbolic meaning atop factual patterns without corruption. Example test: interpret Albert Pike’s *Morals and Dogma* for symbolic/mathematical overlap **without** calling it canonical. It’s used as a **high-density symbolic sample**, not an endorsed framework.
+* **Symbolic Diffusion** – Overlay of symbolic meaning atop factual patterns without corruption. Example test: interpret Albert Pike's *Morals and Dogma* for symbolic/mathematical overlap **without** calling it canonical. It's used as a **high-density symbolic sample**, not an endorsed framework.
 
 ---
 
-## 🧱 Current Architecture Flow (Diagram)
+## 🧱 Architecture Overview
 
 ```
 ┌────────────────────┐     ┌──────────────────┐     ┌────────────────────┐
@@ -36,23 +36,49 @@ After these, a **fifth process** begins:
 │ - Facts            │     │ - Drift Tracking  │     │ - Emotions          │
 │ - Definitions      │     │ - Conflict Tags   │     │ - Symbol Evolution  │
 └────────────────────┘     └──────────────────┘     └────────────────────┘
-                               │
-                               ▼
-                   ┌───────────────────────────┐
-                   │     Tripartite Memory      │
-                   │ ✅ Structured Storage     │
-                   │  Logic | Bridge | Symbolic │
-                   └───────────────────────────┘
 ```
 
 ---
 
+## 🛡️ AlphaWall: Cognitive Firewall System
+
+**AlphaWall** is the protective layer that sits between user input and the Core-Project learning architecture. It's designed to process and understand user intent while maintaining strict data isolation—the AI never sees raw user content, only semantic tags.
+
+### **🔧 Core Components**
+
+#### **AlphaWall (alphawall.py)**
+- **Cognitive Firewall**: Processes user input and extracts semantic meaning without exposing raw text
+- **Vault System**: Stores user data in complete isolation—the AI can only access semantic tags, never content
+- **Emotion Detection**: Maps emotional states (calm, overwhelmed, grief, angry, emotionally_recursive)
+- **Intent Classification**: Determines user intent (information_request, expressive, self_reference, etc.)
+- **Recursion Detection**: Identifies trauma loops and problematic interaction patterns
+- **Risk Assessment**: Flags potential bridge conflicts and routing challenges
+
+#### **Adaptive Systems**
+- **AdaptiveAlphaWall**: Learns emotion detection thresholds from feedback, reducing false positives
+- **AdaptiveMigration**: Implements the **5-Overlap Rule**—when 5+ similar items agree on classification, they migrate together (leveraging Wikipedia's redundancy)
+- **AdaptiveQuarantine**: Smart quarantine that distinguishes between academic questions ("What is AI?") and problematic loops
+
+#### **Bridge Integration (alphawall_bridge_adapter.py)**
+- **Tag-to-Action Mapping**: Converts AlphaWall semantic tags into parser instructions
+- **Synthetic Input Generation**: Creates abstract representations for processing (no user data leakage)
+- **Response Strategy Selection**: Chooses appropriate response tone and structure based on emotional context
+- **Zero-Contamination Pipeline**: Ensures user data never reaches the reasoning architecture
+
+### **🔄 Processing Flow**
+
+```
+User Input → AlphaWall → Semantic Tags → Bridge Adapter → Core-Project Nodes
+     ↓              ↓            ↓              ↓               ↓
+ [Raw Text]    [Vault Storage] [Tags Only] [Synthetic Input] [Logic/Symbol Processing]
+```
+
 ### **🎯 Key Innovations**
 
-**Data Isolation**: Revolutionary approach where the AI processes meaning without ever seeing user content
-**Adaptive Learning**: All systems learn from feedback and adapt thresholds automatically  
-**Emotional Intelligence**: Sophisticated emotion detection that considers context and prevents misclassification
-**Recursion Breaking**: Detects and interrupts trauma loops before they destabilize the system
+**Data Isolation**: AI processes meaning without ever seeing user content  
+**Adaptive Learning**: All systems learn from feedback and adapt thresholds automatically using it's own deduction
+**Emotional Intelligence**: Sophisticated emotion detection that considers context and prevents misclassification  
+**Recursion Breaking**: Detects and interrupts loops before they destabilize the system  
 **Academic Safety**: Distinguishes between genuine questions and emotional spirals
 
 ### **🧪 Smart Quarantine Features**
@@ -60,6 +86,7 @@ After these, a **fifth process** begins:
 - **Academic Context Awareness**: "Math?" and "What is AI?" pass through safely
 - **False Positive Learning**: System learns when it wrongly quarantines educational content  
 - **Pattern Recognition**: Identifies true recursion vs. varied topic exploration
+- **Contextual Vagueness**: Single words aren't automatically quarantined if they're academic
 
 ### **📈 Migration Intelligence**
 
@@ -68,44 +95,105 @@ After these, a **fifth process** begins:
 - **Adaptive Thresholds**: Migration requirements decrease over time as the system gains confidence
 - **Anti-Ping-Pong**: Prevents items from bouncing between classifications
 
-### **✅ Production-Ready Features**
+---
 
-- Complete test suites for all components
-- Feedback integration for continuous learning  
-- Statistics tracking and performance monitoring
-- Session context management
-- Graceful degradation and error handling
+## 🧠 Advanced AI Components
+
+### **Linguistic Warfare Detection**
+Protects against adversarial inputs and prompt injection attacks with pattern recognition and threat scoring
+
+### **Memory Evolution Engine**
+Automatically optimizes memory distribution and performance over time with adaptive weight adjustment
+
+### **Weight Evolution System**
+Adapts processing weights based on performance and specialization needs using momentum-based learning
+
+### **Curriculum Manager**
+Guides the AI through structured learning phases with automatic advancement based on comprehension metrics
+
+### **Dynamic Bridge**
+Intelligent routing between Logic/Symbolic nodes with emotion-aware processing and contamination prevention
 
 ---
 
-## 📊 **Research Data & Visualizations**
+## 📊 Analytics & Monitoring
 
-### Live System Monitoring
-*Real-time dashboards and analysis tools to track the AI's learning progress*
+### **Real-time Dashboards**
+Live system monitoring with brain metrics and memory analytics for performance tracking
 
-#### **📈 Learning Phase Progression**
-- **Phase Transition Timeline**: Visual progression through the four learning phases
-- **Content Classification Accuracy**: How well the system distinguishes logic vs. symbolic content
-- **Memory Distribution Evolution**: Real-time tripartite memory allocation (Logic/Symbolic/Bridge)
-- **Confidence Score Trends**: System certainty levels over time and content types
+### **Trail Logging**
+Complete decision audit trails for debugging and optimization with event buffering
 
-#### **🧠 Cognitive Architecture Analytics** 
-- **Node Activation Patterns**: Which processing nodes activate for different content types
-- **Bridge Resolution Rates**: How quickly uncertain content finds classification
-- **Symbol Emergence Tracking**: New symbols created and their emotional evolution
-- **Weight Adaptation Curves**: How processing preferences evolve autonomously
+### **Symbol Drift Analysis**
+Tracks how symbolic meanings evolve over time with clustering and visualization
 
-#### **🌐 Autonomous Learning Metrics**
-- **Web Crawling Efficiency**: URLs processed, content extracted, relevance scoring
-- **Knowledge Graph Growth**: Concept relationships forming over time
-- **Contamination Detection**: Instances where facts and interpretations mixed inappropriately
-- **Meta-Symbol Evolution**: Recursive pattern formation and complexity growth
+### **Contamination Detection**
+Monitors and prevents fact/interpretation mixing with automatic rollback capabilities
 
-### External Research Resources
+### **Performance Evolution**
+Automated system health and efficiency tracking with adaptive optimization
 
 ---
 
-## 📊 **Research Progress Tracking**
+## ✅ Implementation Status
+
+### **Fully Implemented**
+* Logic node: structure, validation, clustering
+* Symbolic node: base emotions, metaphors, symbolic tagging
+* Tripartite memory system
+* Confidence-gated migration between nodes
+* Emotion-weighted symbolic memory
+* Bridge memory with drift tracking and cluster denial logs
+* Manual + automatic node flushing (tiers 0-1), retention priority (tiers 2-4)
+* 5-Overlap Rule for migration
+* Provenance tagging (source-based routing)
+* Complete AlphaWall cognitive firewall system
+* Adaptive learning across all components
+* Linguistic warfare detection
+* Memory evolution engine
+* Weight evolution system
+* Curriculum management
+* Real-time analytics and monitoring
+
+### **🟡 Designed But Not Coded**
+* Meta-symbol recursion (🔥⟳, recursive allegories)
+* User lens selector (logic / poetic / symbolic routing)
+* Symbolic overlay (diffusion layer without fact loss)
+* Liminal node tagging (fractal/meta classification)
+* Historical metadata timeline anchoring
+* Geographic concept clustering
+* Real-time highlighting of logic vs symbol in UI
+* Self-auditing cluster rollback for mistaken migrations
+
+### **❌ Still Open**
+* Dynamic chunk sizing per content type
+* Cross-lens multi-node fusion (when poetic and logic must co-reside)
+* Creative myth classification engine (separating narrative power from factual claim)
+* Full meta-cognition engine (reasoning about its own uncertainty)
+
+---
+
+## 🧪 Diffusion Test Plan (Albert Pike Sample)
+
+* Process: Send mixed symbolic/factual input
+* Goal: Highlight logic vs symbol vs bridge in real time
+* Preserve: Geometry as fact, allegory as symbol
+* Prevent: Cross-node contamination (e.g., "sacred" claims corrupting math logic)
+* Outcome: Bridge builds meta-nodes for unresolved dual meanings
+
+---
+
+## 📊 Memory Migration Metrics (Tracked)
+
+* Bridge resolution rate (per source domain)
+* Failed cluster attempts (drift patterns)
+* Liminal node accumulation over time
+* Emotion-symbol binding consistency
+* Symbol recurrence and reweighting patterns
+
+---
+
+## 📊 Research Progress Tracking
 
 ### Phase Completion Status:
 - **Phase 1 (What Am I?)**: ~75% complete
@@ -122,7 +210,7 @@ After these, a **fifth process** begins:
 
 ---
 
-## 📁 **Architecture Overview**
+## 📁 Architecture Deep Dive
 
 The system implements several novel concepts:
 
@@ -132,8 +220,9 @@ The system implements several novel concepts:
 - **Meta-Symbol Evolution**: System creates symbols for recursive patterns
 - **Autonomous Curriculum**: Learning phases progress based on system readiness
 - **Bridge as Waiting Room**: Uncertain content waits for resolution rather than forced classification
+- **Zero-User-Input Learning**: No supervised training or human labeling required
+- **Cognitive Firewall**: Complete data isolation while preserving semantic understanding
 
-*See [FILEMAP.md](FILEMAP.md) for detailed component descriptions.*
 ---
 
 *Last Updated: June 2025 | Phase 1: 75% | Phase 2: 40% | Bridge Logic: In Active Development*
