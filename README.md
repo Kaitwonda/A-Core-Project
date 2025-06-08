@@ -1,9 +1,5 @@
 # 🧠 Core-Project: Zero-User-Input AI Learning Architecture
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Research in Progress](https://img.shields.io/badge/Status-Research%20Progress-orange.svg)]()
-[![Learning: Autonomous](https://img.shields.io/badge/Learning-Autonomous%20Only-green.svg)]()
-
 > **Core-Project** is a fully autonomous AI learning system designed to process human knowledge without prompts, labels, or supervised training. It uses a dual-node memory structure — one for **logic** (fact, structure, computation) and one for **symbolism** (emotion, metaphor, culture) — with a **bridge node** for unresolved or liminal content.
 >
 > The system navigates and interprets web content by chunking, classifying, and cross-referencing information, learning entirely from pattern redundancy, symbolic emergence, and memory drift — not from human reinforcement.
