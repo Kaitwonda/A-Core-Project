@@ -31,10 +31,10 @@ After these, a **fifth process** begins:
 
 ```
 ┌────────────────────┐     ┌──────────────────┐     ┌────────────────────┐
-│     Logic Node     │ ◄──►│   Bridge Memory   │◄──► │   Symbolic Node     │
-│ ✅ Fully Working   │     │ 🔄 Stratifying    │     │ 🔄 Metaphor Parsing │
-│ - Facts            │     │ - Drift Tracking  │     │ - Emotions          │
-│ - Definitions      │     │ - Conflict Tags   │     │ - Symbol Evolution  │
+│     Logic Node     │ ◄──►│   Bridge Memory  │◄──► │   Symbolic Node    │
+│                    │     │                  │     │    Metaphor Parsing│
+│ - Facts            │     │ - Drift Tracking │     │ - Emotions         │
+│ - Definitions      │     │ - Conflict Tags  │     │ - Symbol Evolution │
 └────────────────────┘     └──────────────────┘     └────────────────────┘
 ```
 
