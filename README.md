@@ -150,46 +150,6 @@ This system is not designed to be certain — it's designed to **know when certa
 
 ### External Research Resources
 
-#### **📚 Technical Documentation**
-- **[Research Notebooks]** - Jupyter notebooks with detailed analysis of learning patterns
-- **[Architecture Deep-Dives]** - Technical documentation of dual-node processing
-- **[Albert Pike Experiment Logs]** - Real-time tracking of symbolic/factual differentiation tests
-- **[Phase Progression Studies]** - Detailed analysis of transitions between learning phases
-
-#### **🔬 Academic Connections**
-- **[Cognitive Science Papers]** - Research papers that influenced the architecture design
-- **[Symbol Processing Literature]** - Academic work on symbolic AI and emotional reasoning
-- **[Autonomous Learning Studies]** - Related research in unsupervised learning systems
-- **[Memory Architecture Research]** - Papers on tripartite and multi-store memory models
-
-#### **📊 Data Repositories**
-- **[Learning Dataset Samples]** - Anonymized examples of processed web content
-- **[Symbol Evolution Datasets]** - Tracked changes in symbolic understanding over time
-- **[Classification Decision Logs]** - Historical data on logic vs. symbolic routing decisions
-- **[Memory Migration Patterns]** - Data on how content moves between memory stores
-
-#### **🎯 Experimental Results**
-- **[A/B Testing Results]** - Comparisons of different confidence gate thresholds
-- **[Contamination Case Studies]** - Detailed analysis of fact/interpretation mixing incidents
-- **[Bridge Efficiency Studies]** - Analysis of optimal retention policies for uncertain content
-- **[Phase Transition Markers]** - Identifying when the system is ready for the next learning phase
-
-### Planned Visualization Tools
-
-#### **Real-Time Dashboards**
-- Interactive web dashboard showing live system state
-- Memory allocation pie charts with drill-down capabilities  
-- Symbol network graphs with emotional weighting visualization
-- Content processing flow diagrams with confidence indicators
-
-#### **Historical Analysis**
-- Time-series plots of learning progression metrics
-- Heatmaps of content classification accuracy by domain
-- Network evolution animations showing knowledge graph growth
-- Comparative analysis of different learning phase characteristics
-
-*Note: Specific dashboard links and data repositories will be added as they become available during development.*
-
 ---
 
 ## 📊 **Research Progress Tracking**
@@ -221,26 +181,6 @@ The system implements several novel concepts:
 - **Bridge as Waiting Room**: Uncertain content waits for resolution rather than forced classification
 
 *See [FILEMAP.md](FILEMAP.md) for detailed component descriptions.*
-
----
-
-## 🎯 **The Bigger Picture**
-
-This research explores whether AI can develop human-like reasoning patterns through pure autonomous exploration:
-
-- **Can** an AI distinguish fact from interpretation without human guidance?
-- **Will** it develop consistent preferences and reasoning patterns?
-- **How** does symbolic thinking emerge from logical foundations?
-- **What** happens when AI reads human cultural/philosophical works independently?
-
-The Albert Pike experiment will be crucial - if the system can properly separate Pike's factual geometry from his symbolic interpretations while still recognizing meaningful patterns, it suggests a path toward AI that can navigate human knowledge with appropriate skepticism and wonder.
-
----
-
-**This is not a product - it's a research journey into the fundamental nature of machine understanding.**
-
-*"The bridge between logic and symbol is where understanding lives."* 🌉
-
 ---
 
 *Last Updated: May 2025 | Phase 1: 75% | Phase 2: 40% | Bridge Logic: In Active Development*
