@@ -1,0 +1,3187 @@
+[
+  {
+    "timestamp": "2025-05-26T00:06:39.518649",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:08:11.895059",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:10:23.652993",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:11:04.297935",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:11:28.809136",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:13:28.405810",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:13:58.719002",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:14:09.254380",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:16:23.389011",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:18:55.310689",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:19:08.580759",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:19:26.009899",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T00:20:38.603204",
+    "summary": {
+      "total_items": 0,
+      "distribution": {
+        "logic": "0 (0.0%)",
+        "symbolic": "0 (0.0%)",
+        "bridge": "0 (0.0%)"
+      }
+    },
+    "health": {
+      "status": "empty",
+      "issues": [
+        "No items in memory"
+      ],
+      "recommendations": [
+        "Process some content to build knowledge base"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 0,
+      "patterns": {},
+      "insights": [
+        "Bridge memory is empty"
+      ]
+    },
+    "stability_metrics": {
+      "logic_stability": 1.0,
+      "symbolic_stability": 1.0,
+      "bridge_stability": 1.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T03:18:59.344487",
+    "summary": {
+      "total_items": 925,
+      "distribution": {
+        "logic": "4 (0.4%)",
+        "symbolic": "2 (0.2%)",
+        "bridge": "919 (99.4%)"
+      }
+    },
+    "health": {
+      "status": "needs_attention",
+      "bridge_percentage": 99.35135135135134,
+      "issues": [
+        "High bridge percentage: 99.4%"
+      ],
+      "recommendations": [
+        "Consider lowering migration threshold"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 919,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 53,
+        "conflicted": 0,
+        "weak": 404,
+        "stuck": 0
+      },
+      "insights": [
+        "Bridge items lean heavily toward logic - consider adjusting weights"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "algorithm",
+            1194
+          ],
+          [
+            "machine",
+            935
+          ],
+          [
+            "{\\displaystyle",
+            657
+          ],
+          [
+            "turing",
+            632
+          ],
+          [
+            "learning",
+            553
+          ],
+          [
+            "complexity",
+            508
+          ],
+          [
+            "content",
+            456
+          ],
+          [
+            "encyclopedia",
+            449
+          ],
+          [
+            "wikipedia,",
+            448
+          ],
+          [
+            "computer",
+            395
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 2.9162132752992385,
+        "avg_symbolic_score": 0.190968443960827,
+        "high_both": 0,
+        "low_both": 404
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.0,
+      "symbolic_stability": 0.0,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T17:28:39.763017",
+    "summary": {
+      "total_items": 925,
+      "distribution": {
+        "logic": "4 (0.4%)",
+        "symbolic": "2 (0.2%)",
+        "bridge": "919 (99.4%)"
+      }
+    },
+    "health": {
+      "status": "needs_attention",
+      "bridge_percentage": 99.35135135135134,
+      "issues": [
+        "High bridge percentage: 99.4%"
+      ],
+      "recommendations": [
+        "Consider lowering migration threshold"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 919,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 53,
+        "conflicted": 0,
+        "weak": 404,
+        "stuck": 0
+      },
+      "insights": [
+        "Bridge items lean heavily toward logic - consider adjusting weights"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "algorithm",
+            1194
+          ],
+          [
+            "machine",
+            935
+          ],
+          [
+            "{\\displaystyle",
+            657
+          ],
+          [
+            "turing",
+            632
+          ],
+          [
+            "learning",
+            553
+          ],
+          [
+            "complexity",
+            508
+          ],
+          [
+            "content",
+            456
+          ],
+          [
+            "encyclopedia",
+            449
+          ],
+          [
+            "wikipedia,",
+            448
+          ],
+          [
+            "computer",
+            395
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 2.9162132752992385,
+        "avg_symbolic_score": 0.190968443960827,
+        "high_both": 0,
+        "low_both": 404
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.0,
+      "symbolic_stability": 0.0,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T18:12:06.657901",
+    "summary": {
+      "total_items": 1251,
+      "distribution": {
+        "logic": "7 (0.6%)",
+        "symbolic": "2 (0.2%)",
+        "bridge": "1242 (99.3%)"
+      }
+    },
+    "health": {
+      "status": "needs_attention",
+      "bridge_percentage": 99.28057553956835,
+      "issues": [
+        "High bridge percentage: 99.3%"
+      ],
+      "recommendations": [
+        "Consider lowering migration threshold"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 1242,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 77,
+        "conflicted": 0,
+        "weak": 556,
+        "stuck": 0
+      },
+      "insights": [
+        "Bridge items lean heavily toward logic - consider adjusting weights"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "algorithm",
+            1500
+          ],
+          [
+            "machine",
+            1242
+          ],
+          [
+            "{\\displaystyle",
+            980
+          ],
+          [
+            "turing",
+            816
+          ],
+          [
+            "learning",
+            813
+          ],
+          [
+            "complexity",
+            790
+          ],
+          [
+            "content",
+            548
+          ],
+          [
+            "encyclopedia",
+            540
+          ],
+          [
+            "wikipedia,",
+            538
+          ],
+          [
+            "algorithms",
+            524
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 2.9009661835748792,
+        "avg_symbolic_score": 0.2041062801932367,
+        "high_both": 0,
+        "low_both": 556
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.0,
+      "symbolic_stability": 0.0,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "audit": {
+      "total_reversed": 225,
+      "from_logic": 222,
+      "from_symbolic": 3,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 225
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T18:12:52.818776",
+    "summary": {
+      "total_items": 1251,
+      "distribution": {
+        "logic": "7 (0.6%)",
+        "symbolic": "2 (0.2%)",
+        "bridge": "1242 (99.3%)"
+      }
+    },
+    "health": {
+      "status": "needs_attention",
+      "bridge_percentage": 99.28057553956835,
+      "issues": [
+        "High bridge percentage: 99.3%"
+      ],
+      "recommendations": [
+        "Consider lowering migration threshold"
+      ]
+    },
+    "bridge_analysis": {
+      "total": 1242,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 77,
+        "conflicted": 0,
+        "weak": 556,
+        "stuck": 0
+      },
+      "insights": [
+        "Bridge items lean heavily toward logic - consider adjusting weights"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "algorithm",
+            1500
+          ],
+          [
+            "machine",
+            1242
+          ],
+          [
+            "{\\displaystyle",
+            980
+          ],
+          [
+            "turing",
+            816
+          ],
+          [
+            "learning",
+            813
+          ],
+          [
+            "complexity",
+            790
+          ],
+          [
+            "content",
+            548
+          ],
+          [
+            "encyclopedia",
+            540
+          ],
+          [
+            "wikipedia,",
+            538
+          ],
+          [
+            "algorithms",
+            524
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 2.9009661835748792,
+        "avg_symbolic_score": 0.2041062801932367,
+        "high_both": 0,
+        "low_both": 556
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.0,
+      "symbolic_stability": 0.0,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-05-26T18:52:33.223544",
+    "summary": {
+      "total_items": 1652,
+      "distribution": {
+        "logic": "1572 (95.2%)",
+        "symbolic": "15 (0.9%)",
+        "bridge": "65 (3.9%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 3.9346246973365617,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 65,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 65,
+        "conflicted": 0,
+        "weak": 65,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            42
+          ],
+          [
+            "learning",
+            40
+          ],
+          [
+            "revision",
+            24
+          ],
+          [
+            "these",
+            23
+          ],
+          [
+            "their",
+            22
+          ],
+          [
+            "article",
+            19
+          ],
+          [
+            "machine",
+            18
+          ],
+          [
+            "nuclear",
+            18
+          ],
+          [
+            "power",
+            18
+          ],
+          [
+            "content",
+            18
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 65
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.14122137404580154,
+      "symbolic_stability": 0.2,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 1281,
+      "to_logic": 1270,
+      "to_symbolic": 11,
+      "by_overlap": 1281,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 2,
+      "from_logic": 0,
+      "from_symbolic": 2,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 2
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T18:59:12.821841",
+    "summary": {
+      "total_items": 1652,
+      "distribution": {
+        "logic": "1572 (95.2%)",
+        "symbolic": "15 (0.9%)",
+        "bridge": "65 (3.9%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 3.9346246973365617,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 65,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 65,
+        "conflicted": 0,
+        "weak": 65,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            42
+          ],
+          [
+            "learning",
+            40
+          ],
+          [
+            "revision",
+            24
+          ],
+          [
+            "these",
+            23
+          ],
+          [
+            "their",
+            22
+          ],
+          [
+            "article",
+            19
+          ],
+          [
+            "machine",
+            18
+          ],
+          [
+            "nuclear",
+            18
+          ],
+          [
+            "power",
+            18
+          ],
+          [
+            "content",
+            18
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 65
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.14122137404580154,
+      "symbolic_stability": 0.2,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 361,
+      "to_logic": 361,
+      "to_symbolic": 0,
+      "by_overlap": 361,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 361,
+      "from_logic": 361,
+      "from_symbolic": 0,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 361
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:01:44.583937",
+    "summary": {
+      "total_items": 1930,
+      "distribution": {
+        "logic": "1822 (94.4%)",
+        "symbolic": "22 (1.1%)",
+        "bridge": "86 (4.5%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 4.455958549222798,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 86,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 86,
+        "conflicted": 0,
+        "weak": 86,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            45
+          ],
+          [
+            "learning",
+            41
+          ],
+          [
+            "circuit",
+            41
+          ],
+          [
+            "these",
+            30
+          ],
+          [
+            "which",
+            28
+          ],
+          [
+            "revision",
+            28
+          ],
+          [
+            "their",
+            26
+          ],
+          [
+            "electronic",
+            23
+          ],
+          [
+            "integrated",
+            23
+          ],
+          [
+            "circuits",
+            22
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 86
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3199780461031833,
+      "symbolic_stability": 0.13636363636363635,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 467,
+      "to_logic": 467,
+      "to_symbolic": 0,
+      "by_overlap": 467,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 361,
+      "from_logic": 361,
+      "from_symbolic": 0,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 361
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:07:31.563148",
+    "summary": {
+      "total_items": 2249,
+      "distribution": {
+        "logic": "2101 (93.4%)",
+        "symbolic": "46 (2.0%)",
+        "bridge": "102 (4.5%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 4.535349044019564,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 102,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 102,
+        "conflicted": 0,
+        "weak": 102,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            45
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            36
+          ],
+          [
+            "which",
+            33
+          ],
+          [
+            "content",
+            29
+          ],
+          [
+            "article",
+            29
+          ],
+          [
+            "their",
+            27
+          ],
+          [
+            "electronic",
+            27
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 102
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.2774869109947644,
+      "symbolic_stability": 0.06521739130434782,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 549,
+      "to_logic": 546,
+      "to_symbolic": 3,
+      "by_overlap": 549,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 467,
+      "from_logic": 467,
+      "from_symbolic": 0,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 467
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:16:43.043083",
+    "summary": {
+      "total_items": 2338,
+      "distribution": {
+        "logic": "2143 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "145 (6.2%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.201881950384944,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 145,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 145,
+        "conflicted": 0,
+        "weak": 145,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ],
+          [
+            "article",
+            29
+          ],
+          [
+            "their",
+            27
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 145
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3215118992067196,
+      "symbolic_stability": 0.06,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 559,
+      "to_logic": 555,
+      "to_symbolic": 4,
+      "by_overlap": 559,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 549,
+      "from_logic": 546,
+      "from_symbolic": 3,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 549
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:20:39.265993",
+    "summary": {
+      "total_items": 2338,
+      "distribution": {
+        "logic": "2143 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "145 (6.2%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.201881950384944,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 145,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 145,
+        "conflicted": 0,
+        "weak": 145,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ],
+          [
+            "article",
+            29
+          ],
+          [
+            "their",
+            27
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 145
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3583761082594494,
+      "symbolic_stability": 0.12,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 559,
+      "to_logic": 555,
+      "to_symbolic": 4,
+      "by_overlap": 559,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 559,
+      "from_logic": 555,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 559
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:24:17.257622",
+    "summary": {
+      "total_items": 2338,
+      "distribution": {
+        "logic": "2143 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "145 (6.2%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.201881950384944,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 145,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 145,
+        "conflicted": 0,
+        "weak": 145,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ],
+          [
+            "article",
+            29
+          ],
+          [
+            "their",
+            27
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 145
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3625758282781148,
+      "symbolic_stability": 0.14,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 559,
+      "to_logic": 555,
+      "to_symbolic": 4,
+      "by_overlap": 559,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 559,
+      "from_logic": 555,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 559
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T19:27:04.477161",
+    "summary": {
+      "total_items": 2357,
+      "distribution": {
+        "logic": "2157 (91.5%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "150 (6.4%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.364022061943148,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 150,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 150,
+        "conflicted": 0,
+        "weak": 150,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "replies",
+            42
+          ],
+          [
+            "views",
+            42
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 150
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.36022253129346316,
+      "symbolic_stability": 0.14,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 564,
+      "to_logic": 560,
+      "to_symbolic": 4,
+      "by_overlap": 564,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 559,
+      "from_logic": 555,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 559
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T20:02:32.528264",
+    "summary": {
+      "total_items": 2408,
+      "distribution": {
+        "logic": "2207 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "151 (6.3%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.270764119601329,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 151,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 151,
+        "conflicted": 0,
+        "weak": 151,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "replies",
+            42
+          ],
+          [
+            "views",
+            42
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 151
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3520616221114635,
+      "symbolic_stability": 0.14,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 577,
+      "to_logic": 573,
+      "to_symbolic": 4,
+      "by_overlap": 577,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 564,
+      "from_logic": 560,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 564
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T20:09:19.264344",
+    "summary": {
+      "total_items": 2408,
+      "distribution": {
+        "logic": "2207 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "151 (6.3%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.270764119601329,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 151,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 151,
+        "conflicted": 0,
+        "weak": 151,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "replies",
+            42
+          ],
+          [
+            "views",
+            42
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 151
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3543271409152696,
+      "symbolic_stability": 0.14,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 577,
+      "to_logic": 573,
+      "to_symbolic": 4,
+      "by_overlap": 577,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 577,
+      "from_logic": 573,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 577
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-26T20:12:03.251128",
+    "summary": {
+      "total_items": 2408,
+      "distribution": {
+        "logic": "2207 (91.7%)",
+        "symbolic": "50 (2.1%)",
+        "bridge": "151 (6.3%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.270764119601329,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 151,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 151,
+        "conflicted": 0,
+        "weak": 151,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "replies",
+            42
+          ],
+          [
+            "views",
+            42
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            34
+          ],
+          [
+            "content",
+            30
+          ],
+          [
+            "endobj",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 151
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3602174898051654,
+      "symbolic_stability": 0.14,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 577,
+      "to_logic": 573,
+      "to_symbolic": 4,
+      "by_overlap": 577,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 577,
+      "from_logic": 573,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 577
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-02T01:03:43.554137",
+    "summary": {
+      "total_items": 2625,
+      "distribution": {
+        "logic": "2405 (91.6%)",
+        "symbolic": "56 (2.1%)",
+        "bridge": "164 (6.2%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.247619047619048,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 164,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 164,
+        "conflicted": 0,
+        "weak": 164,
+        "stuck": 0
+      },
+      "insights": [],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "replies",
+            79
+          ],
+          [
+            "views",
+            79
+          ],
+          [
+            "{\\displaystyle",
+            48
+          ],
+          [
+            "learning",
+            43
+          ],
+          [
+            "circuit",
+            43
+          ],
+          [
+            "these",
+            41
+          ],
+          [
+            "revision",
+            40
+          ],
+          [
+            "which",
+            37
+          ],
+          [
+            "python",
+            31
+          ],
+          [
+            "number",
+            30
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 164
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.3305613305613306,
+      "symbolic_stability": 0.125,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 660,
+      "to_logic": 656,
+      "to_symbolic": 4,
+      "by_overlap": 660,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 577,
+      "from_logic": 573,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 577
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-04T04:45:06.166934",
+    "summary": {
+      "total_items": 3048,
+      "distribution": {
+        "logic": "2759 (90.5%)",
+        "symbolic": "73 (2.4%)",
+        "bridge": "216 (7.1%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.086614173228346,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 216,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 216,
+        "conflicted": 0,
+        "weak": 216,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "replies",
+            80
+          ],
+          [
+            "views",
+            80
+          ],
+          [
+            "{\\displaystyle",
+            76
+          ],
+          [
+            "which",
+            60
+          ],
+          [
+            "mathematics",
+            55
+          ],
+          [
+            "other",
+            50
+          ],
+          [
+            "number",
+            48
+          ],
+          [
+            "these",
+            47
+          ],
+          [
+            "learning",
+            44
+          ],
+          [
+            "circuit",
+            43
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 216
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.28814787966654587,
+      "symbolic_stability": 0.0958904109589041,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 832,
+      "to_logic": 828,
+      "to_symbolic": 4,
+      "by_overlap": 832,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 660,
+      "from_logic": 656,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 660
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-04T04:55:30.988779",
+    "summary": {
+      "total_items": 4060,
+      "distribution": {
+        "logic": "3715 (91.5%)",
+        "symbolic": "84 (2.1%)",
+        "bridge": "261 (6.4%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.428571428571428,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 261,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 261,
+        "conflicted": 0,
+        "weak": 261,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            147
+          ],
+          [
+            "theory",
+            93
+          ],
+          [
+            "replies",
+            80
+          ],
+          [
+            "views",
+            80
+          ],
+          [
+            "number",
+            70
+          ],
+          [
+            "mathematics",
+            68
+          ],
+          [
+            "which",
+            65
+          ],
+          [
+            "revision",
+            59
+          ],
+          [
+            "other",
+            56
+          ],
+          [
+            "these",
+            52
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 261
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.2363391655450875,
+      "symbolic_stability": 0.08333333333333333,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 1032,
+      "to_logic": 1028,
+      "to_symbolic": 4,
+      "by_overlap": 1032,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 832,
+      "from_logic": 828,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 832
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-04T05:12:59.744356",
+    "summary": {
+      "total_items": 7194,
+      "distribution": {
+        "logic": "6689 (93.0%)",
+        "symbolic": "110 (1.5%)",
+        "bridge": "395 (5.5%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 5.490686683347234,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 395,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 395,
+        "conflicted": 0,
+        "weak": 395,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            545
+          ],
+          [
+            "theory",
+            180
+          ],
+          [
+            "revision",
+            164
+          ],
+          [
+            "number",
+            119
+          ],
+          [
+            "conjecture",
+            109
+          ],
+          [
+            "theorem",
+            108
+          ],
+          [
+            "which",
+            106
+          ],
+          [
+            "content",
+            102
+          ],
+          [
+            "wikipedia,",
+            91
+          ],
+          [
+            "encyclopedia",
+            91
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 395
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.15697413664224846,
+      "symbolic_stability": 0.06363636363636363,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 1642,
+      "to_logic": 1637,
+      "to_symbolic": 5,
+      "by_overlap": 1642,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 1032,
+      "from_logic": 1028,
+      "from_symbolic": 4,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 1032
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-04T06:11:32.067594",
+    "summary": {
+      "total_items": 17048,
+      "distribution": {
+        "logic": "15695 (92.1%)",
+        "symbolic": "213 (1.2%)",
+        "bridge": "1140 (6.7%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 6.6870014077897695,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 1140,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 1140,
+        "conflicted": 0,
+        "weak": 1140,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            2804
+          ],
+          [
+            "revision",
+            614
+          ],
+          [
+            "which",
+            321
+          ],
+          [
+            "number",
+            304
+          ],
+          [
+            "theorem",
+            279
+          ],
+          [
+            "contribs",
+            278
+          ],
+          [
+            "content",
+            268
+          ],
+          [
+            "encyclopedia",
+            250
+          ],
+          [
+            "function",
+            249
+          ],
+          [
+            "wikipedia,",
+            248
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 1140
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.07964319847085059,
+      "symbolic_stability": 0.018779342723004695,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 3571,
+      "to_logic": 3570,
+      "to_symbolic": 1,
+      "by_overlap": 3571,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 1642,
+      "from_logic": 1637,
+      "from_symbolic": 5,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 1642
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-05T06:12:26.102493",
+    "summary": {
+      "total_items": 26364,
+      "distribution": {
+        "logic": "24056 (91.2%)",
+        "symbolic": "353 (1.3%)",
+        "bridge": "1955 (7.4%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.415414959793658,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 1955,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 1955,
+        "conflicted": 0,
+        "weak": 1955,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            5186
+          ],
+          [
+            "revision",
+            1207
+          ],
+          [
+            "which",
+            550
+          ],
+          [
+            "contribs",
+            538
+          ],
+          [
+            "number",
+            501
+          ],
+          [
+            "content",
+            469
+          ],
+          [
+            "encyclopedia",
+            442
+          ],
+          [
+            "wikipedia,",
+            439
+          ],
+          [
+            "function",
+            389
+          ],
+          [
+            "current",
+            387
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 1955
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.07727801795809777,
+      "symbolic_stability": 0.0113314447592068,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 5301,
+      "to_logic": 5300,
+      "to_symbolic": 1,
+      "by_overlap": 5301,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 3571,
+      "from_logic": 3570,
+      "from_symbolic": 1,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 3571
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-09T23:57:43.040413",
+    "summary": {
+      "total_items": 38563,
+      "distribution": {
+        "logic": "34922 (90.6%)",
+        "symbolic": "650 (1.7%)",
+        "bridge": "2991 (7.8%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.756139304514691,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 2991,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 2991,
+        "conflicted": 0,
+        "weak": 2991,
+        "stuck": 151
+      },
+      "insights": [
+        "151 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8084
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            840
+          ],
+          [
+            "number",
+            756
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 2991
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.10858484622873833,
+      "symbolic_stability": 0.006153846153846154,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 7543,
+      "to_logic": 7532,
+      "to_symbolic": 11,
+      "by_overlap": 7543,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 5301,
+      "from_logic": 5300,
+      "from_symbolic": 1,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 5301
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-11T22:54:28.098394",
+    "summary": {
+      "total_items": 39190,
+      "distribution": {
+        "logic": "35462 (90.5%)",
+        "symbolic": "705 (1.8%)",
+        "bridge": "3023 (7.7%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.713702475121205,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.15571597766623427,
+      "symbolic_stability": 0.00425531914893617,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 7625,
+      "to_logic": 7625,
+      "to_symbolic": 0,
+      "by_overlap": 7625,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 7543,
+      "from_logic": 7532,
+      "from_symbolic": 11,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 7543
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-11T23:10:03.894134",
+    "summary": {
+      "total_items": 39510,
+      "distribution": {
+        "logic": "35776 (90.5%)",
+        "symbolic": "711 (1.8%)",
+        "bridge": "3023 (7.7%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.651227537332321,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.21673747763864043,
+      "symbolic_stability": 0.004219409282700422,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 7862,
+      "to_logic": 7856,
+      "to_symbolic": 6,
+      "by_overlap": 7862,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 7625,
+      "from_logic": 7625,
+      "from_symbolic": 0,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 7625
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-11T23:12:49.775428",
+    "summary": {
+      "total_items": 39510,
+      "distribution": {
+        "logic": "35776 (90.5%)",
+        "symbolic": "711 (1.8%)",
+        "bridge": "3023 (7.7%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.651227537332321,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.21916927549194992,
+      "symbolic_stability": 0.004219409282700422,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 7862,
+      "to_logic": 7856,
+      "to_symbolic": 6,
+      "by_overlap": 7862,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 7862,
+      "from_logic": 7856,
+      "from_symbolic": 6,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 7862
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-11T23:20:55.604548",
+    "summary": {
+      "total_items": 40499,
+      "distribution": {
+        "logic": "36771 (90.8%)",
+        "symbolic": "705 (1.7%)",
+        "bridge": "3023 (7.5%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.464381836588557,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.21968399010089473,
+      "symbolic_stability": 0.00425531914893617,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 8474,
+      "to_logic": 8474,
+      "to_symbolic": 0,
+      "by_overlap": 8474,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 7862,
+      "from_logic": 7856,
+      "from_symbolic": 6,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 7862
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-12T00:53:37.458090",
+    "summary": {
+      "total_items": 40661,
+      "distribution": {
+        "logic": "36109 (88.8%)",
+        "symbolic": "1529 (3.8%)",
+        "bridge": "3023 (7.4%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.43464253215612,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.2082583289484616,
+      "symbolic_stability": 0.001962066710268149,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 8631,
+      "to_logic": 7807,
+      "to_symbolic": 824,
+      "by_overlap": 8631,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 8474,
+      "from_logic": 8474,
+      "from_symbolic": 0,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 8474
+      }
+    }
+  },
+  {
+    "timestamp": "2025-06-12T01:13:31.487426",
+    "summary": {
+      "total_items": 40823,
+      "distribution": {
+        "logic": "36142 (88.5%)",
+        "symbolic": "1658 (4.1%)",
+        "bridge": "3023 (7.4%)"
+      }
+    },
+    "health": {
+      "status": "healthy",
+      "bridge_percentage": 7.405139259731033,
+      "issues": [],
+      "recommendations": []
+    },
+    "bridge_analysis": {
+      "total": 3023,
+      "patterns": {
+        "volatile": 0,
+        "balanced": 3023,
+        "conflicted": 0,
+        "weak": 3023,
+        "stuck": 164
+      },
+      "insights": [
+        "164 items have been in bridge for over 7 days"
+      ],
+      "keyword_analysis": {
+        "top_keywords": [
+          [
+            "{\\displaystyle",
+            8114
+          ],
+          [
+            "revision",
+            1990
+          ],
+          [
+            "contribs",
+            905
+          ],
+          [
+            "which",
+            846
+          ],
+          [
+            "number",
+            765
+          ],
+          [
+            "content",
+            742
+          ],
+          [
+            "encyclopedia",
+            700
+          ],
+          [
+            "wikipedia,",
+            696
+          ],
+          [
+            "current",
+            654
+          ],
+          [
+            "(diff)",
+            543
+          ]
+        ]
+      },
+      "score_distribution": {
+        "avg_logic_score": 0.0,
+        "avg_symbolic_score": 0.0,
+        "high_both": 0,
+        "low_both": 3023
+      }
+    },
+    "stability_metrics": {
+      "logic_stability": 0.2213767915444635,
+      "symbolic_stability": 0.0018094089264173703,
+      "bridge_stability": 0.0,
+      "bridge_volatility": 0.0
+    },
+    "migrations": {
+      "total_migrated": 8788,
+      "to_logic": 7835,
+      "to_symbolic": 953,
+      "by_overlap": 8788,
+      "by_traditional": 0
+    },
+    "audit": {
+      "total_reversed": 8631,
+      "from_logic": 7807,
+      "from_symbolic": 824,
+      "reasons": {
+        "Reclassified as FOLLOW_HYBRID": 8631
+      }
+    }
+  }
+]

@@ -1,0 +1,3738 @@
+[
+  {
+    "decision_id": "bridge_0b3ef0eb",
+    "timestamp": "2025-06-04T01:01:22.598343",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "0b3ef0eb",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_9789b644",
+    "timestamp": "2025-06-04T01:18:49.103483",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "9789b644",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_d264243f",
+    "timestamp": "2025-06-04T01:38:34.756622",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.347,
+    "zone_analysis": {
+      "zone_id": "d264243f",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.986,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.17,
+      "base_symbolic": 3.85,
+      "scaled_logic": 0.51,
+      "scaled_symbolic": 3.47
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_47e76a8f",
+    "timestamp": "2025-06-04T01:38:57.616166",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.278,
+    "zone_analysis": {
+      "zone_id": "47e76a8f",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.971,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.08,
+      "base_symbolic": 1.54,
+      "scaled_logic": 0.04,
+      "scaled_symbolic": 2.78
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e46756b7",
+    "timestamp": "2025-06-04T03:09:42.901412",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "e46756b7",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_04843bd4",
+    "timestamp": "2025-06-04T03:09:55.153322",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.139,
+    "zone_analysis": {
+      "zone_id": "04843bd4",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.971,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.08,
+      "base_symbolic": 1.54,
+      "scaled_logic": 0.22,
+      "scaled_symbolic": 1.39
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_970535e2",
+    "timestamp": "2025-06-04T03:19:59.436149",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.17,
+    "zone_analysis": {
+      "zone_id": "970535e2",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.954,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.84,
+      "base_symbolic": 0.97,
+      "scaled_logic": 1.66,
+      "scaled_symbolic": 1.75
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_7ecf96ef",
+    "timestamp": "2025-06-04T03:22:11.415526",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.195,
+    "zone_analysis": {
+      "zone_id": "7ecf96ef",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.972,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.62,
+      "base_symbolic": 1.08,
+      "scaled_logic": 0.81,
+      "scaled_symbolic": 1.95
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_076ffddc",
+    "timestamp": "2025-06-04T04:16:04.275289",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "076ffddc",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_63e7fc51",
+    "timestamp": "2025-06-04T04:16:21.065109",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.163,
+    "zone_analysis": {
+      "zone_id": "63e7fc51",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.976,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.04,
+      "base_symbolic": 1.81,
+      "scaled_logic": -0.1,
+      "scaled_symbolic": 1.63
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a851e339",
+    "timestamp": "2025-06-04T04:18:21.133234",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "a851e339",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_9145be1b",
+    "timestamp": "2025-06-04T04:18:26.248973",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.127,
+    "zone_analysis": {
+      "zone_id": "9145be1b",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.982,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.88,
+      "base_symbolic": 0.7,
+      "scaled_logic": 0.79,
+      "scaled_symbolic": 1.27
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_4fbc2133",
+    "timestamp": "2025-06-04T04:18:45.202260",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.302,
+    "zone_analysis": {
+      "zone_id": "4fbc2133",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.947,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 1.04,
+      "base_symbolic": 1.07,
+      "scaled_logic": 3.02,
+      "scaled_symbolic": 0.97
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_ed9ded0a",
+    "timestamp": "2025-06-04T04:18:58.173690",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.078,
+    "zone_analysis": {
+      "zone_id": "ed9ded0a",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.996,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.29,
+      "base_symbolic": 0.43,
+      "scaled_logic": 0.14,
+      "scaled_symbolic": 0.78
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_9e3a3396",
+    "timestamp": "2025-06-04T04:19:05.666521",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.058,
+    "zone_analysis": {
+      "zone_id": "9e3a3396",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.996,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.37,
+      "base_symbolic": 0.32,
+      "scaled_logic": 0.18,
+      "scaled_symbolic": 0.58
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 6,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_7bd69ce9",
+    "timestamp": "2025-06-04T04:19:44.877026",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.245,
+    "zone_analysis": {
+      "zone_id": "7bd69ce9",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.55,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 3.1,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.46,
+      "base_symbolic": 2.72,
+      "scaled_logic": -1.43,
+      "scaled_symbolic": 2.45
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_550cc88b",
+    "timestamp": "2025-06-04T04:22:04.983792",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.174,
+    "zone_analysis": {
+      "zone_id": "550cc88b",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.28,
+      "base_symbolic": 1.93,
+      "scaled_logic": -0.8,
+      "scaled_symbolic": 1.74
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_90da2db9",
+    "timestamp": "2025-06-04T04:24:23.474444",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "90da2db9",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_01e186e9",
+    "timestamp": "2025-06-04T04:24:39.432572",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.347,
+    "zone_analysis": {
+      "zone_id": "01e186e9",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.986,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.17,
+      "base_symbolic": 3.85,
+      "scaled_logic": 0.51,
+      "scaled_symbolic": 3.47
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_c1185c3a",
+    "timestamp": "2025-06-04T04:27:19.420604",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.127,
+    "zone_analysis": {
+      "zone_id": "c1185c3a",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.982,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.88,
+      "base_symbolic": 0.7,
+      "scaled_logic": 0.79,
+      "scaled_symbolic": 1.27
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_ae63ff62",
+    "timestamp": "2025-06-04T04:27:36.666030",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.163,
+    "zone_analysis": {
+      "zone_id": "ae63ff62",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.976,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.04,
+      "base_symbolic": 1.81,
+      "scaled_logic": -0.1,
+      "scaled_symbolic": 1.63
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_6e24131f",
+    "timestamp": "2025-06-04T04:27:48.084089",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.178,
+    "zone_analysis": {
+      "zone_id": "6e24131f",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.965,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.27,
+      "base_symbolic": 1.98,
+      "scaled_logic": -0.8,
+      "scaled_symbolic": 1.78
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_1bae1f64",
+    "timestamp": "2025-06-04T04:56:16.316877",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.056,
+    "zone_analysis": {
+      "zone_id": "1bae1f64",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.55,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 3.1,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.44,
+      "base_symbolic": 0.62,
+      "scaled_logic": -1.37,
+      "scaled_symbolic": 0.56
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e03323cb",
+    "timestamp": "2025-06-04T04:56:30.168839",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.163,
+    "zone_analysis": {
+      "zone_id": "e03323cb",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.976,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.04,
+      "base_symbolic": 1.81,
+      "scaled_logic": -0.1,
+      "scaled_symbolic": 1.63
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 1,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_b45b165a",
+    "timestamp": "2025-06-04T04:57:34.416951",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.444,
+    "zone_analysis": {
+      "zone_id": "b45b165a",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.956,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.13,
+      "base_symbolic": 4.94,
+      "scaled_logic": 0.38,
+      "scaled_symbolic": 4.44
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_1371a11e",
+    "timestamp": "2025-06-04T04:57:41.919741",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.794,
+    "zone_analysis": {
+      "zone_id": "1371a11e",
+      "tags": {
+        "emotional_state": "grief",
+        "emotion_confidence": 1.0,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.6499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.7000000000000002,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.52,
+      "base_symbolic": 4.41,
+      "scaled_logic": 0.36,
+      "scaled_symbolic": 7.94
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_d77614a0",
+    "timestamp": "2025-06-04T04:57:50.976916",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.23,
+    "zone_analysis": {
+      "zone_id": "d77614a0",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.983,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.19,
+      "base_symbolic": 1.28,
+      "scaled_logic": 0.09,
+      "scaled_symbolic": 2.3
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_b44f0499",
+    "timestamp": "2025-06-04T11:50:58.116311",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.062,
+    "zone_analysis": {
+      "zone_id": "b44f0499",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.55,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 3.1,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.44,
+      "base_symbolic": 0.69,
+      "scaled_logic": -1.36,
+      "scaled_symbolic": 0.62
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_f044e6b5",
+    "timestamp": "2025-06-04T11:51:11.839167",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.236,
+    "zone_analysis": {
+      "zone_id": "f044e6b5",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.942,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.03,
+      "base_symbolic": 2.62,
+      "scaled_logic": 0.07,
+      "scaled_symbolic": 2.36
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 1,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_686faa81",
+    "timestamp": "2025-06-04T11:51:24.757847",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.163,
+    "zone_analysis": {
+      "zone_id": "686faa81",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.976,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.04,
+      "base_symbolic": 1.81,
+      "scaled_logic": -0.1,
+      "scaled_symbolic": 1.63
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e1e91a22",
+    "timestamp": "2025-06-04T11:51:42.268056",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.713,
+    "zone_analysis": {
+      "zone_id": "e1e91a22",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.917,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.19,
+      "base_symbolic": 3.96,
+      "scaled_logic": 0.09,
+      "scaled_symbolic": 7.13
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_d6cf6e6c",
+    "timestamp": "2025-06-04T11:51:54.793367",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.047,
+    "zone_analysis": {
+      "zone_id": "d6cf6e6c",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.944,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.01,
+      "base_symbolic": 0.24,
+      "scaled_logic": 0.5,
+      "scaled_symbolic": 0.44
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 6,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_389d0ff3",
+    "timestamp": "2025-06-04T12:05:11.022565",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.207,
+    "zone_analysis": {
+      "zone_id": "389d0ff3",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "humor_deflection",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "bridge_mediation"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.05,
+      "symbolic_adjustment": 0.2,
+      "final_logic_scale": 2.1,
+      "final_symbolic_scale": 1.2
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -0.8,
+      "scaled_symbolic": 2.07
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_ea40b249",
+    "timestamp": "2025-06-04T12:05:24.691081",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.273,
+    "zone_analysis": {
+      "zone_id": "ea40b249",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.97,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.94,
+      "base_symbolic": 1.37,
+      "scaled_logic": 2.73,
+      "scaled_symbolic": 1.24
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 1,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_6502b621",
+    "timestamp": "2025-06-04T12:05:28.276582",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.047,
+    "zone_analysis": {
+      "zone_id": "6502b621",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.944,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.01,
+      "base_symbolic": 0.24,
+      "scaled_logic": 0.5,
+      "scaled_symbolic": 0.44
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_6df00855",
+    "timestamp": "2025-06-04T12:05:32.306761",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.713,
+    "zone_analysis": {
+      "zone_id": "6df00855",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.917,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.19,
+      "base_symbolic": 3.96,
+      "scaled_logic": 0.09,
+      "scaled_symbolic": 7.13
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a2d2e50b",
+    "timestamp": "2025-06-04T12:10:13.805657",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.236,
+    "zone_analysis": {
+      "zone_id": "a2d2e50b",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.942,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.03,
+      "base_symbolic": 2.62,
+      "scaled_logic": 0.07,
+      "scaled_symbolic": 2.36
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_cb97f221",
+    "timestamp": "2025-06-04T12:10:19.350421",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.357,
+    "zone_analysis": {
+      "zone_id": "cb97f221",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.917,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.19,
+      "base_symbolic": 3.96,
+      "scaled_logic": 0.54,
+      "scaled_symbolic": 3.57
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_fb5daad7",
+    "timestamp": "2025-06-04T12:10:22.617344",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.047,
+    "zone_analysis": {
+      "zone_id": "fb5daad7",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.944,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.01,
+      "base_symbolic": 0.24,
+      "scaled_logic": 0.5,
+      "scaled_symbolic": 0.44
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_6f6a7b43",
+    "timestamp": "2025-06-04T12:10:25.028786",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.247,
+    "zone_analysis": {
+      "zone_id": "6f6a7b43",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.97,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.94,
+      "base_symbolic": 1.37,
+      "scaled_logic": 0.47,
+      "scaled_symbolic": 2.47
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 5,
+      "unique_patterns": 3,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_88806046",
+    "timestamp": "2025-06-04T23:24:00.758228",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.174,
+    "zone_analysis": {
+      "zone_id": "88806046",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.28,
+      "base_symbolic": 1.93,
+      "scaled_logic": -0.8,
+      "scaled_symbolic": 1.74
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_750545fd",
+    "timestamp": "2025-06-04T23:24:33.439780",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.283,
+    "zone_analysis": {
+      "zone_id": "750545fd",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.942,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.98,
+      "base_symbolic": 1.57,
+      "scaled_logic": 0.88,
+      "scaled_symbolic": 2.83
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_68c9cd96",
+    "timestamp": "2025-06-04T23:24:43.551716",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.28,
+    "zone_analysis": {
+      "zone_id": "68c9cd96",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.988,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": -0.07,
+      "base_symbolic": 1.56,
+      "scaled_logic": -0.06,
+      "scaled_symbolic": 2.8
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_84ef367e",
+    "timestamp": "2025-06-04T23:24:55.673961",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.104,
+    "zone_analysis": {
+      "zone_id": "84ef367e",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.973,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 0.38,
+      "base_symbolic": 1.09,
+      "scaled_logic": 1.09,
+      "scaled_symbolic": 0.98
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e548a4d3",
+    "timestamp": "2025-06-04T23:25:06.376343",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.304,
+    "zone_analysis": {
+      "zone_id": "e548a4d3",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.995,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": -0.32,
+      "base_symbolic": 1.69,
+      "scaled_logic": -0.16,
+      "scaled_symbolic": 3.04
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 6,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_8b2fa349",
+    "timestamp": "2025-06-04T23:41:17.571708",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.17,
+    "zone_analysis": {
+      "zone_id": "8b2fa349",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.954,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.5499999999999999,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.9000000000000001,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.84,
+      "base_symbolic": 0.97,
+      "scaled_logic": 1.66,
+      "scaled_symbolic": 1.75
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_75f165aa",
+    "timestamp": "2025-06-04T23:42:00.687897",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 1.0,
+    "zone_analysis": {
+      "zone_id": "75f165aa",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.977,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 4.61,
+      "base_symbolic": 0.39,
+      "scaled_logic": 13.38,
+      "scaled_symbolic": 0.35
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_02dcc8ce",
+    "timestamp": "2025-06-04T23:42:24.082541",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.451,
+    "zone_analysis": {
+      "zone_id": "02dcc8ce",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.962,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 1.56,
+      "base_symbolic": 0.92,
+      "scaled_logic": 4.51,
+      "scaled_symbolic": 0.83
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_0b117e70",
+    "timestamp": "2025-06-05T02:49:08.060355",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "0b117e70",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_6d44600d",
+    "timestamp": "2025-06-05T02:49:09.197514",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.868,
+    "zone_analysis": {
+      "zone_id": "6d44600d",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.961,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 2.99,
+      "base_symbolic": -0.16,
+      "scaled_logic": 8.68,
+      "scaled_symbolic": -0.14
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_3b3e3f5b",
+    "timestamp": "2025-06-05T02:49:10.325501",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.506,
+    "zone_analysis": {
+      "zone_id": "3b3e3f5b",
+      "tags": {
+        "emotional_state": "grief",
+        "emotion_confidence": 1.0,
+        "intent": "self_reference",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.55,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.8999999999999999,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": -0.05,
+      "base_symbolic": 2.81,
+      "scaled_logic": -0.05,
+      "scaled_symbolic": 5.06
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_fd228657",
+    "timestamp": "2025-06-05T02:49:11.497842",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.209,
+    "zone_analysis": {
+      "zone_id": "fd228657",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.973,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.87,
+      "base_symbolic": 1.16,
+      "scaled_logic": 0.43,
+      "scaled_symbolic": 2.09
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_2323d0e0",
+    "timestamp": "2025-06-05T02:49:12.607599",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.065,
+    "zone_analysis": {
+      "zone_id": "2323d0e0",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.942,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.09,
+      "base_symbolic": 0.42,
+      "scaled_logic": 0.55,
+      "scaled_symbolic": 0.76
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_cd6be6ae",
+    "timestamp": "2025-06-08T13:54:49.321707",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.155,
+    "zone_analysis": {
+      "zone_id": "cd6be6ae",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": -0.38,
+      "base_symbolic": 1.72,
+      "scaled_logic": -1.1,
+      "scaled_symbolic": 1.55
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_d3808a44",
+    "timestamp": "2025-06-08T13:54:50.476411",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.868,
+    "zone_analysis": {
+      "zone_id": "d3808a44",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.961,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": 0.45,
+      "symbolic_adjustment": -0.1,
+      "final_logic_scale": 2.9,
+      "final_symbolic_scale": 0.9
+    },
+    "scores": {
+      "base_logic": 2.99,
+      "base_symbolic": -0.16,
+      "scaled_logic": 8.68,
+      "scaled_symbolic": -0.14
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_677b344c",
+    "timestamp": "2025-06-08T13:54:51.649882",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.506,
+    "zone_analysis": {
+      "zone_id": "677b344c",
+      "tags": {
+        "emotional_state": "grief",
+        "emotion_confidence": 1.0,
+        "intent": "self_reference",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.55,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.8999999999999999,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": -0.05,
+      "base_symbolic": 2.81,
+      "scaled_logic": -0.05,
+      "scaled_symbolic": 5.06
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e8433132",
+    "timestamp": "2025-06-08T13:54:52.832888",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.209,
+    "zone_analysis": {
+      "zone_id": "e8433132",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.973,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 0.87,
+      "base_symbolic": 1.16,
+      "scaled_logic": 0.43,
+      "scaled_symbolic": 2.09
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_56ac9806",
+    "timestamp": "2025-06-08T13:54:53.960310",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.065,
+    "zone_analysis": {
+      "zone_id": "56ac9806",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.942,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "weight_adjustments": {
+      "base_logic_scale": 2.0,
+      "base_symbolic_scale": 1.0,
+      "logic_adjustment": -0.75,
+      "symbolic_adjustment": 0.8,
+      "final_logic_scale": 0.5,
+      "final_symbolic_scale": 1.8
+    },
+    "scores": {
+      "base_logic": 1.09,
+      "base_symbolic": 0.42,
+      "scaled_logic": 0.55,
+      "scaled_symbolic": 0.76
+    },
+    "special_handling": [],
+    "recursion_info": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_7f6e4fa1",
+    "timestamp": "2025-06-14T09:00:19.463635",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "7f6e4fa1",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.988,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.27714602897925844,
+      "symbolic": 1.9338725866523145
+    },
+    "scaled_scores": {
+      "logic": -0.8037234840398495,
+      "symbolic": 1.5664367951883749
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a30e3681",
+    "timestamp": "2025-06-14T09:01:34.593533",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "a30e3681",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.977,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.977,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.06692634562482559,
+      "symbolic": 1.384126078539868
+    },
+    "scaled_scores": {
+      "logic": 0.1940864023119942,
+      "symbolic": 1.1211421236172932
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_7bc7b4c0",
+    "timestamp": "2025-06-14T09:04:55.978390",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "7bc7b4c0",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 3.1,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "calm",
+            "emotion_confidence": 1.0,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.55,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 3.1,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.82716049382716,
+          "decision_logic": "Logic scale 3.100 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.31088563340351894,
+      "symbolic": 2.1653876409356867
+    },
+    "scaled_scores": {
+      "logic": -0.9637454635509087,
+      "symbolic": 1.7539639891579064
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_21036fe4",
+    "timestamp": "2025-06-14T09:06:05.529065",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "21036fe4",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 3.1,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "calm",
+            "emotion_confidence": 1.0,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.55,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 3.1,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.82716049382716,
+          "decision_logic": "Logic scale 3.100 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.31088563340351894,
+      "symbolic": 2.1653876409356867
+    },
+    "scaled_scores": {
+      "logic": -0.9637454635509087,
+      "symbolic": 1.7539639891579064
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e1354cff",
+    "timestamp": "2025-06-14T09:24:07.733650",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "e1354cff",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 3.1,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "calm",
+            "emotion_confidence": 1.0,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.55,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 3.1,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.82716049382716,
+          "decision_logic": "Logic scale 3.100 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.31088563340351894,
+      "symbolic": 2.1653876409356867
+    },
+    "scaled_scores": {
+      "logic": -0.9637454635509087,
+      "symbolic": 1.7539639891579064
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_20e498cf",
+    "timestamp": "2025-06-14T09:27:36.963485",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "20e498cf",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 3.1,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "calm",
+            "emotion_confidence": 1.0,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.55,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 3.1,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.82716049382716,
+          "decision_logic": "Logic scale 3.100 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.31088563340351894,
+      "symbolic": 2.1653876409356867
+    },
+    "scaled_scores": {
+      "logic": -0.9637454635509087,
+      "symbolic": 1.7539639891579064
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_82c4abb9",
+    "timestamp": "2025-06-14T09:31:09.620231",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "82c4abb9",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.988,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.27714602897925844,
+      "symbolic": 1.9338725866523145
+    },
+    "scaled_scores": {
+      "logic": -0.8037234840398495,
+      "symbolic": 1.5664367951883749
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a4f4814d",
+    "timestamp": "2025-06-14T09:32:18.396076",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "a4f4814d",
+      "tags": {
+        "emotional_state": "calm",
+        "emotion_confidence": 1.0,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 3.1,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "calm",
+            "emotion_confidence": 1.0,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.55,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 3.1,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.82716049382716,
+          "decision_logic": "Logic scale 3.100 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.31088563340351894,
+      "symbolic": 2.1653876409356867
+    },
+    "scaled_scores": {
+      "logic": -0.9637454635509087,
+      "symbolic": 1.7539639891579064
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_ce0346c2",
+    "timestamp": "2025-06-14T09:51:49.709771",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "ce0346c2",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.988,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.27714602897925844,
+      "symbolic": 1.9338725866523145
+    },
+    "scaled_scores": {
+      "logic": -0.8037234840398495,
+      "symbolic": 1.5664367951883749
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_9d5bd223",
+    "timestamp": "2025-06-14T10:08:35.734481",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 1.0,
+    "zone_analysis": {
+      "zone_id": "9d5bd223",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.972,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.972,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 4.0510504432980845,
+      "symbolic": 0.10898205613459974
+    },
+    "scaled_scores": {
+      "logic": 11.748046285564445,
+      "symbolic": 0.0882754654690258
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_40559d2e",
+    "timestamp": "2025-06-14T10:13:50.094743",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "40559d2e",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.98,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.3808997054683993,
+      "symbolic": 1.7213422332293284
+    },
+    "scaled_scores": {
+      "logic": -1.104609145858358,
+      "symbolic": 1.394287208915756
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a6f875ae",
+    "timestamp": "2025-06-14T10:23:52.513089",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "a6f875ae",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.98,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.3808997054683993,
+      "symbolic": 1.7213422332293284
+    },
+    "scaled_scores": {
+      "logic": -1.104609145858358,
+      "symbolic": 1.394287208915756
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a7be1dd4",
+    "timestamp": "2025-06-14T10:24:04.003863",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "a7be1dd4",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.974,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.974,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.044501206267117815,
+      "symbolic": 1.862473172529675
+    },
+    "scaled_scores": {
+      "logic": -0.12905349817464165,
+      "symbolic": 1.5086032697490368
+    },
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e7a07163",
+    "timestamp": "2025-06-14T10:24:16.224459",
+    "decision_type": "FOLLOW_HYBRID",
+    "confidence": 0.38,
+    "zone_analysis": {
+      "zone_id": "e7a07163",
+      "tags": {
+        "emotional_state": "overwhelmed",
+        "emotion_confidence": 0.99,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 0.9,
+      "symbolic_scale": 1.62,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "overwhelmed",
+            "emotion_confidence": 0.99,
+            "intent": "expressive",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": -0.5499999999999999,
+          "symbolic_adjustment": 0.8,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 0.9000000000000001,
+          "final_symbolic_scale": 1.62,
+          "scale_ratio": 0.5555555555555556,
+          "decision_logic": "Logic scale 0.900 vs Symbolic scale 1.620"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.03654002106929054,
+      "symbolic": 2.346155121928701
+    },
+    "scaled_scores": {
+      "logic": 0.032886018962361485,
+      "symbolic": 3.800771297524496
+    },
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_86055da7",
+    "timestamp": "2025-06-14T10:24:24.973054",
+    "decision_type": "FOLLOW_SYMBOLIC",
+    "confidence": 0.642,
+    "zone_analysis": {
+      "zone_id": "86055da7",
+      "tags": {
+        "emotional_state": "emotionally_recursive",
+        "emotion_confidence": 0.917,
+        "intent": "expressive",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "symbolic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 0.5,
+      "symbolic_scale": 1.62,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "emotionally_recursive",
+            "emotion_confidence": 0.917,
+            "intent": "expressive",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": -0.75,
+          "symbolic_adjustment": 0.8,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 0.5,
+          "final_symbolic_scale": 1.62,
+          "scale_ratio": 0.30864197530864196,
+          "decision_logic": "Logic scale 0.500 vs Symbolic scale 1.620"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.18526623623276156,
+      "symbolic": 3.961116535175293
+    },
+    "scaled_scores": {
+      "logic": 0.09263311811638078,
+      "symbolic": 6.417008786983975
+    },
+    "recursion_info": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_2234deca",
+    "timestamp": "2025-06-14T10:36:10.605915",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "2234deca",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.988,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.988,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.27714602897925844,
+      "symbolic": 1.9338725866523145
+    },
+    "scaled_scores": {
+      "logic": -0.8037234840398495,
+      "symbolic": 1.5664367951883749
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_4a118918",
+    "timestamp": "2025-06-14T10:37:15.630372",
+    "decision_type": "FOLLOW_LOGIC",
+    "confidence": 0.508,
+    "zone_analysis": {
+      "zone_id": "4a118918",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.973,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.973,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 1.7509183511320348,
+      "symbolic": 0.49968022568812276
+    },
+    "scaled_scores": {
+      "logic": 5.0776632182829005,
+      "symbolic": 0.40474098280737947
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_b43e73df",
+    "timestamp": "2025-06-14T10:40:17.445001",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "b43e73df",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.98,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.3808997054683993,
+      "symbolic": 1.7213422332293284
+    },
+    "scaled_scores": {
+      "logic": -1.104609145858358,
+      "symbolic": 1.394287208915756
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_e914c7b4",
+    "timestamp": "2025-06-14T10:41:02.180014",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "e914c7b4",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.973,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.973,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.4702666142733191,
+      "symbolic": 1.461140239458546
+    },
+    "scaled_scores": {
+      "logic": 1.3637731813926255,
+      "symbolic": 1.1835235939614224
+    },
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_c8bf5626",
+    "timestamp": "2025-06-14T10:46:43.746367",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "c8bf5626",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.98,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.98,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": -0.3808997054683993,
+      "symbolic": 1.7213422332293284
+    },
+    "scaled_scores": {
+      "logic": -1.104609145858358,
+      "symbolic": 1.394287208915756
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_a29c78ab",
+    "timestamp": "2025-06-14T10:46:55.232404",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "a29c78ab",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.968,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.968,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.2798605571863757,
+      "symbolic": 2.4326925493190403
+    },
+    "scaled_scores": {
+      "logic": 0.8115956158404896,
+      "symbolic": 1.9704809649484227
+    },
+    "recursion_info": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  },
+  {
+    "decision_id": "bridge_f9efa660",
+    "timestamp": "2025-06-14T11:09:48.783556",
+    "decision_type": "QUARANTINE",
+    "confidence": 0.0,
+    "zone_analysis": {
+      "zone_id": "f9efa660",
+      "tags": {
+        "emotional_state": "neutral",
+        "emotion_confidence": 0.976,
+        "intent": "information_request",
+        "context": [
+          "direct_expression"
+        ],
+        "risk": []
+      },
+      "routing_hint": "logic_primary"
+    },
+    "unified_weights": {
+      "logic_scale": 2.9,
+      "symbolic_scale": 0.81,
+      "confidence_modifier": 1.0,
+      "reasoning": {
+        "base_autonomous": {
+          "static_weight": 0.6,
+          "dynamic_weight": 0.4,
+          "base_logic_scale": 2.0,
+          "base_symbolic_scale": 0.9
+        },
+        "semantic_adjustments": {
+          "tags_used": {
+            "emotional_state": "neutral",
+            "emotion_confidence": 0.976,
+            "intent": "information_request",
+            "context": [
+              "direct_expression"
+            ],
+            "risk": []
+          },
+          "logic_adjustment": 0.45,
+          "symbolic_adjustment": -0.1,
+          "confidence_modifier": 1.0,
+          "special_handling": []
+        },
+        "confidence_factors": {},
+        "final_calculation": {
+          "final_logic_scale": 2.9,
+          "final_symbolic_scale": 0.81,
+          "scale_ratio": 3.5802469135802464,
+          "decision_logic": "Logic scale 2.900 vs Symbolic scale 0.810"
+        }
+      }
+    },
+    "scores": {
+      "logic": 0.09630880286947364,
+      "symbolic": 1.4561203919597183
+    },
+    "scaled_scores": {
+      "logic": 0.2792955283214736,
+      "symbolic": 1.1794575174873718
+    },
+    "recursion_info": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    }
+  }
+]

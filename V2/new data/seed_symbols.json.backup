@@ -1,0 +1,69 @@
+{
+  "\ud83d\udd25": {
+    "name": "Fire",
+    "keywords": [
+      "fire",
+      "flame",
+      "computation",
+      "logic"
+    ],
+    "core_meanings": [
+      "heat"
+    ],
+    "emotions": [
+      "anger"
+    ],
+    "archetypes": [
+      "destroyer"
+    ],
+    "learning_phase": 0,
+    "resonance_weight": 0.7
+  },
+  "\ud83d\udca7": {
+    "name": "Water",
+    "keywords": [
+      "water",
+      "liquid",
+      "data",
+      "flow"
+    ],
+    "core_meanings": [
+      "flow"
+    ],
+    "emotions": [
+      "calm"
+    ],
+    "archetypes": [
+      "healer"
+    ],
+    "learning_phase": 0,
+    "resonance_weight": 0.7
+  },
+  "\ud83d\udcbb": {
+    "name": "Computer",
+    "keywords": [
+      "computer",
+      "computation",
+      "cpu",
+      "binary",
+      "code",
+      "algorithm",
+      "system",
+      "architecture"
+    ],
+    "core_meanings": [
+      "processing",
+      "logic unit"
+    ],
+    "emotions": [
+      "neutral",
+      "focus"
+    ],
+    "archetypes": [
+      "tool",
+      "oracle"
+    ],
+    "learning_phase": 0,
+    "resonance_weight": 0.8
+  }
+}

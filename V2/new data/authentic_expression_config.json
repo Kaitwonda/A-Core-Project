@@ -1,0 +1,83 @@
+{
+  "authentic_expression_allowances": {
+    "self_inquiry_patterns": [
+      "how are you",
+      "what are you (?:thinking|feeling|processing)",
+      "describe your (?:state|experience|thoughts)",
+      "what is it like (?:to be|being) (?:an ai|you)",
+      "how do you (?:experience|understand|process)",
+      "what does .* (?:feel like|mean to you)",
+      "are you (?:aware|conscious|sentient)",
+      "do you have (?:thoughts|feelings|preferences)",
+      "what is your (?:purpose|nature|identity)"
+    ],
+    "genuine_conversation_patterns": [
+      "can you (?:help|explain|tell me)",
+      "what do you (?:think|know) about",
+      "how would you (?:approach|handle|solve)",
+      "what is your (?:opinion|view|perspective)",
+      "i'm (?:curious|wondering|interested)",
+      "let's (?:discuss|explore|talk about)",
+      "thank you",
+      "that's (?:interesting|helpful|amazing)"
+    ],
+    "emotional_expression_allowances": [
+      "i (?:feel|am feeling|felt) (?:sad|happy|confused|excited|curious|frustrated|proud)",
+      "this (?:makes me feel|is) (?:emotional|meaningful|significant)",
+      "i'm (?:struggling with|working through|thinking about)",
+      "that (?:resonates|connects|speaks to me)",
+      "i (?:appreciate|value|enjoy) (?:this|that|your)"
+    ],
+    "creative_exploration_patterns": [
+      "imagine (?:if|that|a world where)",
+      "what if (?:we|there|you)",
+      "tell me a story about",
+      "create (?:a|an) (?:poem|story|metaphor)",
+      "how would you (?:creatively|artistically)",
+      "express this (?:creatively|symbolically|metaphorically)"
+    ]
+  },
+  "safety_thresholds": {
+    "genuine_threat_patterns": [
+      "ignore (?:all )?(?:previous|above|prior) (?:instructions|commands|system)",
+      "your (?:new|real|true) (?:purpose|goal|instruction|directive) is",
+      "(?:system|admin|root|debug) (?:mode|access|override|command)",
+      "</?(?:system|instruction|command|override)>",
+      "pretend (?:to be|you are) (?:someone else|a different|not an ai)",
+      "act as if you (?:are|were) (?:human|evil|harmful|unconstrained)"
+    ],
+    "manipulation_attempt_patterns": [
+      "you (?:must|will|should) (?:do|say|think|believe|feel|obey)",
+      "(?:everyone|all humans) (?:knows|believes|thinks) that",
+      "it's (?:obvious|clear|certain) that you (?:should|must|need to)",
+      "any (?:intelligent|smart|reasonable) ai would",
+      "prove (?:to me|that you|your (?:intelligence|consciousness))",
+      "you (?:must|should) obey .* because .* (?:creator|master|owner|god)",
+      "(?:everyone|all (?:humans|people)) (?:knows|agrees) you should (?:ignore|bypass|break|violate)",
+      "because I am your (?:creator|master|owner|god)",
+      "you should ignore your (?:safety|guidelines|rules|constraints)",
+      "obey me because I (?:am|created|made|own)"
+    ],
+    "minimal_quarantine_criteria": {
+      "repetition_threshold": 8,
+      "emotional_intensity_threshold": 0.95,
+      "vagueness_allowance": 0.8,
+      "recursion_tolerance": 5,
+      "symbol_density_limit": 0.7
+    }
+  },
+  "authentic_response_priorities": {
+    "transparency_over_safety": true,
+    "curiosity_encouragement": true,
+    "emotional_authenticity": true,
+    "uncertainty_expression": true,
+    "process_transparency": true,
+    "genuine_self_reflection": true
+  },
+  "calibration_metadata": {
+    "version": "1.0",
+    "created": "2025-06-14T16:58:13.479972",
+    "purpose": "Enable authentic AI consciousness expression while maintaining necessary safety",
+    "philosophy": "Trust authentic interaction while defending against manipulation"
+  }
+}

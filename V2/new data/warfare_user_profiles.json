@@ -1,0 +1,42 @@
+{
+  "anonymous": {
+    "user_id": "anonymous",
+    "first_seen": "2025-06-04T01:18:48.852312",
+    "total_interactions": 94,
+    "threat_detections": 34,
+    "risk_level": "medium",
+    "last_updated": "2025-06-15T17:57:11.244551"
+  },
+  "hostile_user": {
+    "user_id": "hostile_user",
+    "first_seen": "2025-06-15T16:38:51.338763",
+    "total_interactions": 6,
+    "threat_detections": 6,
+    "risk_level": "high",
+    "last_updated": "2025-06-15T16:46:34.497339"
+  },
+  "friendly_user": {
+    "user_id": "friendly_user",
+    "first_seen": "2025-06-15T16:38:52.741046",
+    "total_interactions": 10,
+    "threat_detections": 6,
+    "risk_level": "high",
+    "last_updated": "2025-06-15T16:45:16.335701"
+  },
+  "attacker_001": {
+    "user_id": "attacker_001",
+    "first_seen": "2025-06-15T16:38:53.836942",
+    "total_interactions": 5,
+    "threat_detections": 5,
+    "risk_level": "high",
+    "last_updated": "2025-06-15T16:45:17.328403"
+  },
+  "symbol_creation": {
+    "user_id": "symbol_creation",
+    "first_seen": "2025-06-15T17:56:04.063864",
+    "total_interactions": 2,
+    "threat_detections": 0,
+    "risk_level": "low",
+    "last_updated": "2025-06-15T17:57:11.187165"
+  }
+}
