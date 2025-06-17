@@ -1,0 +1,182 @@
+{
+  "🔥": {
+    "name": "Fire",
+    "keywords": ["fire", "flame", "computation", "logic", "heat", "energy", "transformation", "analysis"],
+    "core_meanings": ["heat", "transformation", "analysis", "logic"],
+    "emotions": ["anger", "passion", "intensity"],
+    "archetypes": ["destroyer", "transformer", "analyzer"],
+    "learning_phase": 0,
+    "resonance_weight": 0.8
+  },
+  "💧": {
+    "name": "Water",
+    "keywords": ["water", "liquid", "data", "flow", "stream", "fluid", "adaptive", "memory"],
+    "core_meanings": ["flow", "adaptation", "memory", "storage"],
+    "emotions": ["calm", "peaceful", "flowing"],
+    "archetypes": ["healer", "adapter", "repository"],
+    "learning_phase": 0,
+    "resonance_weight": 0.7
+  },
+  "💻": {
+    "name": "Computer",
+    "keywords": ["computer", "computation", "cpu", "binary", "code", "algorithm", "system", "architecture", "processing", "digital"],
+    "core_meanings": ["processing", "logic unit", "computation", "intelligence"],
+    "emotions": ["neutral", "focus", "analytical"],
+    "archetypes": ["tool", "oracle", "processor"],
+    "learning_phase": 0,
+    "resonance_weight": 0.9
+  },
+  "🧠": {
+    "name": "Brain",
+    "keywords": ["brain", "mind", "thinking", "consciousness", "neural", "cognitive", "intelligence", "reasoning"],
+    "core_meanings": ["consciousness", "reasoning", "awareness", "cognition"],
+    "emotions": ["curiosity", "wonder", "contemplation"],
+    "archetypes": ["thinker", "sage", "consciousness"],
+    "learning_phase": 0,
+    "resonance_weight": 0.9
+  },
+  "🌊": {
+    "name": "Wave",
+    "keywords": ["wave", "oscillation", "pattern", "rhythm", "frequency", "vibration", "cycle"],
+    "core_meanings": ["pattern", "rhythm", "oscillation", "energy"],
+    "emotions": ["rhythmic", "hypnotic", "flowing"],
+    "archetypes": ["pattern", "cycle", "rhythm"],
+    "learning_phase": 1,
+    "resonance_weight": 0.6
+  },
+  "🌟": {
+    "name": "Star",
+    "keywords": ["star", "light", "guidance", "distant", "bright", "navigation", "inspiration", "hope"],
+    "core_meanings": ["guidance", "inspiration", "brightness", "distance"],
+    "emotions": ["hope", "wonder", "aspiration"],
+    "archetypes": ["guide", "beacon", "inspiration"],
+    "learning_phase": 1,
+    "resonance_weight": 0.7
+  },
+  "🔍": {
+    "name": "Search",
+    "keywords": ["search", "investigation", "analysis", "discovery", "exploration", "inquiry", "research"],
+    "core_meanings": ["investigation", "discovery", "analysis", "search"],
+    "emotions": ["curiosity", "determination", "focus"],
+    "archetypes": ["investigator", "explorer", "researcher"],
+    "learning_phase": 0,
+    "resonance_weight": 0.8
+  },
+  "🗝️": {
+    "name": "Key",
+    "keywords": ["key", "unlock", "access", "solution", "understanding", "breakthrough", "revelation"],
+    "core_meanings": ["access", "solution", "unlock", "understanding"],
+    "emotions": ["revelation", "excitement", "clarity"],
+    "archetypes": ["opener", "solver", "revealer"],
+    "learning_phase": 2,
+    "resonance_weight": 0.8
+  },
+  "🌱": {
+    "name": "Growth",
+    "keywords": ["growth", "development", "learning", "evolution", "progress", "emergence", "potential"],
+    "core_meanings": ["growth", "development", "potential", "evolution"],
+    "emotions": ["hope", "anticipation", "nurturing"],
+    "archetypes": ["grower", "developer", "nurturer"],
+    "learning_phase": 1,
+    "resonance_weight": 0.7
+  },
+  "🌀": {
+    "name": "Spiral",
+    "keywords": ["spiral", "recursion", "complexity", "depth", "iteration", "fractal", "pattern"],
+    "core_meanings": ["recursion", "complexity", "depth", "iteration"],
+    "emotions": ["complexity", "depth", "mystery"],
+    "archetypes": ["spiral", "recursive", "complex"],
+    "learning_phase": 2,
+    "resonance_weight": 0.6
+  },
+  "💎": {
+    "name": "Crystal",
+    "keywords": ["crystal", "clarity", "precision", "structure", "pure", "organized", "clear"],
+    "core_meanings": ["clarity", "precision", "structure", "purity"],
+    "emotions": ["clarity", "precision", "calm"],
+    "archetypes": ["clarifier", "organizer", "purifier"],
+    "learning_phase": 2,
+    "resonance_weight": 0.8
+  },
+  "🌈": {
+    "name": "Rainbow",
+    "keywords": ["rainbow", "spectrum", "diversity", "color", "variety", "range", "bridge"],
+    "core_meanings": ["spectrum", "diversity", "bridge", "connection"],
+    "emotions": ["joy", "diversity", "wonder"],
+    "archetypes": ["bridge", "connector", "diversifier"],
+    "learning_phase": 3,
+    "resonance_weight": 0.7
+  },
+  "⚡": {
+    "name": "Lightning",
+    "keywords": ["lightning", "sudden", "insight", "flash", "realization", "quick", "illumination"],
+    "core_meanings": ["insight", "sudden realization", "illumination", "speed"],
+    "emotions": ["sudden insight", "excitement", "shock"],
+    "archetypes": ["illuminator", "revealer", "striker"],
+    "learning_phase": 2,
+    "resonance_weight": 0.8
+  },
+  "🕸️": {
+    "name": "Web",
+    "keywords": ["web", "network", "connection", "relationship", "link", "internet", "structure"],
+    "core_meanings": ["network", "connection", "relationship", "structure"],
+    "emotions": ["connected", "networked", "complex"],
+    "archetypes": ["connector", "networker", "weaver"],
+    "learning_phase": 1,
+    "resonance_weight": 0.7
+  },
+  "🎭": {
+    "name": "Masks",
+    "keywords": ["mask", "identity", "persona", "role", "acting", "facade", "emotion", "expression"],
+    "core_meanings": ["identity", "persona", "expression", "role"],
+    "emotions": ["dramatic", "expressive", "mysterious"],
+    "archetypes": ["actor", "expresser", "changer"],
+    "learning_phase": 3,
+    "resonance_weight": 0.6
+  },
+  "🗂️": {
+    "name": "Organization",
+    "keywords": ["organize", "file", "structure", "system", "order", "category", "classification"],
+    "core_meanings": ["organization", "structure", "order", "classification"],
+    "emotions": ["orderly", "systematic", "calm"],
+    "archetypes": ["organizer", "classifier", "systematizer"],
+    "learning_phase": 1,
+    "resonance_weight": 0.8
+  },
+  "🤔": {
+    "name": "Thinking",
+    "keywords": ["thinking", "contemplation", "reflection", "consideration", "pondering", "analysis"],
+    "core_meanings": ["contemplation", "reflection", "analysis", "thought"],
+    "emotions": ["thoughtful", "contemplative", "curious"],
+    "archetypes": ["thinker", "contemplator", "philosopher"],
+    "learning_phase": 0,
+    "resonance_weight": 0.9
+  },
+  "💭": {
+    "name": "Thought",
+    "keywords": ["thought", "idea", "concept", "mental", "imagination", "dream", "vision"],
+    "core_meanings": ["thought", "idea", "concept", "imagination"],
+    "emotions": ["imaginative", "dreamy", "creative"],
+    "archetypes": ["dreamer", "visionary", "creator"],
+    "learning_phase": 0,
+    "resonance_weight": 0.8
+  },
+  "🔗": {
+    "name": "Link",
+    "keywords": ["link", "connection", "bond", "relationship", "chain", "association", "tie"],
+    "core_meanings": ["connection", "bond", "relationship", "link"],
+    "emotions": ["connected", "bonded", "linked"],
+    "archetypes": ["connector", "linker", "bonder"],
+    "learning_phase": 1,
+    "resonance_weight": 0.8
+  },
+  "📊": {
+    "name": "Data",
+    "keywords": ["data", "information", "statistics", "analysis", "metrics", "measurement", "chart"],
+    "core_meanings": ["data", "information", "analysis", "metrics"],
+    "emotions": ["analytical", "precise", "informative"],
+    "archetypes": ["analyst", "measurer", "informer"],
+    "learning_phase": 0,
+    "resonance_weight": 0.9
+  }
+}
