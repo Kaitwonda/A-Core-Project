@@ -1,0 +1,2371 @@
+[
+  {
+    "cycle_id": "integration_20250613_154327",
+    "timestamp": "2025-06-13T15:43:27.621290",
+    "phases": {
+      "data_utilization": {
+        "data_analysis": {
+          "total_files": 30,
+          "total_size_mb": 29.149351119995117,
+          "categories": {
+            "memory_stores": {
+              "files_found": 6,
+              "total_size_mb": 1.430511474609375e-05,
+              "files": [
+                {
+                  "filename": "bridge_memory.json",
+                  "path": "data/bridge_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.861790",
+                  "record_count": 0,
+                  "data_type": "memory_storage_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "logic_memory.json",
+                  "path": "data/logic_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.866893",
+                  "record_count": 0,
+                  "data_type": "memory_storage_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbolic_memory.json",
+                  "path": "data/symbolic_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.868892",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "bridge.json",
+                  "path": "data/bridge.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:20.425380",
+                  "record_count": 0,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "logic.json",
+                  "path": "data/logic.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:25.523560",
+                  "record_count": 0,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbolic.json",
+                  "path": "data/symbolic.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:30.459012",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "decision_logs": {
+              "files_found": 5,
+              "total_size_mb": 0.19098186492919922,
+              "files": [
+                {
+                  "filename": "decision_history.json",
+                  "path": "data/decision_history.json",
+                  "size_mb": 0.000179290771484375,
+                  "size_bytes": 188,
+                  "last_modified": "2025-06-13T15:23:59.495814",
+                  "record_count": 3,
+                  "data_type": "decision_tracking_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "logic_decisions",
+                    "symbolic_decisions",
+                    "bridge_decisions",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "bridge_decisions.json",
+                  "path": "data/bridge_decisions.json",
+                  "size_mb": 0.05763721466064453,
+                  "size_bytes": 60437,
+                  "last_modified": "2025-06-08T08:54:53.971242",
+                  "record_count": 58,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "decision_id",
+                    "timestamp",
+                    "decision_type",
+                    "confidence",
+                    "zone_analysis"
+                  ],
+                  "utilization_score": 0.3
+                },
+                {
+                  "filename": "alphawall_bridge_decisions.json",
+                  "path": "data/alphawall_bridge_decisions.json",
+                  "size_mb": 0.000194549560546875,
+                  "size_bytes": 204,
+                  "last_modified": "2025-06-13T15:24:43.339349",
+                  "record_count": 3,
+                  "data_type": "decision_tracking_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "decisions",
+                    "security_events",
+                    "bridge_interactions",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "unified_weight_decisions.json",
+                  "path": "data/unified_weight_decisions.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:24:13.039822",
+                  "record_count": 0,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "link_evaluator_decisions.json",
+                  "path": "data/link_evaluator_decisions.json",
+                  "size_mb": 0.13296890258789062,
+                  "size_bytes": 139428,
+                  "last_modified": "2025-06-08T08:54:53.988762",
+                  "record_count": 58,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "decision_type",
+                    "confidence",
+                    "zone_analysis",
+                    "bridge_decision",
+                    "contamination_check"
+                  ],
+                  "utilization_score": 0.3
+                }
+              ]
+            },
+            "learning_data": {
+              "files_found": 5,
+              "total_size_mb": 24.79002285003662,
+              "files": [
+                {
+                  "filename": "trail_log.json",
+                  "path": "data/trail_log.json",
+                  "size_mb": 23.622966766357422,
+                  "size_bytes": 24770476,
+                  "last_modified": "2025-05-25T19:04:21.529589",
+                  "record_count": 5656,
+                  "data_type": "user_interaction_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "log_id",
+                    "timestamp",
+                    "input_text_preview",
+                    "source_url",
+                    "processing_phase"
+                  ],
+                  "utilization_score": 1.0
+                },
+                {
+                  "filename": "symbol_occurrence_log.json",
+                  "path": "data/symbol_occurrence_log.json",
+                  "size_mb": 1.0270824432373047,
+                  "size_bytes": 1076974,
+                  "last_modified": "2025-05-25T19:03:56.616218",
+                  "record_count": 1404,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "entries"
+                  ],
+                  "utilization_score": 0.8
+                },
+                {
+                  "filename": "brain_metrics.json",
+                  "path": "data/brain_metrics.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:23:54.504810",
+                  "record_count": 0,
+                  "data_type": "performance_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "brain_contribution_metrics.json",
+                  "path": "data/brain_contribution_metrics.json",
+                  "size_mb": 0.009324073791503906,
+                  "size_bytes": 9777,
+                  "last_modified": "2025-06-11T17:54:14.061110",
+                  "record_count": 22,
+                  "data_type": "performance_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "duration_seconds",
+                    "logic_win_rate",
+                    "symbol_win_rate",
+                    "hybrid_rate"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "evolution_sessions.json",
+                  "path": "data/evolution_sessions.json",
+                  "size_mb": 0.1306476593017578,
+                  "size_bytes": 136994,
+                  "last_modified": "2025-06-11T20:13:31.519720",
+                  "record_count": 30,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "initial_stats",
+                    "final_stats",
+                    "reversed",
+                    "migrated"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "weight_systems": {
+              "files_found": 3,
+              "total_size_mb": 0.0016880035400390625,
+              "files": [
+                {
+                  "filename": "adaptive_weights.json",
+                  "path": "data/adaptive_weights.json",
+                  "size_mb": 5.14984130859375e-05,
+                  "size_bytes": 54,
+                  "last_modified": "2025-06-13T15:28:45.401198",
+                  "record_count": 0,
+                  "data_type": "weight_optimization_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "static",
+                    "dynamic",
+                    "last_updated"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "weight_evolution_history.json",
+                  "path": "data/weight_evolution_history.json",
+                  "size_mb": 0.0015363693237304688,
+                  "size_bytes": 1611,
+                  "last_modified": "2025-06-11T20:13:31.233257",
+                  "record_count": 1,
+                  "data_type": "weight_optimization_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "run_count",
+                    "old_weights",
+                    "new_weights",
+                    "target_specialization"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "weight_momentum.json",
+                  "path": "data/weight_momentum.json",
+                  "size_mb": 0.00010013580322265625,
+                  "size_bytes": 105,
+                  "last_modified": "2025-06-11T20:13:31.232257",
+                  "record_count": 0,
+                  "data_type": "weight_optimization_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "static_wins",
+                    "dynamic_wins",
+                    "last_direction",
+                    "consecutive_moves"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "symbol_systems": {
+              "files_found": 5,
+              "total_size_mb": 0.0026683807373046875,
+              "files": [
+                {
+                  "filename": "symbol_memory.json",
+                  "path": "data/symbol_memory.json",
+                  "size_mb": 0.00017452239990234375,
+                  "size_bytes": 183,
+                  "last_modified": "2025-06-13T15:30:01.915491",
+                  "record_count": 3,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "symbols",
+                    "learned_symbols",
+                    "symbol_relationships",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "meta_symbols.json",
+                  "path": "data/meta_symbols.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:37.494491",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbol_emotion_map.json",
+                  "path": "data/symbol_emotion_map.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:37.495637",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "seed_symbols.json",
+                  "path": "data/seed_symbols.json",
+                  "size_mb": 0.0010824203491210938,
+                  "size_bytes": 1135,
+                  "last_modified": "2025-05-24T11:05:07.570915",
+                  "record_count": 21,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "\ud83d\udd25",
+                    "\ud83d\udca7",
+                    "\ud83d\udcbb"
+                  ],
+                  "utilization_score": 0.3
+                },
+                {
+                  "filename": "symbol_cooccurrence.json",
+                  "path": "data/symbol_cooccurrence.json",
+                  "size_mb": 0.0014057159423828125,
+                  "size_bytes": 1474,
+                  "last_modified": "2025-05-25T19:03:57.647636",
+                  "record_count": 60,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "\ud83d\udcbb",
+                    "\ud83d\udcbb\u27f3",
+                    "\ud83d\udcbb\u27f3\u27f3",
+                    "\u2699\u27f3",
+                    "\ud83d\udcbb\u27f3\u27f3\u27f3"
+                  ],
+                  "utilization_score": 0.3
+                }
+              ]
+            },
+            "security_logs": {
+              "files_found": 2,
+              "total_size_mb": 0.002338409423828125,
+              "files": [
+                {
+                  "filename": "warfare_attack_patterns.json",
+                  "path": "data/warfare_attack_patterns.json",
+                  "size_mb": 0.000514984130859375,
+                  "size_bytes": 540,
+                  "last_modified": "2025-06-13T15:24:08.045419",
+                  "record_count": 16,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "patterns",
+                    "threat_indicators",
+                    "learning_data",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "quarantine_log.json",
+                  "path": "data/quarantine/quarantine_log.json",
+                  "size_mb": 0.00182342529296875,
+                  "size_bytes": 1912,
+                  "last_modified": "2025-06-08T08:54:54.922332",
+                  "record_count": 5,
+                  "data_type": "security_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "quarantine_id",
+                    "zone_id",
+                    "timestamp",
+                    "reason",
+                    "severity"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "analytics_data": {
+              "files_found": 3,
+              "total_size_mb": 0.0005140304565429688,
+              "files": [
+                {
+                  "filename": "visualization_segments.json",
+                  "path": "data/visualization_segments.json",
+                  "size_mb": 0.000125885009765625,
+                  "size_bytes": 132,
+                  "last_modified": "2025-06-13T15:25:07.709834",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "segments",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "cluster_names.json",
+                  "path": "data/cluster_names.json",
+                  "size_mb": 0.0002040863037109375,
+                  "size_bytes": 214,
+                  "last_modified": "2025-06-13T15:24:37.086693",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "clusters",
+                    "naming_history",
+                    "cluster_relationships",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "context_patterns.json",
+                  "path": "data/context_patterns.json",
+                  "size_mb": 0.00018405914306640625,
+                  "size_bytes": 193,
+                  "last_modified": "2025-06-13T15:24:25.110263",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "patterns",
+                    "frequency_map",
+                    "correlation_matrix",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "archived_data": {
+              "files_found": 1,
+              "total_size_mb": 4.161123275756836,
+              "files": [
+                {
+                  "filename": "optimizer_archived_phase1_vectors_final.json",
+                  "path": "data/optimizer_archived_phase1_vectors_final.json",
+                  "size_mb": 4.161123275756836,
+                  "size_bytes": 4363254,
+                  "last_modified": "2025-05-25T17:28:33.371567",
+                  "record_count": 354,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "id",
+                    "text",
+                    "vector",
+                    "source_model_info",
+                    "model_similarity_score"
+                  ],
+                  "utilization_score": 0.4
+                }
+              ]
+            }
+          },
+          "large_files": [
+            {
+              "filename": "trail_log.json",
+              "path": "data/trail_log.json",
+              "size_mb": 23.622966766357422,
+              "size_bytes": 24770476,
+              "last_modified": "2025-05-25T19:04:21.529589",
+              "record_count": 5656,
+              "data_type": "user_interaction_data",
+              "structure": "array",
+              "sample_keys": [
+                "log_id",
+                "timestamp",
+                "input_text_preview",
+                "source_url",
+                "processing_phase"
+              ],
+              "utilization_score": 1.0
+            },
+            {
+              "filename": "symbol_occurrence_log.json",
+              "path": "data/symbol_occurrence_log.json",
+              "size_mb": 1.0270824432373047,
+              "size_bytes": 1076974,
+              "last_modified": "2025-05-25T19:03:56.616218",
+              "record_count": 1404,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "entries"
+              ],
+              "utilization_score": 0.8
+            },
+            {
+              "filename": "optimizer_archived_phase1_vectors_final.json",
+              "path": "data/optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "size_bytes": 4363254,
+              "last_modified": "2025-05-25T17:28:33.371567",
+              "record_count": 354,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [
+                "id",
+                "text",
+                "vector",
+                "source_model_info",
+                "model_similarity_score"
+              ],
+              "utilization_score": 0.4
+            }
+          ],
+          "empty_files": [
+            {
+              "filename": "bridge_memory.json",
+              "path": "data/bridge_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.861790",
+              "record_count": 0,
+              "data_type": "memory_storage_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "logic_memory.json",
+              "path": "data/logic_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.866893",
+              "record_count": 0,
+              "data_type": "memory_storage_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbolic_memory.json",
+              "path": "data/symbolic_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.868892",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "bridge.json",
+              "path": "data/bridge.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:20.425380",
+              "record_count": 0,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "logic.json",
+              "path": "data/logic.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:25.523560",
+              "record_count": 0,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbolic.json",
+              "path": "data/symbolic.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:30.459012",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "decision_history.json",
+              "path": "data/decision_history.json",
+              "size_mb": 0.000179290771484375,
+              "size_bytes": 188,
+              "last_modified": "2025-06-13T15:23:59.495814",
+              "record_count": 3,
+              "data_type": "decision_tracking_data",
+              "structure": "object",
+              "sample_keys": [
+                "logic_decisions",
+                "symbolic_decisions",
+                "bridge_decisions",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "alphawall_bridge_decisions.json",
+              "path": "data/alphawall_bridge_decisions.json",
+              "size_mb": 0.000194549560546875,
+              "size_bytes": 204,
+              "last_modified": "2025-06-13T15:24:43.339349",
+              "record_count": 3,
+              "data_type": "decision_tracking_data",
+              "structure": "object",
+              "sample_keys": [
+                "decisions",
+                "security_events",
+                "bridge_interactions",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "unified_weight_decisions.json",
+              "path": "data/unified_weight_decisions.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:24:13.039822",
+              "record_count": 0,
+              "data_type": "decision_tracking_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "brain_metrics.json",
+              "path": "data/brain_metrics.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:23:54.504810",
+              "record_count": 0,
+              "data_type": "performance_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "adaptive_weights.json",
+              "path": "data/adaptive_weights.json",
+              "size_mb": 5.14984130859375e-05,
+              "size_bytes": 54,
+              "last_modified": "2025-06-13T15:28:45.401198",
+              "record_count": 0,
+              "data_type": "weight_optimization_data",
+              "structure": "object",
+              "sample_keys": [
+                "static",
+                "dynamic",
+                "last_updated"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "weight_momentum.json",
+              "path": "data/weight_momentum.json",
+              "size_mb": 0.00010013580322265625,
+              "size_bytes": 105,
+              "last_modified": "2025-06-11T20:13:31.232257",
+              "record_count": 0,
+              "data_type": "weight_optimization_data",
+              "structure": "object",
+              "sample_keys": [
+                "static_wins",
+                "dynamic_wins",
+                "last_direction",
+                "consecutive_moves"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbol_memory.json",
+              "path": "data/symbol_memory.json",
+              "size_mb": 0.00017452239990234375,
+              "size_bytes": 183,
+              "last_modified": "2025-06-13T15:30:01.915491",
+              "record_count": 3,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "symbols",
+                "learned_symbols",
+                "symbol_relationships",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "meta_symbols.json",
+              "path": "data/meta_symbols.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:37.494491",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbol_emotion_map.json",
+              "path": "data/symbol_emotion_map.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:37.495637",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "warfare_attack_patterns.json",
+              "path": "data/warfare_attack_patterns.json",
+              "size_mb": 0.000514984130859375,
+              "size_bytes": 540,
+              "last_modified": "2025-06-13T15:24:08.045419",
+              "record_count": 16,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "patterns",
+                "threat_indicators",
+                "learning_data",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "visualization_segments.json",
+              "path": "data/visualization_segments.json",
+              "size_mb": 0.000125885009765625,
+              "size_bytes": 132,
+              "last_modified": "2025-06-13T15:25:07.709834",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "segments",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "cluster_names.json",
+              "path": "data/cluster_names.json",
+              "size_mb": 0.0002040863037109375,
+              "size_bytes": 214,
+              "last_modified": "2025-06-13T15:24:37.086693",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "clusters",
+                "naming_history",
+                "cluster_relationships",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "context_patterns.json",
+              "path": "data/context_patterns.json",
+              "size_mb": 0.00018405914306640625,
+              "size_bytes": 193,
+              "last_modified": "2025-06-13T15:24:25.110263",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "patterns",
+                "frequency_map",
+                "correlation_matrix",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            }
+          ],
+          "high_value_data": [
+            {
+              "filename": "trail_log.json",
+              "path": "data/trail_log.json",
+              "size_mb": 23.622966766357422,
+              "size_bytes": 24770476,
+              "last_modified": "2025-05-25T19:04:21.529589",
+              "record_count": 5656,
+              "data_type": "user_interaction_data",
+              "structure": "array",
+              "sample_keys": [
+                "log_id",
+                "timestamp",
+                "input_text_preview",
+                "source_url",
+                "processing_phase"
+              ],
+              "utilization_score": 1.0
+            },
+            {
+              "filename": "symbol_occurrence_log.json",
+              "path": "data/symbol_occurrence_log.json",
+              "size_mb": 1.0270824432373047,
+              "size_bytes": 1076974,
+              "last_modified": "2025-05-25T19:03:56.616218",
+              "record_count": 1404,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "entries"
+              ],
+              "utilization_score": 0.8
+            },
+            {
+              "filename": "optimizer_archived_phase1_vectors_final.json",
+              "path": "data/optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "size_bytes": 4363254,
+              "last_modified": "2025-05-25T17:28:33.371567",
+              "record_count": 354,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [
+                "id",
+                "text",
+                "vector",
+                "source_model_info",
+                "model_similarity_score"
+              ],
+              "utilization_score": 0.4
+            }
+          ],
+          "utilization_opportunities": [
+            {
+              "type": "large_underutilized_file",
+              "file": "optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "recommendation": "Integrate this large data file into migration and learning systems"
+            },
+            {
+              "type": "user_interaction_goldmine",
+              "file": "trail_log.json",
+              "records": 5656,
+              "recommendation": "Mine user interaction patterns for improved routing decisions"
+            },
+            {
+              "type": "symbol_system_integration",
+              "files": [
+                "symbol_memory.json",
+                "meta_symbols.json",
+                "symbol_emotion_map.json",
+                "seed_symbols.json",
+                "symbol_cooccurrence.json"
+              ],
+              "recommendation": "Integrate symbol files for unified symbolic processing"
+            }
+          ]
+        },
+        "utilization_plan": {
+          "phase_1_immediate": [
+            {
+              "action": "Integrate optimizer_archived_phase1_vectors_final.json into migration system",
+              "benefit": "Immediate access to large dataset",
+              "complexity": "medium",
+              "priority_score": 1.5
+            }
+          ],
+          "phase_2_integration": [
+            {
+              "action": "Integrate trail_log.json with migration decisions",
+              "benefit": "User behavior-informed routing",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Unify symbol processing across all symbol files",
+              "benefit": "Coherent symbolic understanding",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Consolidate decision logs for pattern analysis",
+              "benefit": "Improved decision consistency",
+              "complexity": "low",
+              "priority_score": 3.0
+            }
+          ],
+          "phase_3_optimization": [
+            {
+              "action": "Real-time analytics integration",
+              "benefit": "Live system optimization",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Predictive migration based on historical patterns",
+              "benefit": "Proactive system optimization",
+              "complexity": "very_high",
+              "priority_score": 0.75
+            }
+          ],
+          "estimated_benefits": {
+            "data_utilization_increase": "75%",
+            "decision_accuracy_improvement": "25%",
+            "system_efficiency_gain": "40%",
+            "unused_data_activated": "29.1MB"
+          },
+          "implementation_priority": [
+            {
+              "action": "Consolidate decision logs for pattern analysis",
+              "benefit": "Improved decision consistency",
+              "complexity": "low",
+              "priority_score": 3.0
+            },
+            {
+              "action": "Integrate optimizer_archived_phase1_vectors_final.json into migration system",
+              "benefit": "Immediate access to large dataset",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Unify symbol processing across all symbol files",
+              "benefit": "Coherent symbolic understanding",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Integrate trail_log.json with migration decisions",
+              "benefit": "User behavior-informed routing",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Real-time analytics integration",
+              "benefit": "Live system optimization",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Predictive migration based on historical patterns",
+              "benefit": "Proactive system optimization",
+              "complexity": "very_high",
+              "priority_score": 0.75
+            }
+          ]
+        },
+        "immediate_implementation": {
+          "files_processed": 2,
+          "data_integrated": 3,
+          "new_insights_generated": 4,
+          "integration_points_created": 1
+        },
+        "insights_extracted": {
+          "trail_patterns": {
+            "file_size_mb": 23.622966766357422,
+            "sampling_used": true,
+            "patterns_available": true
+          },
+          "symbol_usage": {
+            "total_entries": 1,
+            "data_available": true
+          },
+          "decision_history": {},
+          "conflict_analysis": {},
+          "user_behavior": {}
+        }
+      },
+      "migration_consolidation": {
+        "migration_cycle": {
+          "session_id": "migration_20250613_154328",
+          "forward_migration": {
+            "items_processed": 0,
+            "items_migrated": 0
+          },
+          "reverse_audit": {
+            "items_processed": 0,
+            "items_migrated": 0
+          },
+          "execution_time": 0.089933
+        },
+        "script_consolidation": {
+          "legacy_scripts_replaced": [
+            "adaptive_migration.py",
+            "reverse_migration.py",
+            "memory_evolution_engine.py"
+          ],
+          "unified_system_active": true,
+          "redundancy_eliminated": true
+        },
+        "conflict_resolution": {},
+        "enhanced_routing": {}
+      },
+      "memory_integration": {
+        "memory_stores_verified": {
+          "bridge_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "logic_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "symbolic_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "symbol_memory.json": {
+            "exists": true,
+            "size_bytes": 183,
+            "accessible": true
+          },
+          "user_memory.json": {
+            "exists": true,
+            "size_bytes": 29207,
+            "accessible": true
+          },
+          "vector_memory.json": {
+            "exists": true,
+            "size_bytes": 2,
+            "accessible": true
+          }
+        },
+        "large_files_integrated": {
+          "trail_log.json": {
+            "size_mb": 23.622966766357422,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "optimizer_archived_phase1_vectors_final.json": {
+            "size_mb": 4.161123275756836,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "symbol_occurrence_log.json": {
+            "size_mb": 1.0270824432373047,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "bridge_conflicts.json": {
+            "size_mb": 0.2364969253540039,
+            "insights_extracted": false,
+            "integration_active": true
+          }
+        },
+        "historical_data_activated": {
+          "bridge_decisions.json": {
+            "records": 58,
+            "activated": true
+          },
+          "link_evaluator_decisions.json": {
+            "records": 58,
+            "activated": true
+          },
+          "evolution_sessions.json": {
+            "records": 30,
+            "activated": true
+          }
+        },
+        "cross_system_integration": {}
+      },
+      "system_optimization": {
+        "weight_optimization": {
+          "logic_scale": 2.0,
+          "symbolic_scale": 0.9,
+          "confidence_modifier": 1.0,
+          "decision_type": "FOLLOW_LOGIC"
+        },
+        "performance_metrics": {},
+        "system_health": {
+          "system_health": {
+            "system_status": "error",
+            "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+          },
+          "migration_sessions": 1,
+          "last_migration": "2025-06-13T15:43:28.652752",
+          "recommendations": [],
+          "status": "operational"
+        },
+        "recommendations": [
+          "No items in memory - begin data ingestion"
+        ]
+      }
+    },
+    "data_utilization": {},
+    "migration_consolidation": {},
+    "system_optimization": {},
+    "final_status": {
+      "overall_status": "fully_integrated",
+      "integration_score": 100.0,
+      "phases_completed": 4,
+      "phases_total": 4,
+      "critical_issues": [],
+      "system_ready": true
+    },
+    "execution_time": 1.1524198055267334,
+    "phase_timings": {
+      "data_utilization": 1.0313293933868408,
+      "migration_consolidation": 0.091552734375,
+      "memory_integration": 0.023743867874145508,
+      "system_optimization": 0.005690097808837891,
+      "total_time": 1.1524198055267334
+    }
+  },
+  {
+    "cycle_id": "integration_20250613_160608",
+    "timestamp": "2025-06-13T16:06:08.436207",
+    "phases": {
+      "data_utilization": {
+        "data_analysis": {
+          "total_files": 31,
+          "total_size_mb": 29.15207862854004,
+          "categories": {
+            "memory_stores": {
+              "files_found": 6,
+              "total_size_mb": 1.430511474609375e-05,
+              "files": [
+                {
+                  "filename": "bridge_memory.json",
+                  "path": "data/bridge_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.861790",
+                  "record_count": 0,
+                  "data_type": "memory_storage_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "logic_memory.json",
+                  "path": "data/logic_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.866893",
+                  "record_count": 0,
+                  "data_type": "memory_storage_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbolic_memory.json",
+                  "path": "data/symbolic_memory.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:04.868892",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "bridge.json",
+                  "path": "data/bridge.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:20.425380",
+                  "record_count": 0,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "logic.json",
+                  "path": "data/logic.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:25.523560",
+                  "record_count": 0,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbolic.json",
+                  "path": "data/symbolic.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:27:30.459012",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "decision_logs": {
+              "files_found": 5,
+              "total_size_mb": 0.19170093536376953,
+              "files": [
+                {
+                  "filename": "decision_history.json",
+                  "path": "data/decision_history.json",
+                  "size_mb": 0.000179290771484375,
+                  "size_bytes": 188,
+                  "last_modified": "2025-06-13T15:23:59.495814",
+                  "record_count": 3,
+                  "data_type": "decision_tracking_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "logic_decisions",
+                    "symbolic_decisions",
+                    "bridge_decisions",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "bridge_decisions.json",
+                  "path": "data/bridge_decisions.json",
+                  "size_mb": 0.05763721466064453,
+                  "size_bytes": 60437,
+                  "last_modified": "2025-06-08T08:54:53.971242",
+                  "record_count": 58,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "decision_id",
+                    "timestamp",
+                    "decision_type",
+                    "confidence",
+                    "zone_analysis"
+                  ],
+                  "utilization_score": 0.3
+                },
+                {
+                  "filename": "alphawall_bridge_decisions.json",
+                  "path": "data/alphawall_bridge_decisions.json",
+                  "size_mb": 0.000194549560546875,
+                  "size_bytes": 204,
+                  "last_modified": "2025-06-13T15:24:43.339349",
+                  "record_count": 3,
+                  "data_type": "decision_tracking_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "decisions",
+                    "security_events",
+                    "bridge_interactions",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "unified_weight_decisions.json",
+                  "path": "data/unified_weight_decisions.json",
+                  "size_mb": 0.000720977783203125,
+                  "size_bytes": 756,
+                  "last_modified": "2025-06-13T15:43:28.536435",
+                  "record_count": 1,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "logic_scale",
+                    "symbolic_scale",
+                    "confidence_modifier",
+                    "decision_type",
+                    "reasoning"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "link_evaluator_decisions.json",
+                  "path": "data/link_evaluator_decisions.json",
+                  "size_mb": 0.13296890258789062,
+                  "size_bytes": 139428,
+                  "last_modified": "2025-06-08T08:54:53.988762",
+                  "record_count": 58,
+                  "data_type": "decision_tracking_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "decision_type",
+                    "confidence",
+                    "zone_analysis",
+                    "bridge_decision",
+                    "contamination_check"
+                  ],
+                  "utilization_score": 0.3
+                }
+              ]
+            },
+            "learning_data": {
+              "files_found": 5,
+              "total_size_mb": 24.79002285003662,
+              "files": [
+                {
+                  "filename": "trail_log.json",
+                  "path": "data/trail_log.json",
+                  "size_mb": 23.622966766357422,
+                  "size_bytes": 24770476,
+                  "last_modified": "2025-05-25T19:04:21.529589",
+                  "record_count": 5656,
+                  "data_type": "user_interaction_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "log_id",
+                    "timestamp",
+                    "input_text_preview",
+                    "source_url",
+                    "processing_phase"
+                  ],
+                  "utilization_score": 1.0
+                },
+                {
+                  "filename": "symbol_occurrence_log.json",
+                  "path": "data/symbol_occurrence_log.json",
+                  "size_mb": 1.0270824432373047,
+                  "size_bytes": 1076974,
+                  "last_modified": "2025-05-25T19:03:56.616218",
+                  "record_count": 1404,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "entries"
+                  ],
+                  "utilization_score": 0.8
+                },
+                {
+                  "filename": "brain_metrics.json",
+                  "path": "data/brain_metrics.json",
+                  "size_mb": 1.9073486328125e-06,
+                  "size_bytes": 2,
+                  "last_modified": "2025-06-13T15:23:54.504810",
+                  "record_count": 0,
+                  "data_type": "performance_data",
+                  "structure": "array",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "brain_contribution_metrics.json",
+                  "path": "data/brain_contribution_metrics.json",
+                  "size_mb": 0.009324073791503906,
+                  "size_bytes": 9777,
+                  "last_modified": "2025-06-11T17:54:14.061110",
+                  "record_count": 22,
+                  "data_type": "performance_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "duration_seconds",
+                    "logic_win_rate",
+                    "symbol_win_rate",
+                    "hybrid_rate"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "evolution_sessions.json",
+                  "path": "data/evolution_sessions.json",
+                  "size_mb": 0.1306476593017578,
+                  "size_bytes": 136994,
+                  "last_modified": "2025-06-11T20:13:31.519720",
+                  "record_count": 30,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "initial_stats",
+                    "final_stats",
+                    "reversed",
+                    "migrated"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "weight_systems": {
+              "files_found": 4,
+              "total_size_mb": 0.003696441650390625,
+              "files": [
+                {
+                  "filename": "adaptive_weights.json",
+                  "path": "data/adaptive_weights.json",
+                  "size_mb": 5.14984130859375e-05,
+                  "size_bytes": 54,
+                  "last_modified": "2025-06-13T15:28:45.401198",
+                  "record_count": 0,
+                  "data_type": "weight_optimization_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "static",
+                    "dynamic",
+                    "last_updated"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "weight_evolution_history.json",
+                  "path": "data/weight_evolution_history.json",
+                  "size_mb": 0.0015363693237304688,
+                  "size_bytes": 1611,
+                  "last_modified": "2025-06-11T20:13:31.233257",
+                  "record_count": 1,
+                  "data_type": "weight_optimization_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "timestamp",
+                    "run_count",
+                    "old_weights",
+                    "new_weights",
+                    "target_specialization"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "weight_momentum.json",
+                  "path": "data/weight_momentum.json",
+                  "size_mb": 0.00010013580322265625,
+                  "size_bytes": 105,
+                  "last_modified": "2025-06-11T20:13:31.232257",
+                  "record_count": 0,
+                  "data_type": "weight_optimization_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "static_wins",
+                    "dynamic_wins",
+                    "last_direction",
+                    "consecutive_moves"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "unified_weights.json",
+                  "path": "data/unified_weights.json",
+                  "size_mb": 0.0020084381103515625,
+                  "size_bytes": 2106,
+                  "last_modified": "2025-06-13T16:05:09.620959",
+                  "record_count": 10,
+                  "data_type": "weight_optimization_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "current",
+                    "history",
+                    "momentum",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "symbol_systems": {
+              "files_found": 5,
+              "total_size_mb": 0.0026683807373046875,
+              "files": [
+                {
+                  "filename": "symbol_memory.json",
+                  "path": "data/symbol_memory.json",
+                  "size_mb": 0.00017452239990234375,
+                  "size_bytes": 183,
+                  "last_modified": "2025-06-13T15:30:01.915491",
+                  "record_count": 3,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "symbols",
+                    "learned_symbols",
+                    "symbol_relationships",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "meta_symbols.json",
+                  "path": "data/meta_symbols.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:37.494491",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "symbol_emotion_map.json",
+                  "path": "data/symbol_emotion_map.json",
+                  "size_mb": 2.86102294921875e-06,
+                  "size_bytes": 3,
+                  "last_modified": "2025-06-13T15:28:37.495637",
+                  "record_count": 0,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "seed_symbols.json",
+                  "path": "data/seed_symbols.json",
+                  "size_mb": 0.0010824203491210938,
+                  "size_bytes": 1135,
+                  "last_modified": "2025-05-24T11:05:07.570915",
+                  "record_count": 21,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "\ud83d\udd25",
+                    "\ud83d\udca7",
+                    "\ud83d\udcbb"
+                  ],
+                  "utilization_score": 0.3
+                },
+                {
+                  "filename": "symbol_cooccurrence.json",
+                  "path": "data/symbol_cooccurrence.json",
+                  "size_mb": 0.0014057159423828125,
+                  "size_bytes": 1474,
+                  "last_modified": "2025-05-25T19:03:57.647636",
+                  "record_count": 60,
+                  "data_type": "symbolic_processing_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "\ud83d\udcbb",
+                    "\ud83d\udcbb\u27f3",
+                    "\ud83d\udcbb\u27f3\u27f3",
+                    "\u2699\u27f3",
+                    "\ud83d\udcbb\u27f3\u27f3\u27f3"
+                  ],
+                  "utilization_score": 0.3
+                }
+              ]
+            },
+            "security_logs": {
+              "files_found": 2,
+              "total_size_mb": 0.002338409423828125,
+              "files": [
+                {
+                  "filename": "warfare_attack_patterns.json",
+                  "path": "data/warfare_attack_patterns.json",
+                  "size_mb": 0.000514984130859375,
+                  "size_bytes": 540,
+                  "last_modified": "2025-06-13T15:24:08.045419",
+                  "record_count": 16,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "patterns",
+                    "threat_indicators",
+                    "learning_data",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "quarantine_log.json",
+                  "path": "data/quarantine/quarantine_log.json",
+                  "size_mb": 0.00182342529296875,
+                  "size_bytes": 1912,
+                  "last_modified": "2025-06-08T08:54:54.922332",
+                  "record_count": 5,
+                  "data_type": "security_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "quarantine_id",
+                    "zone_id",
+                    "timestamp",
+                    "reason",
+                    "severity"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "analytics_data": {
+              "files_found": 3,
+              "total_size_mb": 0.0005140304565429688,
+              "files": [
+                {
+                  "filename": "visualization_segments.json",
+                  "path": "data/visualization_segments.json",
+                  "size_mb": 0.000125885009765625,
+                  "size_bytes": 132,
+                  "last_modified": "2025-06-13T15:25:07.709834",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "segments",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "cluster_names.json",
+                  "path": "data/cluster_names.json",
+                  "size_mb": 0.0002040863037109375,
+                  "size_bytes": 214,
+                  "last_modified": "2025-06-13T15:24:37.086693",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "clusters",
+                    "naming_history",
+                    "cluster_relationships",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                },
+                {
+                  "filename": "context_patterns.json",
+                  "path": "data/context_patterns.json",
+                  "size_mb": 0.00018405914306640625,
+                  "size_bytes": 193,
+                  "last_modified": "2025-06-13T15:24:25.110263",
+                  "record_count": 3,
+                  "data_type": "configuration_data",
+                  "structure": "object",
+                  "sample_keys": [
+                    "patterns",
+                    "frequency_map",
+                    "correlation_matrix",
+                    "metadata"
+                  ],
+                  "utilization_score": 0.0
+                }
+              ]
+            },
+            "archived_data": {
+              "files_found": 1,
+              "total_size_mb": 4.161123275756836,
+              "files": [
+                {
+                  "filename": "optimizer_archived_phase1_vectors_final.json",
+                  "path": "data/optimizer_archived_phase1_vectors_final.json",
+                  "size_mb": 4.161123275756836,
+                  "size_bytes": 4363254,
+                  "last_modified": "2025-05-25T17:28:33.371567",
+                  "record_count": 354,
+                  "data_type": "configuration_data",
+                  "structure": "array",
+                  "sample_keys": [
+                    "id",
+                    "text",
+                    "vector",
+                    "source_model_info",
+                    "model_similarity_score"
+                  ],
+                  "utilization_score": 0.4
+                }
+              ]
+            }
+          },
+          "large_files": [
+            {
+              "filename": "trail_log.json",
+              "path": "data/trail_log.json",
+              "size_mb": 23.622966766357422,
+              "size_bytes": 24770476,
+              "last_modified": "2025-05-25T19:04:21.529589",
+              "record_count": 5656,
+              "data_type": "user_interaction_data",
+              "structure": "array",
+              "sample_keys": [
+                "log_id",
+                "timestamp",
+                "input_text_preview",
+                "source_url",
+                "processing_phase"
+              ],
+              "utilization_score": 1.0
+            },
+            {
+              "filename": "symbol_occurrence_log.json",
+              "path": "data/symbol_occurrence_log.json",
+              "size_mb": 1.0270824432373047,
+              "size_bytes": 1076974,
+              "last_modified": "2025-05-25T19:03:56.616218",
+              "record_count": 1404,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "entries"
+              ],
+              "utilization_score": 0.8
+            },
+            {
+              "filename": "optimizer_archived_phase1_vectors_final.json",
+              "path": "data/optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "size_bytes": 4363254,
+              "last_modified": "2025-05-25T17:28:33.371567",
+              "record_count": 354,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [
+                "id",
+                "text",
+                "vector",
+                "source_model_info",
+                "model_similarity_score"
+              ],
+              "utilization_score": 0.4
+            }
+          ],
+          "empty_files": [
+            {
+              "filename": "bridge_memory.json",
+              "path": "data/bridge_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.861790",
+              "record_count": 0,
+              "data_type": "memory_storage_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "logic_memory.json",
+              "path": "data/logic_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.866893",
+              "record_count": 0,
+              "data_type": "memory_storage_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbolic_memory.json",
+              "path": "data/symbolic_memory.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:04.868892",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "bridge.json",
+              "path": "data/bridge.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:20.425380",
+              "record_count": 0,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "logic.json",
+              "path": "data/logic.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:25.523560",
+              "record_count": 0,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbolic.json",
+              "path": "data/symbolic.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:27:30.459012",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "decision_history.json",
+              "path": "data/decision_history.json",
+              "size_mb": 0.000179290771484375,
+              "size_bytes": 188,
+              "last_modified": "2025-06-13T15:23:59.495814",
+              "record_count": 3,
+              "data_type": "decision_tracking_data",
+              "structure": "object",
+              "sample_keys": [
+                "logic_decisions",
+                "symbolic_decisions",
+                "bridge_decisions",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "alphawall_bridge_decisions.json",
+              "path": "data/alphawall_bridge_decisions.json",
+              "size_mb": 0.000194549560546875,
+              "size_bytes": 204,
+              "last_modified": "2025-06-13T15:24:43.339349",
+              "record_count": 3,
+              "data_type": "decision_tracking_data",
+              "structure": "object",
+              "sample_keys": [
+                "decisions",
+                "security_events",
+                "bridge_interactions",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "unified_weight_decisions.json",
+              "path": "data/unified_weight_decisions.json",
+              "size_mb": 0.000720977783203125,
+              "size_bytes": 756,
+              "last_modified": "2025-06-13T15:43:28.536435",
+              "record_count": 1,
+              "data_type": "decision_tracking_data",
+              "structure": "array",
+              "sample_keys": [
+                "logic_scale",
+                "symbolic_scale",
+                "confidence_modifier",
+                "decision_type",
+                "reasoning"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "brain_metrics.json",
+              "path": "data/brain_metrics.json",
+              "size_mb": 1.9073486328125e-06,
+              "size_bytes": 2,
+              "last_modified": "2025-06-13T15:23:54.504810",
+              "record_count": 0,
+              "data_type": "performance_data",
+              "structure": "array",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "adaptive_weights.json",
+              "path": "data/adaptive_weights.json",
+              "size_mb": 5.14984130859375e-05,
+              "size_bytes": 54,
+              "last_modified": "2025-06-13T15:28:45.401198",
+              "record_count": 0,
+              "data_type": "weight_optimization_data",
+              "structure": "object",
+              "sample_keys": [
+                "static",
+                "dynamic",
+                "last_updated"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "weight_momentum.json",
+              "path": "data/weight_momentum.json",
+              "size_mb": 0.00010013580322265625,
+              "size_bytes": 105,
+              "last_modified": "2025-06-11T20:13:31.232257",
+              "record_count": 0,
+              "data_type": "weight_optimization_data",
+              "structure": "object",
+              "sample_keys": [
+                "static_wins",
+                "dynamic_wins",
+                "last_direction",
+                "consecutive_moves"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbol_memory.json",
+              "path": "data/symbol_memory.json",
+              "size_mb": 0.00017452239990234375,
+              "size_bytes": 183,
+              "last_modified": "2025-06-13T15:30:01.915491",
+              "record_count": 3,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "symbols",
+                "learned_symbols",
+                "symbol_relationships",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "meta_symbols.json",
+              "path": "data/meta_symbols.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:37.494491",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "symbol_emotion_map.json",
+              "path": "data/symbol_emotion_map.json",
+              "size_mb": 2.86102294921875e-06,
+              "size_bytes": 3,
+              "last_modified": "2025-06-13T15:28:37.495637",
+              "record_count": 0,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "warfare_attack_patterns.json",
+              "path": "data/warfare_attack_patterns.json",
+              "size_mb": 0.000514984130859375,
+              "size_bytes": 540,
+              "last_modified": "2025-06-13T15:24:08.045419",
+              "record_count": 16,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "patterns",
+                "threat_indicators",
+                "learning_data",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "visualization_segments.json",
+              "path": "data/visualization_segments.json",
+              "size_mb": 0.000125885009765625,
+              "size_bytes": 132,
+              "last_modified": "2025-06-13T15:25:07.709834",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "segments",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "cluster_names.json",
+              "path": "data/cluster_names.json",
+              "size_mb": 0.0002040863037109375,
+              "size_bytes": 214,
+              "last_modified": "2025-06-13T15:24:37.086693",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "clusters",
+                "naming_history",
+                "cluster_relationships",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            },
+            {
+              "filename": "context_patterns.json",
+              "path": "data/context_patterns.json",
+              "size_mb": 0.00018405914306640625,
+              "size_bytes": 193,
+              "last_modified": "2025-06-13T15:24:25.110263",
+              "record_count": 3,
+              "data_type": "configuration_data",
+              "structure": "object",
+              "sample_keys": [
+                "patterns",
+                "frequency_map",
+                "correlation_matrix",
+                "metadata"
+              ],
+              "utilization_score": 0.0
+            }
+          ],
+          "high_value_data": [
+            {
+              "filename": "trail_log.json",
+              "path": "data/trail_log.json",
+              "size_mb": 23.622966766357422,
+              "size_bytes": 24770476,
+              "last_modified": "2025-05-25T19:04:21.529589",
+              "record_count": 5656,
+              "data_type": "user_interaction_data",
+              "structure": "array",
+              "sample_keys": [
+                "log_id",
+                "timestamp",
+                "input_text_preview",
+                "source_url",
+                "processing_phase"
+              ],
+              "utilization_score": 1.0
+            },
+            {
+              "filename": "symbol_occurrence_log.json",
+              "path": "data/symbol_occurrence_log.json",
+              "size_mb": 1.0270824432373047,
+              "size_bytes": 1076974,
+              "last_modified": "2025-05-25T19:03:56.616218",
+              "record_count": 1404,
+              "data_type": "symbolic_processing_data",
+              "structure": "object",
+              "sample_keys": [
+                "entries"
+              ],
+              "utilization_score": 0.8
+            },
+            {
+              "filename": "optimizer_archived_phase1_vectors_final.json",
+              "path": "data/optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "size_bytes": 4363254,
+              "last_modified": "2025-05-25T17:28:33.371567",
+              "record_count": 354,
+              "data_type": "configuration_data",
+              "structure": "array",
+              "sample_keys": [
+                "id",
+                "text",
+                "vector",
+                "source_model_info",
+                "model_similarity_score"
+              ],
+              "utilization_score": 0.4
+            }
+          ],
+          "utilization_opportunities": [
+            {
+              "type": "large_underutilized_file",
+              "file": "optimizer_archived_phase1_vectors_final.json",
+              "size_mb": 4.161123275756836,
+              "recommendation": "Integrate this large data file into migration and learning systems"
+            },
+            {
+              "type": "user_interaction_goldmine",
+              "file": "trail_log.json",
+              "records": 5656,
+              "recommendation": "Mine user interaction patterns for improved routing decisions"
+            },
+            {
+              "type": "symbol_system_integration",
+              "files": [
+                "symbol_memory.json",
+                "meta_symbols.json",
+                "symbol_emotion_map.json",
+                "seed_symbols.json",
+                "symbol_cooccurrence.json"
+              ],
+              "recommendation": "Integrate symbol files for unified symbolic processing"
+            }
+          ]
+        },
+        "utilization_plan": {
+          "phase_1_immediate": [
+            {
+              "action": "Integrate optimizer_archived_phase1_vectors_final.json into migration system",
+              "benefit": "Immediate access to large dataset",
+              "complexity": "medium",
+              "priority_score": 1.5
+            }
+          ],
+          "phase_2_integration": [
+            {
+              "action": "Integrate trail_log.json with migration decisions",
+              "benefit": "User behavior-informed routing",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Unify symbol processing across all symbol files",
+              "benefit": "Coherent symbolic understanding",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Consolidate decision logs for pattern analysis",
+              "benefit": "Improved decision consistency",
+              "complexity": "low",
+              "priority_score": 3.0
+            }
+          ],
+          "phase_3_optimization": [
+            {
+              "action": "Real-time analytics integration",
+              "benefit": "Live system optimization",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Predictive migration based on historical patterns",
+              "benefit": "Proactive system optimization",
+              "complexity": "very_high",
+              "priority_score": 0.75
+            }
+          ],
+          "estimated_benefits": {
+            "data_utilization_increase": "75%",
+            "decision_accuracy_improvement": "25%",
+            "system_efficiency_gain": "40%",
+            "unused_data_activated": "29.2MB"
+          },
+          "implementation_priority": [
+            {
+              "action": "Consolidate decision logs for pattern analysis",
+              "benefit": "Improved decision consistency",
+              "complexity": "low",
+              "priority_score": 3.0
+            },
+            {
+              "action": "Integrate optimizer_archived_phase1_vectors_final.json into migration system",
+              "benefit": "Immediate access to large dataset",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Unify symbol processing across all symbol files",
+              "benefit": "Coherent symbolic understanding",
+              "complexity": "medium",
+              "priority_score": 1.5
+            },
+            {
+              "action": "Integrate trail_log.json with migration decisions",
+              "benefit": "User behavior-informed routing",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Real-time analytics integration",
+              "benefit": "Live system optimization",
+              "complexity": "high",
+              "priority_score": 1.0
+            },
+            {
+              "action": "Predictive migration based on historical patterns",
+              "benefit": "Proactive system optimization",
+              "complexity": "very_high",
+              "priority_score": 0.75
+            }
+          ]
+        },
+        "immediate_implementation": {
+          "files_processed": 2,
+          "data_integrated": 3,
+          "new_insights_generated": 4,
+          "integration_points_created": 1
+        },
+        "insights_extracted": {
+          "trail_patterns": {
+            "file_size_mb": 23.622966766357422,
+            "sampling_used": true,
+            "patterns_available": true
+          },
+          "symbol_usage": {
+            "total_entries": 1,
+            "data_available": true
+          },
+          "decision_history": {},
+          "conflict_analysis": {},
+          "user_behavior": {}
+        }
+      },
+      "migration_consolidation": {
+        "migration_cycle": {
+          "session_id": "migration_20250613_160609",
+          "forward_migration": {
+            "items_processed": 0,
+            "items_migrated": 0
+          },
+          "reverse_audit": {
+            "items_processed": 0,
+            "items_migrated": 0
+          },
+          "execution_time": 0.026558
+        },
+        "script_consolidation": {
+          "legacy_scripts_replaced": [
+            "adaptive_migration.py",
+            "reverse_migration.py",
+            "memory_evolution_engine.py"
+          ],
+          "unified_system_active": true,
+          "redundancy_eliminated": true
+        },
+        "conflict_resolution": {},
+        "enhanced_routing": {}
+      },
+      "memory_integration": {
+        "memory_stores_verified": {
+          "bridge_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "logic_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "symbolic_memory.json": {
+            "exists": true,
+            "size_bytes": 3,
+            "accessible": true
+          },
+          "symbol_memory.json": {
+            "exists": true,
+            "size_bytes": 183,
+            "accessible": true
+          },
+          "user_memory.json": {
+            "exists": true,
+            "size_bytes": 29207,
+            "accessible": true
+          },
+          "vector_memory.json": {
+            "exists": true,
+            "size_bytes": 2,
+            "accessible": true
+          }
+        },
+        "large_files_integrated": {
+          "trail_log.json": {
+            "size_mb": 23.622966766357422,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "optimizer_archived_phase1_vectors_final.json": {
+            "size_mb": 4.161123275756836,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "symbol_occurrence_log.json": {
+            "size_mb": 1.0270824432373047,
+            "insights_extracted": false,
+            "integration_active": true
+          },
+          "bridge_conflicts.json": {
+            "size_mb": 0.2364969253540039,
+            "insights_extracted": false,
+            "integration_active": true
+          }
+        },
+        "historical_data_activated": {
+          "bridge_decisions.json": {
+            "records": 58,
+            "activated": true
+          },
+          "link_evaluator_decisions.json": {
+            "records": 58,
+            "activated": true
+          },
+          "evolution_sessions.json": {
+            "records": 30,
+            "activated": true
+          }
+        },
+        "cross_system_integration": {}
+      },
+      "system_optimization": {
+        "weight_optimization": {
+          "logic_scale": 2.0,
+          "symbolic_scale": 0.9,
+          "confidence_modifier": 1.0,
+          "decision_type": "FOLLOW_LOGIC"
+        },
+        "performance_metrics": {},
+        "system_health": {
+          "system_health": {
+            "system_status": "error",
+            "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+          },
+          "migration_sessions": 3,
+          "last_migration": "2025-06-13T16:06:09.359532",
+          "recommendations": [],
+          "status": "operational"
+        },
+        "recommendations": [
+          "No items in memory - begin data ingestion"
+        ]
+      }
+    },
+    "data_utilization": {},
+    "migration_consolidation": {},
+    "system_optimization": {},
+    "final_status": {
+      "overall_status": "fully_integrated",
+      "integration_score": 100.0,
+      "phases_completed": 4,
+      "phases_total": 4,
+      "critical_issues": [],
+      "system_ready": true
+    },
+    "execution_time": 0.9671592712402344,
+    "phase_timings": {
+      "data_utilization": 0.9232511520385742,
+      "migration_consolidation": 0.029262781143188477,
+      "memory_integration": 0.010901927947998047,
+      "system_optimization": 0.003704547882080078,
+      "total_time": 0.9671592712402344
+    }
+  }
+]

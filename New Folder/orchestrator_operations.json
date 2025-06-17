@@ -1,0 +1,186 @@
+[
+  {
+    "timestamp": "2025-06-13T23:01:14.221041+00:00",
+    "session_id": "session_20250613_230114",
+    "operation": "start_system",
+    "result": {
+      "mode": "autonomous",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "autonomous_orchestrator",
+        "unified_migration",
+        "processing_nodes"
+      ],
+      "mode_status": "ready_for_input"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T13:47:59.830548+00:00",
+    "session_id": "session_20250614_134759",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T13:56:00.512931+00:00",
+    "session_id": "session_20250614_135600",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T13:57:12.960457+00:00",
+    "session_id": "session_20250614_135712",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:01:34.194604+00:00",
+    "session_id": "session_20250614_140134",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:06:05.146296+00:00",
+    "session_id": "session_20250614_140605",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:31:09.271679+00:00",
+    "session_id": "session_20250614_143109",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:32:17.971383+00:00",
+    "session_id": "session_20250614_143217",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:44:44.343009+00:00",
+    "session_id": "session_20250614_144444",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T14:51:49.242801+00:00",
+    "session_id": "session_20250614_145149",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T15:08:35.138453+00:00",
+    "session_id": "session_20250614_150834",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T15:13:27.917285+00:00",
+    "session_id": "session_20250614_151327",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  },
+  {
+    "timestamp": "2025-06-14T15:23:46.947575+00:00",
+    "session_id": "session_20250614_152346",
+    "operation": "start_system",
+    "result": {
+      "mode": "interactive",
+      "status": "started",
+      "subsystems": [],
+      "subsystems_started": [
+        "interactive_ai"
+      ],
+      "mode_status": "ready_for_chat"
+    }
+  }
+]

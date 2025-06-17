@@ -1,0 +1,80 @@
+{
+  "current": {
+    "static": 0.6,
+    "dynamic": 0.4,
+    "last_updated": null
+  },
+  "history": [
+    {
+      "timestamp": "2025-06-12T01:13:31.231834",
+      "run_count": 1,
+      "old_weights": {
+        "static": 0.9,
+        "dynamic": 0.1
+      },
+      "new_weights": {
+        "static": 0.88,
+        "dynamic": 0.12
+      },
+      "target_specialization": 0.6,
+      "actual_specialization": 0.76,
+      "momentum": {
+        "static_wins": 10,
+        "dynamic_wins": 0,
+        "last_direction": "reduce",
+        "consecutive_moves": 1
+      },
+      "memory_stats": {
+        "timestamp": "2025-06-12T01:13:31.165365",
+        "distribution": {
+          "logic": {
+            "count": 36142,
+            "percentage": 88.53342478504764,
+            "avg_score": 2.8644706989098556,
+            "avg_age_days": 4.343423164185712,
+            "stability": 0.2213767915444635
+          },
+          "symbolic": {
+            "count": 1658,
+            "percentage": 4.061435955221322,
+            "avg_score": 3.592581423401689,
+            "avg_age_days": 2.0084439083232812,
+            "stability": 0.0018094089264173703
+          },
+          "bridge": {
+            "count": 3023,
+            "percentage": 7.405139259731033,
+            "avg_logic_score": 0.0,
+            "avg_symbolic_score": 0.0,
+            "avg_age_days": 5.405226596096592,
+            "stability": 0.0,
+            "volatility": 0.0
+          }
+        },
+        "total_items": 40823,
+        "health_indicators": {
+          "status": "healthy",
+          "bridge_percentage": 7.405139259731033,
+          "issues": [],
+          "recommendations": []
+        }
+      },
+      "performance_stats": null,
+      "decision_reason": "Direction: reduce, Bridge%: N/A"
+    }
+  ],
+  "momentum": {
+    "static_wins": 10,
+    "dynamic_wins": 0,
+    "last_direction": "reduce",
+    "consecutive_moves": 1
+  },
+  "metadata": {
+    "last_consolidation": "2025-06-13T21:06:09.365558+00:00",
+    "source_files": [
+      "adaptive_weights.json",
+      "weight_momentum.json",
+      "weight_evolution_history.json"
+    ]
+  }
+}

@@ -1,0 +1,3002 @@
+[
+  {
+    "zone_id": "6d44600d",
+    "timestamp": "2025-06-05T02:49:09.184514",
+    "memory_trace": "42ada0b4adbe9171",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.961,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.2991514535596973,
+      "similarity_to_emotional": -0.01593317823688585,
+      "similarity_to_philosophical": -0.02258940986029338,
+      "similarity_to_practical": 0.07359998403179821
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2c1e6670",
+    "timestamp": "2025-06-05T02:49:09.894331",
+    "memory_trace": "13b769c7175ce65b",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "22e30ffc",
+    "timestamp": "2025-06-05T02:49:10.142145",
+    "memory_trace": "1bea2cceba78f42a",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "3b3e3f5b",
+    "timestamp": "2025-06-05T02:49:10.313338",
+    "memory_trace": "1841f39e3a29cd21",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e97e6911",
+    "timestamp": "2025-06-05T02:49:11.063232",
+    "memory_trace": "03bc794f912839f4",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2acc7de6",
+    "timestamp": "2025-06-05T02:49:11.317215",
+    "memory_trace": "ac5c8362193e841d",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "fd228657",
+    "timestamp": "2025-06-05T02:49:11.483834",
+    "memory_trace": "8747086359005b66",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a3c7f15f",
+    "timestamp": "2025-06-05T02:49:12.186130",
+    "memory_trace": "c9edd7d99592d62b",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "3de29d75",
+    "timestamp": "2025-06-05T02:49:12.429614",
+    "memory_trace": "26e550576b1f94e1",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2323d0e0",
+    "timestamp": "2025-06-05T02:49:12.593588",
+    "memory_trace": "13d1d239c8277793",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "f7441b45",
+    "timestamp": "2025-06-05T02:49:13.298948",
+    "memory_trace": "e26d2256a4a50310",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.962,
+      "intent": "expressive",
+      "context": [
+        "trauma_loop"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.033395781481767015,
+      "similarity_to_emotional": 0.16738479680826818,
+      "similarity_to_philosophical": 0.24558189594233432,
+      "similarity_to_practical": -0.00942425477737538
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 6,
+      "recursion_detected": true
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": true
+    }
+  },
+  {
+    "zone_id": "543f9a3f",
+    "timestamp": "2025-06-05T02:49:13.549734",
+    "memory_trace": "5948d34d1812cb07",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.962,
+      "intent": "expressive",
+      "context": [
+        "trauma_loop"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.033395781481767015,
+      "similarity_to_emotional": 0.16738479680826818,
+      "similarity_to_philosophical": 0.24558189594233432,
+      "similarity_to_practical": -0.00942425477737538
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 6,
+      "recursion_detected": true
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": true
+    }
+  },
+  {
+    "zone_id": "6900fd59",
+    "timestamp": "2025-06-08T13:54:48.898891",
+    "memory_trace": "b1bf9b4f07c52540",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.038089975047430634,
+      "similarity_to_emotional": 0.17213408852598508,
+      "similarity_to_philosophical": 0.0981848519539915,
+      "similarity_to_practical": 0.021584768536662687
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "baf215f7",
+    "timestamp": "2025-06-08T13:54:49.134767",
+    "memory_trace": "538682a70b48ce4d",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.038089975047430634,
+      "similarity_to_emotional": 0.17213408852598508,
+      "similarity_to_philosophical": 0.0981848519539915,
+      "similarity_to_practical": 0.021584768536662687
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "cd6be6ae",
+    "timestamp": "2025-06-08T13:54:49.305208",
+    "memory_trace": "649b8fb9568035b2",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.038089975047430634,
+      "similarity_to_emotional": 0.17213408852598508,
+      "similarity_to_philosophical": 0.0981848519539915,
+      "similarity_to_practical": 0.021584768536662687
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2886f584",
+    "timestamp": "2025-06-08T13:54:50.025498",
+    "memory_trace": "11f5884493e81d21",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.961,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.2991514535596973,
+      "similarity_to_emotional": -0.01593317823688585,
+      "similarity_to_philosophical": -0.02258940986029338,
+      "similarity_to_practical": 0.07359998403179821
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "15dbf548",
+    "timestamp": "2025-06-08T13:54:50.286033",
+    "memory_trace": "20780231e9ae711e",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.961,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.2991514535596973,
+      "similarity_to_emotional": -0.01593317823688585,
+      "similarity_to_philosophical": -0.02258940986029338,
+      "similarity_to_practical": 0.07359998403179821
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "d3808a44",
+    "timestamp": "2025-06-08T13:54:50.462268",
+    "memory_trace": "31b6d967c42d63c6",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.961,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.2991514535596973,
+      "similarity_to_emotional": -0.01593317823688585,
+      "similarity_to_philosophical": -0.02258940986029338,
+      "similarity_to_practical": 0.07359998403179821
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "3f0e60ba",
+    "timestamp": "2025-06-08T13:54:51.172939",
+    "memory_trace": "642771b3e884a477",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "de6cd6a3",
+    "timestamp": "2025-06-08T13:54:51.431882",
+    "memory_trace": "9a2d94faddf1a96a",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "677b344c",
+    "timestamp": "2025-06-08T13:54:51.603768",
+    "memory_trace": "5f2d3d17e29388af",
+    "tags": {
+      "emotional_state": "grief",
+      "emotion_confidence": 1.0,
+      "intent": "self_reference",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.005240294922347565,
+      "similarity_to_emotional": 0.28105568326301805,
+      "similarity_to_philosophical": 0.2762187889723579,
+      "similarity_to_practical": -0.04391451097500221
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "395eec73",
+    "timestamp": "2025-06-08T13:54:52.389747",
+    "memory_trace": "aa3c40a01ab4eaa2",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "c52079f4",
+    "timestamp": "2025-06-08T13:54:52.643905",
+    "memory_trace": "036b78873dbcf20c",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e8433132",
+    "timestamp": "2025-06-08T13:54:52.818511",
+    "memory_trace": "2bd346f17cb044a2",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.973,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.08676066344168996,
+      "similarity_to_emotional": 0.11620192710908124,
+      "similarity_to_philosophical": 0.18831615636530222,
+      "similarity_to_practical": 0.03733105020937331
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 3,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "5ad91973",
+    "timestamp": "2025-06-08T13:54:53.530203",
+    "memory_trace": "0cb7f69de60725c5",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "21359aff",
+    "timestamp": "2025-06-08T13:54:53.778640",
+    "memory_trace": "3739455d033fd2ad",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "56ac9806",
+    "timestamp": "2025-06-08T13:54:53.946044",
+    "memory_trace": "9291fa20acf72e6e",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.942,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.10927909344977679,
+      "similarity_to_emotional": 0.04240129512337272,
+      "similarity_to_philosophical": -0.03768117211208272,
+      "similarity_to_practical": 0.4679501053187073
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 5,
+      "unique_patterns": 5,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "d6949471",
+    "timestamp": "2025-06-08T13:54:54.651403",
+    "memory_trace": "68985c3d5427be09",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.962,
+      "intent": "expressive",
+      "context": [
+        "trauma_loop"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.033395781481767015,
+      "similarity_to_emotional": 0.16738479680826818,
+      "similarity_to_philosophical": 0.24558189594233432,
+      "similarity_to_practical": -0.00942425477737538
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 6,
+      "recursion_detected": true
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": true
+    }
+  },
+  {
+    "zone_id": "bcc536bc",
+    "timestamp": "2025-06-08T13:54:54.907472",
+    "memory_trace": "bfbf0b238d935f28",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.962,
+      "intent": "expressive",
+      "context": [
+        "trauma_loop"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.033395781481767015,
+      "similarity_to_emotional": 0.16738479680826818,
+      "similarity_to_philosophical": 0.24558189594233432,
+      "similarity_to_practical": -0.00942425477737538
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 6,
+      "recursion_detected": true
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": true
+    }
+  },
+  {
+    "zone_id": "2e92abf5",
+    "timestamp": "2025-06-14T13:48:05.618111",
+    "memory_trace": "ae0e192dafd753e9",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "c57a18f8",
+    "timestamp": "2025-06-14T13:56:00.778424",
+    "memory_trace": "835b005c597f3134",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "61752007",
+    "timestamp": "2025-06-14T13:57:13.130666",
+    "memory_trace": "b27d0638187d4bcc",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "01c22c50",
+    "timestamp": "2025-06-14T13:58:32.085037",
+    "memory_trace": "1ff7425102ee3c73",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "fdf2b9f0",
+    "timestamp": "2025-06-14T14:00:19.264581",
+    "memory_trace": "808f4c62039070e0",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "cbcebc50",
+    "timestamp": "2025-06-14T14:00:19.386772",
+    "memory_trace": "fdcc16a731c90a04",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "7f6e4fa1",
+    "timestamp": "2025-06-14T14:00:19.452603",
+    "memory_trace": "49915e2f845cb1cc",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a589104c",
+    "timestamp": "2025-06-14T14:01:34.365367",
+    "memory_trace": "2aed1b6e01f2a418",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.977,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.006692634562482559,
+      "similarity_to_emotional": 0.1384126078539868,
+      "similarity_to_philosophical": 0.07275735535435959,
+      "similarity_to_practical": 0.028619588341231572
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "f326f97f",
+    "timestamp": "2025-06-14T14:01:34.498447",
+    "memory_trace": "f319a0429ecec50b",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.977,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.006692634562482559,
+      "similarity_to_emotional": 0.1384126078539868,
+      "similarity_to_philosophical": 0.07275735535435959,
+      "similarity_to_practical": 0.028619588341231572
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a30e3681",
+    "timestamp": "2025-06-14T14:01:34.583518",
+    "memory_trace": "2602547bfc6846b7",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.977,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.006692634562482559,
+      "similarity_to_emotional": 0.1384126078539868,
+      "similarity_to_philosophical": 0.07275735535435959,
+      "similarity_to_practical": 0.028619588341231572
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "3ba79173",
+    "timestamp": "2025-06-14T14:04:55.759436",
+    "memory_trace": "3eedc5290de75366",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2aec585e",
+    "timestamp": "2025-06-14T14:04:55.883433",
+    "memory_trace": "8fd3b27f93c32df9",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "7bc7b4c0",
+    "timestamp": "2025-06-14T14:04:55.965536",
+    "memory_trace": "71ffa53f81e65559",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e77c5e16",
+    "timestamp": "2025-06-14T14:06:05.299663",
+    "memory_trace": "3e1f81342cf8f258",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "1e0c519d",
+    "timestamp": "2025-06-14T14:06:05.437214",
+    "memory_trace": "9fbe7dd35d379d9f",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "21036fe4",
+    "timestamp": "2025-06-14T14:06:05.517833",
+    "memory_trace": "49bfa21cea0d11ac",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "87320e7c",
+    "timestamp": "2025-06-14T14:24:07.501700",
+    "memory_trace": "46e4c29c73842494",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "1234ee06",
+    "timestamp": "2025-06-14T14:24:07.639703",
+    "memory_trace": "008a4df4b3cdf282",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e1354cff",
+    "timestamp": "2025-06-14T14:24:07.721451",
+    "memory_trace": "ccb2122aac3d0ea5",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "7db2cdac",
+    "timestamp": "2025-06-14T14:27:36.745642",
+    "memory_trace": "1748aaf914dbaa04",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "27e71de5",
+    "timestamp": "2025-06-14T14:27:36.871742",
+    "memory_trace": "c9c982bee4355180",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "20e498cf",
+    "timestamp": "2025-06-14T14:27:36.951967",
+    "memory_trace": "c9fcabb3d8006297",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "96205986",
+    "timestamp": "2025-06-14T14:28:40.559750",
+    "memory_trace": "5b76244c7f37b30f",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "502057b6",
+    "timestamp": "2025-06-14T14:31:09.431016",
+    "memory_trace": "a0656fdaa3b3fe6d",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "57b70d20",
+    "timestamp": "2025-06-14T14:31:09.519135",
+    "memory_trace": "b99f3ef80d0d908c",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "82c4abb9",
+    "timestamp": "2025-06-14T14:31:09.611141",
+    "memory_trace": "096a0f3541d97a8b",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "8ae71858",
+    "timestamp": "2025-06-14T14:32:18.122996",
+    "memory_trace": "9f0d543a9839be03",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "c05c270a",
+    "timestamp": "2025-06-14T14:32:18.286093",
+    "memory_trace": "4419ceb1b82a7cd2",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a4f4814d",
+    "timestamp": "2025-06-14T14:32:18.384373",
+    "memory_trace": "5b6f02041ea63eda",
+    "tags": {
+      "emotional_state": "calm",
+      "emotion_confidence": 1.0,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.031088563340351892,
+      "similarity_to_emotional": 0.21653876409356865,
+      "similarity_to_philosophical": 0.10282800379984322,
+      "similarity_to_practical": -0.006149411045621402
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "9f355acf",
+    "timestamp": "2025-06-14T14:51:49.493744",
+    "memory_trace": "d33ae801c59e7b78",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "c6a31e28",
+    "timestamp": "2025-06-14T14:51:49.607255",
+    "memory_trace": "d0cec41924f2509f",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "ce0346c2",
+    "timestamp": "2025-06-14T14:51:49.700305",
+    "memory_trace": "adca17afa1206e4a",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "432fd278",
+    "timestamp": "2025-06-14T15:08:35.419695",
+    "memory_trace": "093b0da5bc1a89a7",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.972,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.40510504432980843,
+      "similarity_to_emotional": 0.010898205613459975,
+      "similarity_to_philosophical": 0.0067173248530600785,
+      "similarity_to_practical": 0.18050653718179535
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2694e2ec",
+    "timestamp": "2025-06-14T15:08:35.603414",
+    "memory_trace": "ddfd6d3155abfba5",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.972,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.40510504432980843,
+      "similarity_to_emotional": 0.010898205613459975,
+      "similarity_to_philosophical": 0.0067173248530600785,
+      "similarity_to_practical": 0.18050653718179535
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "9d5bd223",
+    "timestamp": "2025-06-14T15:08:35.724661",
+    "memory_trace": "07b3072b878f810b",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.972,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.40510504432980843,
+      "similarity_to_emotional": 0.010898205613459975,
+      "similarity_to_philosophical": 0.0067173248530600785,
+      "similarity_to_practical": 0.18050653718179535
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "d1d8b3f0",
+    "timestamp": "2025-06-14T15:13:49.919671",
+    "memory_trace": "209111c0eb668d34",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "5f8407f9",
+    "timestamp": "2025-06-14T15:13:50.005132",
+    "memory_trace": "7d1a36d270c179db",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "40559d2e",
+    "timestamp": "2025-06-14T15:13:50.083414",
+    "memory_trace": "2c134d879468df56",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "96aa79c4",
+    "timestamp": "2025-06-14T15:23:52.316585",
+    "memory_trace": "94015a8085140ef3",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "11128830",
+    "timestamp": "2025-06-14T15:23:52.421706",
+    "memory_trace": "4aad4ffd8695e467",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a6f875ae",
+    "timestamp": "2025-06-14T15:23:52.502158",
+    "memory_trace": "717bce7e0b8bbc87",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "12a8b012",
+    "timestamp": "2025-06-14T15:24:03.722902",
+    "memory_trace": "be6ebc5ffda526d3",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.974,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.0044501206267117815,
+      "similarity_to_emotional": 0.1862473172529675,
+      "similarity_to_philosophical": 0.09522723206702165,
+      "similarity_to_practical": 0.137755277235231
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a41d41a9",
+    "timestamp": "2025-06-14T15:24:03.904737",
+    "memory_trace": "e5cdf4b16ce61c6d",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.974,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.0044501206267117815,
+      "similarity_to_emotional": 0.1862473172529675,
+      "similarity_to_philosophical": 0.09522723206702165,
+      "similarity_to_practical": 0.137755277235231
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a7be1dd4",
+    "timestamp": "2025-06-14T15:24:03.991242",
+    "memory_trace": "15bba23d5aa23538",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.974,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.0044501206267117815,
+      "similarity_to_emotional": 0.1862473172529675,
+      "similarity_to_philosophical": 0.09522723206702165,
+      "similarity_to_practical": 0.137755277235231
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e28d3aea",
+    "timestamp": "2025-06-14T15:24:15.980911",
+    "memory_trace": "89d6985f9fbcebc0",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.99,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.0036540021069290537,
+      "similarity_to_emotional": 0.2346155121928701,
+      "similarity_to_philosophical": 0.08962345549889036,
+      "similarity_to_practical": -0.0855055106431773
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "0f04da85",
+    "timestamp": "2025-06-14T15:24:16.121427",
+    "memory_trace": "bf415543d1d77829",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.99,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.0036540021069290537,
+      "similarity_to_emotional": 0.2346155121928701,
+      "similarity_to_philosophical": 0.08962345549889036,
+      "similarity_to_practical": -0.0855055106431773
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e7a07163",
+    "timestamp": "2025-06-14T15:24:16.213727",
+    "memory_trace": "5f83fff58fe62dee",
+    "tags": {
+      "emotional_state": "overwhelmed",
+      "emotion_confidence": 0.99,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.0036540021069290537,
+      "similarity_to_emotional": 0.2346155121928701,
+      "similarity_to_philosophical": 0.08962345549889036,
+      "similarity_to_practical": -0.0855055106431773
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "00378aad",
+    "timestamp": "2025-06-14T15:24:24.760047",
+    "memory_trace": "e6c0f1d8206c86ef",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.917,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.018526623623276155,
+      "similarity_to_emotional": 0.3961116535175293,
+      "similarity_to_philosophical": 0.14478170880005037,
+      "similarity_to_practical": -0.1061074144563712
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "3ba0c960",
+    "timestamp": "2025-06-14T15:24:24.875642",
+    "memory_trace": "f64b31b2f42eaf4f",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.917,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.018526623623276155,
+      "similarity_to_emotional": 0.3961116535175293,
+      "similarity_to_philosophical": 0.14478170880005037,
+      "similarity_to_practical": -0.1061074144563712
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "86055da7",
+    "timestamp": "2025-06-14T15:24:24.961107",
+    "memory_trace": "7073f4cf53351793",
+    "tags": {
+      "emotional_state": "emotionally_recursive",
+      "emotion_confidence": 0.917,
+      "intent": "expressive",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.018526623623276155,
+      "similarity_to_emotional": 0.3961116535175293,
+      "similarity_to_philosophical": 0.14478170880005037,
+      "similarity_to_practical": -0.1061074144563712
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 4,
+      "unique_patterns": 4,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "symbolic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "084b718c",
+    "timestamp": "2025-06-14T15:36:10.434322",
+    "memory_trace": "d92a51085792c33c",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "b7f155d0",
+    "timestamp": "2025-06-14T15:36:10.525975",
+    "memory_trace": "121a7581946b094d",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "2234deca",
+    "timestamp": "2025-06-14T15:36:10.592052",
+    "memory_trace": "b5ad65fc286bc5cb",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.988,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.027714602897925843,
+      "similarity_to_emotional": 0.19338725866523146,
+      "similarity_to_philosophical": 0.13606149182251262,
+      "similarity_to_practical": 0.028872550778043637
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "62b95c53",
+    "timestamp": "2025-06-14T15:37:15.390187",
+    "memory_trace": "57527704ca9b1cd9",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.17509183511320348,
+      "similarity_to_emotional": 0.049968022568812276,
+      "similarity_to_philosophical": 0.12779444993898634,
+      "similarity_to_practical": 0.08858976556897208
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "5771688c",
+    "timestamp": "2025-06-14T15:37:15.537266",
+    "memory_trace": "5efcedaac26a55aa",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.17509183511320348,
+      "similarity_to_emotional": 0.049968022568812276,
+      "similarity_to_philosophical": 0.12779444993898634,
+      "similarity_to_practical": 0.08858976556897208
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "4a118918",
+    "timestamp": "2025-06-14T15:37:15.616955",
+    "memory_trace": "7f0c966654298134",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.17509183511320348,
+      "similarity_to_emotional": 0.049968022568812276,
+      "similarity_to_philosophical": 0.12779444993898634,
+      "similarity_to_practical": 0.08858976556897208
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "ed8dc670",
+    "timestamp": "2025-06-14T15:40:17.213079",
+    "memory_trace": "ad5fe69f66d289fc",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "ef65f0b2",
+    "timestamp": "2025-06-14T15:40:17.341459",
+    "memory_trace": "a6536341ed629eef",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "b43e73df",
+    "timestamp": "2025-06-14T15:40:17.431429",
+    "memory_trace": "9f0c8ecd3dd19c62",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "b2a2416e",
+    "timestamp": "2025-06-14T15:41:01.936624",
+    "memory_trace": "af83d5245ef2de2e",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.04702666142733191,
+      "similarity_to_emotional": 0.1461140239458546,
+      "similarity_to_philosophical": 0.05198430604454528,
+      "similarity_to_practical": -0.031834858170698505
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "cd94be20",
+    "timestamp": "2025-06-14T15:41:02.077067",
+    "memory_trace": "0f4b8225a36c8e66",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.04702666142733191,
+      "similarity_to_emotional": 0.1461140239458546,
+      "similarity_to_philosophical": 0.05198430604454528,
+      "similarity_to_practical": -0.031834858170698505
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "e914c7b4",
+    "timestamp": "2025-06-14T15:41:02.159310",
+    "memory_trace": "f37f93fff33c36af",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.973,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.04702666142733191,
+      "similarity_to_emotional": 0.1461140239458546,
+      "similarity_to_philosophical": 0.05198430604454528,
+      "similarity_to_practical": -0.031834858170698505
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "ebb35243",
+    "timestamp": "2025-06-14T15:46:43.575556",
+    "memory_trace": "73e213e9723f4e56",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "f2904cef",
+    "timestamp": "2025-06-14T15:46:43.666066",
+    "memory_trace": "de4c04a312b95e01",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "c8bf5626",
+    "timestamp": "2025-06-14T15:46:43.734254",
+    "memory_trace": "4b096e0bff897f46",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.98,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": -0.03808997054683993,
+      "similarity_to_emotional": 0.17213422332293285,
+      "similarity_to_philosophical": 0.09818495679707366,
+      "similarity_to_practical": 0.0215847185764533
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "6141a3bf",
+    "timestamp": "2025-06-14T15:46:54.974944",
+    "memory_trace": "e072d39a16ec4b2f",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.968,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.02798605571863757,
+      "similarity_to_emotional": 0.24326925493190404,
+      "similarity_to_philosophical": 0.12894444582067577,
+      "similarity_to_practical": -0.041113601112045706
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a02d2354",
+    "timestamp": "2025-06-14T15:46:55.143731",
+    "memory_trace": "93965bfed05b645e",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.968,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.02798605571863757,
+      "similarity_to_emotional": 0.24326925493190404,
+      "similarity_to_philosophical": 0.12894444582067577,
+      "similarity_to_practical": -0.041113601112045706
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "a29c78ab",
+    "timestamp": "2025-06-14T15:46:55.218494",
+    "memory_trace": "1667f0edffe15ba8",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.968,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.02798605571863757,
+      "similarity_to_emotional": 0.24326925493190404,
+      "similarity_to_philosophical": 0.12894444582067577,
+      "similarity_to_practical": -0.041113601112045706
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 2,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "64d10faf",
+    "timestamp": "2025-06-14T16:09:48.512516",
+    "memory_trace": "f3d6fd10d214944c",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.976,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.009630880286947365,
+      "similarity_to_emotional": 0.14561203919597182,
+      "similarity_to_philosophical": 0.05583258042831603,
+      "similarity_to_practical": 0.03129799274785378
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "be4777ba",
+    "timestamp": "2025-06-14T16:09:48.690918",
+    "memory_trace": "8471ca4582a86c71",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.976,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.009630880286947365,
+      "similarity_to_emotional": 0.14561203919597182,
+      "similarity_to_philosophical": 0.05583258042831603,
+      "similarity_to_practical": 0.03129799274785378
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  },
+  {
+    "zone_id": "f9efa660",
+    "timestamp": "2025-06-14T16:09:48.770618",
+    "memory_trace": "9f7f849baebc74a5",
+    "tags": {
+      "emotional_state": "neutral",
+      "emotion_confidence": 0.976,
+      "intent": "information_request",
+      "context": [
+        "direct_expression"
+      ],
+      "risk": []
+    },
+    "semantic_profile": {
+      "similarity_to_technical": 0.009630880286947365,
+      "similarity_to_emotional": 0.14561203919597182,
+      "similarity_to_philosophical": 0.05583258042831603,
+      "similarity_to_practical": 0.03129799274785378
+    },
+    "recursion_indicators": {
+      "pattern_repetition": 0,
+      "unique_patterns": 2,
+      "recursion_detected": false
+    },
+    "routing_hints": {
+      "suggested_node": "logic_primary",
+      "confidence_level": "high",
+      "quarantine_recommended": false
+    }
+  }
+]

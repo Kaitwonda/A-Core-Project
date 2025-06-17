@@ -1,0 +1,215 @@
+[
+  {
+    "session_id": "migration_20250613_154328",
+    "timestamp": "2025-06-13T15:43:28.652752",
+    "forward_migration": {
+      "operation_type": "forward_migration",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 8.3e-05,
+      "metadata": {
+        "insights_used": [
+          "high_engagement_patterns",
+          "logic_vs_symbolic_preferences",
+          "successful_interaction_features",
+          "emotional_context_indicators",
+          "content_classification_hints",
+          "total_entries",
+          "high_engagement_sessions",
+          "logic_indicators",
+          "symbolic_indicators",
+          "processing_note",
+          "frequent_symbols",
+          "symbol_cooccurrence",
+          "classification_hints"
+        ]
+      }
+    },
+    "reverse_audit": {
+      "operation_type": "reverse_audit",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 2e-05,
+      "metadata": {
+        "audit_scope": "logic_and_symbolic"
+      }
+    },
+    "weight_optimization": {
+      "operation_type": "weight_optimization",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 1.3e-05,
+      "metadata": {
+        "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+      }
+    },
+    "data_consolidation": {
+      "operation_type": "data_consolidation",
+      "items_processed": 2,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 0.072176,
+      "metadata": {
+        "memory_files_merged": 0,
+        "orphaned_files_processed": 2,
+        "backups_archived": 3,
+        "conflicts_resolved": 0,
+        "data_volume_processed": 4163
+      }
+    },
+    "total_execution_time": 0.089933,
+    "system_health": {
+      "system_status": "error",
+      "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+    }
+  },
+  {
+    "session_id": "migration_20250613_160509",
+    "timestamp": "2025-06-13T16:05:09.646467",
+    "forward_migration": {
+      "operation_type": "forward_migration",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 9.4e-05,
+      "metadata": {
+        "insights_used": [
+          "high_engagement_patterns",
+          "logic_vs_symbolic_preferences",
+          "successful_interaction_features",
+          "emotional_context_indicators",
+          "content_classification_hints",
+          "total_entries",
+          "high_engagement_sessions",
+          "logic_indicators",
+          "symbolic_indicators",
+          "processing_note",
+          "frequent_symbols",
+          "symbol_cooccurrence",
+          "classification_hints"
+        ]
+      }
+    },
+    "reverse_audit": {
+      "operation_type": "reverse_audit",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 2.1e-05,
+      "metadata": {
+        "audit_scope": "logic_and_symbolic"
+      }
+    },
+    "weight_optimization": {
+      "operation_type": "weight_optimization",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 1.5e-05,
+      "metadata": {
+        "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+      }
+    },
+    "data_consolidation": {
+      "operation_type": "data_consolidation",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 0.010367,
+      "metadata": {
+        "memory_files_merged": 0,
+        "orphaned_files_processed": 0,
+        "backups_archived": 0,
+        "conflicts_resolved": 0,
+        "data_volume_processed": 0
+      }
+    },
+    "total_execution_time": 0.029732,
+    "system_health": {
+      "system_status": "error",
+      "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+    }
+  },
+  {
+    "session_id": "migration_20250613_160609",
+    "timestamp": "2025-06-13T16:06:09.359532",
+    "forward_migration": {
+      "operation_type": "forward_migration",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 0.000145,
+      "metadata": {
+        "insights_used": [
+          "high_engagement_patterns",
+          "logic_vs_symbolic_preferences",
+          "successful_interaction_features",
+          "emotional_context_indicators",
+          "content_classification_hints",
+          "total_entries",
+          "high_engagement_sessions",
+          "logic_indicators",
+          "symbolic_indicators",
+          "processing_note",
+          "frequent_symbols",
+          "symbol_cooccurrence",
+          "classification_hints"
+        ]
+      }
+    },
+    "reverse_audit": {
+      "operation_type": "reverse_audit",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 2.2e-05,
+      "metadata": {
+        "audit_scope": "logic_and_symbolic"
+      }
+    },
+    "weight_optimization": {
+      "operation_type": "weight_optimization",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 1.4e-05,
+      "metadata": {
+        "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+      }
+    },
+    "data_consolidation": {
+      "operation_type": "data_consolidation",
+      "items_processed": 0,
+      "items_migrated": 0,
+      "conflicts_resolved": 0,
+      "insights_applied": 0,
+      "execution_time": 0.009814,
+      "metadata": {
+        "memory_files_merged": 0,
+        "orphaned_files_processed": 0,
+        "backups_archived": 0,
+        "conflicts_resolved": 0,
+        "data_volume_processed": 0
+      }
+    },
+    "total_execution_time": 0.026558,
+    "system_health": {
+      "system_status": "error",
+      "error": "'TripartiteMemory' object has no attribute 'get_memory_statistics'"
+    }
+  }
+]

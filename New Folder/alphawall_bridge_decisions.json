@@ -1,0 +1,10 @@
+{
+  "decisions": [],
+  "security_events": [],
+  "bridge_interactions": [],
+  "metadata": {
+    "total_decisions": 0,
+    "security_breaches_prevented": 0,
+    "last_decision": "2024-01-01T00:00:00Z"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "💻": {
+    "name": "💻",
+    "keywords": [],
+    "core_meanings": [
+      "Algorithm\nThis article is written like a personal reflection, personal essay, or argumentative essay that states a Wikipedia editor's personal feelings or presents an original argument about a topic. ",
+      "Algorithm\nThis article is written like a personal reflection, personal essay, or argumentative essay that states a Wikipedia editor's personal feelings or presents an original argument about a topic. ",
+      "In contrast, a heuristic is an approach to solving problems without well-defined correct or optimal results.[2] For example, although social media recommender systems are commonly called \"algorithms\","
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-13T04:15:40.341607",
+    "updated_at": "2025-06-14T14:50:38.161262",
+    "usage_count": 700
+  },
+  "🔥": {
+    "name": "🔥",
+    "keywords": [],
+    "core_meanings": [
+      "In contrast, a heuristic is an approach to solving problems without well-defined correct or optimal results.[2] For example, although social media recommender systems are commonly called \"algorithms\",",
+      "The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, incorporate random input.[9]\nEtymology\n[edit]Around 825 AD, Persian scienti",
+      "- Exact or approximate\n- While many algorithms reach an exact solution, approximation algorithms seek an approximation that is close to the true solution. Such algorithms have practical value for many"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-13T04:25:17.807817",
+    "updated_at": "2025-06-14T14:50:38.161269",
+    "usage_count": 272
+  },
+  "💧": {
+    "name": "💧",
+    "keywords": [],
+    "core_meanings": [
+      "In the most detail, a formal description gives the exact state table and list of transitions of the Turing machine.[34]\nFlowchart representation [edit]The graphical aid called a flowchart offers a way",
+      "There are algorithms that can solve any problem in this category, such as the popular simplex algorithm.[47] Problems that can be solved with linear programming include the maximum flow problem for di",
+      "In the most detail, a formal description gives the exact state table and list of transitions of the Turing machine.[34]\nFlowchart representation [edit]The graphical aid called a flowchart offers a way"
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-13T04:25:23.589048",
+    "updated_at": "2025-06-14T14:50:38.161272",
+    "usage_count": 84
+  },
+  "🔥⟳": {
+    "name": "🔥⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:14.501265",
+    "updated_at": "2025-06-14T14:50:38.161275",
+    "usage_count": 48
+  },
+  "💻⟳": {
+    "name": "💻⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:30.290479",
+    "updated_at": "2025-06-14T14:50:38.161278",
+    "usage_count": 63
+  },
+  "⚙": {
+    "name": "⚙",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:34.320978",
+    "updated_at": "2025-06-14T14:50:38.161280",
+    "usage_count": 19
+  },
+  "♑": {
+    "name": "♑",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:10:50.233661",
+    "updated_at": "2025-06-14T14:50:38.161283",
+    "usage_count": 14
+  },
+  "♦": {
+    "name": "♦",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:11:36.202083",
+    "updated_at": "2025-06-14T14:50:38.161285",
+    "usage_count": 22
+  },
+  "🔥⟳⟳": {
+    "name": "🔥⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:15:56.494595",
+    "updated_at": "2025-06-14T14:50:38.161288",
+    "usage_count": 2
+  },
+  "💧⟳": {
+    "name": "💧⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:15:56.519758",
+    "updated_at": "2025-06-14T14:50:38.161290",
+    "usage_count": 3
+  },
+  "💻⟳⟳": {
+    "name": "💻⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 1,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-19T01:28:17.981642",
+    "updated_at": "2025-06-14T14:50:38.161293",
+    "usage_count": 75
+  },
+  "💻⟳⟳⟳": {
+    "name": "💻⟳⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:48:18.117312",
+    "updated_at": "2025-06-14T14:50:38.161295",
+    "usage_count": 62
+  },
+  "⚙⟳": {
+    "name": "⚙⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:48:18.168017",
+    "updated_at": "2025-06-14T14:50:38.161297",
+    "usage_count": 11
+  },
+  "♦⟳": {
+    "name": "♦⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 2,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:48:18.194561",
+    "updated_at": "2025-06-14T14:50:38.161300",
+    "usage_count": 16
+  },
+  "♑⟳": {
+    "name": "♑⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:50:56.777290",
+    "updated_at": "2025-06-14T14:50:38.161302",
+    "usage_count": 4
+  },
+  "💻⟳⟳⟳⟳": {
+    "name": "💻⟳⟳⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:54:26.273156",
+    "updated_at": "2025-06-14T14:50:38.161304",
+    "usage_count": 1
+  },
+  "♦⟳⟳": {
+    "name": "♦⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:54:26.372720",
+    "updated_at": "2025-06-14T14:50:38.161306",
+    "usage_count": 2
+  },
+  "♉": {
+    "name": "♉",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 4,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:56:58.004824",
+    "updated_at": "2025-06-14T14:50:38.161309",
+    "usage_count": 4
+  },
+  "⚙⟳⟳": {
+    "name": "⚙⟳⟳",
+    "keywords": [],
+    "core_meanings": [
+      "",
+      ""
+    ],
+    "emotions": [],
+    "emotion_profile": {},
+    "vector_examples": [],
+    "origin": "migrated",
+    "learning_phase": 3,
+    "resonance_weight": 0.5,
+    "created_at": "2025-05-24T03:57:00.824429",
+    "updated_at": "2025-06-14T14:50:38.161311",
+    "usage_count": 2
+  }
+}
