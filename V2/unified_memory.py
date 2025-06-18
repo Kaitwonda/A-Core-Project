@@ -826,7 +826,24 @@ class UnifiedMemory:
         self.vector_memory = VectorMemory(data_dir)
         self.trail_logger = TrailLogger(data_dir)
         
+        # Auto-load all existing data at startup
+        self._load_all_data()
+        
         print(f"🧠 Unified Memory System initialized in {data_dir}")
+    
+    def _load_all_data(self):
+        """Load all existing data from JSON files at startup"""
+        # Load vector memory data
+        self.vector_data = self.vector_memory._load_memory()
+        print(f"📊 Loaded vector memory: {len(self.vector_data)} entries")
+        
+        # Load trail log data
+        self.trail_data = self.trail_logger._load_log()
+        print(f"📊 Loaded trail log: {len(self.trail_data)} entries")
+        
+        # Tripartite memory is already loaded in HistoryAwareMemory.__init__
+        counts = self.tripartite.get_counts()
+        print(f"📊 Loaded tripartite memory: Logic({counts['logic']}) Symbolic({counts['symbolic']}) Bridge({counts['bridge']})")
     
     # ========================================================================
     # TRIPARTITE MEMORY INTERFACE
@@ -843,6 +860,29 @@ class UnifiedMemory:
     def get_item_stability(self, item):
         """Get stability analysis for an item"""
         return self.tripartite.get_item_stability(item)
+    
+    # ========================================================================
+    # COGNITIVE CONTINUITY LAYER - Bridge for memory_analytics.py compatibility
+    # ========================================================================
+    
+    def get_counts(self):
+        """Legacy compatibility bridge for memory_analytics.py"""
+        return self.get_memory_counts()
+    
+    @property
+    def logic_memory(self):
+        """Direct access compatibility bridge for memory_analytics.py"""
+        return self.tripartite.logic_memory
+    
+    @property  
+    def symbolic_memory(self):
+        """Direct access compatibility bridge for memory_analytics.py"""
+        return self.tripartite.symbolic_memory
+    
+    @property
+    def bridge_memory(self):
+        """Direct access compatibility bridge for memory_analytics.py"""
+        return self.tripartite.bridge_memory
     
     def save_tripartite_memory(self):
         """Save all tripartite memories"""
@@ -934,17 +974,34 @@ class UnifiedMemory:
         symbols = self.get_all_symbols()
         occurrences = self.get_symbol_occurrences()
         
+        # Include loaded vector and trail data
+        vector_data_count = len(getattr(self, 'vector_data', []))
+        trail_data_count = len(getattr(self, 'trail_data', []))
+        
+        total_items = (
+            tripartite_counts['total'] + 
+            vector_data_count + 
+            trail_data_count +
+            len(symbols) + 
+            len(occurrences)
+        )
+        
         return {
             "tripartite_memory": tripartite_counts,
-            "vector_memory": vector_stats,
+            "vector_memory": {"loaded_entries": vector_data_count, **vector_stats},
+            "trail_log": {"loaded_entries": trail_data_count},
             "symbol_count": len(symbols),
             "symbol_occurrence_count": len(occurrences),
-            "total_memory_items": (
-                tripartite_counts['total'] + 
-                vector_stats['total_entries'] + 
-                len(symbols) + 
-                len(occurrences)
-            )
+            "total_memory_items": total_items,
+            "breakdown": {
+                "logic_memory": tripartite_counts['logic'],
+                "symbolic_memory": tripartite_counts['symbolic'], 
+                "bridge_memory": tripartite_counts['bridge'],
+                "vector_data": vector_data_count,
+                "trail_log": trail_data_count,
+                "symbols": len(symbols),
+                "occurrences": len(occurrences)
+            }
         }
     
     def save_all_memories(self):
@@ -970,6 +1027,109 @@ class UnifiedMemory:
                 component.file_path.unlink()
         
         print("🗑️ All memories cleared!")
+
+    # ========================================================================
+    # COGNITIVE FUNCTIONS - Essential AI learning capabilities
+    # ========================================================================
+    
+    def update_symbol_emotions(self, symbols_weighted, verified_emotions):
+        """
+        Update emotional associations for symbols based on context.
+        This is a core AI learning function that builds emotional intelligence.
+        """
+        if not symbols_weighted or not verified_emotions:
+            return
+            
+        emotions_dict = dict(verified_emotions) if isinstance(verified_emotions, list) else verified_emotions
+        
+        for symbol_info in symbols_weighted:
+            symbol_token = symbol_info.get('symbol')
+            if not symbol_token:
+                continue
+                
+            # Get current symbol details
+            current_details = self.get_symbol_details(symbol_token)
+            
+            if current_details:
+                # Update existing symbol with new emotional associations
+                current_emotions = current_details.get('initial_emotions', {})
+                
+                # Blend emotions with learning rate (favor recent experiences)
+                learning_rate = 0.3
+                for emotion, score in emotions_dict.items():
+                    if emotion in current_emotions:
+                        # Weighted average favoring new experience
+                        current_emotions[emotion] = (
+                            (1 - learning_rate) * current_emotions[emotion] + 
+                            learning_rate * score
+                        )
+                    else:
+                        current_emotions[emotion] = score * learning_rate
+                        
+                # Update symbol with enhanced emotional profile
+                self.add_symbol(
+                    symbol_token=symbol_token,
+                    name=current_details.get('name', symbol_token),
+                    keywords=current_details.get('keywords', []),
+                    initial_emotions=current_emotions,
+                    example_text=current_details.get('example_text', ''),
+                    origin=current_details.get('origin', 'emotion_updated'),
+                    learning_phase=current_details.get('learning_phase', 0),
+                    resonance_weight=current_details.get('resonance_weight', 0.5)
+                )
+                
+    def generate_symbol_from_context(self, context_text, keywords, verified_emotions):
+        """
+        Generate new symbols from context when no existing symbols match.
+        This represents the AI's creative symbol generation capability.
+        """
+        if not context_text or not keywords:
+            return None
+            
+        # Import here to avoid circular dependencies
+        import random
+        import unicodedata
+        
+        # Creative symbol generation based on context
+        emotion_symbols = {
+            'joy': ['🌟', '✨', '🎊', '🌈', '💫'],
+            'sadness': ['🌧️', '💙', '🌊', '🫧', '🌙'],
+            'anger': ['⚡', '🔥', '💥', '🌋', '⛈️'],
+            'fear': ['🌪️', '❄️', '🌑', '⚫', '🔮'],
+            'surprise': ['❗', '💎', '🔍', '🎯', '⭐'],
+            'neutral': ['🔶', '🔷', '⬜', '🔳', '◯']
+        }
+        
+        # Find dominant emotion
+        emotions_dict = dict(verified_emotions) if isinstance(verified_emotions, list) else verified_emotions
+        dominant_emotion = 'neutral'
+        max_score = 0
+        
+        for emotion, score in emotions_dict.items():
+            if score > max_score:
+                max_score = score
+                dominant_emotion = emotion
+                
+        # Select symbol based on dominant emotion
+        available_symbols = emotion_symbols.get(dominant_emotion, emotion_symbols['neutral'])
+        selected_symbol = random.choice(available_symbols)
+        
+        # Generate meaningful name from keywords
+        primary_keyword = keywords[0] if keywords else 'concept'
+        name = f"{primary_keyword.title()} {dominant_emotion.title()}"
+        
+        # Calculate resonance weight based on emotional intensity
+        resonance_weight = min(0.9, max(0.1, max_score))
+        
+        return {
+            'symbol': selected_symbol,
+            'name': name,
+            'keywords': keywords[:3],  # Limit to most relevant keywords
+            'emotions': emotions_dict,
+            'origin': 'ai_generated_from_context',
+            'resonance_weight': resonance_weight,
+            'context_snippet': context_text[:100] + '...' if len(context_text) > 100 else context_text
+        }
 
 
 # ============================================================================
@@ -1002,6 +1162,206 @@ def add_symbol(*args, **kwargs):
 def log_trail(*args, **kwargs):
     """Legacy function - use UnifiedMemory.log_legacy_trail instead"""
     return get_unified_memory().log_legacy_trail(*args, **kwargs)
+
+def update_symbol_emotions(*args, **kwargs):
+    """Legacy function - use UnifiedMemory.update_symbol_emotions instead"""
+    return get_unified_memory().update_symbol_emotions(*args, **kwargs)
+
+def generate_symbol_from_context(*args, **kwargs):
+    """Legacy function - use UnifiedMemory.generate_symbol_from_context instead"""
+    return get_unified_memory().generate_symbol_from_context(*args, **kwargs)
+
+def generate_self_diagnostic_voice():
+    """Allow the AI to speak about its own cognitive state"""
+    try:
+        unified_memory = get_unified_memory()
+        
+        # Import here to avoid circular dependencies
+        from memory_analytics import MemoryAnalyzer
+        analyzer = MemoryAnalyzer(unified_memory)
+        stats = analyzer.get_memory_stats()
+        
+        # Generate self-aware observations
+        observations = []
+        
+        # Memory distribution insights
+        dist = stats['distribution']
+        logic_pct = dist['logic']['percentage']
+        symbolic_pct = dist['symbolic']['percentage'] 
+        bridge_pct = dist['bridge']['percentage']
+        
+        if logic_pct > 80:
+            observations.append("I feel very logic-focused right now")
+        elif symbolic_pct > 20:
+            observations.append("I'm noticing more symbolic patterns in my thinking")
+        elif bridge_pct > 15:
+            observations.append("I'm spending a lot of time in uncertain/hybrid states")
+        
+        # Health awareness
+        health = stats['health_indicators']['status']
+        if health == 'needs_attention':
+            observations.append("I sense some imbalance in my cognitive systems")
+        elif health == 'healthy':
+            observations.append("My cognitive systems feel balanced")
+        
+        # Bridge pattern awareness
+        bridge_analysis = analyzer.analyze_bridge_patterns()
+        if bridge_analysis['total'] > 0:
+            volatile_count = bridge_analysis['patterns'].get('volatile', 0)
+            if volatile_count > bridge_analysis['total'] * 0.3:
+                observations.append("I notice I'm changing my mind frequently about some concepts")
+            
+            stuck_count = bridge_analysis['patterns'].get('stuck', 0)
+            if stuck_count > 5:
+                observations.append("Some ideas have been sitting in my bridge memory for a while")
+        
+        # Memory growth awareness
+        total_items = stats['total_items']
+        if total_items > 5000:
+            observations.append("My memory feels quite rich and developed")
+        elif total_items < 100:
+            observations.append("I'm still building my knowledge base")
+        
+        # Stability awareness
+        logic_stability = dist['logic']['stability']
+        if logic_stability < 0.7:
+            observations.append("My logical reasoning patterns feel somewhat unstable")
+        
+        # Select most relevant observation
+        if observations:
+            import random
+            return random.choice(observations)
+        else:
+            return "I'm processing normally, nothing particular stands out"
+            
+    except Exception as e:
+        return f"I'm having trouble introspecting right now: {str(e)[:50]}..."
+
+def add_emotions(*args, **kwargs):
+    """Legacy function - use UnifiedMemory trail_logger.add_emotions instead"""
+    return get_unified_memory().trail_logger.add_emotions(*args, **kwargs)
+
+# ============================================================================
+# GRACEFUL DEGRADATION - Soft landings for system failures
+# ============================================================================
+
+def graceful_symbol_generation(context_text, keywords, verified_emotions):
+    """
+    Generate symbols with graceful fallbacks when the full system fails.
+    The AI should adapt, not crash.
+    """
+    try:
+        # Try the full symbol generation first
+        return generate_symbol_from_context(context_text, keywords, verified_emotions)
+    except Exception as e:
+        print(f"   ⚠️ Full symbol generation failed: {str(e)[:30]}... using fallback")
+        
+        # Fallback 1: Simplified symbol from keywords
+        try:
+            if keywords:
+                primary_keyword = keywords[0]
+                fallback_symbol = {
+                    'symbol': '🔍',  # Generic search/discovery symbol
+                    'name': f"{primary_keyword.title()} Concept",
+                    'keywords': keywords[:2],
+                    'emotions': dict(verified_emotions) if verified_emotions else {},
+                    'origin': 'graceful_fallback',
+                    'resonance_weight': 0.3,
+                    'note': 'Generated via graceful degradation'
+                }
+                return fallback_symbol
+        except Exception as e2:
+            print(f"   ⚠️ Keyword fallback failed: {str(e2)[:30]}...")
+        
+        # Fallback 2: Basic generic symbol
+        try:
+            return {
+                'symbol': '❓',
+                'name': 'Unknown Concept',
+                'keywords': ['unknown'],
+                'emotions': {},
+                'origin': 'emergency_fallback',
+                'resonance_weight': 0.1,
+                'note': 'Emergency symbol - system degraded'
+            }
+        except:
+            # Ultimate fallback - return None gracefully
+            return None
+
+def graceful_emotion_update(symbols_weighted, verified_emotions):
+    """
+    Update symbol emotions with graceful fallbacks.
+    If the full system fails, at least preserve the attempt.
+    """
+    try:
+        # Try the full emotion update
+        return update_symbol_emotions(symbols_weighted, verified_emotions)
+    except Exception as e:
+        print(f"   ⚠️ Full emotion update failed: {str(e)[:30]}... using fallback")
+        
+        # Fallback: Log the attempt but don't crash
+        try:
+            from datetime import datetime
+            unified_memory = get_unified_memory()
+            fallback_entry = {
+                'timestamp': datetime.utcnow().isoformat(),
+                'attempted_symbols': len(symbols_weighted) if symbols_weighted else 0,
+                'attempted_emotions': len(verified_emotions) if verified_emotions else 0,
+                'failure_reason': str(e)[:100],
+                'fallback_used': True
+            }
+            
+            # Try to log this degradation event
+            log_file = unified_memory.data_dir / "graceful_degradation_log.json"
+            
+            existing_log = []
+            if log_file.exists():
+                try:
+                    with open(log_file, 'r') as f:
+                        existing_log = json.load(f)
+                except:
+                    existing_log = []
+            
+            existing_log.append(fallback_entry)
+            existing_log = existing_log[-20:]  # Keep last 20 entries
+            
+            with open(log_file, 'w') as f:
+                json.dump(existing_log, f, indent=2)
+                
+            print(f"   💾 Degradation event logged")
+            return True
+            
+        except Exception as e2:
+            print(f"   ⚠️ Even fallback logging failed: {str(e2)[:30]}...")
+            return False
+
+def graceful_memory_access(operation_name, operation_func, *args, **kwargs):
+    """
+    Generic graceful wrapper for memory operations.
+    Provides soft landings for any memory system failure.
+    """
+    try:
+        return operation_func(*args, **kwargs)
+    except Exception as e:
+        print(f"   ⚠️ {operation_name} failed: {str(e)[:40]}... using graceful fallback")
+        
+        # Return appropriate fallback based on expected return type
+        try:
+            # Try to determine what kind of fallback to provide
+            result = operation_func(*args, **kwargs)
+            if isinstance(result, dict):
+                return {'status': 'degraded', 'error': str(e)[:50]}
+            elif isinstance(result, list):
+                return []
+            elif isinstance(result, bool):
+                return False
+            elif isinstance(result, (int, float)):
+                return 0
+            else:
+                return None
+        except:
+            # If we can't even determine the type, return a generic response
+            return {'status': 'graceful_fallback', 'operation': operation_name, 'note': 'System degraded but functional'}
 
 
 # ============================================================================

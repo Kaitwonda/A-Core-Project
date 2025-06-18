@@ -13,7 +13,8 @@ from collections import Counter, defaultdict
 # Import unified weight system
 from unified_weight_system import UnifiedWeightSystem
 
-from visualization_prep import VisualizationPrep
+# Lazy import to avoid circular dependency
+# from visualization_prep import VisualizationPrep
 from quarantine_layer import UserMemoryQuarantine
 from vector_engine import fuse_vectors
 from unified_memory import UnifiedMemory, get_unified_memory
@@ -30,6 +31,16 @@ from linguistic_warfare import LinguisticWarfareDetector, check_for_warfare
 # --- Symbol Co-occurrence Configuration (Step 4.1) ---
 COOCCURRENCE_LOG_PATH = Path("data/symbol_cooccurrence.json")
 COOCCURRENCE_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+# Lazy loader to avoid circular dependency with visualization_prep
+def _get_visualization_prep():
+    """Load VisualizationPrep lazily to avoid circular dependency"""
+    try:
+        from visualization_prep import VisualizationPrep
+        return VisualizationPrep(data_dir="data")
+    except ImportError as e:
+        print(f"Warning: Could not import VisualizationPrep: {e}")
+        return None
 
 def _load_cooccurrence_log():
     if COOCCURRENCE_LOG_PATH.exists() and COOCCURRENCE_LOG_PATH.stat().st_size > 0:
@@ -737,7 +748,7 @@ class DynamicBridge: # Incorporating Step 1, 2, 4.1, 7.1 changes with Unified We
         self.logic_node = logic_node
         self.symbolic_node = symbolic_node
         self.curriculum_manager = curriculum_manager
-        # Trail logging is now handled through unified memory system 
+        # Trail logging is now handled through unified memory system
         self.spacy_nlp = P_Parser.nlp if P_Parser.NLP_MODEL_LOADED else None
         
         # Initialize unified weight system
@@ -745,6 +756,9 @@ class DynamicBridge: # Incorporating Step 1, 2, 4.1, 7.1 changes with Unified We
         
         # Initialize unified memory system
         self.unified_memory = get_unified_memory(data_dir="data")
+        
+        # Initialize trail logger from unified memory
+        self.trail_logger = self.unified_memory.trail_logger
         
         # Share memory reference with nodes
         self.logic_node.tripartite_memory = self.unified_memory.tripartite
@@ -754,7 +768,7 @@ class DynamicBridge: # Incorporating Step 1, 2, 4.1, 7.1 changes with Unified We
         # Initialize security modules
         self.quarantine = UserMemoryQuarantine(data_dir="data")
         self.warfare_detector = LinguisticWarfareDetector(data_dir="data")
-        self.viz_prep = VisualizationPrep(data_dir="data")
+        self.viz_prep = _get_visualization_prep()
         
         # Load adaptive weights if available
         self.weights = self._load_adaptive_weights()
@@ -923,7 +937,7 @@ class DynamicBridge: # Incorporating Step 1, 2, 4.1, 7.1 changes with Unified We
         # Get memory stats for unified weight system
         memory_stats = None
         try:
-            memory_stats = self.tripartite_memory.get_memory_statistics()
+            memory_stats = self.unified_memory.tripartite.get_memory_statistics()
         except:
             pass
         

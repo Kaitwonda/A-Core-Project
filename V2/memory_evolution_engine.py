@@ -5,11 +5,12 @@ from pathlib import Path
 from datetime import datetime
 
 # Import all our components
-from decision_history import HistoryAwareMemory
+from unified_memory import UnifiedMemory
 from adaptive_migration import AdaptiveThresholds, MigrationEngine
 from reverse_migration import ReverseMigrationAuditor
 from weight_evolution import WeightEvolver
 from memory_analytics import MemoryAnalyzer
+from evolution_anchor import EvolutionAnchor
 
 class MemoryEvolutionEngine:
     """
@@ -30,15 +31,16 @@ class MemoryEvolutionEngine:
         }
         
         # Initialize all components
-        self.memory = HistoryAwareMemory(data_dir=data_dir)
+        self.memory = UnifiedMemory(data_dir=data_dir)
         self.thresholds = AdaptiveThresholds(data_dir=data_dir)
-        self.migration_engine = MigrationEngine(self.memory, self.thresholds)
+        self.migration_engine = MigrationEngine(self.memory.tripartite, self.thresholds)
         self.auditor = ReverseMigrationAuditor(
-            self.memory, 
+            self.memory.tripartite, 
             confidence_threshold=self.config['reverse_audit_confidence_threshold']
         )
         self.weight_evolver = WeightEvolver(data_dir=data_dir)
         self.analyzer = MemoryAnalyzer(self.memory, data_dir=data_dir)
+        self.evolution_anchor = EvolutionAnchor(data_dir=data_dir)
         
         # Session tracking
         self.session_start = datetime.utcnow()
@@ -46,16 +48,27 @@ class MemoryEvolutionEngine:
         
     def run_evolution_cycle(self):
         """
-        Run a complete evolution cycle:
-        1. Get initial stats
+        Run a complete evolution cycle with safety anchors:
+        0. Create cognitive safety anchor
+        1. Get initial stats and assess baseline
         2. Reverse audit (catch misclassifications)
         3. Forward migration
         4. Weight evolution
         5. Analytics and reporting
+        6. Distress monitoring and safety checks
         """
         print("\n" + "="*60)
         print("🧬 MEMORY EVOLUTION CYCLE STARTING")
         print("="*60)
+        
+        # Step 0: Create safety anchor before any changes
+        print("\n🌟 Creating cognitive safety anchor...")
+        snapshot_id = self.evolution_anchor.create_cognitive_snapshot("Before evolution cycle")
+        
+        if snapshot_id:
+            print(f"   ✅ Safety anchor established: {snapshot_id}")
+        else:
+            print("   ⚠️ Could not create safety anchor - proceeding with caution")
         
         # Step 1: Initial state
         print("\n📊 Initial State:")
@@ -149,6 +162,25 @@ class MemoryEvolutionEngine:
             'report': report
         })
         
+        # Step 6: Post-evolution distress monitoring
+        print("\n🔍 Post-evolution safety check...")
+        distress_assessment = self.evolution_anchor.detect_evolution_distress()
+        
+        print(f"   🎯 Distress level: {distress_assessment['distress_level']:.2f}")
+        print(f"   📊 Status: {distress_assessment['status']}")
+        
+        if distress_assessment['distress_level'] > 0.3:
+            print(f"   ⚠️ Recommendation: {distress_assessment.get('recommendation', 'Monitor closely')}")
+            if distress_assessment['signals']:
+                print("   🔔 Distress signals:")
+                for signal in distress_assessment['signals']:
+                    print(f"     • {signal}")
+        else:
+            print("   ✅ Evolution proceeding healthily")
+        
+        # Check if we should recommend rollback
+        recommend_rollback = distress_assessment['distress_level'] > 0.7
+        
         print("\n✅ Evolution cycle complete!")
         
         return {
@@ -156,7 +188,10 @@ class MemoryEvolutionEngine:
             'reversed': reversed_count,
             'migrated': migrated_count,
             'final_distribution': final_stats['distribution'],
-            'health_status': final_stats['health_indicators']['status']
+            'health_status': final_stats['health_indicators']['status'],
+            'safety_anchor': snapshot_id,
+            'distress_assessment': distress_assessment,
+            'recommend_rollback': recommend_rollback
         }
         
     def _print_distribution(self, stats):

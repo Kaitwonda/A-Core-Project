@@ -203,6 +203,46 @@ def chunk_text(text, max_chunk_length=1000, overlap=100):
     return [c for c in chunks if c.strip()]
 
 
+def process_web_url(url):
+    """
+    Process a web URL by fetching content and storing it in the unified memory system.
+    This is the main entry point for web content processing called by main.py
+    """
+    print(f"🌐 Processing web URL: {url}")
+    
+    # Fetch and clean content
+    html = fetch_raw_html(url)
+    if not html:
+        print(f"❌ Failed to fetch content from {url}")
+        return
+        
+    cleaned_text = clean_html_to_text(html)
+    if not cleaned_text:
+        print(f"❌ Failed to extract text from {url}")
+        return
+        
+    # Chunk the content for processing
+    chunks = chunk_text(cleaned_text, max_chunk_length=1000)
+    print(f"📝 Extracted {len(chunks)} chunks from {url}")
+    
+    # Store in unified memory system
+    try:
+        from unified_memory import get_unified_memory
+        memory = get_unified_memory()
+        
+        for i, chunk in enumerate(chunks):
+            memory.store_vector(
+                text=chunk, 
+                source_type="web_scrape",
+                source_url=url
+            )
+            
+        print(f"✅ Successfully stored {len(chunks)} chunks from {url}")
+        
+    except Exception as e:
+        print(f"❌ Error storing web content in memory: {e}")
+
+
 if __name__ == '__main__':
     # Import P_Parser here for testing chunk_text if spaCy is used by it
     try:

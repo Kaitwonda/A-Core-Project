@@ -15,7 +15,7 @@ from web_parser import process_web_url
 from unified_memory import VectorMemory
 vector_memory = VectorMemory()
 # cluster_vectors_and_plot moved to unified_symbol_system if needed
-from trail_log import log_trail, add_emotions
+from unified_memory import log_trail, add_emotions
 from trail_graph import show_trail_graph
 from emotion_handler import predict_emotions
 from unified_symbol_system import UnifiedSymbolSystem
@@ -24,6 +24,7 @@ symbol_system = UnifiedSymbolSystem()
 # Graph tools
 from symbol_drift_plot import show_symbol_drift
 from symbol_emotion_cluster import show_emotion_clusters
+from symbol_cluster import cluster_vectors_and_plot
 
 
 def is_url(text):
@@ -274,6 +275,26 @@ async def show_system_status():
     print(f"   Ambiguous terms tracked: {ce_stats['ambiguous_terms_tracked']}")
     print(f"   Context patterns learned: {ce_stats['patterns_learned']}")
     print(f"   Overall accuracy: {ce_stats['overall_accuracy']:.2%}")
+    
+    # Add comprehensive memory status
+    print("\n🧠 Memory Inventory:")
+    try:
+        from unified_memory import get_unified_memory
+        memory = get_unified_memory()
+        stats = memory.get_unified_stats()
+        
+        print(f"   📊 Total Memory Items: {stats['total_memory_items']:,}")
+        breakdown = stats['breakdown']
+        print(f"   📚 Logic Memory: {breakdown['logic_memory']:,} entries")
+        print(f"   🎨 Symbolic Memory: {breakdown['symbolic_memory']:,} entries") 
+        print(f"   🌉 Bridge Memory: {breakdown['bridge_memory']:,} entries")
+        print(f"   🔢 Vector Data: {breakdown['vector_data']:,} entries")
+        print(f"   📝 Trail Log: {breakdown['trail_log']:,} entries")
+        print(f"   🔮 Symbols: {breakdown['symbols']:,} items")
+        print(f"   📋 Occurrences: {breakdown['occurrences']:,} items")
+        
+    except Exception as e:
+        print(f"   ❌ Memory stats unavailable: {e}")
 
 def show_help():
     """Show available commands"""

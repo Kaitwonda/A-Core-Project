@@ -19,11 +19,11 @@ from web_parser import fetch_raw_html, extract_links_with_text_from_html, clean_
 from unified_memory import VectorMemory
 vector_memory = VectorMemory()
 from symbol_cluster import cluster_vectors_and_plot
-from trail_log import log_trail, add_emotions
+from unified_memory import log_trail, add_emotions
 from trail_graph import show_trail_graph
 from emotion_handler import predict_emotions
-from symbol_emotion_updater import update_symbol_emotions
-from symbol_generator import generate_symbol_from_context
+# from symbol_emotion_updater import update_symbol_emotions  # TODO: Check if in unified_symbol_system
+# from symbol_generator import generate_symbol_from_context  # TODO: Check if in unified_symbol_system
 from symbol_drift_plot import show_symbol_drift
 from symbol_emotion_cluster import show_emotion_clusters
 
@@ -462,15 +462,37 @@ def main():
         visualization_data = None
 
         if is_url(user_input):
-            print("🌐 Detected URL. Processing summary...")
-            user_input_for_response = process_web_url_placeholder(
-                user_input,
-                current_phase_for_interaction,
-                general_lexicon
-            )
-            if not user_input_for_response:
-                print("  Could not process URL content.")
-                continue
+            print("🌐 Detected URL. Using smart link processing...")
+            
+            # Enhanced URL processing with related link discovery
+            try:
+                from smart_link_processor import process_user_url_smart
+                
+                smart_response = process_user_url_smart(
+                    url=user_input,
+                    max_related=5,
+                    context=f"phase_{current_phase_for_interaction}_learning"
+                )
+                
+                print(f"\n📋 Smart Link Analysis:")
+                print(smart_response)
+                
+                # Set a simple response for the main loop to continue
+                user_input_for_response = "Smart link processing completed"
+                
+            except Exception as e:
+                print(f"⚠️ Smart link processing failed: {str(e)[:50]}...")
+                print("   Falling back to basic URL processing...")
+                
+                # Fallback to original processing
+                user_input_for_response = process_web_url_placeholder(
+                    user_input,
+                    current_phase_for_interaction,
+                    general_lexicon
+                )
+                if not user_input_for_response:
+                    print("  Could not process URL content.")
+                    continue
         else:
             # User text input - check for warfare patterns first
             print("📝 Detected text input. Analyzing for security threats...")
@@ -615,6 +637,11 @@ def main():
         if input_counter % INPUT_THRESHOLD_SYMBOL_PRUNE == 0:
             print("\n🧹 Periodic symbol duplicate pruning...")
             SM_SymbolMemory.prune_duplicates()
+            
+            # Add self-diagnostic voice
+            self_report = generate_self_diagnostic_voice()
+            if self_report:
+                print(f"\n💭 AI Self-Report: {self_report}")
             
         if input_counter % INPUT_THRESHOLD_PHASE1_VECTOR_PRUNE == 0:
             if current_phase_for_interaction == 1:

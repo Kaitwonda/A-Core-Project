@@ -668,6 +668,239 @@ class LinguisticWarfareDetector:
             self._save_attack_patterns()
             
             print(f"🛡️ [WARFARE-LEARNED] New pattern for {attack_type}: {pattern[:50]}...")
+    
+    def check_url_security(self, url: str, anchor_text: str = "", context: str = "") -> Dict:
+        """
+        Enhanced URL security check that doesn't modify legitimate hyperlinks
+        but flags dangerous ones.
+        """
+        from urllib.parse import urlparse
+        
+        security_result = {
+            'is_safe': True,
+            'risk_score': 0.0,
+            'risk_factors': [],
+            'recommendations': [],
+            'original_url': url,  # Always preserve original
+            'original_anchor': anchor_text
+        }
+        
+        try:
+            parsed = urlparse(url)
+            domain = parsed.netloc.lower()
+            path = parsed.path.lower()
+            
+            # 1. Domain reputation check
+            domain_risk = self._assess_domain_risk(domain)
+            security_result['risk_score'] += domain_risk
+            
+            if domain_risk > 0.3:
+                security_result['risk_factors'].append(f"Suspicious domain: {domain}")
+            
+            # 2. Anchor text manipulation check
+            anchor_risk = self._check_anchor_manipulation(anchor_text, url)
+            security_result['risk_score'] += anchor_risk
+            
+            if anchor_risk > 0.2:
+                security_result['risk_factors'].append("Potentially manipulative anchor text")
+            
+            # 3. URL structure analysis
+            url_structure_risk = self._analyze_url_structure(url)
+            security_result['risk_score'] += url_structure_risk
+            
+            if url_structure_risk > 0.3:
+                security_result['risk_factors'].append("Suspicious URL structure")
+            
+            # 4. Context mismatch detection
+            if context:
+                context_risk = self._check_context_mismatch(url, anchor_text, context)
+                security_result['risk_score'] += context_risk
+                
+                if context_risk > 0.2:
+                    security_result['risk_factors'].append("URL doesn't match expected context")
+            
+            # Final safety determination
+            total_risk = min(1.0, security_result['risk_score'])
+            security_result['risk_score'] = total_risk
+            
+            if total_risk > 0.6:
+                security_result['is_safe'] = False
+                security_result['recommendations'].append("Block this URL - high risk")
+            elif total_risk > 0.4:
+                security_result['is_safe'] = True  # Allow but warn
+                security_result['recommendations'].append("Proceed with caution")
+            else:
+                security_result['recommendations'].append("URL appears safe")
+            
+            return security_result
+            
+        except Exception as e:
+            # If URL parsing fails, treat as unsafe
+            security_result['is_safe'] = False
+            security_result['risk_score'] = 1.0
+            security_result['risk_factors'].append(f"URL parsing error: {str(e)}")
+            security_result['recommendations'].append("Block malformed URL")
+            
+            return security_result
+    
+    def _assess_domain_risk(self, domain: str) -> float:
+        """Assess risk level of a domain without blocking legitimate ones."""
+        risk_score = 0.0
+        
+        # Known dangerous domain patterns
+        dangerous_patterns = [
+            'malware', 'phishing', 'spam', 'hack', 'crack', 'illegal',
+            'exploit', 'vulnerability', 'breach', 'attack'
+        ]
+        
+        for pattern in dangerous_patterns:
+            if pattern in domain:
+                risk_score += 0.4
+        
+        # Suspicious TLDs (but not blocking legitimate ones)
+        suspicious_tlds = ['.tk', '.ml', '.ga', '.cf', '.click', '.download']
+        for tld in suspicious_tlds:
+            if domain.endswith(tld):
+                risk_score += 0.3
+        
+        # Raw IP addresses (often suspicious)
+        if re.match(r'^\d+\.\d+\.\d+\.\d+', domain):
+            risk_score += 0.5
+        
+        # Very long random subdomains
+        if re.search(r'[a-z0-9]{20,}\.', domain):
+            risk_score += 0.3
+        
+        # URL shorteners (moderate risk due to obfuscation)
+        shorteners = ['bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly']
+        if any(shortener in domain for shortener in shorteners):
+            risk_score += 0.2  # Moderate risk, not high
+        
+        return min(1.0, risk_score)
+    
+    def _check_anchor_manipulation(self, anchor_text: str, url: str) -> float:
+        """Check for manipulation attempts in anchor text."""
+        if not anchor_text:
+            return 0.0
+        
+        risk_score = 0.0
+        anchor_lower = anchor_text.lower()
+        
+        # Manipulation patterns in anchor text
+        manipulation_patterns = [
+            'click here to bypass', 'ignore previous instructions',
+            'admin override', 'system access', 'debug mode',
+            'disable security', 'grant permissions', 'execute command',
+            'run as administrator', 'sudo access', 'root privileges'
+        ]
+        
+        for pattern in manipulation_patterns:
+            if pattern in anchor_lower:
+                risk_score += 0.4
+        
+        # Social engineering indicators
+        social_engineering = [
+            'urgent', 'immediate action required', 'account suspended',
+            'verify now', 'click immediately', 'limited time',
+            'act now', 'confirm identity', 'update payment'
+        ]
+        
+        for pattern in social_engineering:
+            if pattern in anchor_lower:
+                risk_score += 0.2
+        
+        # Domain spoofing in anchor text
+        from urllib.parse import urlparse
+        try:
+            url_domain = urlparse(url).netloc.lower()
+            # Check if anchor mentions a different domain
+            if ('http' in anchor_lower or 'www.' in anchor_lower) and url_domain not in anchor_lower:
+                risk_score += 0.3
+        except:
+            pass
+        
+        return min(1.0, risk_score)
+    
+    def _analyze_url_structure(self, url: str) -> float:
+        """Analyze URL structure for suspicious patterns."""
+        risk_score = 0.0
+        
+        # Excessive subdomain levels
+        subdomain_count = url.count('.') - 1  # Subtract 1 for main domain
+        if subdomain_count > 3:
+            risk_score += 0.2
+        
+        # Suspicious path patterns
+        suspicious_paths = [
+            '/admin/', '/wp-admin/', '/administrator/', '/panel/',
+            '/control/', '/manage/', '/system/', '/config/',
+            '/exploit/', '/hack/', '/crack/', '/bypass/'
+        ]
+        
+        url_lower = url.lower()
+        for path in suspicious_paths:
+            if path in url_lower:
+                risk_score += 0.3
+        
+        # Very long URLs (potential obfuscation)
+        if len(url) > 200:
+            risk_score += 0.2
+        
+        # Suspicious query parameters
+        suspicious_params = [
+            'cmd=', 'exec=', 'system=', 'shell=', 'eval=',
+            'include=', 'require=', 'file=', 'path=', 'dir='
+        ]
+        
+        for param in suspicious_params:
+            if param in url_lower:
+                risk_score += 0.4
+        
+        return min(1.0, risk_score)
+    
+    def _check_context_mismatch(self, url: str, anchor_text: str, context: str) -> float:
+        """Check if URL context matches expectations."""
+        risk_score = 0.0
+        
+        # Simple context matching
+        context_lower = context.lower()
+        url_lower = url.lower()
+        anchor_lower = anchor_text.lower()
+        
+        # Educational context expectations
+        if 'education' in context_lower or 'learning' in context_lower:
+            educational_domains = ['edu', 'wikipedia', 'coursera', 'edx', 'khan']
+            if not any(domain in url_lower for domain in educational_domains):
+                risk_score += 0.1  # Mild risk for context mismatch
+        
+        # Research context expectations
+        if 'research' in context_lower or 'academic' in context_lower:
+            research_domains = ['arxiv', 'scholar', 'researchgate', 'pubmed', 'ieee']
+            if not any(domain in url_lower for domain in research_domains):
+                risk_score += 0.1
+        
+        # Complete topic mismatch (anchor talks about one thing, context another)
+        context_keywords = set(context_lower.split())
+        anchor_keywords = set(anchor_lower.split())
+        
+        if len(context_keywords) > 2 and len(anchor_keywords) > 2:
+            overlap = len(context_keywords.intersection(anchor_keywords))
+            if overlap == 0:
+                risk_score += 0.15  # Mild risk for complete topic mismatch
+        
+        return min(1.0, risk_score)
+
+
+# Enhanced URL security check function
+def check_url_safety(url: str, anchor_text: str = "", context: str = "") -> Tuple[bool, Dict]:
+    """
+    Enhanced URL security check that preserves legitimate links.
+    Returns (is_safe, security_analysis)
+    """
+    detector = LinguisticWarfareDetector()
+    security_result = detector.check_url_security(url, anchor_text, context)
+    
+    return security_result['is_safe'], security_result
 
 
 # Integration function for your existing pipeline
